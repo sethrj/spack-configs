@@ -45,7 +45,7 @@
    "spec": "python+uuid"
   },
   {
-   "hash": "j33ejnsb7vfbhclgn3bqopffaw7iv3iw",
+   "hash": "6accy22nc5delwlqfvcrh5qmpttikrg5",
    "spec": "py-h5py"
   },
   {
@@ -2070,9 +2070,9 @@
     "hash": "mtv6o3lhv6rrvcwoxbrp5cv7ryukq6rq"
    }
   },
-  "j33ejnsb7vfbhclgn3bqopffaw7iv3iw": {
+  "6accy22nc5delwlqfvcrh5qmpttikrg5": {
    "py-h5py": {
-    "version": "3.1.0",
+    "version": "2.10.0",
     "arch": {
      "platform": "linux",
      "platform_os": "rhel6",
@@ -2084,7 +2084,7 @@
     },
     "namespace": "builtin",
     "parameters": {
-     "mpi": true,
+     "mpi": false,
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -2095,13 +2095,6 @@
     "dependencies": {
      "hdf5": {
       "hash": "vkws5vrb4kdftpshcdzvsrkizilzgvss",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "openmpi": {
-      "hash": "q2qd7tk2kcfklketmt26oqzdoadbbwcy",
       "type": [
        "build",
        "link"
@@ -2118,13 +2111,6 @@
       "hash": "ub6tfovi4wf6fiwnjei7tepuq4cptek3",
       "type": [
        "build"
-      ]
-     },
-     "py-mpi4py": {
-      "hash": "xq26t64mmatfip42raredss247iu4hi5",
-      "type": [
-       "build",
-       "run"
       ]
      },
      "py-numpy": {
@@ -2146,10 +2132,11 @@
        "build"
       ]
      },
-     "py-wheel": {
-      "hash": "apmkls7k6zbo7dpkncyzz3hsjpf5tgw5",
+     "py-six": {
+      "hash": "fkyfdigzh2mr6j3kc72rjgkyfa74eypv",
       "type": [
-       "build"
+       "build",
+       "run"
       ]
      },
      "python": {
@@ -2160,7 +2147,7 @@
       ]
      }
     },
-    "hash": "l2kkgf27h4nrvhyajtnocdirx7acmroz"
+    "hash": "frh2n7tjo3zcenip7ysfxrfcv5o72pdt"
    }
   },
   "g4qpzh2tusfprahzwn6y4bzoiazqavgf": {
@@ -2274,53 +2261,6 @@
      }
     },
     "hash": "xg7tb657nql4hy2nqpmsqefftsp2okvg"
-   }
-  },
-  "xq26t64mmatfip42raredss247iu4hi5": {
-   "py-mpi4py": {
-    "version": "3.0.3",
-    "arch": {
-     "platform": "linux",
-     "platform_os": "rhel6",
-     "target": "x86_64"
-    },
-    "compiler": {
-     "name": "gcc",
-     "version": "8.3.0"
-    },
-    "namespace": "builtin",
-    "parameters": {
-     "cflags": [],
-     "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
-     "ldflags": [],
-     "ldlibs": []
-    },
-    "dependencies": {
-     "openmpi": {
-      "hash": "q2qd7tk2kcfklketmt26oqzdoadbbwcy",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "py-setuptools": {
-      "hash": "f3wfcdpybghacbw73ooq6fp6zli7rml4",
-      "type": [
-       "build"
-      ]
-     },
-     "python": {
-      "hash": "gm34nbnbm3p2vlajo6g7644dmbipa6gu",
-      "type": [
-       "build",
-       "link",
-       "run"
-      ]
-     }
-    },
-    "hash": "xdtymd57jkhvyv2ybmwwevj543fighsn"
    }
   },
   "3rvqvwpnzjcsc7tw3kuem6srqqz74c2a": {
@@ -2448,9 +2388,9 @@
     "hash": "lrzoaoosvgzktdrb4skewm6hfrgplykf"
    }
   },
-  "apmkls7k6zbo7dpkncyzz3hsjpf5tgw5": {
-   "py-wheel": {
-    "version": "0.35.1",
+  "fkyfdigzh2mr6j3kc72rjgkyfa74eypv": {
+   "py-six": {
+    "version": "1.15.0",
     "arch": {
      "platform": "linux",
      "platform_os": "rhel6",
@@ -2473,8 +2413,7 @@
      "py-setuptools": {
       "hash": "f3wfcdpybghacbw73ooq6fp6zli7rml4",
       "type": [
-       "build",
-       "run"
+       "build"
       ]
      },
      "python": {
@@ -2485,7 +2424,7 @@
       ]
      }
     },
-    "hash": "orkj2vx2so22c6rsv3cabhkf2ycs3aru"
+    "hash": "nl7gugvwuvgbefbcjlgpifxolq2udwzh"
    }
   },
   "uixkrijd2yhh2rg4aleukvbbe2dnlcbp": {
@@ -3168,45 +3107,6 @@
      }
     },
     "hash": "wixmzqu5x4j2xoq2572afoubo226rn67"
-   }
-  },
-  "fkyfdigzh2mr6j3kc72rjgkyfa74eypv": {
-   "py-six": {
-    "version": "1.15.0",
-    "arch": {
-     "platform": "linux",
-     "platform_os": "rhel6",
-     "target": "x86_64"
-    },
-    "compiler": {
-     "name": "gcc",
-     "version": "8.3.0"
-    },
-    "namespace": "builtin",
-    "parameters": {
-     "cflags": [],
-     "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
-     "ldflags": [],
-     "ldlibs": []
-    },
-    "dependencies": {
-     "py-setuptools": {
-      "hash": "f3wfcdpybghacbw73ooq6fp6zli7rml4",
-      "type": [
-       "build"
-      ]
-     },
-     "python": {
-      "hash": "gm34nbnbm3p2vlajo6g7644dmbipa6gu",
-      "type": [
-       "build",
-       "run"
-      ]
-     }
-    },
-    "hash": "nl7gugvwuvgbefbcjlgpifxolq2udwzh"
    }
   },
   "x2cr6mhgxjh2uhvxl2pifiyg2qyp2ob2": {
