@@ -1,0 +1,96 @@
+packages:
+  advantg-data:
+    buildable: false
+    paths: {advantg-data@dev: /rnsdhpc/share/advantg-data}
+  all:
+    target: [x86_64]
+    providers:
+      gl: [opengl]
+      mpi: [openmpi]
+  autoconf:
+    buildable: false
+    paths: {autoconf@2.69: /usr/local/Cellar/autoconf/2.69}
+  automake:
+    buildable: false
+    paths: {automake@1.16.1_1: /usr/local/Cellar/automake/1.16.1_1}
+  bash:
+    buildable: false
+    paths: {bash@5.0.11: /usr/local/Cellar/bash/5.0.11}
+  boost:
+    variants: cxxstd=11
+  cmake:
+    buildable: false
+    paths: {cmake@3.16.2: /usr/local/Cellar/cmake/3.16.2}
+  coreutils:
+    buildable: false
+    paths: {coreutils@8.31: /usr/local/Cellar/coreutils/8.31}
+  gcc:
+    buildable: false
+    paths: {gcc@9.2.0: /usr/local/Cellar/gcc/9.2.0_2}
+  geant4:
+    variants: cxxstd=11 ~threads ~data
+    version: [10.04]
+  geant4-data:
+    buildable: false
+    paths: {geant4-data@10.04: /usr/local/geant4/data}
+  git:
+    buildable: false
+    paths: {git@2.24.0_2: /usr/local/Cellar/git/2.24.0_2}
+  git-lfs:
+    buildable: false
+    paths: {git-lfs@2.8.0: /usr/local/Cellar/git-lfs/2.8.0}
+  hdf5: {variants: +hl +szip ~mpi}
+  lava:
+    permissions: {group: admin, read: group, write: user}
+  llvm:
+    buildable: false
+    paths: {llvm@9.0.0: /usr/local/Cellar/llvm/9.0.0_1}
+  lmod:
+    buildable: false
+    paths: {lmod@8.2.8: /usr/local/Cellar/lmod/8.2.8}
+  lua:
+    buildable: false
+    paths: {lua@5.3.5_1: /usr/local/Cellar/lua/5.3.5_1}
+  m4:
+    buildable: false
+    paths: {m4@1.4.18: /usr/local/Cellar/m4/1.4.18}
+  mcnp:
+    buildable: false
+    paths: {mcnp@5.1.60: /rnsdhpc/opt/mcnp}
+  mcnp-data:
+    buildable: false
+    paths: {mcnp-data@5.1.60: /rnsdhpc/opt/mcnp/data}
+  moab: {variants: ~mpi ~parmetis ~coupler ~metis ~fortran}
+  netcdf: {variants: ~mpi ~parallel}
+  ninja:
+    version: [kitware]
+  opengl:
+    buildable: false
+    paths: {opengl@2.1: /opt/X11}
+  libx11:
+    buildable: false
+    paths: {libx11@1.6.4: /opt/X11}
+  perl:
+    buildable: false
+    paths: {perl@5.30.0: /usr/local/Cellar/perl/5.30.0}
+  py-h5py: {variants: ~mpi}
+  py-matplotlib: {variants: ~tk}
+  python:
+    variants: +shared +uuid
+  qt: {variants: freetype=none ~sql ~ssl ~tools}
+  rename:
+    buildable: false
+    paths: {rename@1.601: /usr/local/Cellar/rename/1.601}
+  scale-data:
+    buildable: false
+    paths: {scale-data@dev: /rnsdhpc/share/scale/data}
+  silo: {variants: ~mpi}
+  xerces-c:
+    variants: cxxstd=14
+  vecgeom:
+    variants: cxxstd=14
+  veccore:
+    variants: cxxstd=14
+  root:
+    variants: cxxstd=14 ~x~opengl~tmva~threads~tbb~rootfit~python+xml~examples~davix
+

@@ -1,0 +1,27 @@
+compilers:
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: mojave
+    paths:
+      cc: /usr/local/Cellar/gcc/9.2.0_2/bin/gcc-9
+      cxx: /usr/local/Cellar/gcc/9.2.0_2/bin/g++-9
+      f77: /usr/local/Cellar/gcc/9.2.0_2/bin/gfortran-9
+      fc: /usr/local/Cellar/gcc/9.2.0_2/bin/gfortran-9
+    spec: gcc@9.2.0
+    target: x86_64
+- compiler:
+    spec: apple-clang@11.0.0
+    paths:
+      cc: /usr/bin/clang
+      cxx: /usr/bin/clang++
+      f77: /usr/local/Cellar/gcc/9.2.0_2/bin/gfortran
+      fc: /usr/local/Cellar/gcc/9.2.0_2/bin/gfortran
+    flags: {}
+    operating_system: mojave
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []

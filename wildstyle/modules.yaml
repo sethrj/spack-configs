@@ -1,0 +1,38 @@
+modules:
+  enable::
+    - lmod
+  lmod:
+    core_compilers:
+      - 'gcc@8.3.1'
+    whitelist:
+      - gcc
+      - git
+      - git-lfs
+      - htop
+      - lmod
+      - ninja
+    hash_length: 0
+    hierarchy:: []
+    git:
+      autoload:
+        'none'
+    all:
+      suffixes:
+        '~mpi': 'serial'
+        '+debug': 'debug'
+        '+threads': 'mt'
+        'threads=openmp': 'mt'
+        '+openmp': 'mt'
+        '^python@2': 'py2'
+        'cxxstd=98': 'c++98'
+        'cxxstd=14': 'c++14'
+        'cxxstd=17': 'c++17'
+        '~shared': 'static'
+        '+jit': 'jit'
+      filter:
+        environment_blacklist: ['CPATH', 'LIBRARY_PATH', 'LD_LIBRARY_PATH']
+      environment:
+        set:
+          '${PACKAGE}_ROOT': '${PREFIX}'
+      autoload:
+          'direct'

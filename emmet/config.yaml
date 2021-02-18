@@ -1,0 +1,8 @@
+config:
+  install_tree: $spack/opt/spack
+  locks: false
+  install_path_scheme: '{compiler.name}-{compiler.version}/{name}/{hash:7}'
+  module_roots:
+    lmod: $spack/share/spack/lmod
+  template_dirs:
+    - $spack/var/spack/repos/ornl-spack/templates

@@ -1,0 +1,27 @@
+compilers:
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: highsierra
+    paths:
+      cc: /usr/bin/clang
+      cxx: /usr/bin/clang++
+      f77: /usr/local/Cellar/gcc/8.3.0/bin/gfortran-8
+      fc: /usr/local/Cellar/gcc/8.3.0/bin/gfortran-8
+    spec: clang@9.0.0-apple
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: highsierra
+    paths:
+      cc: /usr/local/Cellar/gcc/8.3.0/bin/gcc-8
+      cxx: /usr/local/Cellar/gcc/8.3.0/bin/g++-8
+      f77: /usr/local/Cellar/gcc/8.3.0/bin/gfortran-8
+      fc: /usr/local/Cellar/gcc/8.3.0/bin/gfortran-8
+    spec: gcc@8.3.0
+    target: x86_64

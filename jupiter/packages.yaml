@@ -1,0 +1,61 @@
+packages:
+  geant4:
+    variants: cxxstd=11 ~threads ~data
+  geant4-data:
+    paths:
+      geant4-data@10.04: /projects/geant4/data
+    buildable: False
+  hdf5:
+    variants: +hl +szip ~mpi +cxx +fortran
+  intel:
+    paths:
+      intel@13.0.1: /opt/intel/composer_xe_2013
+      intel@14.0.4: /opt/intel
+      intel@16.0.4: /opt/intel-2016
+      intel@17.0.1: /opt/intel-2017
+      intel@18.0.2: /opt/intel-2018
+    buildable: False
+  lava:
+    permissions:
+      read: group
+      group: scale6
+  mcnp:
+    paths:
+      mcnp@5.1.60: /projects/MCNP5_v1.6/MCNP_CODE
+      mcnp@6.1.0: /projects/MCNP_V61/MCNP_CODE
+    buildable: False
+  mcnp-data:
+    paths:
+      mcnp-data@5.1.60: /projects/MCNP5_v1.6/MCNP_DATA
+      mcnp-data@6.1.0: /projects/MCNP_V61/MCNP_DATA
+    buildable: False
+  moab:
+    variants: ~mpi ~parmetis ~coupler ~metis ~fortran
+  python:
+    variants: +shared+uuid
+  py-h5py:
+    variants: ~mpi
+  py-matplotlib:
+    variants: ~tk
+  pcre:
+    variants: +jit
+  qt:
+    variants: ~sql freetype=none ~ssl
+  scale:
+    permissions:
+      read: group
+      group: scale6
+  scale-data:
+    paths:
+      scale-data@6.3.0-A6: /scale/data/cache/v6.3.0-A6
+      scale-data@6.2.0: /scale/data/cache/v6.2.0
+      scale-data@dev: /projects/scale/data/dev
+    buildable: False
+  silo:
+    variants: ~mpi +fortran
+  all:
+    providers:
+      blas: [openblas]
+      lapack: [openblas]
+      mpi: [openmpi]
+    target: [x86_64]

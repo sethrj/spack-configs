@@ -1,0 +1,20 @@
+modules:
+  enable::
+    - lmod
+  lmod:
+    #blacklist_implicits: true
+    core_compilers:
+      - 'clang@9.0.0-apple'
+    hash_length: 0
+    hierarchy:: []
+    all:
+      suffixes:
+        '^openmpi': openmpi
+        '^python@2': py2
+      filter:
+        environment_blacklist: ['CPATH', 'LIBRARY_PATH', 'DYLD_LIBRARY_PATH']
+      environment:
+        set:
+          '${PACKAGE}_ROOT': '${PREFIX}'
+    ^python:
+      autoload:  'direct'

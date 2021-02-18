@@ -1,0 +1,44 @@
+modules:
+  enable::
+    - lmod
+  lmod:
+    hierarchy:: []
+    blacklist_implicits: true
+    core_compilers:
+      - 'gcc@4.4.7'
+    hash_length: 0
+    ^python:
+      autoload:  'direct'
+    all:
+      suffixes:
+        '+debug': 'debug'
+        '+threads': 'mt'
+        '+openmp': 'mt'
+        '+multithreaded': 'mt'
+        '^python@3': 'py3'
+        '+mpi': 'mpi'
+        '~shared': 'static'
+        '^perl~shared': 'static'
+        '^zlib~shared': 'static'
+        'cxxstd=98': 'c++98'
+        'cxxstd=14': 'c++14'
+        'cxxstd=17': 'c++17'
+      environment:
+        set:
+          '${PACKAGE}_ROOT': '${PREFIX}'
+        prepend_path:
+          'LD_RUN_PATH': '${PREFIX}/lib'
+      filter:
+        environment_blacklist: ['CPATH', 'LIBRARY_PATH', 'LD_LIBRARY_PATH']
+    libffi: &lib64
+      environment:
+        prepend_path:
+          'LD_RUN_PATH': '${PREFIX}/lib64'
+    geant4: *lib64
+    jpeg-turbo: *lib64
+    lava: &lrestricted
+      template: 'group-restricted.lua'
+    mcnp: *lrestricted
+    mcnp-data: *lrestricted
+    scale: *lrestricted
+    scale-data: *lrestricted

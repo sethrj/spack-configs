@@ -1,0 +1,49 @@
+modules:
+  enable::
+    - lmod
+  lmod:
+    hierarchy:: []
+    whitelist:
+      - gcc
+      - git
+      - git-lfs
+      - htop
+      - lmod
+      - ninja
+    blacklist:
+      - '%gcc@4.8.5'
+    core_compilers:
+      - 'gcc@4.8.5'
+    hash_length: 0
+    ^python:
+      autoload:  'direct'
+      environment:: {}
+    all:
+      suffixes:
+        '+debug': 'debug'
+        '+threads': 'mt'
+        'threads=openmp': 'mt'
+        '+openmp': 'mt'
+        '+mpi': 'mpi'
+        '^python@2': 'py2'
+        'cxxstd=98': 'c++98'
+        'cxxstd=14': 'c++14'
+        'cxxstd=17': 'c++17'
+        '~shared': 'static'
+      environment:
+        set:
+          '${PACKAGE}_ROOT': '${PREFIX}'
+        prepend_path:
+          'LD_RUN_PATH': '${PREFIX}/lib'
+      filter:
+        environment_blacklist: ['CPATH', 'LIBRARY_PATH', 'LD_LIBRARY_PATH']
+    libffi: &lib64
+      environment:
+        prepend_path:
+          'LD_RUN_PATH': '${PREFIX}/lib64'
+    geant4: *lib64
+    jpeg-turbo: *lib64
+    gcc: &lib64also
+      environment:
+        prepend_path:
+          'LD_RUN_PATH': '${PREFIX}/lib:${PREFIX}/lib64'

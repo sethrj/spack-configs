@@ -1,0 +1,40 @@
+compilers:
+- compiler:
+    spec: clang@3.4.2
+    paths:
+      cc: /usr/bin/clang
+      cxx: /usr/bin/clang++
+      f77:
+      fc:
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@4.8.5
+    paths:
+      cc: /usr/bin/gcc
+      cxx: /usr/bin/g++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@8.3.0
+    paths:
+      cc: /software/user_tools/centos-7.2.1511/cades-nsed-spack/opt/spack/gcc-4.8.5/gcc/wbbrdox/bin/gcc
+      cxx: /software/user_tools/centos-7.2.1511/cades-nsed-spack/opt/spack/gcc-4.8.5/gcc/wbbrdox/bin/g++
+      f77: /software/user_tools/centos-7.2.1511/cades-nsed-spack/opt/spack/gcc-4.8.5/gcc/wbbrdox/bin/gfortran
+      fc: /software/user_tools/centos-7.2.1511/cades-nsed-spack/opt/spack/gcc-4.8.5/gcc/wbbrdox/bin/gfortran
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []

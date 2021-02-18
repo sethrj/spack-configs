@@ -1,0 +1,26 @@
+modules:
+  enable::
+    - lmod
+  lmod:
+    #blacklist_implicits: true
+    core_compilers:
+      - 'clang@10.0.0-apple'
+    hash_length: 0
+    hierarchy:: []
+    all:
+      suffixes:
+        '^python@2': py2
+        '+debug': debug
+        '+mpi': mpi
+        '+openmp': mt
+        '+threads': mt
+        'cxxstd=98': 'c++98'
+        'cxxstd=14': 'c++14'
+        'cxxstd=17': 'c++17'
+      filter:
+        environment_blacklist: ['CPATH', 'LIBRARY_PATH', 'DYLD_LIBRARY_PATH']
+      environment:
+        set:
+          '${PACKAGE}_ROOT': '${PREFIX}'
+    ^python:
+      autoload:  'direct'
