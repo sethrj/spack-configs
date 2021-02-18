@@ -1,0 +1,33 @@
+# This is a Spack Environment file for the new SCALE CI environment.
+# It explicitly disables MPI.
+spack:
+  specs:
+  - bison@3.4.2
+  - cmake
+  - doxygen+graphviz
+  - flex@2.6.4
+  - gsl
+  - llvm@9.0.1 +clang ~flang   # for clang-format
+  - hdf5 +fortran +hl ~mpi +szip api=v110
+  - openblas
+  - python +uuid
+  - py-h5py ~mpi
+  - py-h5sh
+  - py-lxml
+  - py-jsonschema
+  - py-matplotlib
+  - py-numpy
+  - py-sphinx
+  - qt@4.8:4.9 ~framework
+  - silo +fortran ~mpi
+  - swig@4.0.2-fortran
+  - valgrind ~mpi
+  view: true
+  concretization: together
+  packages:
+    all:
+      compiler: [gcc@8.3.0]
+      providers:
+        blas: [openblas]
+        lapack: [openblas]
+      variants: ~mpi
