@@ -1,0 +1,39 @@
+# This is a Spack Environment file for Exnihilo.
+spack:
+  # add package specs to the `specs` list
+  specs: 
+    - cmake
+    - doxygen+graphviz
+    - hdf5 +fortran +hl +mpi
+    - lava~openmp
+    - mcnp@5.1.60
+    - mcnp-data@5.1.60
+    - openblas
+    - openmpi
+    - python +uuid
+    - py-h5py +mpi
+    - py-ipython
+    - py-jupyter-console
+    - py-lxml
+    - py-matplotlib
+    - py-numpy
+    - py-pandas
+    - py-pint
+    - py-psutil
+    - py-scipy
+    - py-sphinx
+    - py-tqdm
+    - silo
+    - swig@4.0.2-fortran
+  view: true
+  concretization: together
+  packages:
+    netcdf:
+      variants: +mpi +parallel
+    silo:
+      variants: +mpi
+    all:
+      providers:
+        blas: [openblas]
+        lapack: [openblas]
+        mpi: [openmpi]
