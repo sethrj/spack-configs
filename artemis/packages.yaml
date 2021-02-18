@@ -1,0 +1,78 @@
+packages:
+  advantg:
+    variants: +openmp
+    permissions:
+      read: group
+      group: advantg
+  advantg-data:
+    permissions:
+      read: group
+      group: advantg
+    buildable: false
+    externals:
+    - spec: advantg-data@3
+      prefix: /projects/advantg/data
+  geant4-data:
+    externals:
+    - spec: geant4-data@10.04
+      prefix: /projects/exnihilo/geant4-data
+    - spec: buildable
+      prefix: 'False'
+  lava:
+    permissions:
+      read: group
+      group: scale6
+  openpbs:
+    buildable: false
+    externals:
+    - spec: openpbs@21
+      prefix: /opt/torque-6.1.3
+  mcnp:
+    buildable: false
+    externals:
+    - spec: mcnp@5.1.60
+      prefix: /projects/MCNP5_v1.6/MCNP_CODE
+    - spec: mcnp@6.1.0
+      prefix: /projects/MCNP_V61/MCNP_CODE
+    - spec: mcnp@6.1.1
+      prefix: /projects/MCNP_V611/MCNP_CODE
+  mcnp-data:
+    buildable: false
+    externals:
+    - spec: mcnp-data@5.1.60
+      prefix: /projects/MCNP5_v1.6/MCNP_DATA
+    - spec: mcnp-data@6.1.0
+      prefix: /projects/MCNP_V61/MCNP_DATA
+    - spec: mcnp-data@6.2
+      prefix: /projects/MCNP_V62/MCNP_DATA
+    - spec: mcnp-data@iter
+      prefix: /projects/exnihilo/iter-data
+  openmpi:
+    version: [2.1.6] # to support SCALE limitations
+    variants: schedulers=tm
+  # >>> install-spack.sh
+  hdf5:
+    variants: +cxx +fortran +hl +szip ~mpi
+  moab:
+    variants: ~mpi ~parmetis ~coupler ~metis ~fortran
+  netcdf:
+    variants: ~mpi ~parallel
+  pcre:
+    variants: +jit
+  py-h5py:
+    variants: ~mpi
+  qt:
+    variants: ~sql ~ssl ~tools
+  scale:
+    permissions:
+      read: group
+      group: scale6
+  silo:
+    variants: ~mpi
+  all:
+    providers:
+      mpi: [openmpi]
+      blas: [openblas]
+      lapack: [openblas]
+    variants: cxxstd=11
+  # <<< install-spack.sh
