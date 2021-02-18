@@ -5,7 +5,11 @@ spack:
   - bison@3.4.2
   - 'cmake@3.16:'
   - flex@2.6.4
-  - flibcpp +swig
+
+
+  
+      # - flibcpp +swig # XXX flibcpp+swig doesn't correctly install .i files 
+      # until 20210218 2d917e17d9f081bf12b998cb29973ef35922e21a
   - hdf5 +hl api=v110 ~mpi
   - googletest
   - 'ninja@1.10:'
