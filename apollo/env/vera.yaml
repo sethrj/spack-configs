@@ -1,0 +1,83 @@
+# This is a Spack Environment file for the "traditional" CASL environment
+spack:
+  specs:
+  - mpich@3.1.3
+  - cmake@3.14.3
+  - python@2.7.13
+  - boost@1.55.0
+  - zlib@1.2.11
+  - netlib-lapack@3.3.1
+  - hdf5@1.10.1 +fortran +hl +szip
+  - netcdf-c@4.4.1
+  - qt@4.8.7
+  - silo@4.10.2
+  - slepc@3.6.3
+  - sundials@2.7.0   # XXX
+  - swig@4.0.1
+  view: true
+  concretization: together
+  packages:
+    hdf5:
+      variants: +mpi
+      version: []
+      target: []
+      compiler: []
+      buildable: true
+      modules: {}
+      providers: {}
+      paths: {}
+    silo:
+      variants: +mpi
+      version: []
+      target: []
+      compiler: []
+      buildable: true
+      modules: {}
+      providers: {}
+      paths: {}
+    sundials:
+      variants: +int64
+      version: []
+      target: []
+      compiler: []
+      buildable: true
+      modules: {}
+      providers: {}
+      paths: {}
+    pcre:
+      variants: +jit
+      version: []
+      target: []
+      compiler: []
+      buildable: true
+      modules: {}
+      providers: {}
+      paths: {}
+    petsc:
+      variants: +mpi ~superlu-dist
+      version: []
+      target: []
+      compiler: []
+      buildable: true
+      modules: {}
+      providers: {}
+      paths: {}
+    glib:
+      version: [2.56.4] # To not use meson, which requires python 3 
+      target: []
+      compiler: []
+      buildable: true
+      modules: {}
+      providers: {}
+      paths: {}
+    all:
+      compiler: [gcc@5.4.0]
+      providers:
+        blas: [netlib-lapack]
+        lapack: [netlib-lapack]
+        mpi: [mpich]
+      version: []
+      target: []
+      buildable: true
+      modules: {}
+      paths: {}
