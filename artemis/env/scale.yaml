@@ -13,7 +13,7 @@ spack:
   - openblas
   - openmpi@:2.999
   - python +uuid
-  - py-h5py ~mpi
+  - py-h5py ~mpi @:2.999   # bug in 3,3.1
   - py-h5sh
   - py-lxml
   - py-jsonschema

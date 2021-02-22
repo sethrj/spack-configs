@@ -1,0 +1,55 @@
+spack:
+  specs:
+  - bison@3.4.2
+  - cmake
+  - doxygen+graphviz
+  - flex@2.6.4
+  - gsl
+  - llvm@9.0.1 +clang ~flang  # for clang-format
+  - hdf5 +fortran +hl ~mpi +szip api=v110
+  - openblas
+  - openmpi@:2.999 # limited by scale
+  - python +uuid
+  - py-h5py ~mpi
+  - py-h5sh
+  - py-lxml
+  - py-jsonschema
+  - py-matplotlib
+  - py-numpy
+  - py-pandas
+  - py-pint
+  - py-psutil
+  - py-sphinx
+  - py-tqdm
+  - qt@4.8:4.9 ~framework
+  - silo +fortran ~mpi
+  - swig@4.0.2-fortran
+  - valgrind
+
+
+
+  
+  # >>> exnihilo
+  - geant4 cxxstd=11 ~threads
+  - htop
+  - lava~openmp
+  - mcnp@5.1.60
+  - mcnp-data@5.1.60
+  - moab@4.9.2+dagmc
+  - py-ipython
+  - py-notebook
+  - py-prompt-toolkit@2.0.10
+  - py-scipy
+  - screen
+  # <<< exnihilo
+  view: true
+  concretization: together
+  packages:
+    xerces-c:
+      variants: cxxstd=11
+    all:
+      compiler: [gcc@8.3.0]
+      providers:
+        blas: [openblas]
+        lapack: [openblas]
+        mpi: [openmpi]
