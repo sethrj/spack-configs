@@ -11,10 +11,10 @@ modules:
     share/aclocal:
     - ACLOCAL_PATH
     include:: []
-    lib:
-    - LIBRARY_PATH
-    lib64:
-    - LIBRARY_PATH
+    lib::
+    - LD_RUN_PATH
+    lib64::
+    - LD_RUN_PATH
     lib/pkgconfig:
     - PKG_CONFIG_PATH
     lib64/pkgconfig:

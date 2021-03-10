@@ -1,0 +1,35 @@
+# This is a Spack Environment file for the new SCALE CI environment.
+# It should also work on mac systems as well.
+spack:
+  # add package specs to the `specs` list
+  specs:
+  - bison@3.4.2
+  - cmake
+  - doxygen+graphviz
+  - flex@2.6.4
+  - gsl
+  - llvm@9.0.1 +clang ~flang   # for clang-format
+  - hdf5 +fortran +hl ~mpi api=v110
+  - openblas
+  - openmpi@:2.999
+  - python +uuid
+  - py-h5py ~mpi @:2.999   # bug in 3,3.1
+  - py-h5sh
+  - py-lxml
+  - py-jsonschema
+  - py-matplotlib
+  - py-numpy
+  - py-sphinx
+  - qt@5 ~framework +gui
+  - silo +fortran ~mpi
+  - swig@4.0.2-fortran
+  - valgrind
+  view: true
+  concretization: together
+  packages:
+    all:
+      compiler: [gcc@8.3.0]
+      providers:
+        blas: [openblas]
+        lapack: [openblas]
+        mpi: [openmpi]
