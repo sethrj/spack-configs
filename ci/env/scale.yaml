@@ -8,19 +8,22 @@ spack:
   - doxygen+graphviz
   - flex@2.6.4
   - gsl
-  - llvm@9.0.1 +clang ~flang   # for clang-format
+  - llvm@9.0.1 +clang ~flang # for clang-format
   - hdf5 +fortran +hl ~mpi api=v110
   - openblas
   - openmpi@:2.999
   - python +uuid
-  - py-h5py ~mpi
+  - py-h5py ~mpi @:2.999 # bug in 3,3.1
   - py-h5sh
   - py-lxml
   - py-jsonschema
   - py-matplotlib
   - py-numpy
+  - py-pandas
   - py-pint
+  - py-psutil
   - py-sphinx
+  - py-pyyaml
   - qt@4.8:4.9 ~framework
   - silo +fortran ~mpi
   - swig@4.0.2-fortran
