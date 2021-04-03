@@ -1,0 +1,131 @@
+packages:
+  advantg-data:
+    buildable: false
+    externals:
+    - {prefix: /rnsdhpc/share/advantg-data, spec: advantg-data@dev}
+  autoconf:
+    buildable: false
+    externals:
+    - {prefix: /usr/local/Cellar/autoconf/2.71, spec: autoconf@2.71}
+  automake:
+    buildable: false
+    externals:
+    - {prefix: /usr/local/Cellar/automake/1.16.3_1, spec: automake@1.16.3_1}
+  bash:
+    buildable: false
+    externals:
+    - {prefix: /usr/local/Cellar/bash/5.1.4, spec: bash@5.1.4}
+  cmake:
+    buildable: false
+    externals:
+    - {prefix: /usr/local/Cellar/cmake/3.20.0, spec: cmake@3.20.0}
+  coreutils:
+    buildable: false
+    externals:
+    - {prefix: /usr/local/Cellar/coreutils/8.32, spec: coreutils@8.32}
+  gcc:
+    buildable: false
+    externals:
+    - {prefix: /usr/local/Cellar/gcc/10.2.0_4, spec: gcc@10.2.0_4}
+  git:
+    buildable: false
+    externals:
+    - {prefix: /usr/local/Cellar/git/2.31.1, spec: git@2.31.1}
+  git-lfs:
+    buildable: false
+    externals:
+    - {prefix: /usr/local/Cellar/git-lfs/2.13.3, spec: git-lfs@2.13.3}
+  hdf5: {variants: +cxx +fortran +hl +szip ~mpi}
+  htop:
+    buildable: false
+    externals:
+    - {prefix: /usr/local/Cellar/htop/3.0.5, spec: htop@3.0.5}
+  lmod:
+    buildable: false
+    externals:
+    - {prefix: /usr/local/Cellar/lmod/8.4.28, spec: lmod@8.4.28}
+  lua:
+    buildable: false
+    externals:
+    - {prefix: /usr/local/Cellar/lua/5.4.3, spec: lua@5.4.3}
+  m4:
+    buildable: false
+    externals:
+    - {prefix: /usr/local/Cellar/m4/1.4.18, spec: m4@1.4.18}
+  mcnp:
+    buildable: false
+    externals:
+    - {prefix: /rnsdhpc/opt/mcnp, spec: mcnp@5.1.60}
+  mcnp-data:
+    buildable: false
+    externals:
+    - {prefix: /rnsdhpc/opt/mcnp/data, spec: mcnp-data@5.1.60}
+  moab: {variants: ~mpi ~parmetis ~coupler ~metis ~fortran}
+  netcdf: {variants: ~mpi ~parallel}
+  ninja:
+    buildable: false
+    externals:
+    - {prefix: /usr/local/Cellar/ninja/1.10.2, spec: ninja@1.10.2}
+  node-js:
+    buildable: false
+    externals:
+    - {prefix: /usr/local/Cellar/node/15.13.0, spec: node-js@15.13.0}
+  opengl:
+    externals:
+    - {prefix: /opt/X11, spec: opengl@2.1}
+  openglu:
+    externals:
+    - {prefix: /opt/X11, spec: openglu@1.8}
+  pcre: {variants: +jit}
+  perl:
+    buildable: false
+    externals:
+    - {prefix: /usr/local/Cellar/perl/5.32.1_1, spec: perl@5.32.1_1}
+  pkgconf:
+    buildable: false
+    externals:
+    - {prefix: /usr/local/Cellar/pkg-config/0.29.2_3, spec: pkgconf@0.29.2_3}
+  py-h5py:
+    variants: ~mpi
+    version: [2.10.0]
+  qt: {variants: ~sql ~ssl ~tools}
+  rename:
+    buildable: false
+    externals:
+    - {prefix: /usr/local/Cellar/rename/1.601, spec: rename@1.601}
+  scale-data:
+    buildable: false
+    externals:
+    - {prefix: /rnsdhpc/share/scale/data, spec: scale-data@experimental}
+  silo: {variants: ~mpi}
+  # >>> install-spack.sh
+  hdf5:
+    variants: +cxx +fortran +hl +szip ~mpi
+  moab:
+    variants: ~mpi ~parmetis ~coupler ~metis ~fortran
+  netcdf:
+    variants: ~mpi ~parallel
+  pcre:
+    variants: +jit
+  py-h5py:
+    variants: ~mpi
+    version:
+    - 2.10.0 # 3.0 and 3.1 fail with variable length arrays
+  ncurses:
+    variants: +termlib
+  qt:
+    variants: ~sql ~ssl ~tools
+  scale:
+    permissions:
+      read: group
+      group: scale6
+  silo:
+    variants: ~mpi
+  all:
+    providers:
+      mpi: [openmpi]
+      blas: [openblas]
+      lapack: [openblas]
+    target: [x86_64]
+    variants: cxxstd=11
+  # <<< install-spack.sh

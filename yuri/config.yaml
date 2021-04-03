@@ -1,0 +1,7 @@
+config:
+  concretizer: clingo
+  install_tree: $spack/opt/spack
+  install_path_scheme: '{compiler.name}/{name}/{hash:7}'
+  module_roots:
+    tcl: $spack/share/spack/modules
+    lmod: $spack/share/spack/lmod

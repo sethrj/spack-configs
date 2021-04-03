@@ -5,78 +5,102 @@
  },
  "roots": [
   {
-   "hash": "34hm4ogbrrrbdfowglltbga3arkc7wwl",
+   "hash": "nctevtn6laoeoojbt3c7vbnt72yfo4oa",
    "spec": "bison@3.4.2"
   },
   {
-   "hash": "skqkkomqjvsnfgyvk65oh4yyerxh63df",
-   "spec": "cmake"
+   "hash": "4dpdbvkurfn5ue6sd4nw2e5xgm625tvu",
+   "spec": "cmake@3.16:"
   },
   {
-   "hash": "rvqo4wyo3ili3e4xcxsjhqjezpkknzth",
+   "hash": "qk7vclhcl3bat7oh7cwogjtd5gpt5ad3",
    "spec": "flex@2.6.4"
   },
   {
-   "hash": "cfrve3bcul52sxm4d6d2jee2h4od32tu",
-   "spec": "hdf5+hl api=v110"
+   "hash": "jm2g3dtiz7qhxgpmtf27jscgcy2zxzyz",
+   "spec": "hdf5+hl+mpi api=v110"
   },
   {
-   "hash": "w5siwxws2mjzi3tjbrxssmyt62hqsvwi",
-   "spec": "ninja-fortran"
+   "hash": "vdnadndf6bnpnlgga6uedp53ydr6cf57",
+   "spec": "googletest"
   },
   {
-   "hash": "2r6qaoyra5tirfajb2o7axecaxruwdjx",
+   "hash": "juiku5sb3ux6fbmbel6mbzkbmzxst6zk",
+   "spec": "ninja@1.10:"
+  },
+  {
+   "hash": "i2vzlffhckwiqh43hreldziibq6a2nh7",
    "spec": "openmpi"
   },
   {
-   "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
+   "hash": "cweweaghtmmoqro6emfhfdn2phvnflof",
+   "spec": "pugixml"
+  },
+  {
+   "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
    "spec": "python+uuid"
   },
   {
-   "hash": "gof3f6y7aulhukomt7iq4xunhxr4dlwc",
+   "hash": "6zlqvrvjm5vgqwvyqhothgzynpt4wgdl",
    "spec": "py-h5py"
   },
   {
-   "hash": "2wbe3zzxknajci6yibkelczacll7pn6l",
+   "hash": "kvsppc7f3oux6x6yf7hw5f3zxnl7dric",
    "spec": "py-lxml"
   },
   {
-   "hash": "asm5376wa7neli7ihlqqwqb4eqizqvrs",
+   "hash": "glmcrhujsadl42tfekd724f7jopnfis4",
    "spec": "py-matplotlib"
   },
   {
-   "hash": "a5qakphxik6vkoc3k6oolapsown5soqn",
+   "hash": "jhl4p7w6j6jy3bqeshs7vdl25iges4ff",
    "spec": "py-numpy"
   },
   {
-   "hash": "ak43a73uqrpsoflaivzsbrqvjey2ghaf",
+   "hash": "g3j76dexavq3r53big5oge56de5pc6zi",
+   "spec": "py-pandas"
+  },
+  {
+   "hash": "b5f5ep7lfvpve74jzuml7wvtt5c5rkc2",
+   "spec": "py-pint"
+  },
+  {
+   "hash": "e5sxwf6l34uo4mnszqdzrlqem6ttmwcp",
+   "spec": "py-psutil"
+  },
+  {
+   "hash": "cst5cdcav3x7jsj3dgu7i7q32llqish3",
+   "spec": "py-tqdm"
+  },
+  {
+   "hash": "3zitfcrw2a53b7ndzsdsjo5ozavt5pwv",
    "spec": "qt@4.8:4.9~framework"
   },
   {
-   "hash": "zqxgrepuugobohgjoqvuef45jcjyzjzv",
-   "spec": "silo+fortran"
+   "hash": "6bcmezuynsm3zssz7zpnhh4ojsexc726",
+   "spec": "silo+fortran+mpi"
   },
   {
-   "hash": "xd3bjquzl5tdnbsa6kx56oqphnvxfjg5",
-   "spec": "swig@fortran"
+   "hash": "bp4qvlcgejwkwo4iegzjim566fjammld",
+   "spec": "swig@4.0.2-fortran"
   },
   {
-   "hash": "ljse3x3nhckq4vpk5fjqbbmxvtbqfagl",
+   "hash": "cyti3pngzbi2nsttxkbqjgwfwmucjc57",
    "spec": "trilinos+amesos+anasazi+aztec+belos+epetra+epetraext+hdf5+ifpack+ifpack2+intrepid+kokkos+ml+mpi+sacado+shards+stratimikos+teuchos+tpetra gotype=long_long"
   }
  ],
  "concrete_specs": {
-  "34hm4ogbrrrbdfowglltbga3arkc7wwl": {
+  "nctevtn6laoeoojbt3c7vbnt72yfo4oa": {
    "bison": {
     "version": "3.4.2",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -95,45 +119,45 @@
     ],
     "dependencies": {
      "diffutils": {
-      "hash": "kgxuzymoql72zjmq2jye7d66yh3szcfr",
+      "hash": "upzmketpmxlg4dvz6yay2swutxkkyrf4",
       "type": [
        "build"
       ]
      },
      "help2man": {
-      "hash": "qiheertyvs5lr5vuc3rpaevhdqx2f6q6",
+      "hash": "zf6pceeuu5yetj4eryocpn27uspicelz",
       "type": [
        "build"
       ]
      },
      "m4": {
-      "hash": "wmai4xloju5f3r2v4bwwns7tw7aihbbk",
+      "hash": "4jvwgubtitzdpncwpiskocwkkvwb4net",
       "type": [
        "build",
        "run"
       ]
      },
      "perl": {
-      "hash": "77jg7ip266sgkpdgm66envhh26xk3sbb",
+      "hash": "ubpv2yu4phzvlr4ma3fsgej4neyatz6q",
       "type": [
        "build"
       ]
      }
     },
-    "hash": "o2q4b7x75jh3w2rrtkkuyfqfumifdaev"
+    "hash": "pwfpjczfjmpb6of6fdrfcq6uknzkln35"
    }
   },
-  "kgxuzymoql72zjmq2jye7d66yh3szcfr": {
+  "upzmketpmxlg4dvz6yay2swutxkkyrf4": {
    "diffutils": {
     "version": "3.7",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -146,27 +170,27 @@
     },
     "dependencies": {
      "libiconv": {
-      "hash": "dacit3kuxkch2ayvo6omykosyeiccc5f",
+      "hash": "tj3twqmzxl7qnvoft4wq65e7sbdicxb2",
       "type": [
        "build",
        "link"
       ]
      }
     },
-    "hash": "kgxuzymoql72zjmq2jye7d66yh3szcfr"
+    "hash": "upzmketpmxlg4dvz6yay2swutxkkyrf4"
    }
   },
-  "dacit3kuxkch2ayvo6omykosyeiccc5f": {
+  "tj3twqmzxl7qnvoft4wq65e7sbdicxb2": {
    "libiconv": {
     "version": "1.16",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -177,20 +201,20 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "hash": "dacit3kuxkch2ayvo6omykosyeiccc5f"
+    "hash": "tj3twqmzxl7qnvoft4wq65e7sbdicxb2"
    }
   },
-  "qiheertyvs5lr5vuc3rpaevhdqx2f6q6": {
+  "zf6pceeuu5yetj4eryocpn27uspicelz": {
    "help2man": {
-    "version": "1.47.11",
+    "version": "1.47.16",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -203,33 +227,33 @@
     },
     "dependencies": {
      "gettext": {
-      "hash": "xfhvfd6ko2gg3y7vuj3y2yjyh52iucg3",
+      "hash": "vnpe2mqonajeohirlahow3zxwuh2me3r",
       "type": [
        "build"
       ]
      },
      "perl": {
-      "hash": "77jg7ip266sgkpdgm66envhh26xk3sbb",
+      "hash": "ubpv2yu4phzvlr4ma3fsgej4neyatz6q",
       "type": [
        "build",
        "run"
       ]
      }
     },
-    "hash": "mhavp6cpkdg3unhkpo4oy6o2wwvapxf4"
+    "hash": "7m7dloxqxlungrevkust7taqw22gj4ot"
    }
   },
-  "xfhvfd6ko2gg3y7vuj3y2yjyh52iucg3": {
+  "vnpe2mqonajeohirlahow3zxwuh2me3r": {
    "gettext": {
-    "version": "0.20.2",
+    "version": "0.21",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -249,42 +273,42 @@
     },
     "dependencies": {
      "bzip2": {
-      "hash": "5bo2xf6fhm42lzpigdz4hw77b53wtvci",
+      "hash": "dev722gmpzf7wr5mokueb5lq5v4frla7",
       "type": [
        "build",
        "link"
       ]
      },
      "libiconv": {
-      "hash": "dacit3kuxkch2ayvo6omykosyeiccc5f",
+      "hash": "tj3twqmzxl7qnvoft4wq65e7sbdicxb2",
       "type": [
        "build",
        "link"
       ]
      },
      "libxml2": {
-      "hash": "c4dewv26cthg64zrgvtvwvorwus7mgdt",
+      "hash": "66voqo4bevuwwcotxqzmtdlambxav4ml",
       "type": [
        "build",
        "link"
       ]
      },
      "ncurses": {
-      "hash": "bcgc75s3lalybh3b5ftczisagml4q2z4",
+      "hash": "t26veif6bum4r2gwyv5zvoh5d5tvghj3",
       "type": [
        "build",
        "link"
       ]
      },
      "tar": {
-      "hash": "b5txbxmx2mzmtsrx73iejbdoxlnsc2sd",
+      "hash": "66xpufigtxu3lw3knrgdue5j43b2ypao",
       "type": [
        "build",
        "link"
       ]
      },
      "xz": {
-      "hash": "27pku55fs4pzco3lrzufqkwtdqd3vxv5",
+      "hash": "nlp35zkiyluolaxvrk5gj2of6fhawaln",
       "type": [
        "build",
        "link",
@@ -292,20 +316,20 @@
       ]
      }
     },
-    "hash": "torplqzknsz7bow6oa76r45mia2mbop2"
+    "hash": "ubdxkvso7an4jpsbsjsc2eaaeawedkh6"
    }
   },
-  "5bo2xf6fhm42lzpigdz4hw77b53wtvci": {
+  "dev722gmpzf7wr5mokueb5lq5v4frla7": {
    "bzip2": {
     "version": "1.0.8",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -319,26 +343,26 @@
     },
     "dependencies": {
      "diffutils": {
-      "hash": "kgxuzymoql72zjmq2jye7d66yh3szcfr",
+      "hash": "upzmketpmxlg4dvz6yay2swutxkkyrf4",
       "type": [
        "build"
       ]
      }
     },
-    "hash": "w42xpbz4bi2txrblfb6xpxhy4o2rxlzz"
+    "hash": "ea35bv6yqbw3yw2qijbiu26x65bwa56r"
    }
   },
-  "c4dewv26cthg64zrgvtvwvorwus7mgdt": {
+  "66voqo4bevuwwcotxqzmtdlambxav4ml": {
    "libxml2": {
     "version": "2.9.10",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -352,47 +376,47 @@
     },
     "dependencies": {
      "libiconv": {
-      "hash": "dacit3kuxkch2ayvo6omykosyeiccc5f",
+      "hash": "tj3twqmzxl7qnvoft4wq65e7sbdicxb2",
       "type": [
        "build",
        "link"
       ]
      },
      "pkgconf": {
-      "hash": "f74ask64smabwal6ozd5sinwzgxvmgd2",
+      "hash": "sqkatm3p3f65cjwbkcksm6l2fx43s57w",
       "type": [
        "build"
       ]
      },
      "xz": {
-      "hash": "27pku55fs4pzco3lrzufqkwtdqd3vxv5",
+      "hash": "nlp35zkiyluolaxvrk5gj2of6fhawaln",
       "type": [
        "build",
        "link"
       ]
      },
      "zlib": {
-      "hash": "fwg66ugw4m7sfyjxqzpxnxrmxg625xmv",
+      "hash": "5gwknia3b7u2z3jbaadu6tii5cs2754w",
       "type": [
        "build",
        "link"
       ]
      }
     },
-    "hash": "zd36xsudsdox5z6aleieakfxywga3dyl"
+    "hash": "ogcxrzl6vg7kmms7nafhh2c54ighhdhu"
    }
   },
-  "f74ask64smabwal6ozd5sinwzgxvmgd2": {
+  "sqkatm3p3f65cjwbkcksm6l2fx43s57w": {
    "pkgconf": {
-    "version": "1.7.3",
+    "version": "0.29.2_3",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -403,23 +427,29 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "hash": "f74ask64smabwal6ozd5sinwzgxvmgd2"
+    "external": {
+     "path": "/usr/local/Cellar/pkg-config/0.29.2_3",
+     "module": null,
+     "extra_attributes": {}
+    },
+    "hash": "sqkatm3p3f65cjwbkcksm6l2fx43s57w"
    }
   },
-  "27pku55fs4pzco3lrzufqkwtdqd3vxv5": {
+  "nlp35zkiyluolaxvrk5gj2of6fhawaln": {
    "xz": {
     "version": "5.2.5",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
+     "pic": false,
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -427,20 +457,20 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "hash": "27pku55fs4pzco3lrzufqkwtdqd3vxv5"
+    "hash": "nlp35zkiyluolaxvrk5gj2of6fhawaln"
    }
   },
-  "fwg66ugw4m7sfyjxqzpxnxrmxg625xmv": {
+  "5gwknia3b7u2z3jbaadu6tii5cs2754w": {
    "zlib": {
     "version": "1.2.11",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -454,23 +484,24 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "hash": "fwg66ugw4m7sfyjxqzpxnxrmxg625xmv"
+    "hash": "5gwknia3b7u2z3jbaadu6tii5cs2754w"
    }
   },
-  "bcgc75s3lalybh3b5ftczisagml4q2z4": {
+  "t26veif6bum4r2gwyv5zvoh5d5tvghj3": {
    "ncurses": {
     "version": "6.2",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
+     "abi": "none",
      "symlinks": false,
      "termlib": true,
      "cflags": [],
@@ -482,26 +513,26 @@
     },
     "dependencies": {
      "pkgconf": {
-      "hash": "f74ask64smabwal6ozd5sinwzgxvmgd2",
+      "hash": "sqkatm3p3f65cjwbkcksm6l2fx43s57w",
       "type": [
        "build"
       ]
      }
     },
-    "hash": "qoweoeawwnvpje4gqxsrsap5prumole6"
+    "hash": "vnwi5zegs64cnlyxmukesswhzxzya5w7"
    }
   },
-  "b5txbxmx2mzmtsrx73iejbdoxlnsc2sd": {
+  "66xpufigtxu3lw3knrgdue5j43b2ypao": {
    "tar": {
-    "version": "1.32",
+    "version": "1.34",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -514,27 +545,27 @@
     },
     "dependencies": {
      "libiconv": {
-      "hash": "dacit3kuxkch2ayvo6omykosyeiccc5f",
+      "hash": "tj3twqmzxl7qnvoft4wq65e7sbdicxb2",
       "type": [
        "build",
        "link"
       ]
      }
     },
-    "hash": "b5txbxmx2mzmtsrx73iejbdoxlnsc2sd"
+    "hash": "66xpufigtxu3lw3knrgdue5j43b2ypao"
    }
   },
-  "77jg7ip266sgkpdgm66envhh26xk3sbb": {
+  "ubpv2yu4phzvlr4ma3fsgej4neyatz6q": {
    "perl": {
-    "version": "5.30.3",
+    "version": "5.32.1_1",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -548,101 +579,30 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "dependencies": {
-     "gdbm": {
-      "hash": "blpazd3wefxjum5llo5vpaoqvej5n2hk",
-      "type": [
-       "build",
-       "link"
-      ]
-     }
+    "external": {
+     "path": "/usr/local/Cellar/perl/5.32.1_1",
+     "module": null,
+     "extra_attributes": {}
     },
-    "hash": "sjbudc7g5zf3tuucdakehh7j2vgy3ymj"
+    "hash": "ubpv2yu4phzvlr4ma3fsgej4neyatz6q"
    }
   },
-  "blpazd3wefxjum5llo5vpaoqvej5n2hk": {
-   "gdbm": {
-    "version": "1.18.1",
-    "arch": {
-     "platform": "darwin",
-     "platform_os": "catalina",
-     "target": "x86_64"
-    },
-    "compiler": {
-     "name": "apple-clang",
-     "version": "11.0.0"
-    },
-    "namespace": "builtin",
-    "parameters": {
-     "cflags": [],
-     "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
-     "ldflags": [],
-     "ldlibs": []
-    },
-    "dependencies": {
-     "readline": {
-      "hash": "tkclkgybvpp4knsyh4m6pbz5knvjvv2c",
-      "type": [
-       "build",
-       "link"
-      ]
-     }
-    },
-    "hash": "6zvvqrqylqzeyu2smkzshe6ax6z7akb7"
-   }
-  },
-  "tkclkgybvpp4knsyh4m6pbz5knvjvv2c": {
-   "readline": {
-    "version": "8.0",
-    "arch": {
-     "platform": "darwin",
-     "platform_os": "catalina",
-     "target": "x86_64"
-    },
-    "compiler": {
-     "name": "apple-clang",
-     "version": "11.0.0"
-    },
-    "namespace": "builtin",
-    "parameters": {
-     "cflags": [],
-     "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
-     "ldflags": [],
-     "ldlibs": []
-    },
-    "dependencies": {
-     "ncurses": {
-      "hash": "bcgc75s3lalybh3b5ftczisagml4q2z4",
-      "type": [
-       "build",
-       "link"
-      ]
-     }
-    },
-    "hash": "7bkz6lhpvucmb4uerlg25dnj4ssezqb3"
-   }
-  },
-  "wmai4xloju5f3r2v4bwwns7tw7aihbbk": {
+  "4jvwgubtitzdpncwpiskocwkkvwb4net": {
    "m4": {
     "version": "1.4.18",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
      "patches": [
       "3877ab548f88597ab2327a2230ee048d2d07ace1062efe81fc92e91b7f39cd00",
-      "c0a408fbffb7255fcc75e26bd8edab116fc81d216bfd18b473668b7739a4158e",
       "fc9b61654a3ba1a8d6cd78ce087e7c96366c290bc8d2c299f09828d793b853c8"
      ],
      "sigsegv": true,
@@ -653,61 +613,33 @@
      "ldflags": [],
      "ldlibs": []
     },
+    "external": {
+     "path": "/usr/local/Cellar/m4/1.4.18",
+     "module": null,
+     "extra_attributes": {}
+    },
     "patches": [
      "3877ab548f88597ab2327a2230ee048d2d07ace1062efe81fc92e91b7f39cd00",
-     "c0a408fbffb7255fcc75e26bd8edab116fc81d216bfd18b473668b7739a4158e",
      "fc9b61654a3ba1a8d6cd78ce087e7c96366c290bc8d2c299f09828d793b853c8"
     ],
-    "dependencies": {
-     "libsigsegv": {
-      "hash": "2lbh2aeyuwcnztqryrou42vfhgl6gncd",
-      "type": [
-       "build",
-       "link"
-      ]
-     }
-    },
-    "hash": "wmai4xloju5f3r2v4bwwns7tw7aihbbk"
+    "hash": "4jvwgubtitzdpncwpiskocwkkvwb4net"
    }
   },
-  "2lbh2aeyuwcnztqryrou42vfhgl6gncd": {
-   "libsigsegv": {
-    "version": "2.12",
-    "arch": {
-     "platform": "darwin",
-     "platform_os": "catalina",
-     "target": "x86_64"
-    },
-    "compiler": {
-     "name": "apple-clang",
-     "version": "11.0.0"
-    },
-    "namespace": "builtin",
-    "parameters": {
-     "cflags": [],
-     "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
-     "ldflags": [],
-     "ldlibs": []
-    },
-    "hash": "2lbh2aeyuwcnztqryrou42vfhgl6gncd"
-   }
-  },
-  "skqkkomqjvsnfgyvk65oh4yyerxh63df": {
+  "4dpdbvkurfn5ue6sd4nw2e5xgm625tvu": {
    "cmake": {
-    "version": "3.18.0",
+    "version": "3.20.0",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
+     "build_type": "Release",
      "doc": false,
      "ncurses": true,
      "openssl": true,
@@ -720,77 +652,25 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "dependencies": {
-     "ncurses": {
-      "hash": "bcgc75s3lalybh3b5ftczisagml4q2z4",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "openssl": {
-      "hash": "4oivigdgnyx5jneyx6g4po73mtslq6cj",
-      "type": [
-       "build",
-       "link"
-      ]
-     }
+    "external": {
+     "path": "/usr/local/Cellar/cmake/3.20.0",
+     "module": null,
+     "extra_attributes": {}
     },
-    "hash": "4cdmqn6t4inuhr67eo6c7abnks4eiw22"
+    "hash": "4dpdbvkurfn5ue6sd4nw2e5xgm625tvu"
    }
   },
-  "4oivigdgnyx5jneyx6g4po73mtslq6cj": {
-   "openssl": {
-    "version": "1.1.1g",
-    "arch": {
-     "platform": "darwin",
-     "platform_os": "catalina",
-     "target": "x86_64"
-    },
-    "compiler": {
-     "name": "apple-clang",
-     "version": "11.0.0"
-    },
-    "namespace": "builtin",
-    "parameters": {
-     "systemcerts": true,
-     "cflags": [],
-     "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
-     "ldflags": [],
-     "ldlibs": []
-    },
-    "dependencies": {
-     "perl": {
-      "hash": "77jg7ip266sgkpdgm66envhh26xk3sbb",
-      "type": [
-       "build",
-       "test"
-      ]
-     },
-     "zlib": {
-      "hash": "fwg66ugw4m7sfyjxqzpxnxrmxg625xmv",
-      "type": [
-       "build",
-       "link"
-      ]
-     }
-    },
-    "hash": "cb5n4fraajydxhnv45x4qj7j2vf3vvwk"
-   }
-  },
-  "rvqo4wyo3ili3e4xcxsjhqjezpkknzth": {
+  "qk7vclhcl3bat7oh7cwogjtd5gpt5ad3": {
    "flex": {
     "version": "2.6.4",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -810,74 +690,74 @@
     ],
     "dependencies": {
      "autoconf": {
-      "hash": "pr2746wryh6jk3nl525crmzchlnsflvz",
+      "hash": "owtrjsww6h4q2nyep22qpk3w6of3u2dy",
       "type": [
        "build"
       ]
      },
      "automake": {
-      "hash": "3e6ms6b2e6dgwflryv3l3ek6se577rw6",
+      "hash": "e7krqloakaqgfzbuurahlsgwxlo62ct6",
       "type": [
        "build"
       ]
      },
      "bison": {
-      "hash": "34hm4ogbrrrbdfowglltbga3arkc7wwl",
+      "hash": "nctevtn6laoeoojbt3c7vbnt72yfo4oa",
       "type": [
        "build"
       ]
      },
      "diffutils": {
-      "hash": "kgxuzymoql72zjmq2jye7d66yh3szcfr",
+      "hash": "upzmketpmxlg4dvz6yay2swutxkkyrf4",
       "type": [
        "build"
       ]
      },
      "findutils": {
-      "hash": "lmbksdtehlsgjnyl2og2ye2wimh6kqdc",
+      "hash": "ksr2mrnih3x3a4lz473x2bcdi5z5ybn2",
       "type": [
        "build"
       ]
      },
      "gettext": {
-      "hash": "xfhvfd6ko2gg3y7vuj3y2yjyh52iucg3",
+      "hash": "vnpe2mqonajeohirlahow3zxwuh2me3r",
       "type": [
        "build"
       ]
      },
      "help2man": {
-      "hash": "qiheertyvs5lr5vuc3rpaevhdqx2f6q6",
+      "hash": "zf6pceeuu5yetj4eryocpn27uspicelz",
       "type": [
        "build"
       ]
      },
      "libtool": {
-      "hash": "gggptc2ssazogds4gc3jidkwr4mdkoac",
+      "hash": "vlwurozs2h2i54f6eunapkglv4os6pmb",
       "type": [
        "build"
       ]
      },
      "m4": {
-      "hash": "wmai4xloju5f3r2v4bwwns7tw7aihbbk",
+      "hash": "4jvwgubtitzdpncwpiskocwkkvwb4net",
       "type": [
        "build"
       ]
      }
     },
-    "hash": "w5sdae27pn4wzxnhelors7gogo6ctfrs"
+    "hash": "ephtsazkshb2q3gfbv25r7yzcncdaw4k"
    }
   },
-  "pr2746wryh6jk3nl525crmzchlnsflvz": {
+  "owtrjsww6h4q2nyep22qpk3w6of3u2dy": {
    "autoconf": {
-    "version": "2.69",
+    "version": "2.71",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -888,36 +768,25 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "dependencies": {
-     "m4": {
-      "hash": "wmai4xloju5f3r2v4bwwns7tw7aihbbk",
-      "type": [
-       "build",
-       "run"
-      ]
-     },
-     "perl": {
-      "hash": "77jg7ip266sgkpdgm66envhh26xk3sbb",
-      "type": [
-       "build",
-       "run"
-      ]
-     }
+    "external": {
+     "path": "/usr/local/Cellar/autoconf/2.71",
+     "module": null,
+     "extra_attributes": {}
     },
-    "hash": "e2ugwggu3zrcrcmv7tsy7mrdfmaxm3s4"
+    "hash": "owtrjsww6h4q2nyep22qpk3w6of3u2dy"
    }
   },
-  "3e6ms6b2e6dgwflryv3l3ek6se577rw6": {
+  "e7krqloakaqgfzbuurahlsgwxlo62ct6": {
    "automake": {
-    "version": "1.16.2",
+    "version": "1.16.3_1",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -928,35 +797,25 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "dependencies": {
-     "autoconf": {
-      "hash": "pr2746wryh6jk3nl525crmzchlnsflvz",
-      "type": [
-       "build"
-      ]
-     },
-     "perl": {
-      "hash": "77jg7ip266sgkpdgm66envhh26xk3sbb",
-      "type": [
-       "build",
-       "run"
-      ]
-     }
+    "external": {
+     "path": "/usr/local/Cellar/automake/1.16.3_1",
+     "module": null,
+     "extra_attributes": {}
     },
-    "hash": "lmgeuam4crznarktnzyzsrvxay3dzkqn"
+    "hash": "e7krqloakaqgfzbuurahlsgwxlo62ct6"
    }
   },
-  "lmbksdtehlsgjnyl2og2ye2wimh6kqdc": {
+  "ksr2mrnih3x3a4lz473x2bcdi5z5ybn2": {
    "findutils": {
     "version": "4.6.0",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -977,50 +836,50 @@
     ],
     "dependencies": {
      "autoconf": {
-      "hash": "pr2746wryh6jk3nl525crmzchlnsflvz",
+      "hash": "owtrjsww6h4q2nyep22qpk3w6of3u2dy",
       "type": [
        "build"
       ]
      },
      "automake": {
-      "hash": "3e6ms6b2e6dgwflryv3l3ek6se577rw6",
+      "hash": "e7krqloakaqgfzbuurahlsgwxlo62ct6",
       "type": [
        "build"
       ]
      },
      "libtool": {
-      "hash": "gggptc2ssazogds4gc3jidkwr4mdkoac",
+      "hash": "vlwurozs2h2i54f6eunapkglv4os6pmb",
       "type": [
        "build"
       ]
      },
      "m4": {
-      "hash": "wmai4xloju5f3r2v4bwwns7tw7aihbbk",
+      "hash": "4jvwgubtitzdpncwpiskocwkkvwb4net",
       "type": [
        "build"
       ]
      },
      "texinfo": {
-      "hash": "kqprqomcmu6s7ibu45nrhyuzmbx5rt4a",
+      "hash": "a5pprcqsfrwfiwvwerjvlilyaag62tbu",
       "type": [
        "build"
       ]
      }
     },
-    "hash": "edw3sxwloaxsjwxc3yyh7vseosxpricl"
+    "hash": "wnofeyq3dw6iaxrdlq36xx3r6mcvxepl"
    }
   },
-  "gggptc2ssazogds4gc3jidkwr4mdkoac": {
+  "vlwurozs2h2i54f6eunapkglv4os6pmb": {
    "libtool": {
     "version": "2.4.6",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -1033,26 +892,26 @@
     },
     "dependencies": {
      "m4": {
-      "hash": "wmai4xloju5f3r2v4bwwns7tw7aihbbk",
+      "hash": "4jvwgubtitzdpncwpiskocwkkvwb4net",
       "type": [
        "build"
       ]
      }
     },
-    "hash": "l3622bczzbvs5zewbfrmmwfa7bggpkxh"
+    "hash": "xxewlfcp73cat3hyqgvwhe67t635nyg6"
    }
   },
-  "kqprqomcmu6s7ibu45nrhyuzmbx5rt4a": {
+  "a5pprcqsfrwfiwvwerjvlilyaag62tbu": {
    "texinfo": {
     "version": "6.5",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -1073,35 +932,36 @@
     ],
     "dependencies": {
      "perl": {
-      "hash": "77jg7ip266sgkpdgm66envhh26xk3sbb",
+      "hash": "ubpv2yu4phzvlr4ma3fsgej4neyatz6q",
       "type": [
        "build",
        "link"
       ]
      }
     },
-    "hash": "m7z5xwa7pvem4pft7wcx4xkxjryqnjcm"
+    "hash": "a5pprcqsfrwfiwvwerjvlilyaag62tbu"
    }
   },
-  "cfrve3bcul52sxm4d6d2jee2h4od32tu": {
+  "jm2g3dtiz7qhxgpmtf27jscgcy2zxzyz": {
    "hdf5": {
-    "version": "1.10.6",
+    "version": "1.10.7",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
      "api": "v110",
-     "cxx": true,
+     "cxx": false,
      "debug": false,
      "fortran": true,
      "hl": true,
+     "java": false,
      "mpi": true,
      "pic": true,
      "shared": true,
@@ -1116,41 +976,41 @@
     },
     "dependencies": {
      "libszip": {
-      "hash": "it6gh4cnezd52gdvvkeb45rcbxoastik",
+      "hash": "2jj6gepfsod63vki4pelnsi7bvs3g5jt",
       "type": [
        "build",
        "link"
       ]
      },
      "openmpi": {
-      "hash": "2r6qaoyra5tirfajb2o7axecaxruwdjx",
+      "hash": "i2vzlffhckwiqh43hreldziibq6a2nh7",
       "type": [
        "build",
        "link"
       ]
      },
      "zlib": {
-      "hash": "fwg66ugw4m7sfyjxqzpxnxrmxg625xmv",
+      "hash": "5gwknia3b7u2z3jbaadu6tii5cs2754w",
       "type": [
        "build",
        "link"
       ]
      }
     },
-    "hash": "p4ntgewn7vndpzthnatsj2elb67fek6n"
+    "hash": "l35ielafjfaxufgkzihecltzcuoj5evg"
    }
   },
-  "it6gh4cnezd52gdvvkeb45rcbxoastik": {
+  "2jj6gepfsod63vki4pelnsi7bvs3g5jt": {
    "libszip": {
     "version": "2.1.1",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -1161,20 +1021,20 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "hash": "it6gh4cnezd52gdvvkeb45rcbxoastik"
+    "hash": "2jj6gepfsod63vki4pelnsi7bvs3g5jt"
    }
   },
-  "2r6qaoyra5tirfajb2o7axecaxruwdjx": {
+  "i2vzlffhckwiqh43hreldziibq6a2nh7": {
    "openmpi": {
-    "version": "3.1.6",
+    "version": "4.0.5",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -1186,9 +1046,14 @@
       "none"
      ],
      "gpfs": true,
+     "internal-hwloc": false,
      "java": false,
      "legacylaunchers": false,
+     "lustre": false,
      "memchecker": false,
+     "patches": [
+      "60ce20bc14d98c572ef7883b9fcd254c3f232c2f3a13377480f96466169ac4c8"
+     ],
      "pmi": false,
      "schedulers": [
       "none"
@@ -1206,42 +1071,64 @@
      "ldflags": [],
      "ldlibs": []
     },
+    "patches": [
+     "60ce20bc14d98c572ef7883b9fcd254c3f232c2f3a13377480f96466169ac4c8"
+    ],
     "dependencies": {
      "hwloc": {
-      "hash": "6b4lvhw5g4isdtbzevt63px3ni45qwyi",
+      "hash": "73zni3ipf3btqwpeohz55dthghg4dojh",
       "type": [
        "build",
        "link"
       ]
      },
+     "libevent": {
+      "hash": "3n6k4mxcabdcabfubohxoqlszlhujvz7",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "openssh": {
+      "hash": "daubjwun6v47dxfgyjckomsrbqeleoun",
+      "type": [
+       "run"
+      ]
+     },
+     "perl": {
+      "hash": "ubpv2yu4phzvlr4ma3fsgej4neyatz6q",
+      "type": [
+       "build"
+      ]
+     },
      "pkgconf": {
-      "hash": "f74ask64smabwal6ozd5sinwzgxvmgd2",
+      "hash": "sqkatm3p3f65cjwbkcksm6l2fx43s57w",
       "type": [
        "build"
       ]
      },
      "zlib": {
-      "hash": "fwg66ugw4m7sfyjxqzpxnxrmxg625xmv",
+      "hash": "5gwknia3b7u2z3jbaadu6tii5cs2754w",
       "type": [
        "build",
        "link"
       ]
      }
     },
-    "hash": "rq44ux2m5xsdn3yq5abjprx5yxteuzk6"
+    "hash": "leoooysqtmdu5kxj7bwi7ddrhlgwloar"
    }
   },
-  "6b4lvhw5g4isdtbzevt63px3ni45qwyi": {
+  "73zni3ipf3btqwpeohz55dthghg4dojh": {
    "hwloc": {
-    "version": "1.11.11",
+    "version": "2.4.1",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -1263,33 +1150,115 @@
     },
     "dependencies": {
      "libxml2": {
-      "hash": "c4dewv26cthg64zrgvtvwvorwus7mgdt",
+      "hash": "66voqo4bevuwwcotxqzmtdlambxav4ml",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "ncurses": {
+      "hash": "t26veif6bum4r2gwyv5zvoh5d5tvghj3",
       "type": [
        "build",
        "link"
       ]
      },
      "pkgconf": {
-      "hash": "f74ask64smabwal6ozd5sinwzgxvmgd2",
+      "hash": "sqkatm3p3f65cjwbkcksm6l2fx43s57w",
       "type": [
        "build"
       ]
      }
     },
-    "hash": "d3sdlmxsivbimmr63ev2p5kbjehzmftc"
+    "hash": "52dvyrapf7ztndqxnbpbxcfp4lcrzcnx"
    }
   },
-  "w5siwxws2mjzi3tjbrxssmyt62hqsvwi": {
-   "ninja-fortran": {
-    "version": "1.9.0.2.g99df1",
+  "3n6k4mxcabdcabfubohxoqlszlhujvz7": {
+   "libevent": {
+    "version": "2.1.12",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "openssl": true,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "openssl": {
+      "hash": "bnnonjogwrsgg7ut5nxm4ogqgea7zsd6",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "jdkxbhj4m6sz7kaodwx3ff34me5cnzsb"
+   }
+  },
+  "bnnonjogwrsgg7ut5nxm4ogqgea7zsd6": {
+   "openssl": {
+    "version": "1.1.1k",
+    "arch": {
+     "platform": "darwin",
+     "platform_os": "bigsur",
+     "target": "x86_64"
+    },
+    "compiler": {
+     "name": "apple-clang",
+     "version": "12.0.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "docs": false,
+     "systemcerts": true,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "perl": {
+      "hash": "ubpv2yu4phzvlr4ma3fsgej4neyatz6q",
+      "type": [
+       "build"
+      ]
+     },
+     "zlib": {
+      "hash": "5gwknia3b7u2z3jbaadu6tii5cs2754w",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "x3lwy7447gwnxzca3rrjrbfni2ttan2q"
+   }
+  },
+  "daubjwun6v47dxfgyjckomsrbqeleoun": {
+   "openssh": {
+    "version": "8.5p1",
+    "arch": {
+     "platform": "darwin",
+     "platform_os": "bigsur",
+     "target": "x86_64"
+    },
+    "compiler": {
+     "name": "apple-clang",
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -1301,27 +1270,184 @@
      "ldlibs": []
     },
     "dependencies": {
-     "python": {
-      "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
+     "libedit": {
+      "hash": "uaf25jochu7bdxulshuwculxbklwmwbo",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "ncurses": {
+      "hash": "t26veif6bum4r2gwyv5zvoh5d5tvghj3",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "openssl": {
+      "hash": "bnnonjogwrsgg7ut5nxm4ogqgea7zsd6",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "zlib": {
+      "hash": "5gwknia3b7u2z3jbaadu6tii5cs2754w",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "e6ez7vzm7rb45fnzspuytbbjrjztjh67"
+   }
+  },
+  "uaf25jochu7bdxulshuwculxbklwmwbo": {
+   "libedit": {
+    "version": "3.1-20210216",
+    "arch": {
+     "platform": "darwin",
+     "platform_os": "bigsur",
+     "target": "x86_64"
+    },
+    "compiler": {
+     "name": "apple-clang",
+     "version": "12.0.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "ncurses": {
+      "hash": "t26veif6bum4r2gwyv5zvoh5d5tvghj3",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "7l4glffyozrwqow7lay5gu55qkn6eveq"
+   }
+  },
+  "vdnadndf6bnpnlgga6uedp53ydr6cf57": {
+   "googletest": {
+    "version": "1.10.0",
+    "arch": {
+     "platform": "darwin",
+     "platform_os": "bigsur",
+     "target": "x86_64"
+    },
+    "compiler": {
+     "name": "apple-clang",
+     "version": "12.0.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "build_type": "RelWithDebInfo",
+     "gmock": false,
+     "ipo": false,
+     "pthreads": true,
+     "shared": true,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "cmake": {
+      "hash": "4dpdbvkurfn5ue6sd4nw2e5xgm625tvu",
       "type": [
        "build"
       ]
      }
     },
-    "hash": "ipr2ooi4ebdasezhohfp5xcb574u2m6y"
+    "hash": "a5j244obwbfcy7xaykmue47vxwsaifwv"
    }
   },
-  "akywlegzeyqgs4575jr2jliyhlf5c46d": {
-   "python": {
-    "version": "3.7.7",
+  "juiku5sb3ux6fbmbel6mbzkbmzxst6zk": {
+   "ninja": {
+    "version": "1.10.2",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "external": {
+     "path": "/usr/local/Cellar/ninja/1.10.2",
+     "module": null,
+     "extra_attributes": {}
+    },
+    "hash": "juiku5sb3ux6fbmbel6mbzkbmzxst6zk"
+   }
+  },
+  "cweweaghtmmoqro6emfhfdn2phvnflof": {
+   "pugixml": {
+    "version": "1.11.4",
+    "arch": {
+     "platform": "darwin",
+     "platform_os": "bigsur",
+     "target": "x86_64"
+    },
+    "compiler": {
+     "name": "apple-clang",
+     "version": "12.0.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "build_type": "RelWithDebInfo",
+     "ipo": false,
+     "pic": true,
+     "shared": true,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "cmake": {
+      "hash": "4dpdbvkurfn5ue6sd4nw2e5xgm625tvu",
+      "type": [
+       "build"
+      ]
+     }
+    },
+    "hash": "h44kf74tztpno66whkfmvqxhiid3atet"
+   }
+  },
+  "wp37a5tv34jygtmzeg4tc3ffph5mpbpa": {
+   "python": {
+    "version": "3.8.8",
+    "arch": {
+     "platform": "darwin",
+     "platform_os": "bigsur",
+     "target": "x86_64"
+    },
+    "compiler": {
+     "name": "apple-clang",
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -1334,8 +1460,7 @@
      "nis": false,
      "optimizations": false,
      "patches": [
-      "0d98e93189bc278fbc37a50ed7f183bd8aaf249a8e1670a465f0db6bb4f8cf87",
-      "210df3f28cde02a8135b58cc4168e70ab91dbf9097359d05938f1e2843875e57"
+      "0d98e93189bc278fbc37a50ed7f183bd8aaf249a8e1670a465f0db6bb4f8cf87"
      ],
      "pic": true,
      "pyexpat": true,
@@ -1357,108 +1482,143 @@
      "ldlibs": []
     },
     "patches": [
-     "0d98e93189bc278fbc37a50ed7f183bd8aaf249a8e1670a465f0db6bb4f8cf87",
-     "210df3f28cde02a8135b58cc4168e70ab91dbf9097359d05938f1e2843875e57"
+     "0d98e93189bc278fbc37a50ed7f183bd8aaf249a8e1670a465f0db6bb4f8cf87"
     ],
     "dependencies": {
+     "apple-libuuid": {
+      "hash": "7wbehvgf4ohdis6mhlzx6cbgr5cztkcy",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
      "bzip2": {
-      "hash": "5bo2xf6fhm42lzpigdz4hw77b53wtvci",
+      "hash": "dev722gmpzf7wr5mokueb5lq5v4frla7",
       "type": [
        "build",
        "link"
       ]
      },
      "expat": {
-      "hash": "txzrn7rhani7cthbuysfo7nkz4aqfdfv",
+      "hash": "ttvevjkhzoi342fmjzezbhopmbcorp4h",
       "type": [
        "build",
        "link"
       ]
      },
      "gdbm": {
-      "hash": "blpazd3wefxjum5llo5vpaoqvej5n2hk",
+      "hash": "dswfyw5nd2px4mzyxbgmc2i2qp322a3a",
       "type": [
        "build",
        "link"
       ]
      },
      "gettext": {
-      "hash": "xfhvfd6ko2gg3y7vuj3y2yjyh52iucg3",
+      "hash": "vnpe2mqonajeohirlahow3zxwuh2me3r",
       "type": [
        "build",
        "link"
       ]
      },
      "libffi": {
-      "hash": "je6iroctaagwtbgu5oa52syssof7te6g",
+      "hash": "nz4enpayfxrva4rqd4mf6u37sqqbc4gg",
       "type": [
        "build",
        "link"
       ]
      },
      "ncurses": {
-      "hash": "bcgc75s3lalybh3b5ftczisagml4q2z4",
+      "hash": "t26veif6bum4r2gwyv5zvoh5d5tvghj3",
       "type": [
        "build",
        "link"
       ]
      },
      "openssl": {
-      "hash": "4oivigdgnyx5jneyx6g4po73mtslq6cj",
+      "hash": "bnnonjogwrsgg7ut5nxm4ogqgea7zsd6",
       "type": [
        "build",
        "link"
       ]
      },
      "pkgconf": {
-      "hash": "f74ask64smabwal6ozd5sinwzgxvmgd2",
+      "hash": "sqkatm3p3f65cjwbkcksm6l2fx43s57w",
       "type": [
        "build"
       ]
      },
      "readline": {
-      "hash": "tkclkgybvpp4knsyh4m6pbz5knvjvv2c",
+      "hash": "zo73rakiitjixgtn2rbzjc4krj4xeg7r",
       "type": [
        "build",
        "link"
       ]
      },
      "sqlite": {
-      "hash": "lztsiuy2shdwrjrpngbotqibrful4bwi",
+      "hash": "tjlzxuu22pqa2734i66rrabsvcgg6wuc",
       "type": [
        "build",
        "link"
       ]
      },
      "xz": {
-      "hash": "27pku55fs4pzco3lrzufqkwtdqd3vxv5",
+      "hash": "nlp35zkiyluolaxvrk5gj2of6fhawaln",
       "type": [
        "build",
        "link"
       ]
      },
      "zlib": {
-      "hash": "fwg66ugw4m7sfyjxqzpxnxrmxg625xmv",
+      "hash": "5gwknia3b7u2z3jbaadu6tii5cs2754w",
       "type": [
        "build",
        "link"
       ]
      }
     },
-    "hash": "pnmmmbnecumsak2hjar4rjq57qbjxj2t"
+    "hash": "caziiosimzsonfg2sdzdnuwelqchtqsr"
    }
   },
-  "txzrn7rhani7cthbuysfo7nkz4aqfdfv": {
-   "expat": {
-    "version": "2.2.9",
+  "7wbehvgf4ohdis6mhlzx6cbgr5cztkcy": {
+   "apple-libuuid": {
+    "version": "1353.100.2",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "external": {
+     "path": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+     "module": null,
+     "extra_attributes": {}
+    },
+    "hash": "7wbehvgf4ohdis6mhlzx6cbgr5cztkcy"
+   }
+  },
+  "ttvevjkhzoi342fmjzezbhopmbcorp4h": {
+   "expat": {
+    "version": "2.2.10",
+    "arch": {
+     "platform": "darwin",
+     "platform_os": "bigsur",
+     "target": "x86_64"
+    },
+    "compiler": {
+     "name": "apple-clang",
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -1470,20 +1630,86 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "hash": "txzrn7rhani7cthbuysfo7nkz4aqfdfv"
+    "hash": "ttvevjkhzoi342fmjzezbhopmbcorp4h"
    }
   },
-  "je6iroctaagwtbgu5oa52syssof7te6g": {
-   "libffi": {
-    "version": "3.3",
+  "dswfyw5nd2px4mzyxbgmc2i2qp322a3a": {
+   "gdbm": {
+    "version": "1.19",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "readline": {
+      "hash": "zo73rakiitjixgtn2rbzjc4krj4xeg7r",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "rl3xahx4u22qof3htpryjde65vzztfwq"
+   }
+  },
+  "zo73rakiitjixgtn2rbzjc4krj4xeg7r": {
+   "readline": {
+    "version": "8.1",
+    "arch": {
+     "platform": "darwin",
+     "platform_os": "bigsur",
+     "target": "x86_64"
+    },
+    "compiler": {
+     "name": "apple-clang",
+     "version": "12.0.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "ncurses": {
+      "hash": "t26veif6bum4r2gwyv5zvoh5d5tvghj3",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "z5vml3lhljagss55hdjpddfzhyi57vx6"
+   }
+  },
+  "nz4enpayfxrva4rqd4mf6u37sqqbc4gg": {
+   "libffi": {
+    "version": "3.3",
+    "arch": {
+     "platform": "darwin",
+     "platform_os": "bigsur",
+     "target": "x86_64"
+    },
+    "compiler": {
+     "name": "apple-clang",
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -1500,20 +1726,20 @@
     "patches": [
      "26f26c6f29a7ce9bf370ad3ab2610f99365b4bdd7b82e7c31df41a3370d685c0"
     ],
-    "hash": "je6iroctaagwtbgu5oa52syssof7te6g"
+    "hash": "nz4enpayfxrva4rqd4mf6u37sqqbc4gg"
    }
   },
-  "lztsiuy2shdwrjrpngbotqibrful4bwi": {
+  "tjlzxuu22pqa2734i66rrabsvcgg6wuc": {
    "sqlite": {
-    "version": "3.31.1",
+    "version": "3.35.3",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -1530,34 +1756,34 @@
     },
     "dependencies": {
      "readline": {
-      "hash": "tkclkgybvpp4knsyh4m6pbz5knvjvv2c",
+      "hash": "zo73rakiitjixgtn2rbzjc4krj4xeg7r",
       "type": [
        "build",
        "link"
       ]
      },
      "zlib": {
-      "hash": "fwg66ugw4m7sfyjxqzpxnxrmxg625xmv",
+      "hash": "5gwknia3b7u2z3jbaadu6tii5cs2754w",
       "type": [
        "build",
        "link"
       ]
      }
     },
-    "hash": "7ehnwr2fiet6ydaoc4fxhvubloyt6uum"
+    "hash": "dpxs46t4whk4arf2sxavool5vwdd3t4x"
    }
   },
-  "gof3f6y7aulhukomt7iq4xunhxr4dlwc": {
+  "6zlqvrvjm5vgqwvyqhothgzynpt4wgdl": {
    "py-h5py": {
     "version": "2.10.0",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -1571,162 +1797,80 @@
     },
     "dependencies": {
      "hdf5": {
-      "hash": "cfrve3bcul52sxm4d6d2jee2h4od32tu",
+      "hash": "jm2g3dtiz7qhxgpmtf27jscgcy2zxzyz",
       "type": [
        "build",
        "link"
       ]
      },
      "openmpi": {
-      "hash": "2r6qaoyra5tirfajb2o7axecaxruwdjx",
+      "hash": "i2vzlffhckwiqh43hreldziibq6a2nh7",
       "type": [
        "build",
        "link"
       ]
      },
-     "py-cached-property": {
-      "hash": "jr4uxyp2wr2sqmwvtlg4xzekx7s7kxxk",
-      "type": [
-       "build",
-       "run"
-      ]
-     },
      "py-cython": {
-      "hash": "luu7sieucu52ur2uy4dxh4p6zwzfeduc",
+      "hash": "nnr7xqtoay2nai3vzihwnvydcenf436s",
       "type": [
        "build"
       ]
      },
      "py-mpi4py": {
-      "hash": "nqt4o7cy5bq2pqdugzyblp6es5cugzh6",
+      "hash": "yaajuub7775otd6sstai4ruexgjjj5zh",
       "type": [
        "build",
        "run"
       ]
      },
      "py-numpy": {
-      "hash": "a5qakphxik6vkoc3k6oolapsown5soqn",
+      "hash": "jhl4p7w6j6jy3bqeshs7vdl25iges4ff",
       "type": [
        "build",
        "run"
       ]
      },
      "py-pkgconfig": {
-      "hash": "oijy3ehfgdcbwmevfsbhhcic6toxf3ha",
+      "hash": "mtq6h22mhfzhkuv6nmxchxcxh7rg3bio",
       "type": [
        "build"
       ]
      },
      "py-setuptools": {
-      "hash": "5yppxpdoyzwh4eqcpdgbjpg23j3xrsuz",
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
       "type": [
        "build"
       ]
      },
      "py-six": {
-      "hash": "jinzswobznuufkqn6bq2m7s53vuqtxqx",
+      "hash": "6wchrrhu7up2uipxhzq7qk7vfk2sfjho",
       "type": [
        "build",
        "run"
       ]
      },
      "python": {
-      "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
       "type": [
        "build",
-       "link",
        "run"
       ]
      }
     },
-    "hash": "4fzhiur7zavdjhxhtxrbmkzkec5jjfxx"
+    "hash": "igagcyxac2q2v6qac2li2c3n6grx2yfb"
    }
   },
-  "jr4uxyp2wr2sqmwvtlg4xzekx7s7kxxk": {
-   "py-cached-property": {
-    "version": "1.5.1",
-    "arch": {
-     "platform": "darwin",
-     "platform_os": "catalina",
-     "target": "x86_64"
-    },
-    "compiler": {
-     "name": "apple-clang",
-     "version": "11.0.0"
-    },
-    "namespace": "builtin",
-    "parameters": {
-     "cflags": [],
-     "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
-     "ldflags": [],
-     "ldlibs": []
-    },
-    "dependencies": {
-     "py-setuptools": {
-      "hash": "5yppxpdoyzwh4eqcpdgbjpg23j3xrsuz",
-      "type": [
-       "build"
-      ]
-     },
-     "python": {
-      "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
-      "type": [
-       "build",
-       "link",
-       "run"
-      ]
-     }
-    },
-    "hash": "2cvjhcgrksycbf7c6oupgbop4jh3b6ha"
-   }
-  },
-  "5yppxpdoyzwh4eqcpdgbjpg23j3xrsuz": {
-   "py-setuptools": {
-    "version": "46.1.3",
-    "arch": {
-     "platform": "darwin",
-     "platform_os": "catalina",
-     "target": "x86_64"
-    },
-    "compiler": {
-     "name": "apple-clang",
-     "version": "11.0.0"
-    },
-    "namespace": "builtin",
-    "parameters": {
-     "cflags": [],
-     "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
-     "ldflags": [],
-     "ldlibs": []
-    },
-    "dependencies": {
-     "python": {
-      "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
-      "type": [
-       "build",
-       "link",
-       "run"
-      ]
-     }
-    },
-    "hash": "2r4foccuywomahgez42fccov2gkfhvpn"
-   }
-  },
-  "luu7sieucu52ur2uy4dxh4p6zwzfeduc": {
+  "nnr7xqtoay2nai3vzihwnvydcenf436s": {
    "py-cython": {
-    "version": "0.29.21",
+    "version": "0.29.22",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -1739,13 +1883,14 @@
     },
     "dependencies": {
      "py-setuptools": {
-      "hash": "5yppxpdoyzwh4eqcpdgbjpg23j3xrsuz",
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
       "type": [
-       "build"
+       "build",
+       "run"
       ]
      },
      "python": {
-      "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
       "type": [
        "build",
        "link",
@@ -1753,20 +1898,53 @@
       ]
      }
     },
-    "hash": "pnlwjminosifqs7hm27njivif244spt5"
+    "hash": "mzo2wogxonbko3iohblzdef3jwvfs2g6"
    }
   },
-  "nqt4o7cy5bq2pqdugzyblp6es5cugzh6": {
+  "bb75eca7u3dhacksofygkhiqtgodhcfp": {
+   "py-setuptools": {
+    "version": "50.3.2",
+    "arch": {
+     "platform": "darwin",
+     "platform_os": "bigsur",
+     "target": "x86_64"
+    },
+    "compiler": {
+     "name": "apple-clang",
+     "version": "12.0.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "python": {
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
+      "type": [
+       "build",
+       "run"
+      ]
+     }
+    },
+    "hash": "cv5au7ss2nfk5pdc2k3eeowwm4frjzsx"
+   }
+  },
+  "yaajuub7775otd6sstai4ruexgjjj5zh": {
    "py-mpi4py": {
     "version": "3.0.3",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -1779,20 +1957,20 @@
     },
     "dependencies": {
      "openmpi": {
-      "hash": "2r6qaoyra5tirfajb2o7axecaxruwdjx",
+      "hash": "i2vzlffhckwiqh43hreldziibq6a2nh7",
       "type": [
        "build",
        "link"
       ]
      },
      "py-setuptools": {
-      "hash": "5yppxpdoyzwh4eqcpdgbjpg23j3xrsuz",
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
       "type": [
        "build"
       ]
      },
      "python": {
-      "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
       "type": [
        "build",
        "link",
@@ -1800,25 +1978,28 @@
       ]
      }
     },
-    "hash": "dieqg44archvnxrj5l3rhxr7m46jdyvp"
+    "hash": "rnropktdk3ntqmzgfhmtpdcycre4eqly"
    }
   },
-  "a5qakphxik6vkoc3k6oolapsown5soqn": {
+  "jhl4p7w6j6jy3bqeshs7vdl25iges4ff": {
    "py-numpy": {
-    "version": "1.19.1",
+    "version": "1.20.2",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
      "blas": true,
      "lapack": true,
+     "patches": [
+      "873745d7b547857fcfec9cae90b09c133b42a4f0c23b6c2d84cf37e2dd816604"
+     ],
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -1826,28 +2007,32 @@
      "ldflags": [],
      "ldlibs": []
     },
+    "patches": [
+     "873745d7b547857fcfec9cae90b09c133b42a4f0c23b6c2d84cf37e2dd816604"
+    ],
     "dependencies": {
      "openblas": {
-      "hash": "gkdwhwee5ga6m26iyurnjlyuz3cqznuq",
+      "hash": "t6khje2wdvuetvnhg55cihaqeqjpchrt",
       "type": [
        "build",
        "link"
       ]
      },
      "py-cython": {
-      "hash": "luu7sieucu52ur2uy4dxh4p6zwzfeduc",
+      "hash": "nnr7xqtoay2nai3vzihwnvydcenf436s",
       "type": [
        "build"
       ]
      },
      "py-setuptools": {
-      "hash": "5yppxpdoyzwh4eqcpdgbjpg23j3xrsuz",
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
       "type": [
-       "build"
+       "build",
+       "run"
       ]
      },
      "python": {
-      "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
       "type": [
        "build",
        "link",
@@ -1855,25 +2040,27 @@
       ]
      }
     },
-    "hash": "6uorcnm6e6ztlt5ltjdz2q6ikgrmczgp"
+    "hash": "t2esfdxpqxc5e3jnvzhv5wnuixypvilv"
    }
   },
-  "gkdwhwee5ga6m26iyurnjlyuz3cqznuq": {
+  "t6khje2wdvuetvnhg55cihaqeqjpchrt": {
    "openblas": {
-    "version": "0.3.10",
+    "version": "0.3.14",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
+     "bignuma": false,
      "consistent_fpcsr": false,
      "ilp64": false,
+     "locking": true,
      "pic": true,
      "shared": true,
      "threads": "none",
@@ -1884,20 +2071,28 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "hash": "gkdwhwee5ga6m26iyurnjlyuz3cqznuq"
+    "dependencies": {
+     "perl": {
+      "hash": "ubpv2yu4phzvlr4ma3fsgej4neyatz6q",
+      "type": [
+       "build"
+      ]
+     }
+    },
+    "hash": "qoifrtfcexlcyz6wdzjpdqydp3i4qtoy"
    }
   },
-  "oijy3ehfgdcbwmevfsbhhcic6toxf3ha": {
+  "mtq6h22mhfzhkuv6nmxchxcxh7rg3bio": {
    "py-pkgconfig": {
     "version": "1.5.1",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -1910,42 +2105,34 @@
     },
     "dependencies": {
      "pkgconf": {
-      "hash": "f74ask64smabwal6ozd5sinwzgxvmgd2",
+      "hash": "sqkatm3p3f65cjwbkcksm6l2fx43s57w",
       "type": [
        "build",
        "run"
       ]
      },
-     "py-nose": {
-      "hash": "uquev7njklpykxjyo5sprsi2wiokuara",
-      "type": [
-       "build",
-       "test"
-      ]
-     },
      "python": {
-      "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
       "type": [
        "build",
-       "link",
        "run"
       ]
      }
     },
-    "hash": "oa7ycqorsywcvenx6bwbwdnrqqsbyaw3"
+    "hash": "hpj7zy5iyxtudd2ppyls6rkbzn77vizj"
    }
   },
-  "uquev7njklpykxjyo5sprsi2wiokuara": {
-   "py-nose": {
-    "version": "1.3.7",
+  "6wchrrhu7up2uipxhzq7qk7vfk2sfjho": {
+   "py-six": {
+    "version": "1.15.0",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -1958,68 +2145,33 @@
     },
     "dependencies": {
      "py-setuptools": {
-      "hash": "5yppxpdoyzwh4eqcpdgbjpg23j3xrsuz",
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
       "type": [
        "build"
       ]
      },
      "python": {
-      "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
       "type": [
        "build",
-       "link",
        "run"
       ]
      }
     },
-    "hash": "inpefekumwutwtc5h6vs3v6nvuobqrbu"
+    "hash": "fwh4f7iergciljimofaidlrodsrlztke"
    }
   },
-  "jinzswobznuufkqn6bq2m7s53vuqtxqx": {
-   "py-six": {
-    "version": "1.14.0",
-    "arch": {
-     "platform": "darwin",
-     "platform_os": "catalina",
-     "target": "x86_64"
-    },
-    "compiler": {
-     "name": "apple-clang",
-     "version": "11.0.0"
-    },
-    "namespace": "builtin",
-    "parameters": {
-     "cflags": [],
-     "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
-     "ldflags": [],
-     "ldlibs": []
-    },
-    "dependencies": {
-     "python": {
-      "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
-      "type": [
-       "build",
-       "link",
-       "run"
-      ]
-     }
-    },
-    "hash": "u2emcyhsdpfwc3jrxsmz67idbeevscki"
-   }
-  },
-  "2wbe3zzxknajci6yibkelczacll7pn6l": {
+  "kvsppc7f3oux6x6yf7hw5f3zxnl7dric": {
    "py-lxml": {
-    "version": "4.4.1",
+    "version": "4.6.1",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -2035,48 +2187,49 @@
     },
     "dependencies": {
      "libxml2": {
-      "hash": "c4dewv26cthg64zrgvtvwvorwus7mgdt",
-      "type": [
-       "build",
-       "run"
-      ]
-     },
-     "libxslt": {
-      "hash": "pcmvywgcdr226wu6ypcytnbm4uqioioy",
-      "type": [
-       "build",
-       "run"
-      ]
-     },
-     "py-setuptools": {
-      "hash": "5yppxpdoyzwh4eqcpdgbjpg23j3xrsuz",
-      "type": [
-       "build"
-      ]
-     },
-     "python": {
-      "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
+      "hash": "66voqo4bevuwwcotxqzmtdlambxav4ml",
       "type": [
        "build",
        "link",
        "run"
       ]
+     },
+     "libxslt": {
+      "hash": "ddibvt4nqiklp6ggiyfcwnlruffwmb3r",
+      "type": [
+       "build",
+       "link",
+       "run"
+      ]
+     },
+     "py-setuptools": {
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
+      "type": [
+       "build",
+       "run"
+      ]
      }
     },
-    "hash": "lghbcpzkuirjawnolg6npjcabpfzxv66"
+    "hash": "2uxqnr7u7tnk2n3imndifvt4hcn5arvt"
    }
   },
-  "pcmvywgcdr226wu6ypcytnbm4uqioioy": {
+  "ddibvt4nqiklp6ggiyfcwnlruffwmb3r": {
    "libxslt": {
     "version": "1.1.33",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -2091,61 +2244,61 @@
     },
     "dependencies": {
      "libgcrypt": {
-      "hash": "fpnlja5u5fvsufxkyylyod3sxrfcu3f2",
+      "hash": "w772djrfwohuxu2wt6jivzu6akfu6n4s",
       "type": [
        "build",
        "link"
       ]
      },
      "libiconv": {
-      "hash": "dacit3kuxkch2ayvo6omykosyeiccc5f",
+      "hash": "tj3twqmzxl7qnvoft4wq65e7sbdicxb2",
       "type": [
        "build",
        "link"
       ]
      },
      "libxml2": {
-      "hash": "c4dewv26cthg64zrgvtvwvorwus7mgdt",
+      "hash": "66voqo4bevuwwcotxqzmtdlambxav4ml",
       "type": [
        "build",
        "link"
       ]
      },
      "pkgconf": {
-      "hash": "f74ask64smabwal6ozd5sinwzgxvmgd2",
+      "hash": "sqkatm3p3f65cjwbkcksm6l2fx43s57w",
       "type": [
        "build"
       ]
      },
      "xz": {
-      "hash": "27pku55fs4pzco3lrzufqkwtdqd3vxv5",
+      "hash": "nlp35zkiyluolaxvrk5gj2of6fhawaln",
       "type": [
        "build",
        "link"
       ]
      },
      "zlib": {
-      "hash": "fwg66ugw4m7sfyjxqzpxnxrmxg625xmv",
+      "hash": "5gwknia3b7u2z3jbaadu6tii5cs2754w",
       "type": [
        "build",
        "link"
       ]
      }
     },
-    "hash": "ivz2musxzwveue7hthvi453mwurjbn6k"
+    "hash": "ckp5qpxoyfamczpl7wd4p224bnkhlvpt"
    }
   },
-  "fpnlja5u5fvsufxkyylyod3sxrfcu3f2": {
+  "w772djrfwohuxu2wt6jivzu6akfu6n4s": {
    "libgcrypt": {
-    "version": "1.8.5",
+    "version": "1.9.1",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -2158,27 +2311,27 @@
     },
     "dependencies": {
      "libgpg-error": {
-      "hash": "e5zdwz76nzwirxhdcpaos5np5tw5fai2",
+      "hash": "7rfcj4s3f6pfbckk45h756xrbvp26qec",
       "type": [
        "build",
        "link"
       ]
      }
     },
-    "hash": "rt7gmpiwog3lvmwjic6hlwzfafroltuo"
+    "hash": "qn72brdv2vbi4ig6cwacfodphyful5vj"
    }
   },
-  "e5zdwz76nzwirxhdcpaos5np5tw5fai2": {
+  "7rfcj4s3f6pfbckk45h756xrbvp26qec": {
    "libgpg-error": {
     "version": "1.37",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -2191,26 +2344,26 @@
     },
     "dependencies": {
      "gawk": {
-      "hash": "4q2gvuejhdlj7yc2b7mx3snzd4o65xml",
+      "hash": "evs5o7ajno5nepkfxcuvyovegbadcgqb",
       "type": [
        "build"
       ]
      }
     },
-    "hash": "zcaqjhuoilzsq6qep4t6j5wkpx23zkld"
+    "hash": "7lyhf63r7qq3adkpnqyhrjy665rgaelw"
    }
   },
-  "4q2gvuejhdlj7yc2b7mx3snzd4o65xml": {
+  "evs5o7ajno5nepkfxcuvyovegbadcgqb": {
    "gawk": {
-    "version": "5.0.1",
+    "version": "5.1.0",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -2223,55 +2376,55 @@
     },
     "dependencies": {
      "gettext": {
-      "hash": "xfhvfd6ko2gg3y7vuj3y2yjyh52iucg3",
+      "hash": "vnpe2mqonajeohirlahow3zxwuh2me3r",
       "type": [
        "build",
        "link"
       ]
      },
      "gmp": {
-      "hash": "7p5lchh42nffuto2ii4dnkb2td3333ya",
+      "hash": "bwskhr52q3y3es56u5ts7tfbhfahiozy",
       "type": [
        "build",
        "link"
       ]
      },
      "libsigsegv": {
-      "hash": "2lbh2aeyuwcnztqryrou42vfhgl6gncd",
+      "hash": "vismycbww4it736zfs4bn6u5b5dmcmgf",
       "type": [
        "build",
        "link"
       ]
      },
      "mpfr": {
-      "hash": "5slku42wwdqnwda5vqryu5tyiuwmpltq",
+      "hash": "lahgedgsmol2nhdqbwis43dgiuzzd33b",
       "type": [
        "build",
        "link"
       ]
      },
      "readline": {
-      "hash": "tkclkgybvpp4knsyh4m6pbz5knvjvv2c",
+      "hash": "zo73rakiitjixgtn2rbzjc4krj4xeg7r",
       "type": [
        "build",
        "link"
       ]
      }
     },
-    "hash": "vof4qpgv7wxs5kvyps2d45ouhn7c77dh"
+    "hash": "goz63xofqver4svpt4bd6nbkjujxpvau"
    }
   },
-  "7p5lchh42nffuto2ii4dnkb2td3333ya": {
+  "bwskhr52q3y3es56u5ts7tfbhfahiozy": {
    "gmp": {
-    "version": "6.1.2",
+    "version": "6.2.1",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -2284,50 +2437,47 @@
     },
     "dependencies": {
      "autoconf": {
-      "hash": "pr2746wryh6jk3nl525crmzchlnsflvz",
+      "hash": "owtrjsww6h4q2nyep22qpk3w6of3u2dy",
       "type": [
        "build"
       ]
      },
      "automake": {
-      "hash": "3e6ms6b2e6dgwflryv3l3ek6se577rw6",
+      "hash": "e7krqloakaqgfzbuurahlsgwxlo62ct6",
       "type": [
        "build"
       ]
      },
      "libtool": {
-      "hash": "gggptc2ssazogds4gc3jidkwr4mdkoac",
+      "hash": "vlwurozs2h2i54f6eunapkglv4os6pmb",
       "type": [
        "build"
       ]
      },
      "m4": {
-      "hash": "wmai4xloju5f3r2v4bwwns7tw7aihbbk",
+      "hash": "4jvwgubtitzdpncwpiskocwkkvwb4net",
       "type": [
        "build"
       ]
      }
     },
-    "hash": "vcr47ebpmdhuonsepm474htvtgaduxly"
+    "hash": "ycz75vpdf2vrww35qv6emrffq2eogpll"
    }
   },
-  "5slku42wwdqnwda5vqryu5tyiuwmpltq": {
-   "mpfr": {
-    "version": "4.0.2",
+  "vismycbww4it736zfs4bn6u5b5dmcmgf": {
+   "libsigsegv": {
+    "version": "2.12",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
-     "patches": [
-      "3f80b836948aa96f8d1cb9cc7f3f55973f19285482a96f9a4e1623d460bcccf0"
-     ],
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -2335,62 +2485,89 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "patches": [
-     "3f80b836948aa96f8d1cb9cc7f3f55973f19285482a96f9a4e1623d460bcccf0"
-    ],
+    "hash": "vismycbww4it736zfs4bn6u5b5dmcmgf"
+   }
+  },
+  "lahgedgsmol2nhdqbwis43dgiuzzd33b": {
+   "mpfr": {
+    "version": "4.1.0",
+    "arch": {
+     "platform": "darwin",
+     "platform_os": "bigsur",
+     "target": "x86_64"
+    },
+    "compiler": {
+     "name": "apple-clang",
+     "version": "12.0.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
     "dependencies": {
      "autoconf": {
-      "hash": "pr2746wryh6jk3nl525crmzchlnsflvz",
+      "hash": "owtrjsww6h4q2nyep22qpk3w6of3u2dy",
       "type": [
        "build"
       ]
      },
      "autoconf-archive": {
-      "hash": "f5p7i5d3atkkhawouukvgqn6dkevhxmf",
+      "hash": "lwke7nwbsbrreb3iqsqtyin53hovqki7",
       "type": [
        "build"
       ]
      },
      "automake": {
-      "hash": "3e6ms6b2e6dgwflryv3l3ek6se577rw6",
+      "hash": "e7krqloakaqgfzbuurahlsgwxlo62ct6",
       "type": [
        "build"
       ]
      },
      "gmp": {
-      "hash": "7p5lchh42nffuto2ii4dnkb2td3333ya",
+      "hash": "bwskhr52q3y3es56u5ts7tfbhfahiozy",
       "type": [
        "build",
        "link"
       ]
      },
      "libtool": {
-      "hash": "gggptc2ssazogds4gc3jidkwr4mdkoac",
+      "hash": "vlwurozs2h2i54f6eunapkglv4os6pmb",
       "type": [
        "build"
       ]
      },
      "m4": {
-      "hash": "wmai4xloju5f3r2v4bwwns7tw7aihbbk",
+      "hash": "4jvwgubtitzdpncwpiskocwkkvwb4net",
+      "type": [
+       "build"
+      ]
+     },
+     "texinfo": {
+      "hash": "a5pprcqsfrwfiwvwerjvlilyaag62tbu",
       "type": [
        "build"
       ]
      }
     },
-    "hash": "7etj52fx2yp7a2aohixh3dadgdwalzfh"
+    "hash": "vflswqwfc2bvlg2dcp7ioofo2t47xzry"
    }
   },
-  "f5p7i5d3atkkhawouukvgqn6dkevhxmf": {
+  "lwke7nwbsbrreb3iqsqtyin53hovqki7": {
    "autoconf-archive": {
     "version": "2019.01.06",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -2401,25 +2578,26 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "hash": "f5p7i5d3atkkhawouukvgqn6dkevhxmf"
+    "hash": "lwke7nwbsbrreb3iqsqtyin53hovqki7"
    }
   },
-  "asm5376wa7neli7ihlqqwqb4eqizqvrs": {
+  "glmcrhujsadl42tfekd724f7jopnfis4": {
    "py-matplotlib": {
-    "version": "3.3.0",
+    "version": "3.4.1",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
      "animation": false,
      "backend": "macosx",
+     "fonts": false,
      "image": true,
      "latex": false,
      "movies": false,
@@ -2432,76 +2610,82 @@
     },
     "dependencies": {
      "freetype": {
-      "hash": "5vvubsmwivboolr32sxktzmboh7gzfnq",
+      "hash": "ijr3s2zubgxuu6vlqjkfuw3catmkovg5",
       "type": [
        "build",
        "link"
       ]
      },
      "libpng": {
-      "hash": "sbhspcdt76eon6boqmffrjpzk4oqaw5m",
+      "hash": "z3hgnlfqgqol6mdh55yaaxb2h435szkg",
       "type": [
        "build",
        "link"
       ]
      },
      "pkgconf": {
-      "hash": "f74ask64smabwal6ozd5sinwzgxvmgd2",
+      "hash": "sqkatm3p3f65cjwbkcksm6l2fx43s57w",
+      "type": [
+       "build"
+      ]
+     },
+     "py-certifi": {
+      "hash": "vij4s7cqmjxb6mpgdp7caknn7da7jhsa",
       "type": [
        "build"
       ]
      },
      "py-cycler": {
-      "hash": "u7ptq4l2v2fy7bzdbyxvr44mskilpuwm",
+      "hash": "d5sz6o7npdazh7tnajqot2vhn6tj64ln",
       "type": [
        "build",
        "run"
       ]
      },
      "py-kiwisolver": {
-      "hash": "4nsobhczcdt2767yp6ngahfmndrobs35",
+      "hash": "bjeggvghe2osoneejekmyojwwsaoncwn",
       "type": [
        "build",
        "run"
       ]
      },
      "py-numpy": {
-      "hash": "a5qakphxik6vkoc3k6oolapsown5soqn",
+      "hash": "jhl4p7w6j6jy3bqeshs7vdl25iges4ff",
       "type": [
        "build",
        "run"
       ]
      },
      "py-pillow": {
-      "hash": "uqkai6zydmyectehmjz4gitcmzvfxyf2",
+      "hash": "prpnbnaisbmrppbr4ocpwfpq7kgni5ls",
       "type": [
        "build",
        "run"
       ]
      },
      "py-pyparsing": {
-      "hash": "tda5ldxvplegvp3radtwmhlrm5a5cz7b",
+      "hash": "zptlystuip7vdygvpymlqjuhf4kb3p52",
       "type": [
        "build",
        "run"
       ]
      },
      "py-python-dateutil": {
-      "hash": "sfoozer2tmx2jga3fif7s2puvpe4v4xg",
+      "hash": "bazyp4gf2odq6qvz7mmajje6redb325j",
       "type": [
        "build",
        "run"
       ]
      },
      "py-setuptools": {
-      "hash": "5yppxpdoyzwh4eqcpdgbjpg23j3xrsuz",
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
       "type": [
        "build",
        "run"
       ]
      },
      "python": {
-      "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
       "type": [
        "build",
        "link",
@@ -2509,27 +2693,27 @@
       ]
      },
      "qhull": {
-      "hash": "bi2tranlz5rxeb66dujklu3z2omgybak",
+      "hash": "4nvxp5nqsip2a7s6kxiz64n3hpi5hao7",
       "type": [
        "build",
        "link"
       ]
      }
     },
-    "hash": "v4n2wfkxl6jcziu5n7cnx55674qqqbxi"
+    "hash": "zlo4yu5376qxwquolcdiilcoejlz7sg2"
    }
   },
-  "5vvubsmwivboolr32sxktzmboh7gzfnq": {
+  "ijr3s2zubgxuu6vlqjkfuw3catmkovg5": {
    "freetype": {
-    "version": "2.10.1",
+    "version": "2.10.4",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -2542,40 +2726,40 @@
     },
     "dependencies": {
      "bzip2": {
-      "hash": "5bo2xf6fhm42lzpigdz4hw77b53wtvci",
+      "hash": "dev722gmpzf7wr5mokueb5lq5v4frla7",
       "type": [
        "build",
        "link"
       ]
      },
      "libpng": {
-      "hash": "sbhspcdt76eon6boqmffrjpzk4oqaw5m",
+      "hash": "z3hgnlfqgqol6mdh55yaaxb2h435szkg",
       "type": [
        "build",
        "link"
       ]
      },
      "pkgconf": {
-      "hash": "f74ask64smabwal6ozd5sinwzgxvmgd2",
+      "hash": "sqkatm3p3f65cjwbkcksm6l2fx43s57w",
       "type": [
        "build"
       ]
      }
     },
-    "hash": "66d7kexexu2n2vbcmh5wmnhslzosb4hs"
+    "hash": "msitxdwobfgaevqs5frslm656a2ilgel"
    }
   },
-  "sbhspcdt76eon6boqmffrjpzk4oqaw5m": {
+  "z3hgnlfqgqol6mdh55yaaxb2h435szkg": {
    "libpng": {
     "version": "1.6.37",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -2588,27 +2772,27 @@
     },
     "dependencies": {
      "zlib": {
-      "hash": "fwg66ugw4m7sfyjxqzpxnxrmxg625xmv",
+      "hash": "5gwknia3b7u2z3jbaadu6tii5cs2754w",
       "type": [
        "build",
        "link"
       ]
      }
     },
-    "hash": "sbhspcdt76eon6boqmffrjpzk4oqaw5m"
+    "hash": "z3hgnlfqgqol6mdh55yaaxb2h435szkg"
    }
   },
-  "u7ptq4l2v2fy7bzdbyxvr44mskilpuwm": {
-   "py-cycler": {
-    "version": "0.10.0",
+  "vij4s7cqmjxb6mpgdp7caknn7da7jhsa": {
+   "py-certifi": {
+    "version": "2020.6.20",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -2621,41 +2805,79 @@
     },
     "dependencies": {
      "py-setuptools": {
-      "hash": "5yppxpdoyzwh4eqcpdgbjpg23j3xrsuz",
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
+      "type": [
+       "build",
+       "run"
+      ]
+     }
+    },
+    "hash": "dnijjwxrfk6cfh5e3axbsjcl4gr6mwyd"
+   }
+  },
+  "d5sz6o7npdazh7tnajqot2vhn6tj64ln": {
+   "py-cycler": {
+    "version": "0.10.0",
+    "arch": {
+     "platform": "darwin",
+     "platform_os": "bigsur",
+     "target": "x86_64"
+    },
+    "compiler": {
+     "name": "apple-clang",
+     "version": "12.0.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "py-setuptools": {
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
       "type": [
        "build"
       ]
      },
      "py-six": {
-      "hash": "jinzswobznuufkqn6bq2m7s53vuqtxqx",
+      "hash": "6wchrrhu7up2uipxhzq7qk7vfk2sfjho",
       "type": [
        "build",
        "run"
       ]
      },
      "python": {
-      "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
       "type": [
        "build",
-       "link",
        "run"
       ]
      }
     },
-    "hash": "esdou4pysmine6e5u4m5od4dlxjyow6n"
+    "hash": "nmrolokevphun7e4gowdnbhwxcjt5pm4"
    }
   },
-  "4nsobhczcdt2767yp6ngahfmndrobs35": {
+  "bjeggvghe2osoneejekmyojwwsaoncwn": {
    "py-kiwisolver": {
     "version": "1.1.0",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -2668,43 +2890,46 @@
     },
     "dependencies": {
      "py-setuptools": {
-      "hash": "5yppxpdoyzwh4eqcpdgbjpg23j3xrsuz",
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
       "type": [
        "build"
       ]
      },
      "python": {
-      "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
       "type": [
        "build",
-       "link",
        "run"
       ]
      }
     },
-    "hash": "pg4jjqbyvjddsdcjdyrxkre34vzni46z"
+    "hash": "d2cuhtemozvmkpswtz3cx36glzuewdzo"
    }
   },
-  "uqkai6zydmyectehmjz4gitcmzvfxyf2": {
+  "prpnbnaisbmrppbr4ocpwfpq7kgni5ls": {
    "py-pillow": {
-    "version": "7.0.0",
+    "version": "8.0.0",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
      "freetype": false,
+     "imagequant": false,
+     "jpeg": true,
      "jpeg2000": false,
      "lcms": false,
      "tiff": false,
      "webp": false,
      "webpmux": false,
+     "xcb": false,
+     "zlib": true,
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -2714,48 +2939,47 @@
     },
     "dependencies": {
      "libjpeg-turbo": {
-      "hash": "6t3oluwlvlpzbakvk252wyfuscaofoix",
+      "hash": "5ycq7reyln3ptbcycvu4fjgeaypmo3ha",
       "type": [
        "build",
        "link"
       ]
      },
      "py-setuptools": {
-      "hash": "5yppxpdoyzwh4eqcpdgbjpg23j3xrsuz",
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
       "type": [
        "build"
       ]
      },
      "python": {
-      "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
       "type": [
        "build",
-       "link",
        "run"
       ]
      },
      "zlib": {
-      "hash": "fwg66ugw4m7sfyjxqzpxnxrmxg625xmv",
+      "hash": "5gwknia3b7u2z3jbaadu6tii5cs2754w",
       "type": [
        "build",
        "link"
       ]
      }
     },
-    "hash": "4krzedziusbro7yieg2rmbwjypxwbfil"
+    "hash": "2oreewyd7xuxaqkydw5pamlm6nibqhq4"
    }
   },
-  "6t3oluwlvlpzbakvk252wyfuscaofoix": {
+  "5ycq7reyln3ptbcycvu4fjgeaypmo3ha": {
    "libjpeg-turbo": {
-    "version": "2.0.4",
+    "version": "2.0.6",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -2768,32 +2992,32 @@
     },
     "dependencies": {
      "cmake": {
-      "hash": "skqkkomqjvsnfgyvk65oh4yyerxh63df",
+      "hash": "4dpdbvkurfn5ue6sd4nw2e5xgm625tvu",
       "type": [
        "build"
       ]
      },
      "nasm": {
-      "hash": "mpvgfvzfbe6hczks6l6iqmachgtvpbm7",
+      "hash": "3dnjmpvajg7su74a4hsoibz4lymfcwp4",
       "type": [
        "build"
       ]
      }
     },
-    "hash": "reio4xpgcgbmqvxvhwmm2yrcjmmsbnfs"
+    "hash": "a42a3py5w4w27szrixi66caxwpvybhho"
    }
   },
-  "mpvgfvzfbe6hczks6l6iqmachgtvpbm7": {
+  "3dnjmpvajg7su74a4hsoibz4lymfcwp4": {
    "nasm": {
-    "version": "2.14.02",
+    "version": "2.15.05",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -2804,20 +3028,20 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "hash": "mpvgfvzfbe6hczks6l6iqmachgtvpbm7"
+    "hash": "3dnjmpvajg7su74a4hsoibz4lymfcwp4"
    }
   },
-  "tda5ldxvplegvp3radtwmhlrm5a5cz7b": {
+  "zptlystuip7vdygvpymlqjuhf4kb3p52": {
    "py-pyparsing": {
-    "version": "2.4.2",
+    "version": "2.4.7",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -2830,34 +3054,33 @@
     },
     "dependencies": {
      "py-setuptools": {
-      "hash": "5yppxpdoyzwh4eqcpdgbjpg23j3xrsuz",
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
       "type": [
        "build"
       ]
      },
      "python": {
-      "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
       "type": [
        "build",
-       "link",
        "run"
       ]
      }
     },
-    "hash": "hffcdarp377acna364si4mkriawwv3js"
+    "hash": "x6dvyenjzt4n2xpgm2jlsfh62as5fup2"
    }
   },
-  "sfoozer2tmx2jga3fif7s2puvpe4v4xg": {
+  "bazyp4gf2odq6qvz7mmajje6redb325j": {
    "py-python-dateutil": {
-    "version": "2.8.0",
+    "version": "2.8.1",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -2870,51 +3093,50 @@
     },
     "dependencies": {
      "py-setuptools": {
-      "hash": "5yppxpdoyzwh4eqcpdgbjpg23j3xrsuz",
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
       "type": [
        "build"
       ]
      },
      "py-setuptools-scm": {
-      "hash": "t4pcs3muzlkf3op54g5i2w7m3s5l7ko6",
+      "hash": "h74d5lduerdzzr7c23il3krgdlk3ec7e",
       "type": [
        "build"
       ]
      },
      "py-six": {
-      "hash": "jinzswobznuufkqn6bq2m7s53vuqtxqx",
+      "hash": "6wchrrhu7up2uipxhzq7qk7vfk2sfjho",
       "type": [
        "build",
        "run"
       ]
      },
      "python": {
-      "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
       "type": [
        "build",
-       "link",
        "run"
       ]
      }
     },
-    "hash": "kcekvceteqsmxlbwmgb2aa6rfm3venvx"
+    "hash": "jop623mnqymje3ldceiia6dbvz24gz7o"
    }
   },
-  "t4pcs3muzlkf3op54g5i2w7m3s5l7ko6": {
+  "h74d5lduerdzzr7c23il3krgdlk3ec7e": {
    "py-setuptools-scm": {
     "version": "4.1.2",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
-     "toml": false,
+     "toml": true,
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -2924,39 +3146,85 @@
     },
     "dependencies": {
      "py-setuptools": {
-      "hash": "5yppxpdoyzwh4eqcpdgbjpg23j3xrsuz",
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
+      "type": [
+       "build",
+       "run"
+      ]
+     },
+     "py-toml": {
+      "hash": "w3div6j2zvxe75bnwnwe2kge3a4azrkb",
       "type": [
        "build",
        "run"
       ]
      },
      "python": {
-      "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
       "type": [
        "build",
-       "link",
        "run"
       ]
      }
     },
-    "hash": "dtzvaijq333vh6ibcznoililyjxegxmr"
+    "hash": "z4rlb3knv43njvss7yvatqookfzteeas"
    }
   },
-  "bi2tranlz5rxeb66dujklu3z2omgybak": {
-   "qhull": {
-    "version": "2020.1",
+  "w3div6j2zvxe75bnwnwe2kge3a4azrkb": {
+   "py-toml": {
+    "version": "0.10.2",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "py-setuptools": {
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
+      "type": [
+       "build",
+       "run"
+      ]
+     }
+    },
+    "hash": "pqlq4xf5kxshy64ygvqskuzzeizp3453"
+   }
+  },
+  "4nvxp5nqsip2a7s6kxiz64n3hpi5hao7": {
+   "qhull": {
+    "version": "2020.1",
+    "arch": {
+     "platform": "darwin",
+     "platform_os": "bigsur",
+     "target": "x86_64"
+    },
+    "compiler": {
+     "name": "apple-clang",
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
      "build_type": "RelWithDebInfo",
+     "ipo": false,
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -2966,35 +3234,379 @@
     },
     "dependencies": {
      "cmake": {
-      "hash": "skqkkomqjvsnfgyvk65oh4yyerxh63df",
+      "hash": "4dpdbvkurfn5ue6sd4nw2e5xgm625tvu",
       "type": [
        "build"
       ]
      }
     },
-    "hash": "vz3xkl6cj32ez3zuwj3ic6pmmhqmuycw"
+    "hash": "ymyu6tem6z433l44pikmmymjjm76cqkv"
    }
   },
-  "ak43a73uqrpsoflaivzsbrqvjey2ghaf": {
-   "qt": {
-    "version": "4.8.7",
+  "g3j76dexavq3r53big5oge56de5pc6zi": {
+   "py-pandas": {
+    "version": "1.2.3",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "py-bottleneck": {
+      "hash": "3d25cl4tz7k62fy64lxgmmnhmage3wow",
+      "type": [
+       "build",
+       "run"
+      ]
+     },
+     "py-cython": {
+      "hash": "nnr7xqtoay2nai3vzihwnvydcenf436s",
+      "type": [
+       "build"
+      ]
+     },
+     "py-numexpr": {
+      "hash": "a2w2hsrn3uiydrxyk6fdw6qrdrmgkoxe",
+      "type": [
+       "build",
+       "run"
+      ]
+     },
+     "py-numpy": {
+      "hash": "jhl4p7w6j6jy3bqeshs7vdl25iges4ff",
+      "type": [
+       "build",
+       "run"
+      ]
+     },
+     "py-python-dateutil": {
+      "hash": "bazyp4gf2odq6qvz7mmajje6redb325j",
+      "type": [
+       "build",
+       "run"
+      ]
+     },
+     "py-pytz": {
+      "hash": "gxmm2oc35ssu3tyovug3tpwqn33enw6d",
+      "type": [
+       "build",
+       "run"
+      ]
+     },
+     "py-setuptools": {
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
+      "type": [
+       "build",
+       "run"
+      ]
+     }
+    },
+    "hash": "jhiraqiv5alar2xe4swff2fg5lnjy7wx"
+   }
+  },
+  "3d25cl4tz7k62fy64lxgmmnhmage3wow": {
+   "py-bottleneck": {
+    "version": "1.2.1",
+    "arch": {
+     "platform": "darwin",
+     "platform_os": "bigsur",
+     "target": "x86_64"
+    },
+    "compiler": {
+     "name": "apple-clang",
+     "version": "12.0.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "py-numpy": {
+      "hash": "jhl4p7w6j6jy3bqeshs7vdl25iges4ff",
+      "type": [
+       "build",
+       "run"
+      ]
+     },
+     "py-setuptools": {
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
+      "type": [
+       "build",
+       "run"
+      ]
+     }
+    },
+    "hash": "y5vtih25gw56h3zgbswgzc7ozgjezx65"
+   }
+  },
+  "a2w2hsrn3uiydrxyk6fdw6qrdrmgkoxe": {
+   "py-numexpr": {
+    "version": "2.7.2",
+    "arch": {
+     "platform": "darwin",
+     "platform_os": "bigsur",
+     "target": "x86_64"
+    },
+    "compiler": {
+     "name": "apple-clang",
+     "version": "12.0.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "py-numpy": {
+      "hash": "jhl4p7w6j6jy3bqeshs7vdl25iges4ff",
+      "type": [
+       "build",
+       "run"
+      ]
+     },
+     "py-setuptools": {
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
+      "type": [
+       "build",
+       "run"
+      ]
+     }
+    },
+    "hash": "blwoqrw5vs3mcbqp2hui7yxna666xap7"
+   }
+  },
+  "gxmm2oc35ssu3tyovug3tpwqn33enw6d": {
+   "py-pytz": {
+    "version": "2020.1",
+    "arch": {
+     "platform": "darwin",
+     "platform_os": "bigsur",
+     "target": "x86_64"
+    },
+    "compiler": {
+     "name": "apple-clang",
+     "version": "12.0.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "py-setuptools": {
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
+      "type": [
+       "build",
+       "run"
+      ]
+     }
+    },
+    "hash": "bor2e4d6akxcpxhdye362fb5hbbhnxgw"
+   }
+  },
+  "b5f5ep7lfvpve74jzuml7wvtt5c5rkc2": {
+   "py-pint": {
+    "version": "0.11",
+    "arch": {
+     "platform": "darwin",
+     "platform_os": "bigsur",
+     "target": "x86_64"
+    },
+    "compiler": {
+     "name": "apple-clang",
+     "version": "12.0.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "py-setuptools": {
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
+      "type": [
+       "build"
+      ]
+     },
+     "py-setuptools-scm": {
+      "hash": "h74d5lduerdzzr7c23il3krgdlk3ec7e",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
+      "type": [
+       "build",
+       "run"
+      ]
+     }
+    },
+    "hash": "2zipkfzvt3xewc6pzbsnp5yeph5amgte"
+   }
+  },
+  "e5sxwf6l34uo4mnszqdzrlqem6ttmwcp": {
+   "py-psutil": {
+    "version": "5.7.2",
+    "arch": {
+     "platform": "darwin",
+     "platform_os": "bigsur",
+     "target": "x86_64"
+    },
+    "compiler": {
+     "name": "apple-clang",
+     "version": "12.0.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "py-setuptools": {
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
+      "type": [
+       "build",
+       "run"
+      ]
+     }
+    },
+    "hash": "zevfpa5vs4t4teidkzemfoppk6q57hhw"
+   }
+  },
+  "cst5cdcav3x7jsj3dgu7i7q32llqish3": {
+   "py-tqdm": {
+    "version": "4.59.0",
+    "arch": {
+     "platform": "darwin",
+     "platform_os": "bigsur",
+     "target": "x86_64"
+    },
+    "compiler": {
+     "name": "apple-clang",
+     "version": "12.0.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "notebook": false,
+     "telegram": false,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "py-setuptools": {
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
+      "type": [
+       "build",
+       "run"
+      ]
+     },
+     "py-setuptools-scm": {
+      "hash": "h74d5lduerdzzr7c23il3krgdlk3ec7e",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
+      "type": [
+       "build",
+       "run"
+      ]
+     }
+    },
+    "hash": "v5rfahcwyd3gfyr5ctgsza3ukh4z3ouf"
+   }
+  },
+  "3zitfcrw2a53b7ndzsdsjo5ozavt5pwv": {
+   "qt": {
+    "version": "4.8.7",
+    "arch": {
+     "platform": "darwin",
+     "platform_os": "bigsur",
+     "target": "x86_64"
+    },
+    "compiler": {
+     "name": "apple-clang",
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
      "dbus": false,
      "debug": false,
+     "doc": false,
      "examples": false,
      "framework": false,
-     "freetype": "none",
      "gtk": false,
+     "gui": true,
      "opengl": false,
      "patches": [
       "03f9893882c63a9a9617d9ecab9caf80661c96df13f596a9b24fc4579490144a",
@@ -3020,96 +3632,103 @@
      "a4f37427b34d88df6a6adc16e1e6c805087d4f3a7c658e1797450b0912fcbf5d"
     ],
     "dependencies": {
+     "freetype": {
+      "hash": "ijr3s2zubgxuu6vlqjkfuw3catmkovg5",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
      "glib": {
-      "hash": "cqgahn6swy2skugyfncptsez4wzvhky6",
+      "hash": "vg7szoi7q5kvbxw7e3wrezpmfpubuhah",
       "type": [
        "build",
        "link"
       ]
      },
      "icu4c": {
-      "hash": "i4hog73o7zbdjl2h75pugxiajqcxetlr",
+      "hash": "wepfmxcjfn7at4tuekmbmxr2kg7seouu",
       "type": [
        "build",
        "link"
       ]
      },
      "inputproto": {
-      "hash": "krr3wctoukuoelrtrf6kr4jwce2kqkh4",
+      "hash": "l7zomt73kwkavmqdm5nnih3gmcl6nr4n",
       "type": [
        "build",
        "link"
       ]
      },
      "libjpeg-turbo": {
-      "hash": "6t3oluwlvlpzbakvk252wyfuscaofoix",
+      "hash": "5ycq7reyln3ptbcycvu4fjgeaypmo3ha",
       "type": [
        "build",
        "link"
       ]
      },
      "libmng": {
-      "hash": "w6eu3e5kwtsnoezwzmdqwtl3onlacdgf",
+      "hash": "xn7cnndoq4v5v2xyk3pe26hjj4lxdy23",
       "type": [
        "build",
        "link"
       ]
      },
      "libpng": {
-      "hash": "sbhspcdt76eon6boqmffrjpzk4oqaw5m",
+      "hash": "z3hgnlfqgqol6mdh55yaaxb2h435szkg",
       "type": [
        "build",
        "link"
       ]
      },
      "libtiff": {
-      "hash": "674h4qjiirwtffk7aj365rc5rq2w7ud2",
+      "hash": "gsx5fa2yxvlfeo6o2cs4b4n4pscw4c2q",
       "type": [
        "build",
        "link"
       ]
      },
      "libxml2": {
-      "hash": "c4dewv26cthg64zrgvtvwvorwus7mgdt",
+      "hash": "66voqo4bevuwwcotxqzmtdlambxav4ml",
       "type": [
        "build",
        "link"
       ]
      },
      "pkgconf": {
-      "hash": "f74ask64smabwal6ozd5sinwzgxvmgd2",
+      "hash": "sqkatm3p3f65cjwbkcksm6l2fx43s57w",
       "type": [
        "build"
       ]
      },
      "zlib": {
-      "hash": "fwg66ugw4m7sfyjxqzpxnxrmxg625xmv",
+      "hash": "5gwknia3b7u2z3jbaadu6tii5cs2754w",
       "type": [
        "build",
        "link"
       ]
      }
     },
-    "hash": "fiuuswniud47znolgngy57e6b7b3w6hw"
+    "hash": "vl245huzihd376umixhno3ahym3ib26j"
    }
   },
-  "cqgahn6swy2skugyfncptsez4wzvhky6": {
+  "vg7szoi7q5kvbxw7e3wrezpmfpubuhah": {
    "glib": {
-    "version": "2.64.3",
+    "version": "2.66.8",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
      "libmount": false,
      "patches": [
-      "63e5a3efbdaf67cfb9707a20fd6e21e8826d1c785b20c6ec326f6d2b116950fc"
+      "b3fd45063a19c871048aa1f28692293ab8971a871bdcbe65f06f17fdd79db9e2"
      ],
      "tracing": [
       "none"
@@ -3122,96 +3741,96 @@
      "ldlibs": []
     },
     "patches": [
-     "63e5a3efbdaf67cfb9707a20fd6e21e8826d1c785b20c6ec326f6d2b116950fc"
+     "b3fd45063a19c871048aa1f28692293ab8971a871bdcbe65f06f17fdd79db9e2"
     ],
     "dependencies": {
      "gettext": {
-      "hash": "xfhvfd6ko2gg3y7vuj3y2yjyh52iucg3",
+      "hash": "vnpe2mqonajeohirlahow3zxwuh2me3r",
       "type": [
        "build",
        "link"
       ]
      },
      "libffi": {
-      "hash": "je6iroctaagwtbgu5oa52syssof7te6g",
+      "hash": "nz4enpayfxrva4rqd4mf6u37sqqbc4gg",
       "type": [
        "build",
        "link"
       ]
      },
      "libiconv": {
-      "hash": "dacit3kuxkch2ayvo6omykosyeiccc5f",
+      "hash": "tj3twqmzxl7qnvoft4wq65e7sbdicxb2",
       "type": [
        "build",
        "link"
       ]
      },
      "meson": {
-      "hash": "zgs5uchpnx3jyoeb6kcaedxhzjteyaeg",
+      "hash": "aamx7mvka4h3jlber7hc4t4rz7t5cglb",
       "type": [
        "build"
       ]
      },
      "ninja": {
-      "hash": "a6ax5m6c4ugryr75holadev2z3xyvalx",
+      "hash": "juiku5sb3ux6fbmbel6mbzkbmzxst6zk",
       "type": [
        "build"
       ]
      },
      "pcre": {
-      "hash": "7rnfhrdlpffh4aj36tareb3ed4gwydc2",
+      "hash": "qawwvdgbkxdjatw3jpzxcwvns6tjbyco",
       "type": [
        "build",
        "link"
       ]
      },
      "perl": {
-      "hash": "77jg7ip266sgkpdgm66envhh26xk3sbb",
+      "hash": "ubpv2yu4phzvlr4ma3fsgej4neyatz6q",
       "type": [
        "build",
        "run"
       ]
      },
      "pkgconf": {
-      "hash": "f74ask64smabwal6ozd5sinwzgxvmgd2",
+      "hash": "sqkatm3p3f65cjwbkcksm6l2fx43s57w",
       "type": [
        "build"
       ]
      },
      "python": {
-      "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
       "type": [
        "build",
        "run"
       ]
      },
      "zlib": {
-      "hash": "fwg66ugw4m7sfyjxqzpxnxrmxg625xmv",
+      "hash": "5gwknia3b7u2z3jbaadu6tii5cs2754w",
       "type": [
        "build",
        "link"
       ]
      }
     },
-    "hash": "pgqe5utuhhjnwuq4wdtdzwvzzag526vw"
+    "hash": "ono5pesuyhknizrqeirspiorssnxwmbr"
    }
   },
-  "zgs5uchpnx3jyoeb6kcaedxhzjteyaeg": {
+  "aamx7mvka4h3jlber7hc4t4rz7t5cglb": {
    "meson": {
-    "version": "0.54.3",
+    "version": "0.57.1",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
      "patches": [
-      "45c35fce59361a994c49f8d3f5fd2595fc1b181ba4b5e219b7563752dd879a3b"
+      "7a7ff3bffb5c1996faf178da6765d578394624edb96fe9297bf21f2e3cd9ebda"
      ],
      "cflags": [],
      "cppflags": [],
@@ -3221,77 +3840,44 @@
      "ldlibs": []
     },
     "patches": [
-     "45c35fce59361a994c49f8d3f5fd2595fc1b181ba4b5e219b7563752dd879a3b"
+     "7a7ff3bffb5c1996faf178da6765d578394624edb96fe9297bf21f2e3cd9ebda"
     ],
     "dependencies": {
      "ninja": {
-      "hash": "a6ax5m6c4ugryr75holadev2z3xyvalx",
+      "hash": "juiku5sb3ux6fbmbel6mbzkbmzxst6zk",
       "type": [
        "run"
       ]
      },
      "py-setuptools": {
-      "hash": "5yppxpdoyzwh4eqcpdgbjpg23j3xrsuz",
+      "hash": "bb75eca7u3dhacksofygkhiqtgodhcfp",
       "type": [
        "build",
        "run"
       ]
      },
      "python": {
-      "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
       "type": [
        "build",
-       "link",
        "run"
       ]
      }
     },
-    "hash": "3skgluwvizyhqzmflnxkwcqmg5qckup4"
+    "hash": "fzzyrhazatawgfyl4hf4sfdwdsrvyl6z"
    }
   },
-  "a6ax5m6c4ugryr75holadev2z3xyvalx": {
-   "ninja": {
-    "version": "kitware",
-    "arch": {
-     "platform": "darwin",
-     "platform_os": "catalina",
-     "target": "x86_64"
-    },
-    "compiler": {
-     "name": "apple-clang",
-     "version": "11.0.0"
-    },
-    "namespace": "builtin",
-    "parameters": {
-     "cflags": [],
-     "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
-     "ldflags": [],
-     "ldlibs": []
-    },
-    "dependencies": {
-     "python": {
-      "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
-      "type": [
-       "build"
-      ]
-     }
-    },
-    "hash": "jrz4mlm6qwobv7hvfwew26w7gtwcfm7e"
-   }
-  },
-  "7rnfhrdlpffh4aj36tareb3ed4gwydc2": {
+  "qawwvdgbkxdjatw3jpzxcwvns6tjbyco": {
    "pcre": {
     "version": "8.44",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -3305,20 +3891,20 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "hash": "7rnfhrdlpffh4aj36tareb3ed4gwydc2"
+    "hash": "qawwvdgbkxdjatw3jpzxcwvns6tjbyco"
    }
   },
-  "i4hog73o7zbdjl2h75pugxiajqcxetlr": {
+  "wepfmxcjfn7at4tuekmbmxr2kg7seouu": {
    "icu4c": {
     "version": "67.1",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -3332,26 +3918,26 @@
     },
     "dependencies": {
      "python": {
-      "hash": "akywlegzeyqgs4575jr2jliyhlf5c46d",
+      "hash": "wp37a5tv34jygtmzeg4tc3ffph5mpbpa",
       "type": [
        "build"
       ]
      }
     },
-    "hash": "6gz3cwfrwotwxgjvyyiz4g6sko43kowe"
+    "hash": "efpwgedz2bgnwm33ynqspcrt7cus7vv7"
    }
   },
-  "krr3wctoukuoelrtrf6kr4jwce2kqkh4": {
+  "l7zomt73kwkavmqdm5nnih3gmcl6nr4n": {
    "inputproto": {
     "version": "2.3.2",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -3364,32 +3950,32 @@
     },
     "dependencies": {
      "pkgconf": {
-      "hash": "f74ask64smabwal6ozd5sinwzgxvmgd2",
+      "hash": "sqkatm3p3f65cjwbkcksm6l2fx43s57w",
       "type": [
        "build"
       ]
      },
      "util-macros": {
-      "hash": "wrgin6q65f3wtsyuvtt2ztvpald55fwk",
+      "hash": "pzpg67qtutygwqojig2ltovrgrruxylh",
       "type": [
        "build"
       ]
      }
     },
-    "hash": "qq25ppfsqq7wjpyyqokpmbcxlylck5a6"
+    "hash": "n757udq6dz22idcb6wxdmhv4v6ql3b4f"
    }
   },
-  "wrgin6q65f3wtsyuvtt2ztvpald55fwk": {
+  "pzpg67qtutygwqojig2ltovrgrruxylh": {
    "util-macros": {
     "version": "1.19.1",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -3400,24 +3986,25 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "hash": "wrgin6q65f3wtsyuvtt2ztvpald55fwk"
+    "hash": "pzpg67qtutygwqojig2ltovrgrruxylh"
    }
   },
-  "w6eu3e5kwtsnoezwzmdqwtl3onlacdgf": {
+  "xn7cnndoq4v5v2xyk3pe26hjj4lxdy23": {
    "libmng": {
     "version": "2.0.3",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
      "build_type": "RelWithDebInfo",
+     "ipo": false,
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -3427,47 +4014,47 @@
     },
     "dependencies": {
      "cmake": {
-      "hash": "skqkkomqjvsnfgyvk65oh4yyerxh63df",
+      "hash": "4dpdbvkurfn5ue6sd4nw2e5xgm625tvu",
       "type": [
        "build"
       ]
      },
      "lcms": {
-      "hash": "qd5hvhfcacxltyq4dwmoafoi5435fwvc",
+      "hash": "ibd4iai7e7kvmirci62jgfg42tjy73cp",
       "type": [
        "build",
        "link"
       ]
      },
      "libjpeg-turbo": {
-      "hash": "6t3oluwlvlpzbakvk252wyfuscaofoix",
+      "hash": "5ycq7reyln3ptbcycvu4fjgeaypmo3ha",
       "type": [
        "build",
        "link"
       ]
      },
      "zlib": {
-      "hash": "fwg66ugw4m7sfyjxqzpxnxrmxg625xmv",
+      "hash": "5gwknia3b7u2z3jbaadu6tii5cs2754w",
       "type": [
        "build",
        "link"
       ]
      }
     },
-    "hash": "as3ccn5ul2m4sgcofljrxsitmm35u5la"
+    "hash": "6xhnjqhvarlnkund4xwtzee4qzdft5c6"
    }
   },
-  "qd5hvhfcacxltyq4dwmoafoi5435fwvc": {
+  "ibd4iai7e7kvmirci62jgfg42tjy73cp": {
    "lcms": {
     "version": "2.9",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -3480,41 +4067,41 @@
     },
     "dependencies": {
      "libjpeg-turbo": {
-      "hash": "6t3oluwlvlpzbakvk252wyfuscaofoix",
+      "hash": "5ycq7reyln3ptbcycvu4fjgeaypmo3ha",
       "type": [
        "build",
        "link"
       ]
      },
      "libtiff": {
-      "hash": "674h4qjiirwtffk7aj365rc5rq2w7ud2",
+      "hash": "gsx5fa2yxvlfeo6o2cs4b4n4pscw4c2q",
       "type": [
        "build",
        "link"
       ]
      },
      "zlib": {
-      "hash": "fwg66ugw4m7sfyjxqzpxnxrmxg625xmv",
+      "hash": "5gwknia3b7u2z3jbaadu6tii5cs2754w",
       "type": [
        "build",
        "link"
       ]
      }
     },
-    "hash": "xb5royijrp45kmh4ehfu6ppsll24qde7"
+    "hash": "rykb74xk6ybobdikwriebmp5n3z4kfev"
    }
   },
-  "674h4qjiirwtffk7aj365rc5rq2w7ud2": {
+  "gsx5fa2yxvlfeo6o2cs4b4n4pscw4c2q": {
    "libtiff": {
-    "version": "4.0.10",
+    "version": "4.1.0",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -3527,48 +4114,49 @@
     },
     "dependencies": {
      "libjpeg-turbo": {
-      "hash": "6t3oluwlvlpzbakvk252wyfuscaofoix",
+      "hash": "5ycq7reyln3ptbcycvu4fjgeaypmo3ha",
       "type": [
        "build",
        "link"
       ]
      },
      "xz": {
-      "hash": "27pku55fs4pzco3lrzufqkwtdqd3vxv5",
+      "hash": "nlp35zkiyluolaxvrk5gj2of6fhawaln",
       "type": [
        "build",
        "link"
       ]
      },
      "zlib": {
-      "hash": "fwg66ugw4m7sfyjxqzpxnxrmxg625xmv",
+      "hash": "5gwknia3b7u2z3jbaadu6tii5cs2754w",
       "type": [
        "build",
        "link"
       ]
      }
     },
-    "hash": "mlt6odcrqi6otijzwa5cwpwvazmmlqbf"
+    "hash": "gry7ekuhohc5ogyrjo4jonhucv55sxpo"
    }
   },
-  "zqxgrepuugobohgjoqvuef45jcjyzjzv": {
+  "6bcmezuynsm3zssz7zpnhh4ojsexc726": {
    "silo": {
     "version": "4.10.2",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
      "fortran": true,
      "mpi": true,
      "patches": [
-      "7b5a1dc2a0e358e667088d77e7caa780967fa8ea60be89c44986605df9990abe"
+      "7b5a1dc2a0e358e667088d77e7caa780967fa8ea60be89c44986605df9990abe",
+      "952d3c95fbeaf32355c1c24d831b6c315c5cf29023874127b0f461855046750c"
      ],
      "pic": true,
      "shared": true,
@@ -3581,52 +4169,53 @@
      "ldlibs": []
     },
     "patches": [
-     "7b5a1dc2a0e358e667088d77e7caa780967fa8ea60be89c44986605df9990abe"
+     "7b5a1dc2a0e358e667088d77e7caa780967fa8ea60be89c44986605df9990abe",
+     "952d3c95fbeaf32355c1c24d831b6c315c5cf29023874127b0f461855046750c"
     ],
     "dependencies": {
      "hdf5": {
-      "hash": "cfrve3bcul52sxm4d6d2jee2h4od32tu",
+      "hash": "jm2g3dtiz7qhxgpmtf27jscgcy2zxzyz",
       "type": [
        "build",
        "link"
       ]
      },
      "openmpi": {
-      "hash": "2r6qaoyra5tirfajb2o7axecaxruwdjx",
+      "hash": "i2vzlffhckwiqh43hreldziibq6a2nh7",
       "type": [
        "build",
        "link"
       ]
      },
      "readline": {
-      "hash": "tkclkgybvpp4knsyh4m6pbz5knvjvv2c",
+      "hash": "zo73rakiitjixgtn2rbzjc4krj4xeg7r",
       "type": [
        "build",
        "link"
       ]
      },
      "zlib": {
-      "hash": "fwg66ugw4m7sfyjxqzpxnxrmxg625xmv",
+      "hash": "5gwknia3b7u2z3jbaadu6tii5cs2754w",
       "type": [
        "build",
        "link"
       ]
      }
     },
-    "hash": "u3kjaf2xrrvvn24rzth3bpbhbg2chh3j"
+    "hash": "mysa4uw7uefko4sxfzwgm4zl23ymitpv"
    }
   },
-  "xd3bjquzl5tdnbsa6kx56oqphnvxfjg5": {
+  "bp4qvlcgejwkwo4iegzjim566fjammld": {
    "swig": {
-    "version": "fortran",
+    "version": "4.0.2-fortran",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -3639,51 +4228,57 @@
     },
     "dependencies": {
      "autoconf": {
-      "hash": "pr2746wryh6jk3nl525crmzchlnsflvz",
+      "hash": "owtrjsww6h4q2nyep22qpk3w6of3u2dy",
       "type": [
        "build"
       ]
      },
      "automake": {
-      "hash": "3e6ms6b2e6dgwflryv3l3ek6se577rw6",
+      "hash": "e7krqloakaqgfzbuurahlsgwxlo62ct6",
+      "type": [
+       "build"
+      ]
+     },
+     "bison": {
+      "hash": "nctevtn6laoeoojbt3c7vbnt72yfo4oa",
       "type": [
        "build"
       ]
      },
      "libtool": {
-      "hash": "gggptc2ssazogds4gc3jidkwr4mdkoac",
+      "hash": "vlwurozs2h2i54f6eunapkglv4os6pmb",
       "type": [
        "build"
       ]
      },
      "pcre": {
-      "hash": "7rnfhrdlpffh4aj36tareb3ed4gwydc2",
+      "hash": "qawwvdgbkxdjatw3jpzxcwvns6tjbyco",
       "type": [
        "build",
        "link"
       ]
      },
      "pkgconf": {
-      "hash": "f74ask64smabwal6ozd5sinwzgxvmgd2",
+      "hash": "sqkatm3p3f65cjwbkcksm6l2fx43s57w",
       "type": [
        "build"
       ]
      }
     },
-    "hash": "v77bidyrrbsalza6u4m622sm625hgjpu"
+    "hash": "xgnzrukscoq4j2vkwdgxztghs7wmd75z"
    }
   },
-  "ljse3x3nhckq4vpk5fjqbbmxvtbqfagl": {
+  "cyti3pngzbi2nsttxkbqjgwfwmucjc57": {
    "trilinos": {
-    "version": "12.18.1",
+    "version": "13.0.1",
     "arch": {
      "platform": "darwin",
-     "platform_os": "catalina",
+     "platform_os": "bigsur",
      "target": "x86_64"
     },
     "compiler": {
      "name": "apple-clang",
-     "version": "11.0.0"
+     "version": "12.0.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -3691,6 +4286,7 @@
      "alloptpkgs": false,
      "amesos": true,
      "amesos2": false,
+     "amesos2basker": false,
      "anasazi": true,
      "aztec": true,
      "belos": true,
@@ -3699,24 +4295,34 @@
      "cgns": false,
      "chaco": false,
      "complex": false,
+     "cuda": false,
+     "cuda_arch": [
+      "none"
+     ],
+     "cuda_rdc": false,
+     "cxxstd": "11",
      "debug": false,
      "dtk": false,
      "epetra": true,
      "epetraext": true,
+     "epetraextbtf": false,
+     "epetraextexperimental": false,
+     "epetraextgraphreorderings": false,
      "exodus": false,
      "explicit_template_instantiation": true,
      "float": false,
      "fortran": true,
-     "fortrilinos": false,
      "glm": false,
      "gotype": "long_long",
      "gtest": false,
      "hdf5": true,
+     "hwloc": false,
      "hypre": false,
      "ifpack": true,
      "ifpack2": true,
      "intrepid": true,
      "intrepid2": false,
+     "ipo": false,
      "isorropia": false,
      "kokkos": true,
      "matio": false,
@@ -3741,7 +4347,9 @@
      "shared": true,
      "shylu": false,
      "stk": false,
+     "stokhos": false,
      "stratimikos": true,
+     "strumpack": false,
      "suite-sparse": false,
      "superlu": false,
      "superlu-dist": false,
@@ -3749,6 +4357,8 @@
      "tempus": false,
      "teuchos": true,
      "tpetra": true,
+     "trilinoscouplings": false,
+     "wrapper": false,
      "x11": false,
      "xsdkflags": false,
      "zlib": false,
@@ -3763,34 +4373,34 @@
     },
     "dependencies": {
      "cmake": {
-      "hash": "skqkkomqjvsnfgyvk65oh4yyerxh63df",
+      "hash": "4dpdbvkurfn5ue6sd4nw2e5xgm625tvu",
       "type": [
        "build"
       ]
      },
      "hdf5": {
-      "hash": "cfrve3bcul52sxm4d6d2jee2h4od32tu",
+      "hash": "jm2g3dtiz7qhxgpmtf27jscgcy2zxzyz",
       "type": [
        "build",
        "link"
       ]
      },
      "openblas": {
-      "hash": "gkdwhwee5ga6m26iyurnjlyuz3cqznuq",
+      "hash": "t6khje2wdvuetvnhg55cihaqeqjpchrt",
       "type": [
        "build",
        "link"
       ]
      },
      "openmpi": {
-      "hash": "2r6qaoyra5tirfajb2o7axecaxruwdjx",
+      "hash": "i2vzlffhckwiqh43hreldziibq6a2nh7",
       "type": [
        "build",
        "link"
       ]
      }
     },
-    "hash": "xwzz22i4aflmhs3vx7asa7fm35asi7uc"
+    "hash": "mquha7ftbk4uqyplnf2uu3vymjrxhqna"
    }
   }
  }
