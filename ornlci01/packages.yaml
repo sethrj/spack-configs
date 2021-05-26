@@ -1,0 +1,69 @@
+packages:
+  scale:
+    permissions:
+      read: group
+      group: scale6
+  all:
+    providers:
+      mpi: [openmpi]
+      blas: [openblas]
+      lapack: [openblas]
+    target: [x86_64]
+  # Begin variants/preference specs
+  all:
+    providers:
+      mpi: [openmpi]
+      gl: [opengl]
+  boost:
+    variants: cxxstd=11
+  geant4:
+    variants: cxxstd=11 ~threads ~data
+  hdf5:
+    variants: +hl +szip ~mpi
+  moab:
+    variants: ~mpi ~parmetis ~coupler ~metis ~fortran
+  netcdf:
+    variants: ~mpi ~parallel
+  pcre:
+    variants: +jit
+  python:
+    variants: +shared +uuid +libxml2
+  py-h5py:
+    variants: ~mpi
+  py-matplotlib:
+    variants: ~tk
+  qt:
+    variants: freetype=none ~sql ~ssl ~tools
+  silo:
+    variants: ~mpi
+  swig:
+    version: [fortran]
+  # >>> install-spack.sh
+  hdf5:
+    variants: +cxx +fortran +hl +szip ~mpi
+  moab:
+    variants: ~mpi ~parmetis ~coupler ~metis ~fortran
+  netcdf:
+    variants: ~mpi ~parallel
+  pcre:
+    variants: +jit
+  py-h5py:
+    variants: ~mpi
+    version:
+    - 2.10.0 # 3.0 and 3.1 fail with variable length arrays
+  qt:
+    variants: ~sql ~ssl ~tools
+  scale:
+    permissions:
+      read: group
+      group: scale6
+  silo:
+    variants: ~mpi
+  all:
+    providers:
+      mpi: [openmpi]
+      blas: [openblas]
+      lapack: [openblas]
+    target: [x86_64]
+    variants: cxxstd=11
+  # <<< install-spack.sh
