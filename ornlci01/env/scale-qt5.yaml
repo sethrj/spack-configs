@@ -8,7 +8,6 @@ spack:
   - doxygen+graphviz
   - flex@2.6.4
   - gsl
-  - llvm@9.0.1 +clang ~flang   # for clang-format
   - hdf5 +fortran +hl ~mpi api=v110
   - openblas
   - openmpi@:2.999
@@ -20,7 +19,7 @@ spack:
   - py-matplotlib
   - py-numpy
   - py-sphinx
-  - qt@5.9.9 ~framework +gui
+  - qt@5.9:5.9.99 ~framework +gui
   - silo +fortran ~mpi
   - swig@4.0.2-fortran
   - valgrind

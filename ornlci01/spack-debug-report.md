@@ -1,4 +1,4 @@
-* **Spack:** 0.16.0-1129-31722ac994
-* **Python:** 2.7.18
+* **Spack:** 0.16.2-2872-30547f60d1
+* **Python:** 2.7.10
 * **Platform:** darwin-highsierra-skylake
-* **Concretizer:** original
+* **Concretizer:** clingo
