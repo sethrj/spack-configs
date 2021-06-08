@@ -1,63 +1,49 @@
 packages:
-  adios:
-    variants: ~blosc
-  advantg:
   advantg-data:
-    paths:
-      advantg-data@3: /projects/advantg/data
-    buildable: False
+    buildable: false
+    externals:
+    - spec: advantg-data@3
+      prefix: /projects/advantg/data
   geant4:
-    variants: cxxstd=11 ~threads ~data
-  geant4-data:
-    paths:
-      geant4-data@10.04: /projects/exnihilo/geant4-data
-      buildable: False
-  hdf5:
-    #variants: +hl +szip ~mpi
-    variants: +hl +szip +mpi
+    variants: ~threads
   mcnp:
-    paths:
-      mcnp@5.1.60: /projects/mcnp/MCNP_CODE
-    buildable: False
+    buildable: false
+    externals:
+    - spec: mcnp@5.1.60
+      prefix: /projects/mcnp/MCNP_CODE
   mcnp-data:
-    paths:
-      mcnp-data@5.1.60: /projects/mcnp/MCNP_DATA
-    buildable: False
-  mesa:
-    variants: ~llvm
+    buildable: false
+    externals:
+    - spec: mcnp-data@5.1.60
+      prefix: /projects/mcnp/MCNP_DATA
   moab:
-    # variants: ~mpi ~parmetis ~coupler ~metis ~fortran
-    variants: ~parmetis ~coupler ~metis ~fortran
+    variants: ~mpi ~parmetis ~coupler ~metis ~fortran
+  scale-data:
+    buildable: false
+    externals:
+    - spec: scale-data@experimental
+      prefix: /projects/scale/data/experimental
+  # >>> install-spack.sh
+  hdf5:
+    variants: +cxx +fortran +hl +szip ~mpi
+  moab:
+    variants: ~mpi ~parmetis ~coupler ~metis ~fortran
   netcdf:
-    # variants: ~mpi ~parallel
-  ninja:
-    version: [kitware]
+    variants: ~mpi ~parallel
   pcre:
     variants: +jit
-  python:
-    variants: +shared +uuid
-    version: [3.7.4, 2.7.16]
-    # PY2 -- # version: [2.7.16]
   py-h5py:
     variants: ~mpi
-  py-matplotlib:
-    variants: ~tk
-    # PY2 -- # version: [2.2.3]
-  py-numpy:
-    # PY2 -- # version: [1.16]
-  py-pandas:
-    # PY2 -- # version: [0.24.2]
-  py-scipy:
-    # PY2 -- # version: [1.2.1]
+    version:
+    - 2.10.0 # 3.0 and 3.1 fail with variable length arrays
   qt:
-    variants: freetype=none ~sql ~ssl ~tools
-  scale-data:
-    paths:
-      scale-data@experimental: /projects/scale/data/experimental
-    buildable: False
+    variants: ~sql ~ssl ~tools
   silo:
-    # variants: ~mpi
+    variants: ~mpi
   all:
-    compiler: [gcc@8.2.0]
     providers:
       mpi: [openmpi]
+      blas: [openblas]
+      lapack: [openblas]
+    variants: cxxstd=11
+  # <<< install-spack.sh

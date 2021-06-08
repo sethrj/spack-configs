@@ -1,49 +1,52 @@
 modules:
   enable::
     - lmod
+  prefix_inspections:
+    bin:
+    - PATH
+    man:
+    - MANPATH
+    share/man:
+    - MANPATH
+    share/aclocal:
+    - ACLOCAL_PATH
+    include:: []
+    lib:
+    - LIBRARY_PATH
+    lib64:
+    - LIBRARY_PATH
+    lib/pkgconfig:
+    - PKG_CONFIG_PATH
+    lib64/pkgconfig:
+    - PKG_CONFIG_PATH
+    share/pkgconfig:
+    - PKG_CONFIG_PATH
+    '':
+    - CMAKE_PREFIX_PATH
+    - '${PACKAGE}_ROOT'
   lmod:
-    hierarchy:: []
-    whitelist:
-      - gcc
-      - git
-      - git-lfs
-      - htop
-      - lmod
-      - ninja
-    blacklist:
-      - '%gcc@4.8.5'
     core_compilers:
       - 'gcc@4.8.5'
-    hash_length: 0
+    hash_length: 4
+    hierarchy:: []
     ^python:
       autoload:  'direct'
-      environment:: {}
     all:
       suffixes:
-        '+debug': 'debug'
-        '+threads': 'mt'
-        'threads=openmp': 'mt'
-        '+openmp': 'mt'
-        '+mpi': 'mpi'
-        '^python@2': 'py2'
+        '^python@2': py2
+        '+cuda': 'cuda'
+        '+debug': debug
+        '+mpi': mpi
+        '+multithreaded': mt
+        '+openmp': mt
+        '+threads': mt
+        '~shared': 'static'
         'cxxstd=98': 'c++98'
         'cxxstd=14': 'c++14'
         'cxxstd=17': 'c++17'
-        '~shared': 'static'
-      environment:
-        set:
-          '${PACKAGE}_ROOT': '${PREFIX}'
-        prepend_path:
-          'LD_RUN_PATH': '${PREFIX}/lib'
-      filter:
-        environment_blacklist: ['CPATH', 'LIBRARY_PATH', 'LD_LIBRARY_PATH']
-    libffi: &lib64
-      environment:
-        prepend_path:
-          'LD_RUN_PATH': '${PREFIX}/lib64'
-    geant4: *lib64
-    jpeg-turbo: *lib64
-    gcc: &lib64also
-      environment:
-        prepend_path:
-          'LD_RUN_PATH': '${PREFIX}/lib:${PREFIX}/lib64'
+    lava: &restricted
+      template: 'group-restricted.lua'
+    mcnp: *restricted
+    mcnp-data: *restricted
+    scale: *restricted
+    scale-data: *restricted

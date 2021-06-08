@@ -1,12 +1,11 @@
 config:
-  template_dirs:
-    - $spack/etc/spack/ornl-spack/templates
-  build_jobs: 40
-  locks: false
+  concretizer: clingo
+  install_tree: $spack/opt/spack
   install_path_scheme: '{compiler.name}-{compiler.version}/{name}/{hash:7}'
-  install_tree: $spack/opt/spack2
   module_roots:
-    lmod: $spack/share/spack2/lmod
+    lmod: $spack/share/spack/lmod
+  template_dirs:
+    - $spack/var/spack/repos/ornl-spack/templates
   build_stage:
     - /build/$user-spack
     - $tempdir
