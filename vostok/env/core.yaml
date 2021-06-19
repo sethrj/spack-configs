@@ -1,0 +1,14 @@
+spack:
+  specs:
+  - git
+  - git-lfs
+  - htop
+  - lmod
+  - ninja
+  - rename
+  - python
+  view: true
+  concretization: together
+  packages:
+    python:
+      variants: +uuid
