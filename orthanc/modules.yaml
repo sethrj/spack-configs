@@ -1,6 +1,4 @@
 modules:
-  enable::
-    - lmod
   prefix_inspections:
     bin:
     - PATH
@@ -11,9 +9,9 @@ modules:
     share/aclocal:
     - ACLOCAL_PATH
     include:: []
-    lib:
+    lib::
     - LIBRARY_PATH
-    lib64:
+    lib64::
     - LIBRARY_PATH
     lib/pkgconfig:
     - PKG_CONFIG_PATH
@@ -24,29 +22,32 @@ modules:
     '':
     - CMAKE_PREFIX_PATH
     - '${PACKAGE}_ROOT'
-  lmod:
-    core_compilers:
-      - 'gcc@4.8.5'
-    hash_length: 4
-    hierarchy:: []
-    ^python:
-      autoload:  'direct'
-    all:
-      suffixes:
-        '^python@2': py2
-        '+cuda': 'cuda'
-        '+debug': debug
-        '+mpi': mpi
-        '+multithreaded': mt
-        '+openmp': mt
-        '+threads': mt
-        '~shared': 'static'
-        'cxxstd=98': 'c++98'
-        'cxxstd=14': 'c++14'
-        'cxxstd=17': 'c++17'
-    lava: &restricted
-      template: 'group-restricted.lua'
-    mcnp: *restricted
-    mcnp-data: *restricted
-    scale: *restricted
-    scale-data: *restricted
+  default:
+    enable::
+      - lmod
+    lmod:
+      core_compilers:
+        - 'gcc@4.8.5'
+      hash_length: 4
+      hierarchy:: []
+      ^python:
+        autoload:  'direct'
+      all:
+        suffixes:
+          '^python@2': py2
+          '+cuda': 'cuda'
+          '+debug': debug
+          '+mpi': mpi
+          '+multithreaded': mt
+          '+openmp': mt
+          '+threads': mt
+          '~shared': 'static'
+          'cxxstd=98': 'c++98'
+          'cxxstd=14': 'c++14'
+          'cxxstd=17': 'c++17'
+      lava: &restricted
+        template: 'group-restricted.lua'
+      mcnp: *restricted
+      mcnp-data: *restricted
+      scale: *restricted
+      scale-data: *restricted
