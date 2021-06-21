@@ -1,17 +1,16 @@
 compilers:
 - compiler:
-    spec: clang@8.0.1
+    spec: clang@9.0.1
     paths:
-      cc: /usr/bin/clang-8
-      cxx: /usr/bin/clang++-8
+      cc: /usr/bin/clang
+      cxx: /usr/bin/clang++
       f77:
       fc:
     flags: {}
     operating_system: rhel8
     target: x86_64
     modules: []
-    environment:
-      unset: []
+    environment: {}
     extra_rpaths: []
 - compiler:
     spec: gcc@8.3.1

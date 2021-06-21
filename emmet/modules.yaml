@@ -1,45 +1,34 @@
 modules:
-  enable::
-    - lmod
-  lmod:
-    hierarchy:: []
-    blacklist_implicits: true
-    core_compilers:
-      - 'gcc@8.3.1'
-    hash_length: 0
-    ^python:
-      autoload:  'direct'
-    all:
-      suffixes:
-        '+cuda': 'cuda'
-        '+debug': 'debug'
-        '+mpi': 'mpi'
-        '+multithreaded': 'mt'
-        '+openmp': 'mt'
-        '~shared': 'static'
-        '+threads': 'mt'
-        '^python@2': 'py2'
-        '^zlib~shared': 'static'
-        'cxxstd=98': 'c++98'
-        'cxxstd=14': 'c++14'
-        'cxxstd=17': 'c++17'
-      environment:
-        set:
-          '${PACKAGE}_ROOT': '${PREFIX}'
-        prepend_path:
-          'LD_RUN_PATH': '${PREFIX}/lib'
-      filter:
-        environment_blacklist: ['CPATH', 'LIBRARY_PATH', 'LD_LIBRARY_PATH']
-    libffi: &lib64
-      environment:
-        prepend_path:
-          'LD_RUN_PATH': '${PREFIX}/lib64'
-    geant4: *lib64
-    jpeg-turbo: *lib64
-    lava: &lrestricted
-      template: 'group-restricted.lua'
-    mcnp: *lrestricted
-    mcnp-data: *lrestricted
-    scale: *lrestricted
-    scale-data: *lrestricted
-
+  prefix_inspections:
+    '':
+    - CMAKE_PREFIX_PATH
+    - '${PACKAGE}_ROOT'
+  default:
+    enable::
+      - lmod
+    lmod:
+      core_compilers:
+        - 'gcc@8.3.1'
+      hash_length: 4
+      hierarchy:: []
+      ^python:
+        autoload:  'direct'
+      all:
+        suffixes:
+          '^python@2': py2
+          '+cuda': 'cuda'
+          '+debug': debug
+          '+mpi': mpi
+          '+multithreaded': mt
+          '+openmp': mt
+          '+threads': mt
+          '~shared': 'static'
+          'cxxstd=98': 'c++98'
+          'cxxstd=11': 'c++11'
+          'cxxstd=17': 'c++17'
+      lava: &restricted
+        template: 'group-restricted.lua'
+      mcnp: *restricted
+      mcnp-data: *restricted
+      scale: *restricted
+      scale-data: *restricted

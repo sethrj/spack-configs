@@ -1,25 +1,21 @@
 packages:
   cuda:
-    paths:
-      cuda@10.2: /usr/local/cuda-10.2
-    buildable: False
+    buildable: false
+    externals:
+    - spec: cuda@10.2
+      prefix: /usr/local/cuda-10.2
   mcnp:
-    paths:
-      mcnp@5.1.60: /data/mcnp/MCNP_CODE
-    buildable: False
+    buildable: false
+    externals:
+    - spec: mcnp@5.1.60
+      prefix: /data/mcnp/MCNP_CODE
   mcnp-data:
-    paths:
-      mcnp-data@5.1.60: /data/mcnp/MCNP_DATA
-    buildable: False
+    buildable: false
+    externals:
+    - spec: mcnp-data@5.1.60
+      prefix: /data/mcnp/MCNP_DATA
   scale-data:
-    paths:
-      scale-data@experimental: /data/scale/data
-    buildable: False
-  xerces-c:
-    variants: cxxstd=14
-  vecgeom:
-    variants: cxxstd=14 cuda_arch=35
-  veccore:
-    variants: cxxstd=14 cuda_arch=35
-  root:
-    variants: cxxstd=14 ~x~opengl~tmva~threads~tbb~rootfit~python+xml~examples~davix
+    buildable: false
+    externals:
+    - spec: scale-data@experimental
+      prefix: /data/scale/data
