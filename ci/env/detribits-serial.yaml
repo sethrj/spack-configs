@@ -21,7 +21,7 @@ spack:
   - py-pint
   - py-psutil
   - py-tqdm
-  - qt@5:5.99 ~framework
+  - qt@5:5.99
   - silo +fortran ~mpi
   - swig@4.0.2-fortran
   - 'superlu@5:'
@@ -35,7 +35,6 @@ spack:
       variants: +szip +fortran
     qt:
       variants: ~dbus~examples~gtk~opengl~phonon+shared~sql~ssl~tools~webkit
-      version: [5.9.9]
     superlu:
       version: [5.2.2]
     trilinos:
@@ -49,9 +48,3 @@ spack:
       providers:
         blas: [openblas]
         lapack: [openblas]
-  modules:
-    default:
-      lmod:
-        core_compilers:
-        - gcc@3.4.6
-        - gcc@4.4.7
