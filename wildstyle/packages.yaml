@@ -1,27 +1,5 @@
 packages:
-  adios:
-    variants: ~blosc
   cuda:
-    paths:
-      cuda@10.1: /usr/local/cuda-10.1
-    buildable: False
-  geant4:
-    variants: cxxstd=11 ~threads
-  hdf5:
-    variants: +hl +szip
-  mcnp:
-    paths:
-      mcnp@5.1.60: /data/mcnp/MCNP_CODE
-    buildable: False
-  mcnp-data:
-    paths:
-      mcnp-data@5.1.60: /data/mcnp/MCNP_DATA
-    buildable: False
-  ninja:
-    version: [kitware]
-  qt:
-    variants: freetype=none ~sql ~ssl ~tools
-  scale-data:
-    paths:
-      scale-data@experimental: /data/scale/data
-    buildable: False
+    externals:
+    - spec: cuda@10.1.243
+      prefix: /usr/local/cuda-10.1

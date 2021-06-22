@@ -1,38 +1,34 @@
 modules:
-  enable::
-    - lmod
-  lmod:
-    core_compilers:
-      - 'gcc@8.3.1'
-    whitelist:
-      - gcc
-      - git
-      - git-lfs
-      - htop
+  prefix_inspections:
+    '':
+    - CMAKE_PREFIX_PATH
+    - '${PACKAGE}_ROOT'
+  default:
+    enable::
       - lmod
-      - ninja
-    hash_length: 0
-    hierarchy:: []
-    git:
-      autoload:
-        'none'
-    all:
-      suffixes:
-        '~mpi': 'serial'
-        '+debug': 'debug'
-        '+threads': 'mt'
-        'threads=openmp': 'mt'
-        '+openmp': 'mt'
-        '^python@2': 'py2'
-        'cxxstd=98': 'c++98'
-        'cxxstd=14': 'c++14'
-        'cxxstd=17': 'c++17'
-        '~shared': 'static'
-        '+jit': 'jit'
-      filter:
-        environment_blacklist: ['CPATH', 'LIBRARY_PATH', 'LD_LIBRARY_PATH']
-      environment:
-        set:
-          '${PACKAGE}_ROOT': '${PREFIX}'
-      autoload:
-          'direct'
+    lmod:
+      core_compilers:
+        - 'gcc@8.3.1'
+      hash_length: 4
+      hierarchy:: []
+      ^python:
+        autoload:  'direct'
+      all:
+        suffixes:
+          '^python@2': py2
+          '+cuda': 'cuda'
+          '+debug': debug
+          '+mpi': mpi
+          '+multithreaded': mt
+          '+openmp': mt
+          '+threads': mt
+          '~shared': 'static'
+          'cxxstd=98': 'c++98'
+          'cxxstd=11': 'c++11'
+          'cxxstd=17': 'c++17'
+      lava: &restricted
+        template: 'group-restricted.lua'
+      mcnp: *restricted
+      mcnp-data: *restricted
+      scale: *restricted
+      scale-data: *restricted
