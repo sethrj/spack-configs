@@ -33,7 +33,7 @@ spack:
   concretization: together
   packages:
     hwloc:
-      version: [1.11.13]
+      version: [1.11.13] # needed for openmpi 2
     qt:
       variants: ~dbus~examples~gtk~opengl~phonon+shared~sql~ssl~tools~webkit
       version: [5.9.9]

@@ -27,7 +27,7 @@ spack:
   - 'superlu@5:'
   - trilinos +amesos +amesos2 +anasazi +aztec +belos +ifpack +teuchos gotype=long_long
     +epetra +epetraext +kokkos +ifpack2 +intrepid +ml +sacado +shards +tpetra +stratimikos
-    +hdf5 +mpi ~superlu
+    +hdf5 +mpi
   view: true
   concretization: together
   packages:
@@ -35,7 +35,6 @@ spack:
       variants: +szip +fortran
     qt:
       variants: ~dbus~examples~gtk~opengl~phonon+shared~sql~ssl~tools~webkit
-      version: [5.9.9]
     superlu:
       version: [5.2.2]
     trilinos:
@@ -50,8 +49,3 @@ spack:
         blas: [openblas]
         lapack: [openblas]
         mpi: [openmpi]
-  modules:
-    default:
-      lmod:
-        core_compilers:
-        - gcc@4.8.5

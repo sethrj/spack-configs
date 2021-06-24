@@ -35,7 +35,6 @@ spack:
       variants: +szip +fortran
     qt:
       variants: ~dbus~examples~gtk~opengl~phonon+shared~sql~ssl~tools~webkit
-      version: [5.9.9]
     superlu:
       version: [5.2.2]
     trilinos:
@@ -49,8 +48,3 @@ spack:
       providers:
         blas: [openblas]
         lapack: [openblas]
-  modules:
-    default:
-      lmod:
-        core_compilers:
-        - gcc@4.8.5
