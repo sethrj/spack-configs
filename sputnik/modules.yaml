@@ -1,20 +1,26 @@
 modules:
-  enable::
-    - lmod
-  lmod:
-    #blacklist_implicits: true
-    core_compilers:
-      - 'clang@9.0.0-apple'
-    hash_length: 0
-    hierarchy:: []
-    all:
-      suffixes:
-        '^openmpi': openmpi
-        '^python@2': py2
-      filter:
-        environment_blacklist: ['CPATH', 'LIBRARY_PATH', 'DYLD_LIBRARY_PATH']
-      environment:
-        set:
-          '${PACKAGE}_ROOT': '${PREFIX}'
-    ^python:
-      autoload:  'direct'
+  prefix_inspections:
+    '':
+    - CMAKE_PREFIX_PATH
+    - '${PACKAGE}_ROOT'
+  default:
+    enable::
+      - lmod
+    lmod:
+      core_compilers:
+        - 'apple-clang@12.0.5'
+      hash_length: 4
+      hierarchy:: []
+      ^python:
+        autoload:  'direct'
+      all:
+        suffixes:
+          '^python@2': py2
+          '+debug': debug
+          '+mpi': mpi
+          '+multithreaded': mt
+          '+threads': mt
+          '+openmp': mt
+          'cxxstd=98': 'c++98'
+          'cxxstd=14': 'c++14'
+          'cxxstd=17': 'c++17'

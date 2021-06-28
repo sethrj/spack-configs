@@ -1,0 +1,8 @@
+config:
+  install_tree:
+    projections:
+      all: '{compiler.name}/{name}/{hash:7}'
+    root: $spack/opt/spack
+  module_roots:
+    lmod: $spack/share/spack/lmod
+  concretizer: clingo
