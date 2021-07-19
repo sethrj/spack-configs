@@ -1,4 +1,4 @@
-* **Spack:** 0.16.2-3212-62653b9c36
-* **Python:** 3.8.3
+* **Spack:** 0.16.2-3561-7845939722
+* **Python:** 3.9.6
 * **Platform:** darwin-bigsur-skylake
-* **Concretizer:** original
+* **Concretizer:** clingo

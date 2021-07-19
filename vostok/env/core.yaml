@@ -1,14 +1,15 @@
 spack:
   specs:
+  - gcc@11.1.0
   - git
   - git-lfs
-  - htop
   - lmod
   - ninja
-  - rename
   - python
   view: true
   concretization: together
   packages:
     python:
       variants: +uuid
+    all:
+      compiler: [apple-clang@12.0.5]

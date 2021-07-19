@@ -8,23 +8,35 @@ spack:
   - doxygen+graphviz
   - flex@2.6.4
   - gsl
+  - llvm@9.0.1 +clang ~flang # for clang-format
   - hdf5 +fortran +hl ~mpi api=v110
+  - nlohmann-json
   - openblas
-  - openmpi@:2.1.5
+  - openmpi@:2.999
   - python +uuid
-  - py-h5py ~mpi
+  - py-h5py ~mpi @:2.999 # bug in 3,3.1
   - py-h5sh
   - py-lxml
   - py-jsonschema
   - py-matplotlib
   - py-numpy
+  - py-pandas
+  - py-pint
+  - py-psutil
   - py-sphinx
-  - qt@5.0:5.99 ~framework
+  - py-pyyaml
+  - qt@5:5.99 +gui
   - silo +fortran ~mpi
   - swig@4.0.2-fortran
+  - valgrind
   view: true
   concretization: together
   packages:
+    hwloc:
+      version: [1.11.13] # needed for openmpi 2
+    qt:
+      variants: ~dbus~examples~gtk~opengl~phonon+shared~sql~ssl~tools~webkit
+      version: [5.9.9]
     all:
       providers:
         blas: [openblas]

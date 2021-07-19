@@ -4,8 +4,8 @@ compilers:
     paths:
       cc: /usr/bin/clang
       cxx: /usr/bin/clang++
-      f77: /usr/local/bin/gfortran
-      fc: /usr/local/bin/gfortran
+      f77: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/rhldz55/bin/gfortran
+      fc: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/rhldz55/bin/gfortran
     flags: {}
     operating_system: bigsur
     target: x86_64
@@ -15,10 +15,10 @@ compilers:
 - compiler:
     spec: gcc@11.1.0
     paths:
-      cc: /usr/local/bin/gcc-11
-      cxx: /usr/local/bin/g++-11
-      f77: /usr/local/bin/gfortran-11
-      fc: /usr/local/bin/gfortran-11
+      cc: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/rhldz55/bin/gcc
+      cxx: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/rhldz55/bin/g++
+      f77: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/rhldz55/bin/gfortran
+      fc: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/rhldz55/bin/gfortran
     flags: {}
     operating_system: bigsur
     target: x86_64
