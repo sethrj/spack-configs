@@ -1,0 +1,26 @@
+spack:
+  specs:
+  - gcc@8.3.0
+  - git
+  - git-lfs
+  - htop
+  - lmod
+  - ninja
+  - rename
+  - python
+  view: true
+  concretization: together
+  packages:
+    python:
+      variants: +uuid
+      version: []
+      target: []
+      compiler: []
+      buildable: true
+      providers: {}
+    all:
+      compiler: [gcc@4.8.5]
+      version: []
+      target: []
+      buildable: true
+      providers: {}

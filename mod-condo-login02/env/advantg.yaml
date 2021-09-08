@@ -1,0 +1,99 @@
+# This is a Spack Environment file for Exnihilo.
+spack:
+  # add package specs to the `specs` list
+  specs:
+  - advantg +openmp
+  - hdf5
+  - mcnp@5.1.60
+  - mcnp-data@5.1.60
+  - python@2.7:2.8
+  - scale +python +omnibus +mcnp +mpi ~data ~ampx ~dagmc ~fulcrum ~rte ~polaris +openmp
+  - silo
+  view: true
+  concretization: together
+  packages:
+    lava:
+      variants: +openmp
+      version: []
+      target: []
+      compiler: []
+      buildable: true
+      providers: {}
+    hdf5:
+      variants: +fortran +hl +mpi +szip
+      version: []
+      target: []
+      compiler: []
+      buildable: true
+      providers: {}
+    pcre:
+      variants: +jit
+      version: []
+      target: []
+      compiler: []
+      buildable: true
+      providers: {}
+    python:
+      variants: +libxml2 +shared +uuid
+      version: [2.7.16]
+      target: []
+      compiler: []
+      buildable: true
+      providers: {}
+    py-matplotlib:
+      version: [2.2.3]
+      target: []
+      compiler: []
+      buildable: true
+      providers: {}
+    py-numpy:
+      version: [1.16.5]
+      target: []
+      compiler: []
+      buildable: true
+      providers: {}
+    py-pandas:
+      version: [0.24.2]
+      target: []
+      compiler: []
+      buildable: true
+      providers: {}
+    py-pillow:
+      version: [6.2.2]
+      target: []
+      compiler: []
+      buildable: true
+      providers: {}
+    py-pint:
+      version: [0.9]
+      target: []
+      compiler: []
+      buildable: true
+      providers: {}
+    py-scipy:
+      version: [1.2.2]
+      target: []
+      compiler: []
+      buildable: true
+      providers: {}
+    py-setuptools:
+      version: [44.1.0]
+      target: []
+      compiler: []
+      buildable: true
+      providers: {}
+    py-sphinx:
+      version: [1.8.4]
+      target: []
+      compiler: []
+      buildable: true
+      providers: {}
+    all:
+      providers:
+        blas: [openblas]
+        lapack: [openblas]
+        mpi: [openmpi]
+      version: []
+      target: []
+      compiler: []
+      buildable: true
