@@ -49,7 +49,7 @@ packages:
       prefix: /projects/exnihilo/iter-data
   openmpi:
     version: [2.1.6] # to support SCALE limitations
-    variants: schedulers=tm
+    variants: schedulers=slurm
   # >>> install-spack.sh
   hdf5:
     variants: +cxx +fortran +hl +szip ~mpi
