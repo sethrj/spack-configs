@@ -5,14 +5,11 @@ spack:
   - bison@3.4.2
   - 'cmake@3.16:'
   - flex@2.6.4
-
-
-  
-      # - flibcpp +swig # XXX flibcpp+swig doesn't correctly install .i files 
-      # until 20210218 2d917e17d9f081bf12b998cb29973ef35922e21a
+  - 'flibcpp@1.0.1: +swig'
   - hdf5 +hl api=v110 +mpi
   - googletest
   - 'ninja@1.10:'
+  - nlohmann-json
   - openmpi
   - pugixml
   - python +uuid
@@ -24,11 +21,12 @@ spack:
   - py-pint
   - py-psutil
   - py-tqdm
-  - qt@4.8:4.9 ~framework
+  - qt@5:5.99
   - silo +mpi +fortran
   - swig@4.0.2-fortran
-  - trilinos +amesos +anasazi +aztec +belos +ifpack +teuchos gotype=long_long +epetra
-    +epetraext +kokkos +ifpack2 +intrepid +ml +sacado +shards +tpetra +stratimikos
+  - 'superlu@5:'
+  - trilinos +amesos +amesos2 +anasazi +aztec +belos +ifpack +teuchos gotype=long_long
+    +epetra +epetraext +kokkos +ifpack2 +intrepid +ml +sacado +shards +tpetra +stratimikos
     +hdf5 +mpi
   view: true
   concretization: together
@@ -37,9 +35,11 @@ spack:
       variants: +szip +fortran
     qt:
       variants: ~dbus~examples~gtk~opengl~phonon+shared~sql~ssl~tools~webkit
+    superlu:
+      version: [5.2.2]
     trilinos:
-      variants: ~adios2 ~alloptpkgs ~amesos2 ~boost ~cgns ~chaco ~complex ~debug ~dtk
-        ~exodus +explicit_template_instantiation ~float +fortran ~fortrilinos ~glm   ~gtest
+      variants: ~adios2 ~alloptpkgs ~boost ~cgns ~chaco ~complex ~debug ~dtk ~exodus
+        +explicit_template_instantiation ~float +fortran ~fortrilinos ~glm   ~gtest
         +hdf5 ~hypre  ~intrepid2 ~isorropia ~matio ~mesquite ~metis ~minitensor ~muelu
         ~mumps ~netcdf ~nox ~openmp ~phalanx ~piro ~pnetcdf ~python ~rol ~rythmos
         +shared ~shylu ~stk ~suite-sparse ~superlu ~superlu-dist ~teko ~tempus ~x11

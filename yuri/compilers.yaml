@@ -1,11 +1,11 @@
 compilers:
 - compiler:
-    spec: apple-clang@12.0.0
+    spec: apple-clang@12.0.5
     paths:
       cc: /usr/bin/clang
       cxx: /usr/bin/clang++
-      f77: /usr/local/bin/gfortran-10
-      fc: /usr/local/bin/gfortran-10
+      f77: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/rhldz55/bin/gfortran
+      fc: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/rhldz55/bin/gfortran
     flags: {}
     operating_system: bigsur
     target: x86_64
@@ -13,12 +13,12 @@ compilers:
     environment: {}
     extra_rpaths: []
 - compiler:
-    spec: gcc@10.2.0
+    spec: gcc@11.1.0
     paths:
-      cc: /usr/local/bin/gcc-10
-      cxx: /usr/local/bin/g++-10
-      f77: /usr/local/bin/gfortran-10
-      fc: /usr/local/bin/gfortran-10
+      cc: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/rhldz55/bin/gcc
+      cxx: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/rhldz55/bin/g++
+      f77: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/rhldz55/bin/gfortran
+      fc: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/rhldz55/bin/gfortran
     flags: {}
     operating_system: bigsur
     target: x86_64
