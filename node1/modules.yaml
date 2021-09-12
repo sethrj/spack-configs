@@ -1,0 +1,32 @@
+modules:
+  prefix_inspections:
+    '':
+    - CMAKE_PREFIX_PATH
+    - '${PACKAGE}_ROOT'
+  default:
+    enable::
+      - lmod
+    lmod:
+      core_compilers:
+        - 'gcc@4.8.5'
+      hash_length: 4
+      hierarchy:: []
+      ^python:
+        autoload:  'direct'
+      all:
+        suffixes:
+          '^python@2': py2
+          '+debug': debug
+          '+mpi': mpi
+          '+multithreaded': mt
+          '+threads': mt
+          '+openmp': mt
+          'cxxstd=98': 'c++98'
+          'cxxstd=14': 'c++14'
+          'cxxstd=17': 'c++17'
+      lava: &restricted
+        template: 'group-restricted.lua'
+      mcnp: *restricted
+      mcnp-data: *restricted
+      scale: *restricted
+      scale-data: *restricted

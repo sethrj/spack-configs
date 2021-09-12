@@ -1,0 +1,10 @@
+config:
+  install_tree:
+    projections:
+      all: '{compiler.name}-{compiler.version}/{name}/{hash:7}'
+    root: $spack/opt/spack
+  module_roots:
+    lmod: $spack/share/spack/lmod
+  template_dirs:
+  - $spack/var/spack/repos/ornl-spack/templates
+#concretizer: clingo

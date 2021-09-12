@@ -1,0 +1,15 @@
+spack:
+  specs:
+  - gcc@8.3.0
+  - git
+  - git-lfs
+  - lmod
+  - ninja
+  - python
+  view: true
+  concretization: together
+  packages:
+    python:
+      variants: +uuid
+    all:
+      compiler: [gcc@4.8.5]
