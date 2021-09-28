@@ -23,9 +23,8 @@ spack:
   - silo +fortran ~mpi
   - superlu@5.2.2
   - swig@4.0.2-fortran
-  - trilinos +amesos +anasazi +aztec +belos +ifpack +teuchos gotype=long_long +epetra
-    +epetraext +kokkos +ifpack2 +intrepid +ml +sacado +shards +tpetra +stratimikos
-    +hdf5 ~mpi
+  - trilinos +amesos +anasazi +aztec +belos +ifpack gotype=long_long +epetra +epetraext
+    +kokkos +ifpack2 +intrepid +ml +sacado +shards +tpetra +stratimikos +hdf5 ~mpi
   view: true
   concretization: together
   packages:

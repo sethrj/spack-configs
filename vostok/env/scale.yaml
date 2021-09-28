@@ -8,8 +8,9 @@ spack:
   - doxygen+graphviz
   - flex@2.6.4
   - gsl
-  - llvm@9.0.1 +clang ~flang # for clang-format
+
   - hdf5 +fortran +hl ~mpi api=v110
+  - 'java@14:'
   - nlohmann-json
   - openblas
   - openmpi@:2.999
@@ -28,7 +29,7 @@ spack:
   - qt@5:5.99 +gui
   - silo +fortran ~mpi
   - swig@4.0.2-fortran
-  - valgrind
+
   view: true
   concretization: together
   packages:
