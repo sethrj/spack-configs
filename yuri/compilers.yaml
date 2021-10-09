@@ -1,11 +1,11 @@
 compilers:
 - compiler:
-    spec: apple-clang@12.0.5
+    spec: apple-clang@13.0.0
     paths:
       cc: /usr/bin/clang
       cxx: /usr/bin/clang++
-      f77: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/rhldz55/bin/gfortran
-      fc: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/rhldz55/bin/gfortran
+      f77: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/5ict6ia/bin/gfortran
+      fc: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/5ict6ia/bin/gfortran
     flags: {}
     operating_system: bigsur
     target: x86_64
@@ -13,12 +13,12 @@ compilers:
     environment: {}
     extra_rpaths: []
 - compiler:
-    spec: gcc@11.1.0
+    spec: gcc@11.2.0
     paths:
-      cc: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/rhldz55/bin/gcc
-      cxx: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/rhldz55/bin/g++
-      f77: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/rhldz55/bin/gfortran
-      fc: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/rhldz55/bin/gfortran
+      cc: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/5ict6ia/bin/gcc
+      cxx: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/5ict6ia/bin/g++
+      f77: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/5ict6ia/bin/gfortran
+      fc: /rnsdhpc/code/spack/opt/spack/apple-clang/gcc/5ict6ia/bin/gfortran
     flags: {}
     operating_system: bigsur
     target: x86_64

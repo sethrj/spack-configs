@@ -15,6 +15,10 @@ packages:
     externals:
     - spec: openssh@8.1p1
       prefix: /usr
+  scale-data:
+    externals:
+    - spec: scale-data@dev
+      prefix: /rnsdhpc/share/scale/data
   # >>> install-spack.sh
   hdf5:
     variants: +cxx +fortran +hl ~mpi
@@ -36,7 +40,7 @@ packages:
   silo:
     variants: ~mpi
   all:
-    compiler: [apple-clang@12.0.0]
+    compiler: [apple-clang@13.0.0]
     providers:
       mpi: [openmpi]
       blas: [openblas]

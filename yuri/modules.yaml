@@ -8,11 +8,14 @@ modules:
       - lmod
     lmod:
       core_compilers:
-        - 'apple-clang@12.0.5'
-      hash_length: 4
+        - 'apple-clang@13.0.0'
       hierarchy:: []
+      hash_length: 0
       ^python:
         autoload:  'direct'
+      projections:
+        all: "{name}/{version}.{hash:4}"
+        ^python@2: "py2/{name}/{version}.{hash:4}"
       all:
         suffixes:
           '^python@2': py2
@@ -21,6 +24,8 @@ modules:
           '+multithreaded': mt
           '+threads': mt
           '+openmp': mt
+          'api=v110': 'api110'
+          'api=v112': 'api112'
           'cxxstd=98': 'c++98'
           'cxxstd=14': 'c++14'
           'cxxstd=17': 'c++17'
