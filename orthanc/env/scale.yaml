@@ -8,16 +8,16 @@ spack:
   - doxygen+graphviz
   - flex@2.6.4
   - gsl
+  - hdf5 +fortran +hl ~mpi
 
 
   
-    # - llvm@9.0.1 +clang ~flang # for clang-format
-  - hdf5 +fortran +hl ~mpi api=v110
+    #
   - nlohmann-json
   - openblas
   - openmpi@:2.999
   - python +uuid
-  - py-h5py ~mpi @:2.999 # bug in 3,3.1
+  - py-h5py@:2.999 ~mpi # compound vlen bug in 2.6-3.1 and 3.3+
   - py-h5sh
   - py-lxml
   - py-jsonschema
@@ -35,6 +35,8 @@ spack:
   view: true
   concretization: together
   packages:
+    hwloc:
+      version: [1.11.13] # needed for openmpi 2
     qt:
       variants: ~dbus~examples~gtk~opengl~phonon+shared~sql~ssl~tools~webkit
     all:
@@ -42,3 +44,8 @@ spack:
         blas: [openblas]
         lapack: [openblas]
         mpi: [openmpi]
+  modules:
+    default:
+      lmod:
+        core_compilers:
+        - gcc@4.8.5
