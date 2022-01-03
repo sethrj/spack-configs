@@ -21,7 +21,7 @@
    "spec": "flibcpp@1.0.1:+swig"
   },
   {
-   "hash": "lln3a2zrrxkwedc2emgoimm3lisspy6h",
+   "hash": "sceysvsflwubyx3b5espccbox3r4idem",
    "spec": "hdf5+hl+mpi api=v110"
   },
   {
@@ -49,7 +49,7 @@
    "spec": "python+uuid"
   },
   {
-   "hash": "vwbjpv5f2l6zyxegbqkqfjwhdyahnkzw",
+   "hash": "ew7k6hlafgqd564oxzedmucomltse2v5",
    "spec": "py-h5py"
   },
   {
@@ -85,7 +85,7 @@
    "spec": "qt@5:5.99"
   },
   {
-   "hash": "p5mwnohuih3zgk6y6rxyvmt7w2qtzvjq",
+   "hash": "oe6av3wlrrv6vhfnhxpn33lwj7vyzkpe",
    "spec": "silo+fortran+mpi"
   },
   {
@@ -97,7 +97,7 @@
    "spec": "superlu@5:"
   },
   {
-   "hash": "tnr3l4izb267ihibartap5wwa3zqrtic",
+   "hash": "c2i5xxietpdsoen4yf6ejeypez44uc2o",
    "spec": "trilinos+amesos+amesos2+anasazi+aztec+belos+epetra+epetraext+hdf5+ifpack+ifpack2+intrepid+kokkos+ml+mpi+sacado+shards+stratimikos+teuchos+tpetra gotype=long_long"
   }
  ],
@@ -2265,7 +2265,7 @@
     "hash": "jipne2dxcvz73gvrheg3ym4i6uu346dg"
    }
   },
-  "lln3a2zrrxkwedc2emgoimm3lisspy6h": {
+  "sceysvsflwubyx3b5espccbox3r4idem": {
    "hdf5": {
     "version": "1.10.7",
     "arch": {
@@ -2318,16 +2318,17 @@
     "namespace": "builtin",
     "parameters": {
      "api": "v110",
+     "build_type": "RelWithDebInfo",
      "cxx": false,
-     "debug": false,
      "fortran": true,
      "hl": true,
+     "ipo": false,
      "java": false,
      "mpi": true,
-     "pic": true,
      "shared": true,
      "szip": true,
      "threadsafe": false,
+     "tools": true,
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -2336,6 +2337,12 @@
      "ldlibs": []
     },
     "dependencies": {
+     "cmake": {
+      "hash": "kvh4ybz3324ng4vtcqsccbys6ylbfacm",
+      "type": [
+       "build"
+      ]
+     },
      "libszip": {
       "hash": "wxeqfoige3qeg6tndbqd26xaxmh6ukmb",
       "type": [
@@ -2357,6 +2364,12 @@
        "link"
       ]
      },
+     "pkgconf": {
+      "hash": "sik3xg73mfg7hmxraxqdfp2qxhbofbqf",
+      "type": [
+       "run"
+      ]
+     },
      "zlib": {
       "hash": "iil4tfzytqdszqdpr7j5eo4mcy5ok3w2",
       "type": [
@@ -2365,7 +2378,7 @@
       ]
      }
     },
-    "hash": "vcleqnkyizo3vf5jkhqhbtcr4yovr2pw"
+    "hash": "v5x237ae5o5o6mzcbnz2gmltpwne5zit"
    }
   },
   "wxeqfoige3qeg6tndbqd26xaxmh6ukmb": {
@@ -4047,7 +4060,7 @@
     "hash": "qp5tc7qgbn4dhsgkgvrtrl7q3nnqhjfw"
    }
   },
-  "vwbjpv5f2l6zyxegbqkqfjwhdyahnkzw": {
+  "ew7k6hlafgqd564oxzedmucomltse2v5": {
    "py-h5py": {
     "version": "3.2.1",
     "arch": {
@@ -4115,7 +4128,7 @@
     ],
     "dependencies": {
      "hdf5": {
-      "hash": "lln3a2zrrxkwedc2emgoimm3lisspy6h",
+      "hash": "sceysvsflwubyx3b5espccbox3r4idem",
       "type": [
        "build",
        "link"
@@ -4174,7 +4187,7 @@
       ]
      }
     },
-    "hash": "vrp5pim5zqmgfkf7k4bjwuxc2fxeyces"
+    "hash": "vz3l5nlwewb5ew7pa4levcdiqojfs72k"
    }
   },
   "mhk42szprgcrwykp5lweyawmtlwulpao": {
@@ -11765,7 +11778,7 @@
     "hash": "52gstntdrnhkh5glysad2bm4akp5dyib"
    }
   },
-  "p5mwnohuih3zgk6y6rxyvmt7w2qtzvjq": {
+  "oe6av3wlrrv6vhfnhxpn33lwj7vyzkpe": {
    "silo": {
     "version": "4.10.2",
     "arch": {
@@ -11842,7 +11855,7 @@
     ],
     "dependencies": {
      "hdf5": {
-      "hash": "lln3a2zrrxkwedc2emgoimm3lisspy6h",
+      "hash": "sceysvsflwubyx3b5espccbox3r4idem",
       "type": [
        "build",
        "link"
@@ -11870,7 +11883,7 @@
       ]
      }
     },
-    "hash": "o7dfvnnpjzna4itoscjpahmobtb2x7ph"
+    "hash": "xghhcgzsc44e4k7jz22ulhaqckz5ujy3"
    }
   },
   "rjdwwlgyaadmmfjh65efwkfbdmqiwgho": {
@@ -11953,7 +11966,7 @@
     "hash": "pq7rlkqbbpllymic3fhcdkuqjruyuvtv"
    }
   },
-  "tnr3l4izb267ihibartap5wwa3zqrtic": {
+  "c2i5xxietpdsoen4yf6ejeypez44uc2o": {
    "trilinos": {
     "version": "13.0.1",
     "arch": {
@@ -12103,7 +12116,7 @@
       ]
      },
      "hdf5": {
-      "hash": "lln3a2zrrxkwedc2emgoimm3lisspy6h",
+      "hash": "sceysvsflwubyx3b5espccbox3r4idem",
       "type": [
        "build",
        "link"
@@ -12124,7 +12137,7 @@
       ]
      }
     },
-    "hash": "tplmtgmm5ozi2xiosza32uph3wgjg62c"
+    "hash": "qouu6ctb7amaatmuxre6kke6dlamjpip"
    }
   }
  }
