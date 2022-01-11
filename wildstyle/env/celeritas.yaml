@@ -14,6 +14,7 @@ spack:
   - python
   - py-h5py
   - root
+  - swig
   - valgrind ~ubsan
   - veccore
   - vecgeom +gdml
@@ -35,7 +36,6 @@ spack:
       buildable: true
       providers: {}
     all:
-      variants: +cuda cxxstd=14 cuda_arch=70
       providers:
         blas: [openblas]
         lapack: [openblas]

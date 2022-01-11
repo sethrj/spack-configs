@@ -1,9 +1,11 @@
 packages:
   cuda:
     externals:
-    - spec: cuda@10.1.243
-      prefix: /usr/local/cuda-10.1
+    - spec: cuda@11.5.20211118
+      prefix: /usr/local/cuda-11.5
   scale-data:
     externals:
     - spec: scale-data@local
       prefix: /data/scale/data
+  all:
+      variants: +cuda cuda_arch=70 cxxstd=14
