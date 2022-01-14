@@ -2,8 +2,8 @@ packages:
   cuda:
     buildable: false
     externals:
-    - spec: cuda@10.2
-      prefix: /usr/local/cuda-10.2
+    - spec: cuda@11.5
+      prefix: /usr/local/cuda-11.5
   mcnp:
     buildable: false
     externals:
@@ -19,3 +19,9 @@ packages:
     externals:
     - spec: scale-data@experimental
       prefix: /data/scale/data
+  pcre:
+    variants: +jit
+  swig:
+    version: [4.0.2-fortran]
+  all:
+    variants: +cuda cuda_arch=35

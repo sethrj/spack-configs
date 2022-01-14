@@ -1,4 +1,4 @@
-* **Spack:** 0.16.2-3213-7b6ca59038
-* **Python:** 3.8.5
+* **Spack:** 0.17.1-764-48c0703828
+* **Python:** 3.6.8
 * **Platform:** linux-rhel8-haswell
-* **Concretizer:** original
+* **Concretizer:** clingo

@@ -3,12 +3,14 @@ modules:
     '':
     - CMAKE_PREFIX_PATH
     - '${PACKAGE}_ROOT'
+    lib:: ['LD_RUN_PATH']
+    lib64:: ['LD_RUN_PATH']
   default:
     enable::
       - lmod
     lmod:
       core_compilers:
-        - 'gcc@8.3.1'
+        - 'gcc@8.5.0'
       hash_length: 4
       hierarchy:: []
       ^python:
