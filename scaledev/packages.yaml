@@ -1,0 +1,36 @@
+packages:
+  groff:
+    externals:
+    - spec: groff@1.22.2
+      prefix: /usr
+  # >>> install-spack.sh
+  hdf5:
+    variants: +cxx +fortran +hl +szip ~mpi
+  moab:
+    variants: ~mpi ~parmetis ~coupler ~metis ~fortran
+  netcdf:
+    variants: ~mpi ~parallel
+  pcre:
+    variants: +jit
+  py-h5py:
+    variants: ~mpi
+    version:
+    - 2.10.0 # 3.0 and 3.1 fail with variable length arrays
+  qt:
+    variants: ~sql ~ssl ~tools
+  scale:
+    permissions:
+      read: group
+      group: scale6
+  silo:
+    variants: ~mpi
+  all:
+    providers:
+      mpi: [openmpi]
+      blas: [openblas]
+      lapack: [openblas]
+    compiler:
+    - gcc@8.3.0
+    target: [x86_64]
+    variants: cxxstd=11
+  # <<< install-spack.sh
