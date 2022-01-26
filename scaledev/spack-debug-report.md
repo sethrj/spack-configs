@@ -1,4 +1,4 @@
-* **Spack:** 0.17.1-971-3cf5df7e3b
+* **Spack:** 0.16.2-3016-1fd1f1c93f
 * **Python:** 3.8.10
 * **Platform:** linux-centos7-zen2
-* **Concretizer:** clingo
+* **Concretizer:** original
