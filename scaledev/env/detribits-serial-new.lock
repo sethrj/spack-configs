@@ -22,11 +22,11 @@
       "spec": "flibcpp@1.0.1:+swig"
     },
     {
-      "hash": "wgukgusb6y73jz5b2e4d7s2xox2yv5oz",
+      "hash": "ou4gkqzqjr254bpo52bsrozqdjtqot73",
       "spec": "hdf5+hl~mpi"
     },
     {
-      "hash": "ar6vcdujhuzmg44jt5gponwrggm7ita5",
+      "hash": "euzgju2oh2ide5qitrjy3zh5h5b7hjmg",
       "spec": "lava"
     },
     {
@@ -54,7 +54,7 @@
       "spec": "python+uuid"
     },
     {
-      "hash": "ys32hojkjcwdlyby5qqcd7bkx47vwmpp",
+      "hash": "52yyxqfj7arp6u7iuqfbb34oco67lmhc",
       "spec": "py-h5py@:2.999~mpi"
     },
     {
@@ -90,7 +90,7 @@
       "spec": "qt@5.0:5"
     },
     {
-      "hash": "htzf3lytepdugryudt5iegozftapf3ia",
+      "hash": "6f6fg6dq6ixeijrbjwwjxcbqpmg5aii6",
       "spec": "silo+fortran~mpi"
     },
     {
@@ -1270,7 +1270,7 @@
       },
       "hash": "fqycxssin5yt7mnqleztk4v5mp46h7f2"
     },
-    "wgukgusb6y73jz5b2e4d7s2xox2yv5oz": {
+    "ou4gkqzqjr254bpo52bsrozqdjtqot73": {
       "name": "hdf5",
       "version": "1.10.7",
       "arch": {
@@ -1296,7 +1296,7 @@
           "2a1e3118d7d3d7411820e567b03530de96a46385304017f8e548408aa1cfbfc0"
         ],
         "shared": true,
-        "szip": true,
+        "szip": false,
         "threadsafe": false,
         "tools": true,
         "cflags": [],
@@ -1318,14 +1318,6 @@
           ]
         },
         {
-          "name": "libaec",
-          "build_hash": "li4hgdl7x3vrclyg372vupdei45sqxbw",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
           "name": "pkgconf",
           "build_hash": "mkngb4ol4vrihsqy6b2wjaqsgfoqj52n",
           "type": [
@@ -1341,45 +1333,11 @@
           ]
         }
       ],
-      "hash": "5xks3q3oh56pjlovz662ashbeps3h3lj"
+      "hash": "oeost2fpguyhwjawg7ryvcggmln2bpqk"
     },
-    "li4hgdl7x3vrclyg372vupdei45sqxbw": {
-      "name": "libaec",
-      "version": "1.0.5",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "centos7",
-        "target": "x86_64"
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "8.3.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "build_type": "RelWithDebInfo",
-        "ipo": false,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "cmake",
-          "build_hash": "tftkxl3x4eqg7u3l3bo2dkhjuqpe3ros",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "4n37idecy52sr4jexhfzzoqac7qy6pww"
-    },
-    "ar6vcdujhuzmg44jt5gponwrggm7ita5": {
+    "euzgju2oh2ide5qitrjy3zh5h5b7hjmg": {
       "name": "lava",
-      "version": "master",
+      "version": "1.4.3",
       "arch": {
         "platform": "linux",
         "platform_os": "centos7",
@@ -1414,16 +1372,16 @@
         },
         {
           "name": "mcnp",
-          "build_hash": "rlnp4f74bg3rdyaobyvu2b7njl4f7gb5",
+          "build_hash": "vl6eg6nfkq6457mi73floiegakr7b4sq",
           "type": [
             "build",
             "run"
           ]
         }
       ],
-      "hash": "vufu3rerww24rz6yl4thadtdmnefmob4"
+      "hash": "4xxacuakmlg42rt3d6vqylx2536wmfj4"
     },
-    "rlnp4f74bg3rdyaobyvu2b7njl4f7gb5": {
+    "vl6eg6nfkq6457mi73floiegakr7b4sq": {
       "name": "mcnp",
       "version": "5.1.60",
       "arch": {
@@ -1444,40 +1402,12 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "dependencies": [
-        {
-          "name": "mcnp-data",
-          "build_hash": "rk2rzdryzpstjtec5p4fz7shvczpvc42",
-          "type": [
-            "build",
-            "run"
-          ]
-        }
-      ],
-      "hash": "axhbkwir35cmuism7qpe6h7ymz35c5ok"
-    },
-    "rk2rzdryzpstjtec5p4fz7shvczpvc42": {
-      "name": "mcnp-data",
-      "version": "6.2.0",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "centos7",
-        "target": "x86_64"
+      "external": {
+        "path": "/projects/MCNP5_v1.6/MCNP_CODE",
+        "module": null,
+        "extra_attributes": {}
       },
-      "compiler": {
-        "name": "gcc",
-        "version": "8.3.0"
-      },
-      "namespace": "lanl",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "hash": "rk2rzdryzpstjtec5p4fz7shvczpvc42"
+      "hash": "vl6eg6nfkq6457mi73floiegakr7b4sq"
     },
     "mydfm3e3s4awtjcqgzllmd6qlziy7ewh": {
       "name": "googletest",
@@ -2018,7 +1948,7 @@
       ],
       "hash": "ppgd3c5lndbd3drfd5r6eljjdctttzbv"
     },
-    "ys32hojkjcwdlyby5qqcd7bkx47vwmpp": {
+    "52yyxqfj7arp6u7iuqfbb34oco67lmhc": {
       "name": "py-h5py",
       "version": "2.10.0",
       "arch": {
@@ -2043,7 +1973,7 @@
       "dependencies": [
         {
           "name": "hdf5",
-          "build_hash": "wgukgusb6y73jz5b2e4d7s2xox2yv5oz",
+          "build_hash": "ou4gkqzqjr254bpo52bsrozqdjtqot73",
           "type": [
             "build",
             "link"
@@ -2109,7 +2039,7 @@
           ]
         }
       ],
-      "hash": "ynp2xyjrvxwnpabgxrm6whxrgoosdeva"
+      "hash": "6aa3yc77chtjlaohi4vxftqfcgihv56e"
     },
     "gqp2x53drauvi4qr53ielooaswjcxp6r": {
       "name": "py-cython",
@@ -7345,7 +7275,7 @@
       },
       "hash": "7zasselnyvrjah5v5ladlxtixtxx6yxy"
     },
-    "htzf3lytepdugryudt5iegozftapf3ia": {
+    "6f6fg6dq6ixeijrbjwwjxcbqpmg5aii6": {
       "name": "silo",
       "version": "4.10.2",
       "arch": {
@@ -7399,7 +7329,7 @@
         },
         {
           "name": "hdf5",
-          "build_hash": "wgukgusb6y73jz5b2e4d7s2xox2yv5oz",
+          "build_hash": "ou4gkqzqjr254bpo52bsrozqdjtqot73",
           "type": [
             "build",
             "link"
@@ -7436,7 +7366,7 @@
           ]
         }
       ],
-      "hash": "z224ds2mcjhiuzl4sareekr3tgut3zm5"
+      "hash": "wgi7k2g2utygr3h4xzddvxg4uu5hvzlw"
     },
     "25mk4kfzahjdiylekaabowuk4bva3ttm": {
       "name": "superlu",
