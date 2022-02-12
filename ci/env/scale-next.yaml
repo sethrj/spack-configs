@@ -9,8 +9,6 @@ spack:
   - flex@2.6.4
   - gsl
   - hdf5 +fortran +hl ~mpi
-
-
   
     # - 'java@14:' # jdk fails to fetch
   - nlohmann-json
@@ -31,7 +29,6 @@ spack:
   - qt@5:5.99 +gui
   - silo +fortran ~mpi
   - swig@4.0.2-fortran
-  - valgrind
   view: true
   concretization: together
   packages:

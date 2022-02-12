@@ -1,0 +1,16 @@
+spack:
+  specs:
+  - htop
+  - llvm +clang ~flang   # for clang-format
+  - py-macholib
+  - py-python-magic
+  - rename
+  - screen
+  - valgrind
+  - vim
+  - zsh
+  view: false
+  concretization: together
+  packages:
+    valgrind:
+      variants: ~boost~mpi
