@@ -1,33 +1,35 @@
 modules:
-  enable::
-    - lmod
-  prefix_inspections:
+  prefix_inspections::
     '':
     - CMAKE_PREFIX_PATH
     - '${PACKAGE}_ROOT'
-  lmod:
-    core_compilers:
-      - 'gcc@4.4.7'
-    hash_length: 4
-    hierarchy:: []
-    ^python:
-      autoload:  'direct'
-    all:
-      suffixes:
-        '^python@2': py2
-        '+cuda': 'cuda'
-        '+debug': debug
-        '+mpi': mpi
-        '+multithreaded': mt
-        '+openmp': mt
-        '+threads': mt
-        '~shared': 'static'
-        'cxxstd=98': 'c++98'
-        'cxxstd=14': 'c++14'
-        'cxxstd=17': 'c++17'
-    lava: &restricted
-      template: 'group-restricted.lua'
-    mcnp: *restricted
-    mcnp-data: *restricted
-    scale: *restricted
-    scale-data: *restricted
+  default:
+    enable::
+      - lmod
+    lmod:
+      core_compilers:
+        - 'gcc@4.4.7'
+      hash_length: 4
+      hierarchy:: []
+      ^py-setuptools:
+        autoload: 'direct'
+      all:
+        autoload: 'none'
+        suffixes:
+          '^python@2': py2
+          '+cuda': 'cuda'
+          '+debug': debug
+          '+mpi': mpi
+          '+multithreaded': mt
+          '+openmp': mt
+          '+threads': mt
+          '~shared': 'static'
+          'cxxstd=98': 'c++98'
+          'cxxstd=14': 'c++14'
+          'cxxstd=17': 'c++17'
+      lava: &restricted
+        template: 'group-restricted.lua'
+      mcnp: *restricted
+      mcnp-data: *restricted
+      scale: *restricted
+      scale-data: *restricted
