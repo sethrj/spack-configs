@@ -1,6 +1,6 @@
 #!/bin/bash -e
 ###############################################################################
-# File  :  ci/admin/install-spack.sh
+# File : update-local.sh
 ###############################################################################
 
 if [ "$0" != "$BASH_SOURCE" ]; then
@@ -57,7 +57,8 @@ vcall cp "${SPACK_ROOT}/etc/spack/"*.yaml "./"
 spack debug report > spack-debug-report.md
 for env in $(cd ${SPACK_ENV_BASE} && ls); do
   printf "$env " >&2
-  cp "${SPACK_ENV_BASE}/${env}/spack.yaml" "env/${env}.yaml"
+  cp "${SPACK_ENV_BASE}/${env}/spack.yaml" "env/${env}.yaml" \
+    || printf "\e[31;1m(missing environment)\e[0m "
   cp "${SPACK_ENV_BASE}/${env}/spack.lock" "env/${env}.lock" 2>/dev/null \
     || printf "\e[31;1m(missing lock)\e[0m "
 done
