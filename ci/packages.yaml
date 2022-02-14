@@ -30,6 +30,8 @@ packages:
   py-h5py:
     variants: ~mpi
     version: [2.10.0] # 3.0 and 3.1 fail with variable length arrays
+  openblas:
+    version: [0.3.15] # 0.3.19 causes trilinos failures on the `ci` machine architecture
   qt:
     variants: ~sql ~ssl ~tools
   scale:
