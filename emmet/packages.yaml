@@ -2,8 +2,8 @@ packages:
   cuda:
     buildable: false
     externals:
-    - spec: cuda@11.5
-      prefix: /usr/local/cuda-11.5
+    - spec: cuda@11.6
+      prefix: /usr/local/cuda-11.6
   mcnp:
     buildable: false
     externals:
@@ -25,3 +25,5 @@ packages:
     version: [4.0.2-fortran]
   all:
     variants: +cuda cuda_arch=35
+    providers:
+      mpi: [openmpi]
