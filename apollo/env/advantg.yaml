@@ -4,6 +4,7 @@ spack:
   - hdf5 +hl
   - mcnp@5.1.60
   - mcnp-data@5.1.60
+  - openblas threads=openmp
   - python@2.7:2.8
   - scale +python +omnibus +mcnp +mpi ~data ~ampx ~dagmc ~fulcrum ~rte ~polaris +openmp
   - silo
@@ -18,6 +19,9 @@ spack:
       variants: +libxml2 +shared +uuid
       version:
       - 2.7.16
+    py-h5py:
+      version:
+      - 2.10.0
     py-matplotlib:
       version:
       - 2.2.3

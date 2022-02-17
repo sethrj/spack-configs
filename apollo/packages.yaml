@@ -54,7 +54,6 @@ packages:
     variants: schedulers=tm
   swig:
     version: [4.0.2-fortran]
-  # BEGIN VARIANTS FROM SCALE CI #
   hdf5:
     variants: +hl +szip ~mpi
   moab:
@@ -99,6 +98,4 @@ packages:
       mpi: [openmpi]
       blas: [openblas]
       lapack: [openblas]
-    target: [x86_64]
     variants: cxxstd=11
-  # <<< install-spack.sh

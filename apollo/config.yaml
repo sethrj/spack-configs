@@ -1,9 +1,7 @@
 config:
-  build_jobs: 48
-  install_tree: $spack/opt/spack-v16
-  locks: false
+  install_tree: $spack/opt/spack
   install_path_scheme: '{compiler.name}-{compiler.version}/{name}/{hash:7}'
   module_roots:
-    lmod: $spack/share/spack-v16/lmod
+    lmod: $spack/share/spack/lmod
   template_dirs:
     - $spack/var/spack/repos/ornl-spack/templates
