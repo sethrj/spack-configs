@@ -12,22 +12,18 @@ packages:
     externals:
     - spec: advantg-data@3
       prefix: /projects/advantg/data
-  geant4:
-    variants: cxxstd=11 ~threads ~data
-  geant4-data:
+  groff:
     externals:
-    - spec: geant4-data@10.04
-      prefix: /projects/exnihilo/geant4-data
-    - spec: buildable
-      prefix: 'False'
-  lava:
-    permissions:
-      read: group
-      group: scale6
-  openpbs:
+    - spec: groff@1.22.2
+      prefix: /usr
+  openssh:
+    externals:
+    - spec: openssh@7.4p1
+      prefix: /usr
+  torque:
     buildable: false
     externals:
-    - spec: openpbs@21
+    - spec: torque@6.1.3
       prefix: /opt/torque-6.1.3
   mcnp:
     buildable: false
@@ -49,42 +45,19 @@ packages:
       prefix: /projects/MCNP_V62/MCNP_DATA
     - spec: mcnp-data@iter
       prefix: /projects/exnihilo/iter-data
-  openmpi:
-    version: [2.1.6] # to support SCALE limitations
-    variants: schedulers=tm
-  swig:
-    version: [4.0.2-fortran]
-  hdf5:
-    variants: +hl +szip ~mpi
-  moab:
-    variants: ~mpi ~parmetis ~coupler ~metis ~fortran
-  netcdf:
-    variants: ~mpi ~parallel
-  pcre:
-    variants: +jit
-  py-h5py:
-    variants: ~mpi
-  qt:
-    variants: ~sql ~ssl ~tools
-  scale:
-    permissions:
-      read: group
-      group: scale6
-  silo:
-    variants: ~mpi
   # >>> install-spack.sh
   hdf5:
-    variants: +cxx +fortran +hl +szip ~mpi
+    variants: +cxx +fortran +hl ~mpi
+
   moab:
-    variants: ~mpi ~parmetis ~coupler ~metis ~fortran
+    variants: ~mpi ~parmetis ~coupler ~metis ~fortran +shared
   netcdf:
     variants: ~mpi ~parallel
   pcre:
     variants: +jit
   py-h5py:
     variants: ~mpi
-    version:
-    - 2.10.0 # 3.0 and 3.1 fail with variable length arrays
+    version: [2.10.0] # 3.0 and 3.1 fail with variable length arrays
   qt:
     variants: ~sql ~ssl ~tools
   scale:
@@ -93,9 +66,15 @@ packages:
       group: scale6
   silo:
     variants: ~mpi
+  swig:
+    version: [4.0.2-fortran]
   all:
     providers:
       mpi: [openmpi]
       blas: [openblas]
       lapack: [openblas]
+    compiler:
+    - gcc@8.5.0
+    target: [x86_64]
     variants: cxxstd=11
+  # <<< install-spack.sh
