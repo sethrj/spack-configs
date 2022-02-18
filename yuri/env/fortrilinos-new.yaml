@@ -3,8 +3,8 @@ spack:
   - cmake
   - ninja
   - openmpi
-  - trilinos +amesos2 +anasazi +belos +kokkos +ifpack2 +muelu +nox +tpetra +stratimikos
-    +mpi gotype=long_long
+  - trilinos@13.2.0 +amesos2 +anasazi +belos +kokkos +ifpack2 +muelu +nox +tpetra
+    +stratimikos +mpi gotype=long_long
   view: true
   concretization: together
   packages:

@@ -9,23 +9,29 @@ modules:
     lmod:
       core_compilers:
         - 'apple-clang@13.0.0'
+      hash_length: 4
       hierarchy:: []
-      hash_length: 0
-      ^python:
-        autoload:  'direct'
-      projections:
-        all: "{name}/{version}.{hash:4}"
-        ^python@2: "py2/{name}/{version}.{hash:4}"
+      ^py-setuptools:
+        autoload:  direct
       all:
+        autoload:  none
         suffixes:
           '^python@2': py2
+          '+cuda': cuda
           '+debug': debug
           '+mpi': mpi
           '+multithreaded': mt
-          '+threads': mt
           '+openmp': mt
-          'api=v110': 'api110'
-          'api=v112': 'api112'
+          '+threads': mt
+          '~shared': static
           'cxxstd=98': 'c++98'
           'cxxstd=14': 'c++14'
           'cxxstd=17': 'c++17'
+      advantg: &restricted
+        template: 'group-restricted.lua'
+      advantg-data: *restricted
+      lava: *restricted
+      mcnp: *restricted
+      mcnp-data: *restricted
+      scale: *restricted
+      scale-data: *restricted

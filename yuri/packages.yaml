@@ -1,29 +1,36 @@
 packages:
-  mcnp:
-    externals:
-    - spec: mcnp@5.1.60
-      prefix: /rnsdhpc/opt/mcnp
-  mcnp-data:
-    externals:
-    - spec: mcnp-data@5.1.60
-      prefix: /rnsdhpc/opt/mcnp/data
   groff:
     externals:
     - spec: groff@1.19.2
       prefix: /usr
+  jdk:
+    externals:
+    - spec: jdk@14.0.2_12-46
+      prefix: /usr
+  opengl:
+    externals:
+    - spec: opengl@2.1
+      prefix: /opt/X11
   openssh:
     externals:
-    - spec: openssh@8.1p1
+    - spec: openssh@8.6p1
       prefix: /usr
-  scale-data:
-    externals:
-    - spec: scale-data@dev
-      prefix: /rnsdhpc/share/scale/data
   # >>> install-spack.sh
-  hdf5:
-    variants: +cxx +fortran +hl ~mpi
+  gcc:
+    variants: ~bootstrap
+
+  mcnp:
+    buildable: false
+    externals:
+    - spec: mcnp@5.1.60
+      prefix: /projects/MCNP5_v1.6/MCNP_CODE
+  mcnp-data:
+    buildable: false
+    externals:
+    - spec: mcnp-data@5.1.60
+      prefix: /projects/MCNP5_v1.6/MCNP_DATA
   moab:
-    variants: ~mpi ~parmetis ~coupler ~metis ~fortran
+    variants: ~mpi ~parmetis ~coupler ~metis ~fortran +shared
   netcdf:
     variants: ~mpi ~parallel
   pcre:
@@ -33,17 +40,22 @@ packages:
     version: [2.10.0] # 3.0 and 3.1 fail with variable length arrays
   qt:
     variants: ~sql ~ssl ~tools
-  scale:
-    permissions:
-      read: group
-      group: scale6
   silo:
     variants: ~mpi
+  swig:
+    version: [4.0.2-fortran]
   all:
-    compiler: [apple-clang@13.0.0]
     providers:
       mpi: [openmpi]
       blas: [openblas]
       lapack: [openblas]
+    compiler:
+    - apple-clang@13.0.0
     target: [x86_64]
     variants: cxxstd=11
+  # <<< install-spack.sh
+  hdf5:
+    variants: +cxx +fortran +hl ~mpi
+    version: [1.10.7] # Silo compatibility
+  python:
+    version: [3.9.10] # Not sure of constraint
