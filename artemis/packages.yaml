@@ -12,12 +12,6 @@ packages:
     externals:
     - spec: advantg-data@3
       prefix: /projects/advantg/data
-  geant4-data:
-    externals:
-    - spec: geant4-data@10.04
-      prefix: /projects/exnihilo/geant4-data
-    - spec: buildable
-      prefix: 'False'
   lava:
     permissions:
       read: group
@@ -48,8 +42,12 @@ packages:
     - spec: mcnp-data@iter
       prefix: /projects/exnihilo/iter-data
   openmpi:
-    version: [2.1.6] # to support SCALE limitations
-    variants: schedulers=slurm
+    variants: fabrics=auto schedulers=slurm +pmi
+  slurm:
+    buildable: false
+    externals:
+    - spec: slurm@20-11-8
+      prefix: /usr
   # >>> install-spack.sh
   hdf5:
     variants: +cxx +fortran +hl +szip ~mpi
@@ -70,6 +68,8 @@ packages:
   silo:
     variants: ~mpi
   all:
+    compiler:
+    - gcc@8.3.0
     providers:
       mpi: [openmpi]
       blas: [openblas]
