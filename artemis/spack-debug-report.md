@@ -1,4 +1,4 @@
-* **Spack:** 0.16.2-4214-3a9028427c
+* **Spack:** 0.17.1-1315-d22a9a7472
 * **Python:** 3.8.11
 * **Platform:** linux-rhel7-cascadelake
-* **Concretizer:** original
+* **Concretizer:** clingo
