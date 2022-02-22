@@ -1,4 +1,8 @@
 packages:
+  slurm:
+    externals:
+    - spec: slurm@20.11.8
+      prefix: /usr
   groff:
     externals:
     - spec: groff@1.22.2
@@ -13,9 +17,6 @@ packages:
     permissions:
       read: group
       group: advantg
-  hdf5:
-    variants: +cxx +fortran +hl ~mpi
-
   mcnp:
     buildable: false
     externals:
@@ -26,8 +27,16 @@ packages:
     externals:
     - spec: mcnp-data@5.1.60
       prefix: /projects/MCNP5_v1.6/MCNP_DATA
+  scale:
+    permissions:
+      read: group
+      group: scale6
+  hdf5:
+    variants: +cxx +fortran +hl ~mpi
   moab:
     variants: ~mpi ~parmetis ~coupler ~metis ~fortran +shared
+  openmpi:
+    variants: schedulers=slurm
   netcdf:
     variants: ~mpi ~parallel
   pcre:
@@ -37,11 +46,6 @@ packages:
     version: [2.10.0] # 3.0 and 3.1 fail with variable length arrays
   qt:
     variants: ~sql ~ssl ~tools
-
-  scale:
-    permissions:
-      read: group
-      group: scale6
   silo:
     variants: ~mpi
   swig:
@@ -53,5 +57,4 @@ packages:
       lapack: [openblas]
     compiler:
     - gcc@8.5.0
-    target: [x86_64]
   # <<< install-spack.sh

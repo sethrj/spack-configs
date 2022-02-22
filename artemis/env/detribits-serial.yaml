@@ -3,17 +3,19 @@ spack:
   # add package specs to the `specs` list
   specs:
   - bison@3.4.2
-  - 'cmake@3.16:'
+  - 'cmake@3.21:'   # newest version needed for packaging
   - flex@2.6.4
   - 'flibcpp@1.0.1: +swig'
-  - hdf5 +hl api=v110 ~mpi
+  - hdf5 +hl ~mpi
+  - lava
   - googletest
+  - gnds
   - 'ninja@1.10:'
   - nlohmann-json
 
   - pugixml
   - python +uuid
-  - py-h5py ~mpi
+  - py-h5py@:2.999 ~mpi   # compound vlen bug in 2.6-3.1 and 3.3+
   - py-lxml
   - py-matplotlib
   - py-numpy
@@ -21,18 +23,18 @@ spack:
   - py-pint
   - py-psutil
   - py-tqdm
-  - qt@5:5.99
+  - qt@5.0:5
   - silo +fortran ~mpi
   - swig@4.0.2-fortran
   - 'superlu@5:'
   - trilinos +amesos +amesos2 +anasazi +aztec +belos +ifpack gotype=long_long +epetra
     +epetraext +kokkos +ifpack2 +intrepid +ml +sacado +shards +tpetra +stratimikos
-    +hdf5 ~mpi
+    ~mpi
   view: true
   concretization: together
   packages:
     hdf5:
-      variants: +szip +fortran
+      version: [1.10.8] # needed for h5py@2 
     qt:
       variants: ~dbus~examples~gtk~opengl~phonon+shared~sql~ssl~tools~webkit
     superlu:
@@ -40,11 +42,12 @@ spack:
     trilinos:
       variants: ~adios2 ~alloptpkgs ~boost ~cgns ~chaco ~complex ~debug ~dtk ~exodus
         +explicit_template_instantiation ~float +fortran ~fortrilinos ~glm   ~gtest
-        +hdf5 ~hypre  ~intrepid2 ~isorropia ~matio ~mesquite ~metis ~minitensor ~muelu
+        ~hdf5 ~hypre  ~intrepid2 ~isorropia ~matio ~mesquite ~metis ~minitensor ~muelu
         ~mumps ~netcdf ~nox ~openmp ~phalanx ~piro ~pnetcdf ~python ~rol ~rythmos
         +shared ~shylu ~stk ~suite-sparse ~superlu ~superlu-dist ~teko ~tempus ~x11
         ~zlib ~zoltan ~zoltan2
     all:
+      variants: cxxstd=11
       providers:
         blas: [openblas]
         lapack: [openblas]
