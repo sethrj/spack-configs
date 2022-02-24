@@ -1,0 +1,27 @@
+compilers:
+- compiler:
+    spec: apple-clang@13.0.0
+    paths:
+      cc: /usr/bin/clang
+      cxx: /usr/bin/clang++
+      f77: /Users/Shared/ornldev/code/spack/opt/spack/apple-clang-13.0.0/gcc/pzlitlh/bin/gfortran
+      fc: /Users/Shared/ornldev/code/spack/opt/spack/apple-clang-13.0.0/gcc/pzlitlh/bin/gfortran
+    flags: {}
+    operating_system: bigsur
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@11.2.0
+    paths:
+      cc: /Users/Shared/ornldev/code/spack/opt/spack/apple-clang-13.0.0/gcc/pzlitlh/bin/gcc
+      cxx: /Users/Shared/ornldev/code/spack/opt/spack/apple-clang-13.0.0/gcc/pzlitlh/bin/g++
+      f77: /Users/Shared/ornldev/code/spack/opt/spack/apple-clang-13.0.0/gcc/pzlitlh/bin/gfortran
+      fc: /Users/Shared/ornldev/code/spack/opt/spack/apple-clang-13.0.0/gcc/pzlitlh/bin/gfortran
+    flags: {}
+    operating_system: bigsur
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
