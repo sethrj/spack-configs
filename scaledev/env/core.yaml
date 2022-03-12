@@ -1,17 +1,19 @@
 spack:
   specs:
-  - gcc@8.3.0
+  - gcc@8.5.0
   - git
   - git-lfs
-  - htop
   - lmod
-  - ninja
-  - rename
   - python
   view: true
   concretization: together
   packages:
+    lua:
+      variants: +shared
+    perl:
+      variants: +shared
     python:
-      variants: +uuid
+      variants: +shared +uuid
     all:
       compiler: [gcc@4.8.5]
+      variants: ~shared+pic libs=static

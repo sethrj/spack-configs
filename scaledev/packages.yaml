@@ -8,8 +8,6 @@ packages:
     - spec: openssh@7.4p1
       prefix: /usr
   # >>> install-spack.sh
-  hdf5:
-    variants: +cxx +fortran +hl ~mpi
 
   mcnp:
     buildable: false
@@ -21,6 +19,20 @@ packages:
     externals:
     - spec: mcnp-data@5.1.60
       prefix: /projects/MCNP5_v1.6/MCNP_DATA
+
+  scale:
+    permissions:
+      read: group
+      group: scale6
+
+  scale-data:
+    buildable: false
+    externals:
+    - spec: scale-data@master
+      prefix: /projects/scale-data
+
+  hdf5:
+    variants: +cxx +fortran +hl ~mpi
   moab:
     variants: ~mpi ~parmetis ~coupler ~metis ~fortran +shared
   netcdf:
@@ -29,13 +41,9 @@ packages:
     variants: +jit
   py-h5py:
     variants: ~mpi
-    version: [2.10.0] # 3.0 and 3.1 fail with variable length arrays
+    version: [2.10.0] # 3 series fails with variable length arrays
   qt:
     variants: ~sql ~ssl ~tools
-  scale:
-    permissions:
-      read: group
-      group: scale6
   silo:
     variants: ~mpi
   swig:
