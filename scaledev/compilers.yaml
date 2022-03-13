@@ -12,19 +12,19 @@ compilers:
     modules: []
     environment: {}
     extra_rpaths: []
-#- compiler:
-#    spec: gcc@8.5.0
-#    paths:
-#      cc: /projects/spack/opt/spack/gcc-4.8.5/gcc/4pqhrbp/bin/gcc
-#      cxx: /projects/spack/opt/spack/gcc-4.8.5/gcc/4pqhrbp/bin/g++
-#      f77: /projects/spack/opt/spack/gcc-4.8.5/gcc/4pqhrbp/bin/gfortran
-#      fc: /projects/spack/opt/spack/gcc-4.8.5/gcc/4pqhrbp/bin/gfortran
-#    flags: {}
-#    operating_system: centos7
-#    target: x86_64
-#    modules: []
-#    environment: {}
-#    extra_rpaths: []
+- compiler:
+    spec: gcc@8.5.0
+    paths:
+      cc: /projects/spack/opt/spack/gcc-4.8.5/gcc/4pqhrbp/bin/gcc
+      cxx: /projects/spack/opt/spack/gcc-4.8.5/gcc/4pqhrbp/bin/g++
+      f77: /projects/spack/opt/spack/gcc-4.8.5/gcc/4pqhrbp/bin/gfortran
+      fc: /projects/spack/opt/spack/gcc-4.8.5/gcc/4pqhrbp/bin/gfortran
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
 - compiler:
     spec: gcc@8.5.0.static
     paths:
