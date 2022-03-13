@@ -1,12 +1,9 @@
 spack:
   specs:
-  - gcc@8.3.0
+  - gcc@8.5.0
   - git
   - git-lfs
-  - htop
   - lmod
-  - ninja
-  - rename
   - python
   view: true
   concretization: together
@@ -17,3 +14,5 @@ spack:
       compiler: [gcc@4.4.7]
     gcc:
       variants: +binutils
+    go:
+      version: [1.16.10]
