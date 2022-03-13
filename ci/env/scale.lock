@@ -34,6 +34,10 @@
       "spec": "nlohmann-json"
     },
     {
+      "hash": "xff2nbo3lo3ccvf64aao5szhuebspgys",
+      "spec": "ninja"
+    },
+    {
       "hash": "6jrcjmch2vrpjzdme6wzedb3uup37slj",
       "spec": "openblas"
     },
@@ -1802,6 +1806,38 @@
         }
       ],
       "hash": "cg2ylzqpbk7zdumupzsqfoqun25pj3an"
+    },
+    "xff2nbo3lo3ccvf64aao5szhuebspgys": {
+      "name": "ninja",
+      "version": "1.10.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel6",
+        "target": "x86_64"
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "dependencies": [
+        {
+          "name": "python",
+          "build_hash": "slugqj6jzrf3w7dlrehnioa5fjgzzlfu",
+          "type": [
+            "build"
+          ]
+        }
+      ],
+      "hash": "vpfynzgj5ukakbu4b6b2hkxlkfidcn2k"
     },
     "6jrcjmch2vrpjzdme6wzedb3uup37slj": {
       "name": "openblas",
@@ -7566,38 +7602,6 @@
         }
       ],
       "hash": "gzpkrcionqdtuuvqfyd2q3e4ha3twgyi"
-    },
-    "xff2nbo3lo3ccvf64aao5szhuebspgys": {
-      "name": "ninja",
-      "version": "1.10.2",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel6",
-        "target": "x86_64"
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "8.5.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "python",
-          "build_hash": "slugqj6jzrf3w7dlrehnioa5fjgzzlfu",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "vpfynzgj5ukakbu4b6b2hkxlkfidcn2k"
     },
     "jfrmuysdcif4cxh3boaa3mt3kpykbgmc": {
       "name": "pcre",
