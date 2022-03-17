@@ -1,0 +1,86 @@
+packages:
+  spectrum-mpi:
+    version: [10.4.0.3-20210112]
+    target: []
+    compiler: []
+    buildable: false
+    providers: {}
+    externals:
+    - spec: spectrum-mpi@10.4.0.3-20210112
+      modules:
+      - spectrum-mpi/10.4.0.3-20210112
+  cuda:
+    buildable: false
+    version:
+    - 11.0.2
+    externals:
+    - spec: cuda@11.0.2
+      modules:
+      - cuda/11.0.2
+    target: []
+    providers: {}
+    compiler: []
+  lsf:
+    version: [10.1.0.10]
+    buildable: false
+    externals:
+    - spec: lsf@10.1.0.10
+      prefix: /opt/ibm/spectrumcomputing/lsf/10.1.0.10
+    target: []
+    compiler: []
+    providers: {}
+  hcoll:
+    buildable: false
+    version: [4.4]
+    externals:
+    - spec: hcoll@4.4
+      prefix: /opt/mellanox/hcoll
+    target: []
+    compiler: []
+    providers: {}
+  knem:
+    buildable: false
+    version: [1.1.3]
+    externals:
+    - spec: knem@1.1.3
+      prefix: /opt/knem-1.1.3.90mlnx1
+    target: []
+    compiler: []
+    providers: {}
+  go-bootstrap:
+    buildable: false
+    version: [1.7.1-bootstrap]
+    externals:
+    - spec: go-bootstrap@1.7.1-bootstrap
+      prefix: /sw/summit/go/1.7.1-bootstrap
+    target: []
+    providers: {}
+    compiler: []
+  gtkplus:
+    version: [3.22.30, 2.24.32]
+    buildable: false
+    externals:
+    - spec: gtkplus@2.24.32
+      prefix: /usr
+    - spec: gtkplus@3.22.30
+      prefix: /usr
+    target: []
+    providers: {}
+    compiler: []
+  openssl:
+    buildable: false
+    version: [1.1.1]
+    externals:
+    - spec: openssl@1.1.1
+      prefix: /usr
+    target: []
+    providers: {}
+    compiler: []
+  all:
+    compiler: [gcc@9.1.0]
+    providers:
+      mpi: [spectrum-mpi]
+    buildable: true
+    version: []
+    target: [ppc64le]
+    variants: +cuda cuda_arch=70 cxxstd=14

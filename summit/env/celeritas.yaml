@@ -1,0 +1,23 @@
+spack:
+  specs:
+  - cmake
+  - geant4
+  - googletest
+  - hepmc3
+  - ninja
+  - nlohmann-json
+  - python
+  - root ~aqua
+  - veccore
+  - vecgeom +gdml
+  view: /gpfs/alpine/proj-shared/csc404/celeritas/spack/view
+  concretization: together
+  packages:
+    root:
+      variants: ~davix ~examples ~opengl ~x ~tbb ~rootfit ~math ~gsl cxxstd=14
+    all:
+      providers:
+        blas: [openblas]
+        lapack: [openblas]
+        mpi: [openmpi]
+      variants: cxxstd=14 +cuda cuda_arch=70
