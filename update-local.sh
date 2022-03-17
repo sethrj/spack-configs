@@ -41,7 +41,15 @@ if ! hash spack 2>/dev/null; then
 fi
 SPACK_ENV_BASE="$SPACK_ROOT/var/spack/environments"
 
-SHORTHOST=${PBS_O_HOST:-$HOSTNAME}
+if [ -n "${LMOD_SYSTEM_NAME}" ]; then
+  # OLCF systems
+  SHORTHOST=${LMOD_SYSTEM_NAME}
+elif [ -n "${PBS_O_HOST}" ]; then
+  # On compute node
+  SHORTHOST=${PBS_O_HOST}
+else
+  SHORTHOST=${HOSTNAME}
+fi
 SHORTHOST=${SHORTHOST%%.*}
 CONFIGDIR="$( cd "$( dirname "$0" )" && pwd )"/$SHORTHOST
 if [ ! -d $CONFIGDIR ]; then
