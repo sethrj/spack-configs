@@ -6,29 +6,29 @@
   },
   "roots": [
     {
-      "hash": "teqab5p2tgvujpsvqafec22aqblurros",
+      "hash": "hthzodjtb64u36vn67oa5jelffiuckks",
       "spec": "cmake"
     },
     {
-      "hash": "4yzy45leesvbnd4didwic3neypc226ik",
+      "hash": "7r57rm567oiv65vkv6tnpp6gylzjkz2s",
       "spec": "ninja"
     },
     {
-      "hash": "cgumw2nng4mzqhxwfjraqmlctyktyrlg",
+      "hash": "774bypx642nqzhtfqowo6ic37gxjp5mk",
       "spec": "openmpi"
     },
     {
-      "hash": "pulpqxytbakmyeyhy447l7irxvo7m65n",
-      "spec": "trilinos+amesos2+anasazi+belos+ifpack2+kokkos+mpi+muelu+nox+stratimikos+tpetra gotype=long_long"
+      "hash": "piwgnrcjfduargenq6pgtiy6f476s6pv",
+      "spec": "trilinos@13.2.0+amesos2+anasazi+belos+ifpack2+kokkos+mpi+muelu+nox+stratimikos+tpetra gotype=long_long"
     }
   ],
   "concrete_specs": {
-    "teqab5p2tgvujpsvqafec22aqblurros": {
+    "hthzodjtb64u36vn67oa5jelffiuckks": {
       "name": "cmake",
       "version": "3.22.2",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -53,7 +53,7 @@
       "dependencies": [
         {
           "name": "ncurses",
-          "build_hash": "jwutydp2v3ptuuv7ga7slom56mtvmavg",
+          "build_hash": "26m3ztan4nc7juaheohcg5ugrkew4hqt",
           "type": [
             "build",
             "link"
@@ -61,21 +61,21 @@
         },
         {
           "name": "openssl",
-          "build_hash": "km55wwb5afsqq2emwaqger5kphkrsxdx",
+          "build_hash": "uq2vgd5rr5gp7rzgpvg6ekbeinn2hugh",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "k26u6l276ucxglneo5hqxybsjnsm5ick"
+      "hash": "yjdagszipeb3phxt3oeoeex6kunbd7kj"
     },
-    "jwutydp2v3ptuuv7ga7slom56mtvmavg": {
+    "26m3ztan4nc7juaheohcg5ugrkew4hqt": {
       "name": "ncurses",
       "version": "6.2",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -97,20 +97,20 @@
       "dependencies": [
         {
           "name": "pkgconf",
-          "build_hash": "exg6xuonlrhkwgzdlwhc6s7jxi7ypp3g",
+          "build_hash": "nt3e3jdlff6k3g2twm635sy6ii2fmjg2",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "bjyawboexrkpb3k2vrqzwcl43wjv3wj6"
+      "hash": "yzypcoehjgxvqcf73g456svmn72bzbuw"
     },
-    "exg6xuonlrhkwgzdlwhc6s7jxi7ypp3g": {
+    "nt3e3jdlff6k3g2twm635sy6ii2fmjg2": {
       "name": "pkgconf",
       "version": "1.8.0",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -126,14 +126,14 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "hash": "exg6xuonlrhkwgzdlwhc6s7jxi7ypp3g"
+      "hash": "nt3e3jdlff6k3g2twm635sy6ii2fmjg2"
     },
-    "km55wwb5afsqq2emwaqger5kphkrsxdx": {
+    "uq2vgd5rr5gp7rzgpvg6ekbeinn2hugh": {
       "name": "openssl",
       "version": "1.1.1m",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -154,28 +154,28 @@
       "dependencies": [
         {
           "name": "perl",
-          "build_hash": "lwkbfhynfxbjprgxmsxk2vknubbsnvq3",
+          "build_hash": "khxcnmzv56febiv6iwfdwgg6ejgjjqsd",
           "type": [
             "build"
           ]
         },
         {
           "name": "zlib",
-          "build_hash": "dyvjhhivxcq7ze7v7tcq2a4nsuhojnnf",
+          "build_hash": "fj3aancm72hxjybw6445d5uuftok6jvr",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "pmc4pcis5tdttapkacjuoxaalzzgl5r3"
+      "hash": "o6osykoro3ocazkqxrtjfulnc2s6sdhq"
     },
-    "lwkbfhynfxbjprgxmsxk2vknubbsnvq3": {
+    "khxcnmzv56febiv6iwfdwgg6ejgjjqsd": {
       "name": "perl",
       "version": "5.34.0",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -197,7 +197,7 @@
       "dependencies": [
         {
           "name": "berkeley-db",
-          "build_hash": "emdbkn6qroefmrx2tshabhd5ipgjfjrd",
+          "build_hash": "jsxgjhu6kaciv4dclqseywctaayeztwv",
           "type": [
             "build",
             "link"
@@ -205,7 +205,7 @@
         },
         {
           "name": "bzip2",
-          "build_hash": "egcrjcatkdoin3ffwa4caqk2bv6dx5jd",
+          "build_hash": "6c3a74jawg2mkst5s3xjz2rvsgrxflnp",
           "type": [
             "build",
             "link"
@@ -213,7 +213,7 @@
         },
         {
           "name": "gdbm",
-          "build_hash": "ybqrufvtnhpnapdc75ku7l2cjydeyotr",
+          "build_hash": "pgypqscz63skxjatntzzbumidi5dplv6",
           "type": [
             "build",
             "link"
@@ -221,21 +221,21 @@
         },
         {
           "name": "zlib",
-          "build_hash": "dyvjhhivxcq7ze7v7tcq2a4nsuhojnnf",
+          "build_hash": "fj3aancm72hxjybw6445d5uuftok6jvr",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "tpha2u52qfwaraidpzzbf6u4dbqg7dk5"
+      "hash": "ux3uf3md4qnxhreafwf7fcuq5wd6cjgp"
     },
-    "emdbkn6qroefmrx2tshabhd5ipgjfjrd": {
+    "jsxgjhu6kaciv4dclqseywctaayeztwv": {
       "name": "berkeley-db",
       "version": "18.1.40",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -260,14 +260,14 @@
       "patches": [
         "b231fcc4d5cff05e5c3a4814f6a5af0e9a966428dc2176540d2c05aff41de522"
       ],
-      "hash": "emdbkn6qroefmrx2tshabhd5ipgjfjrd"
+      "hash": "jsxgjhu6kaciv4dclqseywctaayeztwv"
     },
-    "egcrjcatkdoin3ffwa4caqk2bv6dx5jd": {
+    "6c3a74jawg2mkst5s3xjz2rvsgrxflnp": {
       "name": "bzip2",
       "version": "1.0.8",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -289,20 +289,20 @@
       "dependencies": [
         {
           "name": "diffutils",
-          "build_hash": "gwsn7frpsd7wnx264q75lq6gmzgt5nev",
+          "build_hash": "i5sfxg627kftkesfmnsaaarf7kplngpb",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "c5yi4rwprzohn4jsr37xfgj5e3bi2pvd"
+      "hash": "layd3qcuhzpbmnmyjqdcjkpvfompfspc"
     },
-    "gwsn7frpsd7wnx264q75lq6gmzgt5nev": {
+    "i5sfxg627kftkesfmnsaaarf7kplngpb": {
       "name": "diffutils",
       "version": "3.8",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -321,21 +321,21 @@
       "dependencies": [
         {
           "name": "libiconv",
-          "build_hash": "nk3agj6zdyupf6wxyksqbmzbcxagib3r",
+          "build_hash": "brlt6smd7ihozdfabr4em3vwspx6ryc4",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "7rebrc5a2zjkiwpwcekzxj45i6ynsd2a"
+      "hash": "4x3cte5tegmltaoioaghmjtskff72lnn"
     },
-    "nk3agj6zdyupf6wxyksqbmzbcxagib3r": {
+    "brlt6smd7ihozdfabr4em3vwspx6ryc4": {
       "name": "libiconv",
       "version": "1.16",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -355,14 +355,14 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "hash": "nk3agj6zdyupf6wxyksqbmzbcxagib3r"
+      "hash": "brlt6smd7ihozdfabr4em3vwspx6ryc4"
     },
-    "ybqrufvtnhpnapdc75ku7l2cjydeyotr": {
+    "pgypqscz63skxjatntzzbumidi5dplv6": {
       "name": "gdbm",
       "version": "1.19",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -381,21 +381,21 @@
       "dependencies": [
         {
           "name": "readline",
-          "build_hash": "4x7uo6z3mw5scxbe4hlscyzxvli74i4b",
+          "build_hash": "65efa3uv3j5zyz5vv5j74r2rcc4qjhwr",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "ddpmn74d5autrlwnetixqfw7j6t457ef"
+      "hash": "s6jre6zy3s5rjbvg5tog2uorvd3zgr47"
     },
-    "4x7uo6z3mw5scxbe4hlscyzxvli74i4b": {
+    "65efa3uv3j5zyz5vv5j74r2rcc4qjhwr": {
       "name": "readline",
       "version": "8.1",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -414,21 +414,21 @@
       "dependencies": [
         {
           "name": "ncurses",
-          "build_hash": "jwutydp2v3ptuuv7ga7slom56mtvmavg",
+          "build_hash": "26m3ztan4nc7juaheohcg5ugrkew4hqt",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "nyieiyveopajmxtfavnh7g3pzglhmn23"
+      "hash": "wqhqfjcmba64urwihxincnj5b64dwhlu"
     },
-    "dyvjhhivxcq7ze7v7tcq2a4nsuhojnnf": {
+    "fj3aancm72hxjybw6445d5uuftok6jvr": {
       "name": "zlib",
       "version": "1.2.11",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -447,14 +447,14 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "hash": "dyvjhhivxcq7ze7v7tcq2a4nsuhojnnf"
+      "hash": "fj3aancm72hxjybw6445d5uuftok6jvr"
     },
-    "4yzy45leesvbnd4didwic3neypc226ik": {
+    "7r57rm567oiv65vkv6tnpp6gylzjkz2s": {
       "name": "ninja",
       "version": "1.10.2",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -473,20 +473,20 @@
       "dependencies": [
         {
           "name": "python",
-          "build_hash": "ox6cuyisywmmjrvt4oumrm5iqu666r2o",
+          "build_hash": "c3qdfet4glwcweebb6mhyhclfac7bhmm",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "maucnei7qscxyu42nslidfar7ww4v3ka"
+      "hash": "56sdx6pkn7xo6cu7uczatrejurjpivax"
     },
-    "ox6cuyisywmmjrvt4oumrm5iqu666r2o": {
+    "c3qdfet4glwcweebb6mhyhclfac7bhmm": {
       "name": "python",
       "version": "3.9.10",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -536,7 +536,7 @@
       "dependencies": [
         {
           "name": "apple-libuuid",
-          "build_hash": "id3yhto77xqqx6c2hqq2tn2iy22olln2",
+          "build_hash": "p7njdfajvqazxjlxfoapznq65lfpi2io",
           "type": [
             "build",
             "link"
@@ -544,7 +544,7 @@
         },
         {
           "name": "bzip2",
-          "build_hash": "egcrjcatkdoin3ffwa4caqk2bv6dx5jd",
+          "build_hash": "6c3a74jawg2mkst5s3xjz2rvsgrxflnp",
           "type": [
             "build",
             "link"
@@ -552,7 +552,7 @@
         },
         {
           "name": "expat",
-          "build_hash": "l4htjxawpoihballbhqvltbgoffvsuhs",
+          "build_hash": "pqoulybddd5jze7febejsmcx3eerhroh",
           "type": [
             "build",
             "link"
@@ -560,7 +560,7 @@
         },
         {
           "name": "gdbm",
-          "build_hash": "ybqrufvtnhpnapdc75ku7l2cjydeyotr",
+          "build_hash": "pgypqscz63skxjatntzzbumidi5dplv6",
           "type": [
             "build",
             "link"
@@ -568,7 +568,7 @@
         },
         {
           "name": "gettext",
-          "build_hash": "g2cwxmw2bcz3iqgqvk4xnckro4hcuqww",
+          "build_hash": "ngx5qa3bz2fobe3c54ogguojbrfls2ol",
           "type": [
             "build",
             "link"
@@ -576,7 +576,7 @@
         },
         {
           "name": "libffi",
-          "build_hash": "gxdlroox3jje5r2kcv4wdz74hyf3meup",
+          "build_hash": "yl2xcitpffepad2i23qf33xxbvlwj76o",
           "type": [
             "build",
             "link"
@@ -584,7 +584,7 @@
         },
         {
           "name": "ncurses",
-          "build_hash": "jwutydp2v3ptuuv7ga7slom56mtvmavg",
+          "build_hash": "26m3ztan4nc7juaheohcg5ugrkew4hqt",
           "type": [
             "build",
             "link"
@@ -592,7 +592,7 @@
         },
         {
           "name": "openssl",
-          "build_hash": "km55wwb5afsqq2emwaqger5kphkrsxdx",
+          "build_hash": "uq2vgd5rr5gp7rzgpvg6ekbeinn2hugh",
           "type": [
             "build",
             "link"
@@ -600,14 +600,14 @@
         },
         {
           "name": "pkgconf",
-          "build_hash": "exg6xuonlrhkwgzdlwhc6s7jxi7ypp3g",
+          "build_hash": "nt3e3jdlff6k3g2twm635sy6ii2fmjg2",
           "type": [
             "build"
           ]
         },
         {
           "name": "readline",
-          "build_hash": "4x7uo6z3mw5scxbe4hlscyzxvli74i4b",
+          "build_hash": "65efa3uv3j5zyz5vv5j74r2rcc4qjhwr",
           "type": [
             "build",
             "link"
@@ -615,7 +615,7 @@
         },
         {
           "name": "sqlite",
-          "build_hash": "eutyuft3lie5iakf6kn5oltc3r7v3aqc",
+          "build_hash": "lfoba3ssa573cxlzwc5oor7vwdd2xbe4",
           "type": [
             "build",
             "link"
@@ -623,7 +623,7 @@
         },
         {
           "name": "xz",
-          "build_hash": "fjw5kipvkaevtu75x3rm7ub56a3dtw3y",
+          "build_hash": "x5c5oesxiiclloghj4ccuwzs3rs2m65m",
           "type": [
             "build",
             "link"
@@ -631,21 +631,21 @@
         },
         {
           "name": "zlib",
-          "build_hash": "dyvjhhivxcq7ze7v7tcq2a4nsuhojnnf",
+          "build_hash": "fj3aancm72hxjybw6445d5uuftok6jvr",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "epfygwub72a3xhgr2s7p4mofuq73grd7"
+      "hash": "qqqezh5nshgvfmhxyedxebfis2amzapt"
     },
-    "id3yhto77xqqx6c2hqq2tn2iy22olln2": {
+    "p7njdfajvqazxjlxfoapznq65lfpi2io": {
       "name": "apple-libuuid",
       "version": "1353.100.2",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -666,14 +666,14 @@
         "module": null,
         "extra_attributes": {}
       },
-      "hash": "id3yhto77xqqx6c2hqq2tn2iy22olln2"
+      "hash": "p7njdfajvqazxjlxfoapznq65lfpi2io"
     },
-    "l4htjxawpoihballbhqvltbgoffvsuhs": {
+    "pqoulybddd5jze7febejsmcx3eerhroh": {
       "name": "expat",
       "version": "2.4.4",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -690,14 +690,14 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "hash": "l4htjxawpoihballbhqvltbgoffvsuhs"
+      "hash": "pqoulybddd5jze7febejsmcx3eerhroh"
     },
-    "g2cwxmw2bcz3iqgqvk4xnckro4hcuqww": {
+    "ngx5qa3bz2fobe3c54ogguojbrfls2ol": {
       "name": "gettext",
       "version": "0.21",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -723,7 +723,7 @@
       "dependencies": [
         {
           "name": "bzip2",
-          "build_hash": "egcrjcatkdoin3ffwa4caqk2bv6dx5jd",
+          "build_hash": "6c3a74jawg2mkst5s3xjz2rvsgrxflnp",
           "type": [
             "build",
             "link"
@@ -731,7 +731,7 @@
         },
         {
           "name": "libiconv",
-          "build_hash": "nk3agj6zdyupf6wxyksqbmzbcxagib3r",
+          "build_hash": "brlt6smd7ihozdfabr4em3vwspx6ryc4",
           "type": [
             "build",
             "link"
@@ -739,7 +739,7 @@
         },
         {
           "name": "libxml2",
-          "build_hash": "fgw5szzwbqehjszktcwqtpto5b6uvoa3",
+          "build_hash": "kevr2rby2r35ymtovyhygvtfibo2cxbr",
           "type": [
             "build",
             "link"
@@ -747,7 +747,7 @@
         },
         {
           "name": "ncurses",
-          "build_hash": "jwutydp2v3ptuuv7ga7slom56mtvmavg",
+          "build_hash": "26m3ztan4nc7juaheohcg5ugrkew4hqt",
           "type": [
             "build",
             "link"
@@ -755,7 +755,7 @@
         },
         {
           "name": "tar",
-          "build_hash": "5kj5jqluu6cropglrwcbi2p75hze2m6m",
+          "build_hash": "dpciioqswwmbxd7rh6ni4nll2booug34",
           "type": [
             "build",
             "link"
@@ -763,7 +763,7 @@
         },
         {
           "name": "xz",
-          "build_hash": "fjw5kipvkaevtu75x3rm7ub56a3dtw3y",
+          "build_hash": "x5c5oesxiiclloghj4ccuwzs3rs2m65m",
           "type": [
             "build",
             "link",
@@ -771,14 +771,14 @@
           ]
         }
       ],
-      "hash": "osyfqslp74yezp2nlwhsd6kjuo7a4yem"
+      "hash": "ox5hygfc3mv5d2e2brhuyzvv5tbizmok"
     },
-    "fgw5szzwbqehjszktcwqtpto5b6uvoa3": {
+    "kevr2rby2r35ymtovyhygvtfibo2cxbr": {
       "name": "libxml2",
       "version": "2.9.12",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -798,7 +798,7 @@
       "dependencies": [
         {
           "name": "libiconv",
-          "build_hash": "nk3agj6zdyupf6wxyksqbmzbcxagib3r",
+          "build_hash": "brlt6smd7ihozdfabr4em3vwspx6ryc4",
           "type": [
             "build",
             "link"
@@ -806,14 +806,14 @@
         },
         {
           "name": "pkgconf",
-          "build_hash": "exg6xuonlrhkwgzdlwhc6s7jxi7ypp3g",
+          "build_hash": "nt3e3jdlff6k3g2twm635sy6ii2fmjg2",
           "type": [
             "build"
           ]
         },
         {
           "name": "xz",
-          "build_hash": "fjw5kipvkaevtu75x3rm7ub56a3dtw3y",
+          "build_hash": "x5c5oesxiiclloghj4ccuwzs3rs2m65m",
           "type": [
             "build",
             "link"
@@ -821,21 +821,21 @@
         },
         {
           "name": "zlib",
-          "build_hash": "dyvjhhivxcq7ze7v7tcq2a4nsuhojnnf",
+          "build_hash": "fj3aancm72hxjybw6445d5uuftok6jvr",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "3dwrkpb7ce6l56nplryvwii3vrh4owym"
+      "hash": "lsny6ceid6jeeunyzvfb3ds3lom2ycor"
     },
-    "fjw5kipvkaevtu75x3rm7ub56a3dtw3y": {
+    "x5c5oesxiiclloghj4ccuwzs3rs2m65m": {
       "name": "xz",
       "version": "5.2.5",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -856,14 +856,14 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "hash": "fjw5kipvkaevtu75x3rm7ub56a3dtw3y"
+      "hash": "x5c5oesxiiclloghj4ccuwzs3rs2m65m"
     },
-    "5kj5jqluu6cropglrwcbi2p75hze2m6m": {
+    "dpciioqswwmbxd7rh6ni4nll2booug34": {
       "name": "tar",
       "version": "1.34",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -882,21 +882,21 @@
       "dependencies": [
         {
           "name": "libiconv",
-          "build_hash": "nk3agj6zdyupf6wxyksqbmzbcxagib3r",
+          "build_hash": "brlt6smd7ihozdfabr4em3vwspx6ryc4",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "23qzbnec7mpwpd57f3wx75rrh4htdhqo"
+      "hash": "nkhqy45h4s2yypuce63saa5unflzb4wk"
     },
-    "gxdlroox3jje5r2kcv4wdz74hyf3meup": {
+    "yl2xcitpffepad2i23qf33xxbvlwj76o": {
       "name": "libffi",
       "version": "3.3",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -918,14 +918,14 @@
       "patches": [
         "26f26c6f29a7ce9bf370ad3ab2610f99365b4bdd7b82e7c31df41a3370d685c0"
       ],
-      "hash": "gxdlroox3jje5r2kcv4wdz74hyf3meup"
+      "hash": "yl2xcitpffepad2i23qf33xxbvlwj76o"
     },
-    "eutyuft3lie5iakf6kn5oltc3r7v3aqc": {
+    "lfoba3ssa573cxlzwc5oor7vwdd2xbe4": {
       "name": "sqlite",
       "version": "3.37.1",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -949,7 +949,7 @@
       "dependencies": [
         {
           "name": "readline",
-          "build_hash": "4x7uo6z3mw5scxbe4hlscyzxvli74i4b",
+          "build_hash": "65efa3uv3j5zyz5vv5j74r2rcc4qjhwr",
           "type": [
             "build",
             "link"
@@ -957,21 +957,21 @@
         },
         {
           "name": "zlib",
-          "build_hash": "dyvjhhivxcq7ze7v7tcq2a4nsuhojnnf",
+          "build_hash": "fj3aancm72hxjybw6445d5uuftok6jvr",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "23vfoccsyfhythepzzuwxt4qedeba7ic"
+      "hash": "azdkedplczodvp27bjiodxrkppf5k7fy"
     },
-    "cgumw2nng4mzqhxwfjraqmlctyktyrlg": {
+    "774bypx642nqzhtfqowo6ic37gxjp5mk": {
       "name": "openmpi",
       "version": "4.1.2",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -1015,7 +1015,7 @@
       "dependencies": [
         {
           "name": "hwloc",
-          "build_hash": "5bpbj7f2nllg7eua7xszzlo5fizgir5z",
+          "build_hash": "kwiemd4ur4sbdhye6cpqhcirbdzfn7d5",
           "type": [
             "build",
             "link"
@@ -1023,7 +1023,7 @@
         },
         {
           "name": "libevent",
-          "build_hash": "eowsc5utvwyfmv56falfdqtjutant5k2",
+          "build_hash": "76zfhqro4y4z2bk2iujkscejnl5b6h2h",
           "type": [
             "build",
             "link"
@@ -1031,42 +1031,42 @@
         },
         {
           "name": "openssh",
-          "build_hash": "pisdslvhsfrt47kb2545cfbzhwrqczg3",
+          "build_hash": "oawrkil4a6vdozfd6f3ne356bklawuty",
           "type": [
             "run"
           ]
         },
         {
           "name": "perl",
-          "build_hash": "lwkbfhynfxbjprgxmsxk2vknubbsnvq3",
+          "build_hash": "khxcnmzv56febiv6iwfdwgg6ejgjjqsd",
           "type": [
             "build"
           ]
         },
         {
           "name": "pkgconf",
-          "build_hash": "exg6xuonlrhkwgzdlwhc6s7jxi7ypp3g",
+          "build_hash": "nt3e3jdlff6k3g2twm635sy6ii2fmjg2",
           "type": [
             "build"
           ]
         },
         {
           "name": "zlib",
-          "build_hash": "dyvjhhivxcq7ze7v7tcq2a4nsuhojnnf",
+          "build_hash": "fj3aancm72hxjybw6445d5uuftok6jvr",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "t2gwnsykv35dzga5h3q6ymcazuocefop"
+      "hash": "z7tvg5gwoln6q5xjpnw6lb24bhwmoelj"
     },
-    "5bpbj7f2nllg7eua7xszzlo5fizgir5z": {
+    "kwiemd4ur4sbdhye6cpqhcirbdzfn7d5": {
       "name": "hwloc",
       "version": "2.7.0",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -1096,7 +1096,7 @@
       "dependencies": [
         {
           "name": "libxml2",
-          "build_hash": "fgw5szzwbqehjszktcwqtpto5b6uvoa3",
+          "build_hash": "kevr2rby2r35ymtovyhygvtfibo2cxbr",
           "type": [
             "build",
             "link"
@@ -1104,7 +1104,7 @@
         },
         {
           "name": "ncurses",
-          "build_hash": "jwutydp2v3ptuuv7ga7slom56mtvmavg",
+          "build_hash": "26m3ztan4nc7juaheohcg5ugrkew4hqt",
           "type": [
             "build",
             "link"
@@ -1112,20 +1112,20 @@
         },
         {
           "name": "pkgconf",
-          "build_hash": "exg6xuonlrhkwgzdlwhc6s7jxi7ypp3g",
+          "build_hash": "nt3e3jdlff6k3g2twm635sy6ii2fmjg2",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "eru7gyz2qrybfoclqxhijb5yf5d4gzve"
+      "hash": "exe4xul46mv4jxfrqxqwfjlifkq3ng2e"
     },
-    "eowsc5utvwyfmv56falfdqtjutant5k2": {
+    "76zfhqro4y4z2bk2iujkscejnl5b6h2h": {
       "name": "libevent",
       "version": "2.1.12",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -1145,21 +1145,21 @@
       "dependencies": [
         {
           "name": "openssl",
-          "build_hash": "km55wwb5afsqq2emwaqger5kphkrsxdx",
+          "build_hash": "uq2vgd5rr5gp7rzgpvg6ekbeinn2hugh",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "33hrvao3yowj7eiyazufqow2s3uxwpii"
+      "hash": "m6civ37u47lm3kxraa7cmlqkykcgp2t3"
     },
-    "pisdslvhsfrt47kb2545cfbzhwrqczg3": {
+    "oawrkil4a6vdozfd6f3ne356bklawuty": {
       "name": "openssh",
-      "version": "8.1p1",
+      "version": "8.6p1",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -1180,14 +1180,14 @@
         "module": null,
         "extra_attributes": {}
       },
-      "hash": "pisdslvhsfrt47kb2545cfbzhwrqczg3"
+      "hash": "oawrkil4a6vdozfd6f3ne356bklawuty"
     },
-    "pulpqxytbakmyeyhy447l7irxvo7m65n": {
+    "piwgnrcjfduargenq6pgtiy6f476s6pv": {
       "name": "trilinos",
-      "version": "13.0.1",
+      "version": "13.2.0",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -1234,7 +1234,7 @@
         "kokkos": true,
         "mesquite": false,
         "minitensor": false,
-        "ml": true,
+        "ml": false,
         "mpi": true,
         "muelu": true,
         "mumps": false,
@@ -1277,14 +1277,14 @@
       "dependencies": [
         {
           "name": "cmake",
-          "build_hash": "teqab5p2tgvujpsvqafec22aqblurros",
+          "build_hash": "hthzodjtb64u36vn67oa5jelffiuckks",
           "type": [
             "build"
           ]
         },
         {
           "name": "hwloc",
-          "build_hash": "5bpbj7f2nllg7eua7xszzlo5fizgir5z",
+          "build_hash": "kwiemd4ur4sbdhye6cpqhcirbdzfn7d5",
           "type": [
             "build",
             "link"
@@ -1292,7 +1292,7 @@
         },
         {
           "name": "openblas",
-          "build_hash": "koua5dsd2xfkjs3azqzuxr6in7weljgb",
+          "build_hash": "su23kvv3lgtzn43y77fdjtbbjl2ywpzo",
           "type": [
             "build",
             "link"
@@ -1300,21 +1300,21 @@
         },
         {
           "name": "openmpi",
-          "build_hash": "cgumw2nng4mzqhxwfjraqmlctyktyrlg",
+          "build_hash": "774bypx642nqzhtfqowo6ic37gxjp5mk",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "etjdqmlvvibvnni7bsusrkllelv6twog"
+      "hash": "cwcyu7fht7c46ij5ywq4itehnxaduo7p"
     },
-    "koua5dsd2xfkjs3azqzuxr6in7weljgb": {
+    "su23kvv3lgtzn43y77fdjtbbjl2ywpzo": {
       "name": "openblas",
       "version": "0.3.19",
       "arch": {
         "platform": "darwin",
-        "platform_os": "bigsur",
+        "platform_os": "monterey",
         "target": "x86_64"
       },
       "compiler": {
@@ -1341,13 +1341,13 @@
       "dependencies": [
         {
           "name": "perl",
-          "build_hash": "lwkbfhynfxbjprgxmsxk2vknubbsnvq3",
+          "build_hash": "khxcnmzv56febiv6iwfdwgg6ejgjjqsd",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "emlppmbyuwscia5i25g54uletqhkanfr"
+      "hash": "zpewlinjqycmdsyta6oxpzfup3hwixsn"
     }
   }
 }

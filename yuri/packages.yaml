@@ -16,9 +16,10 @@ packages:
     - spec: openssh@8.6p1
       prefix: /usr
   # >>> install-spack.sh
+  doxygen:
+    variants: +graphviz
   gcc:
     variants: ~bootstrap
-
   mcnp:
     buildable: false
     externals:
