@@ -1,8 +1,6 @@
 config:
   install_tree: /gpfs/alpine/proj-shared/csc404/celeritas/spack/opt
   install_path_scheme: '{compiler.name}-{compiler.version}/{name}/{hash:7}'
-  module_roots:
-    lmod: /gpfs/alpine/proj-shared/csc404/celeritas/spack/lmod
   build_stage:
     - $tempdir/$user/spack-stage
     - $spack/var/spack/stage

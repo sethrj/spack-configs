@@ -9,7 +9,7 @@ spack:
   - python
   - root ~aqua
   - veccore
-  - vecgeom +gdml
+  - vecgeom +gdml ~shared
   view: /gpfs/alpine/proj-shared/csc404/celeritas/spack/view
   concretization: together
   packages:
@@ -21,3 +21,4 @@ spack:
         lapack: [openblas]
         mpi: [openmpi]
       variants: cxxstd=14 +cuda cuda_arch=70
+      compiler: [gcc@9.1.0] # xxx meant to do 9.3.0!!!

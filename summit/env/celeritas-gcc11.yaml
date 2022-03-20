@@ -16,7 +16,7 @@ spack:
     root:
       variants: ~davix ~examples ~opengl ~x ~tbb ~rootfit ~math ~gsl cxxstd=14
     all:
-      compilers: [gcc@11.1.0]
+      compiler: [gcc@11.1.0]
       providers:
         blas: [openblas]
         lapack: [openblas]
