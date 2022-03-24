@@ -6,6 +6,10 @@
   },
   "roots": [
     {
+      "hash": "qoha7ytq7ryrii4vi3nwylypv4qexkge",
+      "spec": "ccache"
+    },
+    {
       "hash": "6vm2g5vd77h2akr6khsxmvrtjh5jazcy",
       "spec": "cmake@3.21:"
     },
@@ -55,6 +59,56 @@
     }
   ],
   "concrete_specs": {
+    "qoha7ytq7ryrii4vi3nwylypv4qexkge": {
+      "name": "ccache",
+      "version": "4.5.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "centos7",
+        "target": "x86_64"
+      },
+      "compiler": {
+        "name": "clang",
+        "version": "13.0.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_type": "RelWithDebInfo",
+        "ipo": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "dependencies": [
+        {
+          "name": "cmake",
+          "build_hash": "6vm2g5vd77h2akr6khsxmvrtjh5jazcy",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "hiredis",
+          "build_hash": "uptwf24ivpwfsi25v5cjyjvhik5khmpk",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "zstd",
+          "build_hash": "z5f3cqrvtund2ahgld4mu27najvj2ztq",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "bzwoek4jclxncewvnop56kgbmbaom5p4"
+    },
     "6vm2g5vd77h2akr6khsxmvrtjh5jazcy": {
       "name": "cmake",
       "version": "3.22.2",
@@ -480,6 +534,53 @@
         "ldlibs": []
       },
       "hash": "jivlxnuz7u2jt5vkexwu5byt2xfasrt5"
+    },
+    "uptwf24ivpwfsi25v5cjyjvhik5khmpk": {
+      "name": "hiredis",
+      "version": "0.14.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "centos7",
+        "target": "x86_64"
+      },
+      "compiler": {
+        "name": "clang",
+        "version": "13.0.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "hash": "uptwf24ivpwfsi25v5cjyjvhik5khmpk"
+    },
+    "z5f3cqrvtund2ahgld4mu27najvj2ztq": {
+      "name": "zstd",
+      "version": "1.5.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "centos7",
+        "target": "x86_64"
+      },
+      "compiler": {
+        "name": "clang",
+        "version": "13.0.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "programs": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "hash": "z5f3cqrvtund2ahgld4mu27najvj2ztq"
     },
     "qkip26j5f3r2bfu3os337p3ulypcvzue": {
       "name": "hdf5",

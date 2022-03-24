@@ -1,9 +1,10 @@
-# This is a Spack Environment file for Exnihilo.
+# This is a Spack Environment file for SCALE (detribits MPI).
 spack:
   # add package specs to the `specs` list
   specs:
   - bison@3.4.2
   - 'cmake@3.16:'
+  - cuda
   - flex@2.6.4
   - 'flibcpp@1.0.1: +swig'
   - hdf5 +hl +mpi
@@ -12,10 +13,10 @@ spack:
   - gnds
   - 'ninja@1.10:'
   - nlohmann-json
-  - openmpi
+  - openmpi@:2
   - pugixml
   - python +uuid
-  - py-h5py@:2.999
+  - py-h5py@:2
   - py-lxml
   - py-matplotlib
   - py-numpy
@@ -33,6 +34,8 @@ spack:
   view: true
   concretization: together
   packages:
+    hdf5:
+      version: [1.10.8] # needed for h5py@2 
     qt:
       variants: ~dbus~examples~gtk~opengl~phonon+shared~sql~ssl~tools~webkit
     superlu:

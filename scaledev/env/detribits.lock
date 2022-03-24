@@ -14,6 +14,10 @@
       "spec": "cmake@3.16:"
     },
     {
+      "hash": "gzushaq6ku4cww6gc4w3mko4lxi4qyrs",
+      "spec": "cuda"
+    },
+    {
       "hash": "k7cvodnliqja4hy4u7q7tdxvamrin6zk",
       "spec": "flex@2.6.4"
     },
@@ -655,6 +659,126 @@
       ],
       "hash": "nzhpoorvhjmcsf2d62c2cpn3jbhadqg4"
     },
+    "gzushaq6ku4cww6gc4w3mko4lxi4qyrs": {
+      "name": "cuda",
+      "version": "11.6.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "centos7",
+        "target": "x86_64"
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.5.0.static"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "allow-unsupported-compilers": false,
+        "dev": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "dependencies": [
+        {
+          "name": "libxml2",
+          "build_hash": "oqjivn3zdpcrk2xletdjygdlau57dppb",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "bbwpyicwinzlfeibe3zdcqonqf2ajr3w"
+    },
+    "oqjivn3zdpcrk2xletdjygdlau57dppb": {
+      "name": "libxml2",
+      "version": "2.9.12",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "centos7",
+        "target": "x86_64"
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.5.0.static"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "python": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "dependencies": [
+        {
+          "name": "libiconv",
+          "build_hash": "az6pdinavp5nfifx44n5xdaonifbmph6",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "pkgconf",
+          "build_hash": "z32pfgh6k55ldgtyoih3skikorzz7exd",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "xz",
+          "build_hash": "6s2r2ue6hisrxdfpjh4mps4i6r4rqm7h",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "zlib",
+          "build_hash": "iyy6ckyxm2f2i2l5dtz4g4joiunvbkny",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "lkze2cgi5ymdnipqgcig7drqtun62jcp"
+    },
+    "6s2r2ue6hisrxdfpjh4mps4i6r4rqm7h": {
+      "name": "xz",
+      "version": "5.2.5",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "centos7",
+        "target": "x86_64"
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.5.0.static"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "libs": [
+          "shared",
+          "static"
+        ],
+        "pic": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "hash": "6s2r2ue6hisrxdfpjh4mps4i6r4rqm7h"
+    },
     "k7cvodnliqja4hy4u7q7tdxvamrin6zk": {
       "name": "flex",
       "version": "2.6.4",
@@ -951,91 +1075,6 @@
         }
       ],
       "hash": "7jl6u7hsas6py4pfxmtu4ah35aaibehs"
-    },
-    "oqjivn3zdpcrk2xletdjygdlau57dppb": {
-      "name": "libxml2",
-      "version": "2.9.12",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "centos7",
-        "target": "x86_64"
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "8.5.0.static"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "python": false,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "libiconv",
-          "build_hash": "az6pdinavp5nfifx44n5xdaonifbmph6",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "pkgconf",
-          "build_hash": "z32pfgh6k55ldgtyoih3skikorzz7exd",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "xz",
-          "build_hash": "6s2r2ue6hisrxdfpjh4mps4i6r4rqm7h",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "zlib",
-          "build_hash": "iyy6ckyxm2f2i2l5dtz4g4joiunvbkny",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "lkze2cgi5ymdnipqgcig7drqtun62jcp"
-    },
-    "6s2r2ue6hisrxdfpjh4mps4i6r4rqm7h": {
-      "name": "xz",
-      "version": "5.2.5",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "centos7",
-        "target": "x86_64"
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "8.5.0.static"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "libs": [
-          "shared",
-          "static"
-        ],
-        "pic": false,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "hash": "6s2r2ue6hisrxdfpjh4mps4i6r4rqm7h"
     },
     "ysjplbwvowh4r35dnpfltzo2532w4vlj": {
       "name": "tar",
