@@ -11,12 +11,17 @@ packages:
       - spectrum-mpi/10.4.0.3-20210112
   cuda:
     buildable: false
+    variants: +allow-unsupported-compilers
     version:
     - 11.0.2
+    - 11.4.2
     externals:
     - spec: cuda@11.0.2
       modules:
       - cuda/11.0.2
+    - spec: cuda@11.4.2
+      modules:
+        - cuda/11.4.2
     target: []
     providers: {}
     compiler: []
@@ -82,4 +87,4 @@ packages:
     buildable: true
     version: []
     target: [ppc64le]
-    variants: +cuda cuda_arch=70 cxxstd=14
+    variants: +cuda cuda_arch=70
