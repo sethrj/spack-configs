@@ -1,24 +1,23 @@
 spack:
   specs:
-  - cmake
-  - geant4
+  - cmake~openssl # summit @3.22.2%gcc@11.1.0 lacks openssl
+  - geant4@11.0.1
   - googletest
   - hepmc3
+  - mpi
   - ninja
   - nlohmann-json
   - python
-  - root ~aqua
   - veccore
   - vecgeom +gdml ~shared
-  view: /gpfs/alpine/proj-shared/csc404/celeritas/spack/view
+  view: /gpfs/alpine/proj-shared/csc404/celeritas/spack/view-next
   concretization: together
   packages:
     root:
-      variants: ~davix ~examples ~opengl ~x ~tbb ~rootfit ~math ~gsl cxxstd=14
+      variants: ~davix ~examples ~opengl ~x ~tbb ~rootfit ~math ~gsl cxxstd=17
     all:
       providers:
         blas: [openblas]
         lapack: [openblas]
-        mpi: [openmpi]
-      variants: cxxstd=14 +cuda cuda_arch=70
-      compiler: [gcc@9.1.0] # xxx meant to do 9.3.0!!!
+      variants: cxxstd=17 +cuda cuda_arch=70
+      compiler: [gcc@11.1.0]
