@@ -1,90 +1,364 @@
 packages:
-  spectrum-mpi:
-    version: [10.4.0.3-20210112]
-    target: []
+  all:
+    buildable: true
+    compiler: [gcc@8.3.1, gcc, clang, xl, nvhpc, pgi]
+    providers:
+      blas: [netlib-lapack]
+      lapack: [netlib-lapack]
+      mpi: [olcf.spectrum-mpi]
+      scalapack: [netlib-scalapack]
+    target: [ppc64le]
+    variants: +cuda cuda_arch=70 # SRJ added
+    version: []
+  amgx:
+    buildable: true
     compiler: []
-    buildable: false
     providers: {}
+    target: []
+    variants: +cuda cuda_arch=70
+    version: []
+  autoconf:
     externals:
-    - spec: spectrum-mpi@10.4.0.3-20210112
-      modules:
-      - spectrum-mpi/10.4.0.3-20210112
+      - spec: autoconf@2.69%xl
+        prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8-os/autoconf-2.69-optfzhop7h64asc5mcxr3ckbnqin42e6
+      # - spec: autoconf@2.69%nvhpc
+      #   prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8-os/autoconf-2.69-optfzhop7h64asc5mcxr3ckbnqin42e6
+      # - spec: autoconf@2.69%pgi
+      #   prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8-os/autoconf-2.69-optfzhop7h64asc5mcxr3ckbnqin42e6
+  automake:
+    externals:
+      - spec: automake@1.16.3%xl
+        prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8-os/automake-1.16.3-54v6ar44uhjaqfvxaiul3e2u43xdx2wr
+      # - spec: automake@1.16.3%nvhpc
+      #   prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8-os/automake-1.16.3-54v6ar44uhjaqfvxaiul3e2u43xdx2wr
+      # - spec: automake@1.16.3%pgi
+      #   prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8-os/automake-1.16.3-54v6ar44uhjaqfvxaiul3e2u43xdx2wr
+  axom:
+    variants: ~examples~openmp+hdf5+umpire+raja+mpi
+  # camp:
+  #   variants: +cuda cuda_arch=70
+  #   buildable: true
+  #   version: []
+  #   target: []
+  #   providers: {}
+  #   compiler: []
+  binutils:
+    variants: +ld +gold +headers +libiberty ~nls +plugins
+    version: [2.36.1]
+  boost:
+    variants: visibility=global
+  cmake:
+    externals:
+      - spec: cmake@3.21.3%xl
+        prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8-os/cmake-3.21.3-jwz44tvjsvelffi5pqyhhjljiu4jnbbv
+      - spec: cmake@3.22.2%xl
+        prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8.3.1/cmake-3.22.2-753egsm3pztoytlasqi2hrq4pcgchfyn
+      - spec: cmake@3.21.3%nvhpc
+        prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8-os/cmake-3.21.3-jwz44tvjsvelffi5pqyhhjljiu4jnbbv
+      - spec: cmake@3.22.2%nvhpc
+        prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8.3.1/cmake-3.22.2-753egsm3pztoytlasqi2hrq4pcgchfyn
+      - spec: cmake@3.21.3%pgi
+        prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8-os/cmake-3.21.3-jwz44tvjsvelffi5pqyhhjljiu4jnbbv
+      - spec: cmake@3.22.2%pgi
+        prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8.3.1/cmake-3.22.2-753egsm3pztoytlasqi2hrq4pcgchfyn
   cuda:
     buildable: false
+    compiler: []
+    externals:
+      - modules:
+          - cuda/11.4.2
+        spec: cuda@11.4.2
+      - modules:
+          - cuda/11.1.1
+        spec: cuda@11.1.1
+      - modules:
+          - cuda/11.0.3
+        spec: cuda@11.0.3
+      - modules:
+          - cuda/11.0.2
+        spec: cuda@11.0.2
+      - modules:
+          - cuda/10.2.89
+        spec: cuda@10.2.89
+      - modules:
+          - cuda/10.1.243
+        spec: cuda@10.1.243
+      - modules:
+          - cuda/10.1.168
+        spec: cuda@10.1.168
+    providers: {}
+    target: []
     variants: +allow-unsupported-compilers
     version:
-    - 11.0.2
-    - 11.4.2
-    externals:
-    - spec: cuda@11.0.2
-      modules:
-      - cuda/11.0.2
-    - spec: cuda@11.4.2
-      modules:
-        - cuda/11.4.2
-    target: []
-    providers: {}
-    compiler: []
-  lsf:
-    version: [10.1.0.10]
-    buildable: false
-    externals:
-    - spec: lsf@10.1.0.10
-      prefix: /opt/ibm/spectrumcomputing/lsf/10.1.0.10
-    target: []
+      - 11.0.3
+      - 11.1.1
+      - 11.4.2
+      - 11.0.2
+      - 10.2.89
+      - 10.1.243
+      - 10.1.168
+  darshan-runtime:
+    buildable: true
     compiler: []
     providers: {}
-  hcoll:
-    buildable: false
-    version: [4.4]
-    externals:
-    - spec: hcoll@4.4
-      prefix: /opt/mellanox/hcoll
     target: []
+    variants: +grouplogs scheduler=lsf logpath=/gpfs/alpine/darshan/summit
+    version: []
+  doxygen:
+    version:
+    - 1.8.20
+  elfutils:
+    variants: +bzip2 ~nls +xz
+  fftw:
+    buildable: true
     compiler: []
     providers: {}
-  knem:
-    buildable: false
-    version: [1.1.3]
-    externals:
-    - spec: knem@1.1.3
-      prefix: /opt/knem-1.1.3.90mlnx1
     target: []
-    compiler: []
-    providers: {}
+    variants: +openmp precision=float,double,long_double
+    version: []
+  gdbm:
+    version: [1.19]
   go-bootstrap:
     buildable: false
+    compiler: []
+    externals:
+      - prefix: /sw/summit/go/1.7.1-bootstrap
+        spec: go-bootstrap@1.7.1-bootstrap
+    providers: {}
+    target: []
     version: [1.7.1-bootstrap]
-    externals:
-    - spec: go-bootstrap@1.7.1-bootstrap
-      prefix: /sw/summit/go/1.7.1-bootstrap
-    target: []
-    providers: {}
-    compiler: []
   gtkplus:
-    version: [3.22.30, 2.24.32]
     buildable: false
-    externals:
-    - spec: gtkplus@2.24.32
-      prefix: /usr
-    - spec: gtkplus@3.22.30
-      prefix: /usr
-    target: []
-    providers: {}
     compiler: []
+    externals:
+      - prefix: /usr
+        spec: gtkplus@2.24.32
+      - prefix: /usr
+        spec: gtkplus@3.22.30
+    providers: {}
+    target: []
+    version: [3.22.30, 2.24.32]
+  hcoll:
+    buildable: false
+    compiler: []
+    externals:
+      - prefix: /opt/mellanox/hcoll
+        spec: hcoll@4.4
+    providers: {}
+    target: []
+    version: [4.4]
+  hdf5:
+    buildable: true
+    compiler: []
+    providers: {}
+    target: []
+    variants: +hl+cxx+fortran+shared api=default
+    version: [1.10.7]
+  hpctoolkit:
+    variants: +cuda+mpi~papi
+  hpx:
+    variants: max_cpu_count=176 
+  icu4c:
+    buildable: true
+    compiler: []
+    providers: {}
+    target: []
+    version: [66.1]
+  knem:
+    buildable: false
+    compiler: []
+    externals:
+      - prefix: /opt/knem-1.1.3.90mlnx1
+        spec: knem@1.1.3
+    providers: {}
+    target: []
+    version: [1.1.3]
+  kokkos:
+    buildable: true
+    compiler: []
+    providers: {}
+    target: []
+    variants: +wrapper+cuda cuda_arch=70
+    version: []
+  kokkos-kernels:
+    buildable: true
+    compiler: []
+    providers: {}
+    target: []
+    variants: +cuda cuda_arch=70
+    version: []
+  libfabric:
+    variants: fabrics=rxm,sockets,tcp,udp,verbs
+  libtool:
+    buildable: true
+    compiler: []
+    externals:
+      - prefix: /usr
+        spec: libtool@2.4.6
+    providers: {}
+    target: []
+    version: [2.4.6]
+  libunwind:
+    variants: +pic +xz
+  lsf:
+    buildable: false
+    compiler: []
+    externals:
+      - prefix: /opt/ibm/spectrumcomputing/lsf/10.1.0.10
+        spec: lsf@10.1.0.10
+    providers: {}
+    target: []
+    version: [10.1.0.10]
+  m4:
+    externals:
+      - spec: m4@1.4.19%xl
+        prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8-os/m4-1.4.19-nvrhryvgvr2m4rxh2g2body6xogfgntr
+      # - spec: m4@1.4.19%nvhpc
+      #   prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8-os/m4-1.4.19-nvrhryvgvr2m4rxh2g2body6xogfgntr
+      # - spec: m4@1.4.19%pgi
+      #   prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8-os/m4-1.4.19-nvrhryvgvr2m4rxh2g2body6xogfgntr
+  magma:
+    buildable: true
+    compiler: []
+    providers: {}
+    target: []
+    variants: +cuda cuda_arch=70
+    version: []
+  ncurses:
+    variants: +termlib
+  netcdf-c:
+    buildable: true
+    compiler: []
+    providers: {}
+    target: []
+    variants: ~hdf4+mpi+parallel-netcdf+shared
+    version: []
+  netcdf-fortran:
+    buildable: true
+    compiler: []
+    providers: {}
+    target: []
+    version: [4.4.5]
+  netlib-scalapack:
+    buildable: true
+    compiler: []
+    providers: {}
+    target: []
+    variants: +fpic
+    version: []
+  numactl:
+    externals:
+      - spec: numactl@2.0.14%xl
+        prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8-os/numactl-2.0.14-q7j2bvbvrd4dzkvwcezqdgufijeu7ltp
+      - spec: numactl@2.0.14%nvhpc
+        prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8-os/numactl-2.0.14-q7j2bvbvrd4dzkvwcezqdgufijeu7ltp
+      - spec: numactl@2.0.14%pgi
+        prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8-os/numactl-2.0.14-q7j2bvbvrd4dzkvwcezqdgufijeu7ltp
   openssl:
     buildable: false
-    version: [1.1.1]
-    externals:
-    - spec: openssl@1.1.1
-      prefix: /usr
-    target: []
-    providers: {}
     compiler: []
-  all:
-    providers:
-      mpi: [spectrum-mpi]
+    externals:
+      - spec: openssl@1.1.1-os
+        prefix: /usr
+    providers: {}
+    target: []
+    version: [1.1.1-os]
+  papi:
     buildable: true
+    compiler: []
+    providers: {}
+    target: []
+    variants: cpu=POWER9 +cuda
     version: []
-    target: [ppc64le]
+  parallel-netcdf:
+    buildable: true
+    compiler: []
+    providers: {}
+    target: []
+    variants: +cxx+fortran+fpic
+    version: []
+  perl:
+    buildable: true
+    compiler: []
+    providers: {}
+    target: []
+    version: [5.30.1]
+    externals:
+      - spec: perl@5.3.0.1%xl
+        prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8-os/perl-5.30.1-zifqgjkzlwlma2e7jamlznouljyiu5dy
+      # - spec: perl@5.30.1%nvhpc
+      #   prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8-os/perl-5.30.1-ckmwwemftzpcoqnbooh3l5ivn3ss7ne4
+      # - spec: perl@5.30.1%pgi
+      #   prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8-os/perl-5.30.1-ckmwwemftzpcoqnbooh3l5ivn3ss7ne4
+  pkgconf:
+    externals:
+      - spec: pkgconf@1.8.0%xl
+        prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8-os/pkgconf-1.8.0-icr4e4fhxo5smcopsy3biqf3tiwgupji
+      # - spec: pkgconf@1.8.0%nvhpc
+      #   prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8-os/pkgconf-1.8.0-icr4e4fhxo5smcopsy3biqf3tiwgupji
+      # - spec: pkgconf@1.8.0%pgi
+      #   prefix: /sw/summit/spack-envs/base/opt/linux-rhel8-ppc64le/gcc-8-os/pkgconf-1.8.0-icr4e4fhxo5smcopsy3biqf3tiwgupji
+  rdma-core:
+    buildable: true
+    externals:
+      - prefix: /usr
+        spec: rdma-core@system
+    version: [system]
+  slate:
+    buildable: true
+    compiler: []
+    providers: {}
+    target: []
     variants: +cuda cuda_arch=70
+    version: []
+  spectral:
+    variants: ~examples prologue_dir=/sw/summit/spectral/usr/local
+  spectrum-mpi:
+    buildable: true
+    compiler: []
+    providers: {}
+    target: []
+    version:
+      - 10.4.0.3-20210112
+      - 10.4.0.0-20200604
+      - 10.3.1.2-20200121
+  strumpack:
+    buildable: true
+    compiler: []
+    providers: {}
+    target: []
+    variants: ~butterflypack~slate~rocm+cuda cuda_arch=70
+    version: []
+  tasmanian:
+    buildable: true
+    compiler: []
+    providers: {}
+    target: []
+    variants: +cuda
+    version: []
+  trilinos:
+    buildable: true
+    compiler: []
+    providers: {}
+    target: []
+    variants: +amesos +amesos2 +anasazi +aztec +belos +boost +epetra +epetraext
+      +ifpack +ifpack2 +intrepid +intrepid2 +isorropia +kokkos +ml +minitensor +muelu
+      +nox +piro +phalanx +rol +rythmos +sacado +stk +shards +shylu +stokhos +stratimikos
+      +teko +tempus +tpetra +trilinoscouplings +zoltan +zoltan2 +superlu-dist gotype=long_long
+    version: []
+  umpire:
+    buildable: true
+    compiler: []
+    providers: {}
+    target: []
+    variants: ~examples
+    version: []
+  upcxx:
+    buildable: true
+    compiler: []
+    providers: {}
+    target: []
+    variants: +cuda
+    version: []
+  xz:
+    variants: +pic
