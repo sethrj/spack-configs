@@ -6,35 +6,35 @@
   },
   "roots": [
     {
-      "hash": "jjddmrr7avba6v6ircadgmx7ziinfyd5",
+      "hash": "5t34ryriav3q4vjf4radfwsi5wlxmhz5",
       "spec": "cmake"
     },
     {
-      "hash": "eb6qvf5wosnll6trignidvxjgdnaoysj",
+      "hash": "wftagikxyjlnt72qbfz6tdvhx5f7laih",
       "spec": "ninja"
     },
     {
-      "hash": "m5veuumpcn7uxvwoeea3jbz4r5wlvpn7",
+      "hash": "vj3athtttdadud4t2aw5drdbzmsixkk6",
       "spec": "openmpi"
     },
     {
-      "hash": "niclwegzetq747rec3z3t4tlaa4ss62a",
+      "hash": "v43b6fo54clyteamuv5vwazshhtyoirf",
       "spec": "swig@4.1.dev1-fortran"
     },
     {
-      "hash": "u2b2zmk23lp3rxsdnlh7u5kfedu6jkc4",
-      "spec": "trilinos@13.2.0:13.2+amesos2+anasazi+belos+ifpack2+kokkos+mpi+muelu+nox+stratimikos+tpetra gotype=long_long"
+      "hash": "tb7q7lxdlld7bthh6cafylofufevj6dk",
+      "spec": "trilinos@13.4.0:13.4+amesos2+anasazi+belos+ifpack2+kokkos+mpi+muelu+nox+stratimikos+tpetra gotype=long_long"
     }
   ],
   "concrete_specs": {
-    "jjddmrr7avba6v6ircadgmx7ziinfyd5": {
+    "5t34ryriav3q4vjf4radfwsi5wlxmhz5": {
       "name": "cmake",
-      "version": "3.23.2",
+      "version": "3.25.0",
       "arch": {
         "platform": "darwin",
-        "platform_os": "monterey",
+        "platform_os": "ventura",
         "target": {
-          "name": "m1",
+          "name": "m2",
           "vendor": "Apple",
           "features": [
             "aes",
@@ -44,11 +44,14 @@
             "asimdhp",
             "asimdrdm",
             "atomics",
+            "bf16",
+            "bti",
             "cpuid",
             "crc32",
             "dcpodp",
             "dcpop",
             "dit",
+            "ecv",
             "evtstrm",
             "fcma",
             "flagm",
@@ -56,6 +59,7 @@
             "fp",
             "fphp",
             "frint",
+            "i8mm",
             "ilrcpc",
             "jscvt",
             "lrcpc",
@@ -72,16 +76,18 @@
           ],
           "generation": 0,
           "parents": [
-            "aarch64"
+            "m1",
+            "armv8.5a"
           ]
         }
       },
       "compiler": {
         "name": "apple-clang",
-        "version": "13.1.6"
+        "version": "14.0.0"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "generic",
         "build_type": "Release",
         "doc": false,
         "ncurses": true,
@@ -94,1082 +100,22 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "tpolhzciewq2zvbav5taipfpnopdwx3qzofflrc2z5umep2ufczq====",
-      "dependencies": [
-        {
-          "name": "ncurses",
-          "hash": "muw42gzujqbr7bw5oaggjsugmh7w4njv",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "openssl",
-          "hash": "373h7tjl2ogx6kbvcc2eclcltbhalinf",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "jjddmrr7avba6v6ircadgmx7ziinfyd5"
+      "external": {
+        "path": "/opt/homebrew",
+        "module": null,
+        "extra_attributes": {}
+      },
+      "package_hash": "3c4mbhuczcwuuglycvzju7pzyjg2tgg4s44wah2pkhxzhsy3jaya====",
+      "hash": "5t34ryriav3q4vjf4radfwsi5wlxmhz5"
     },
-    "muw42gzujqbr7bw5oaggjsugmh7w4njv": {
-      "name": "ncurses",
-      "version": "6.2",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "abi": "none",
-        "symlinks": false,
-        "termlib": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "wexr3ks5fmcfecqntj3v4yv2sjk2bhufytecxvwx4ltxpxphkwnq====",
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "pkgconf",
-          "hash": "ett7ygi7ft3lg6iekce3ts2qscv7kxk2",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "muw42gzujqbr7bw5oaggjsugmh7w4njv"
-    },
-    "6ge5mev6dobcylwn3g5yrkqh4ltosyjj": {
-      "name": "gnuconfig",
-      "version": "2021-08-14",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "7qakwrcwsb3n4vna7ixvloiiiah6geinixa3tmzhuiphanrp7cqa====",
-      "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj"
-    },
-    "ett7ygi7ft3lg6iekce3ts2qscv7kxk2": {
-      "name": "pkgconf",
-      "version": "1.8.0",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "olr5zscvqru56pgiiqlnzc4ud5e7iuyntj6fsplcrjh3jngqjpja====",
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "ett7ygi7ft3lg6iekce3ts2qscv7kxk2"
-    },
-    "373h7tjl2ogx6kbvcc2eclcltbhalinf": {
-      "name": "openssl",
-      "version": "1.1.1q",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "certs": "mozilla",
-        "docs": false,
-        "patches": [
-          "3fdcf2d1e47c34f3a012f23306322c5a35cad55b180c9b6fb34537b55884645c"
-        ],
-        "shared": false,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "patches": [
-        "3fdcf2d1e47c34f3a012f23306322c5a35cad55b180c9b6fb34537b55884645c"
-      ],
-      "package_hash": "4lv2auwhwbsyyktezpsdm4xifzx745tnqzdo7xracivbyorc257q====",
-      "dependencies": [
-        {
-          "name": "ca-certificates-mozilla",
-          "hash": "u5bzvfgpz34r42tnbpbmh5jnman6xebj",
-          "type": [
-            "build",
-            "run"
-          ]
-        },
-        {
-          "name": "perl",
-          "hash": "256wjmrblmpwyisdoqf6s4ymi6cmhlib",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "zlib",
-          "hash": "ke4alug7ypoxp37jb6namwlxssmws4kp",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "373h7tjl2ogx6kbvcc2eclcltbhalinf"
-    },
-    "u5bzvfgpz34r42tnbpbmh5jnman6xebj": {
-      "name": "ca-certificates-mozilla",
-      "version": "2022-03-29",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "aojaioyxdr3ycsv6sisfzcmgub763kuu3efgo272lm5hpnhyhjha====",
-      "hash": "u5bzvfgpz34r42tnbpbmh5jnman6xebj"
-    },
-    "256wjmrblmpwyisdoqf6s4ymi6cmhlib": {
-      "name": "perl",
-      "version": "5.34.1",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cpanm": true,
-        "shared": true,
-        "threads": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "k7jacx7f7kqkhsuqdosjy6uq7me5pci72pom6v7c6elwnasxfm7q====",
-      "dependencies": [
-        {
-          "name": "berkeley-db",
-          "hash": "e5dqqjq73phzxahcxenwijqade5l6zle",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "bzip2",
-          "hash": "rjsj6wiw54343ndzx52ffepljpr5kwa5",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "gdbm",
-          "hash": "chvvbrto7lmurq7mo5ehber6xk5bz2v4",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "zlib",
-          "hash": "ke4alug7ypoxp37jb6namwlxssmws4kp",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "256wjmrblmpwyisdoqf6s4ymi6cmhlib"
-    },
-    "e5dqqjq73phzxahcxenwijqade5l6zle": {
-      "name": "berkeley-db",
-      "version": "18.1.40",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cxx": true,
-        "docs": false,
-        "patches": [
-          "b231fcc4d5cff05e5c3a4814f6a5af0e9a966428dc2176540d2c05aff41de522"
-        ],
-        "stl": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "patches": [
-        "b231fcc4d5cff05e5c3a4814f6a5af0e9a966428dc2176540d2c05aff41de522"
-      ],
-      "package_hash": "zqtca4ffufuo77zgcwrqh7wgwnolhptkrj3xloipwjdpjowbthsq====",
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "e5dqqjq73phzxahcxenwijqade5l6zle"
-    },
-    "rjsj6wiw54343ndzx52ffepljpr5kwa5": {
-      "name": "bzip2",
-      "version": "1.0.8",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "debug": false,
-        "pic": false,
-        "shared": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "hwzzje524zinhoim5aj25ucowy2n57b6zm7gtzaimfjft2onrvuq====",
-      "dependencies": [
-        {
-          "name": "diffutils",
-          "hash": "mbrctz7juifwhhzpfxqqewahvkdkghrk",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "rjsj6wiw54343ndzx52ffepljpr5kwa5"
-    },
-    "mbrctz7juifwhhzpfxqqewahvkdkghrk": {
-      "name": "diffutils",
-      "version": "3.8",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "jv4gzc4vymljleyxlrnpauwx6pzt7kwz3ppu2cmw2ndcbxmupocq====",
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "libiconv",
-          "hash": "fh6dfpnr2xivw6w6it4cqjiaqxmnriri",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "mbrctz7juifwhhzpfxqqewahvkdkghrk"
-    },
-    "fh6dfpnr2xivw6w6it4cqjiaqxmnriri": {
-      "name": "libiconv",
-      "version": "1.16",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "libs": [
-          "shared",
-          "static"
-        ],
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "iwav2dx3w6bi363i3gqu3ndd2rajsle7ebgznblzarzb46iraw4q====",
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "fh6dfpnr2xivw6w6it4cqjiaqxmnriri"
-    },
-    "chvvbrto7lmurq7mo5ehber6xk5bz2v4": {
-      "name": "gdbm",
-      "version": "1.19",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "gvha7657bne2aoksscez5obusidw4wwc4g6ju4a6nzqc77drwziq====",
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "readline",
-          "hash": "ua734bl3l4xjbt4ofrbvzbf3qtvd2yij",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "chvvbrto7lmurq7mo5ehber6xk5bz2v4"
-    },
-    "ua734bl3l4xjbt4ofrbvzbf3qtvd2yij": {
-      "name": "readline",
-      "version": "8.1.2",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "ouxxalld7kxximyke7ekitja6kuz3h7tlt7lm2szo3hg7amf6ana====",
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "ncurses",
-          "hash": "muw42gzujqbr7bw5oaggjsugmh7w4njv",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "ua734bl3l4xjbt4ofrbvzbf3qtvd2yij"
-    },
-    "ke4alug7ypoxp37jb6namwlxssmws4kp": {
-      "name": "zlib",
-      "version": "1.2.12",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "optimize": true,
-        "patches": [
-          "0d38234384870bfd34dfcb738a9083952656f0c766a0f5990b1893076b084b76"
-        ],
-        "pic": true,
-        "shared": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "patches": [
-        "0d38234384870bfd34dfcb738a9083952656f0c766a0f5990b1893076b084b76"
-      ],
-      "package_hash": "pthf7iophdyonixxeed7gyqiksopxeklzzjbxtjrw7nzlkcqleba====",
-      "hash": "ke4alug7ypoxp37jb6namwlxssmws4kp"
-    },
-    "eb6qvf5wosnll6trignidvxjgdnaoysj": {
+    "wftagikxyjlnt72qbfz6tdvhx5f7laih": {
       "name": "ninja",
-      "version": "1.11.0",
+      "version": "1.11.1",
       "arch": {
         "platform": "darwin",
-        "platform_os": "monterey",
+        "platform_os": "ventura",
         "target": {
-          "name": "m1",
+          "name": "m2",
           "vendor": "Apple",
           "features": [
             "aes",
@@ -1179,11 +125,14 @@
             "asimdhp",
             "asimdrdm",
             "atomics",
+            "bf16",
+            "bti",
             "cpuid",
             "crc32",
             "dcpodp",
             "dcpop",
             "dit",
+            "ecv",
             "evtstrm",
             "fcma",
             "flagm",
@@ -1191,6 +140,7 @@
             "fp",
             "fphp",
             "frint",
+            "i8mm",
             "ilrcpc",
             "jscvt",
             "lrcpc",
@@ -1207,291 +157,18 @@
           ],
           "generation": 0,
           "parents": [
-            "aarch64"
+            "m1",
+            "armv8.5a"
           ]
         }
       },
       "compiler": {
         "name": "apple-clang",
-        "version": "13.1.6"
+        "version": "14.0.0"
       },
       "namespace": "builtin",
       "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "vt5waaf2yjr4bbnv6yev3ykh5hgr754kt42j6mc4lskzjpzv4kwa====",
-      "dependencies": [
-        {
-          "name": "python",
-          "hash": "vq2jw2bf6svgekzo5rmqckmcc7mhspa5",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "eb6qvf5wosnll6trignidvxjgdnaoysj"
-    },
-    "vq2jw2bf6svgekzo5rmqckmcc7mhspa5": {
-      "name": "python",
-      "version": "3.9.13",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "bz2": true,
-        "ctypes": true,
-        "dbm": true,
-        "debug": false,
-        "ensurepip": true,
-        "libxml2": true,
-        "lzma": true,
-        "nis": false,
-        "optimizations": false,
-        "patches": [
-          "0d98e93189bc278fbc37a50ed7f183bd8aaf249a8e1670a465f0db6bb4f8cf87",
-          "4c2457325f2b608b1b6a2c63087df8c26e07db3e3d493caf36a56f0ecf6fb768",
-          "f2fd060afc4b4618fe8104c4c5d771f36dc55b1db5a4623785a4ea707ec72fb4"
-        ],
-        "pic": true,
-        "pyexpat": true,
-        "pythoncmd": true,
-        "readline": true,
-        "shared": true,
-        "sqlite3": true,
-        "ssl": true,
-        "tix": false,
-        "tkinter": false,
-        "ucs4": false,
-        "uuid": true,
-        "zlib": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "patches": [
-        "0d98e93189bc278fbc37a50ed7f183bd8aaf249a8e1670a465f0db6bb4f8cf87",
-        "f2fd060afc4b4618fe8104c4c5d771f36dc55b1db5a4623785a4ea707ec72fb4",
-        "4c2457325f2b608b1b6a2c63087df8c26e07db3e3d493caf36a56f0ecf6fb768"
-      ],
-      "package_hash": "xz5xvdcellpvbc3ygod6l6focigw6ixg6faabz6wzerzxbdlvksa====",
-      "dependencies": [
-        {
-          "name": "apple-libuuid",
-          "hash": "jbbx4armwtqezpna5pzpzrl4n6iujt47",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "bzip2",
-          "hash": "rjsj6wiw54343ndzx52ffepljpr5kwa5",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "expat",
-          "hash": "f5zknwnmvgq6h6qyvq42a4mva6aaxosy",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "gdbm",
-          "hash": "chvvbrto7lmurq7mo5ehber6xk5bz2v4",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "gettext",
-          "hash": "fvtlcauusbkjitnxbim2oeylnj6jtje6",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "libffi",
-          "hash": "rjvdm33zgkypoyb4nw7cvmnojlsspgkw",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "ncurses",
-          "hash": "muw42gzujqbr7bw5oaggjsugmh7w4njv",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "openssl",
-          "hash": "373h7tjl2ogx6kbvcc2eclcltbhalinf",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "pkgconf",
-          "hash": "ett7ygi7ft3lg6iekce3ts2qscv7kxk2",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "readline",
-          "hash": "ua734bl3l4xjbt4ofrbvzbf3qtvd2yij",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "sqlite",
-          "hash": "b567ltsfskkafpuucmngvxzugnixy4zl",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "xz",
-          "hash": "gv3m23pon2lqhx5fcg2gu5nj4nomqap6",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "zlib",
-          "hash": "ke4alug7ypoxp37jb6namwlxssmws4kp",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "vq2jw2bf6svgekzo5rmqckmcc7mhspa5"
-    },
-    "jbbx4armwtqezpna5pzpzrl4n6iujt47": {
-      "name": "apple-libuuid",
-      "version": "1353.100.2",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
+        "build_system": "generic",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -1500,839 +177,21 @@
         "ldlibs": []
       },
       "external": {
-        "path": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "path": "/opt/homebrew",
         "module": null,
         "extra_attributes": {}
       },
-      "package_hash": "xfo7vfix7tkafshyv6v35ceebjh5qzhzztkxc2umwwiml3gb7owq====",
-      "hash": "jbbx4armwtqezpna5pzpzrl4n6iujt47"
+      "package_hash": "m4qytcmdffb4wjd5wppdkefidb44kldmg46psjso7f3jkrwrcrjq====",
+      "hash": "wftagikxyjlnt72qbfz6tdvhx5f7laih"
     },
-    "f5zknwnmvgq6h6qyvq42a4mva6aaxosy": {
-      "name": "expat",
-      "version": "2.4.8",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "libbsd": false,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "cyr63m7lwwlyhb4u3t6i5hc35v4dhnl5d6eudsgpplunm6eadqqq====",
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "f5zknwnmvgq6h6qyvq42a4mva6aaxosy"
-    },
-    "fvtlcauusbkjitnxbim2oeylnj6jtje6": {
-      "name": "gettext",
-      "version": "0.21",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "bzip2": true,
-        "curses": true,
-        "git": true,
-        "libunistring": false,
-        "libxml2": true,
-        "tar": true,
-        "xz": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "jw4ekeys767dy7bg7rbm633zbyzlofp425ujcqonffwdfmw32vxa====",
-      "dependencies": [
-        {
-          "name": "bzip2",
-          "hash": "rjsj6wiw54343ndzx52ffepljpr5kwa5",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "libiconv",
-          "hash": "fh6dfpnr2xivw6w6it4cqjiaqxmnriri",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "libxml2",
-          "hash": "ozh3lkmxwprziil67lyuvmfli2jmuqtd",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "ncurses",
-          "hash": "muw42gzujqbr7bw5oaggjsugmh7w4njv",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "tar",
-          "hash": "axle3yrqal4ul6t2rdud25akvezbpav3",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "xz",
-          "hash": "gv3m23pon2lqhx5fcg2gu5nj4nomqap6",
-          "type": [
-            "build",
-            "link",
-            "run"
-          ]
-        }
-      ],
-      "hash": "fvtlcauusbkjitnxbim2oeylnj6jtje6"
-    },
-    "ozh3lkmxwprziil67lyuvmfli2jmuqtd": {
-      "name": "libxml2",
-      "version": "2.9.13",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "python": false,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "fkxwdyj3trnkukxqw7hisq4msubf3hkzevy6tnbtwe2w3y7rsqta====",
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "libiconv",
-          "hash": "fh6dfpnr2xivw6w6it4cqjiaqxmnriri",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "pkgconf",
-          "hash": "ett7ygi7ft3lg6iekce3ts2qscv7kxk2",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "xz",
-          "hash": "gv3m23pon2lqhx5fcg2gu5nj4nomqap6",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "zlib",
-          "hash": "ke4alug7ypoxp37jb6namwlxssmws4kp",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "ozh3lkmxwprziil67lyuvmfli2jmuqtd"
-    },
-    "gv3m23pon2lqhx5fcg2gu5nj4nomqap6": {
-      "name": "xz",
-      "version": "5.2.5",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "libs": [
-          "shared",
-          "static"
-        ],
-        "pic": false,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "qepisyc4rnoop4vi4afesmbibz6mnoktx46lqefhzehnehsavozq====",
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "gv3m23pon2lqhx5fcg2gu5nj4nomqap6"
-    },
-    "axle3yrqal4ul6t2rdud25akvezbpav3": {
-      "name": "tar",
-      "version": "1.34",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "zip": "pigz",
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "uroxlrgy5nrgbemzhcechjroxo7ycyniyi2geepv66v2hi2mn53q====",
-      "dependencies": [
-        {
-          "name": "bzip2",
-          "hash": "rjsj6wiw54343ndzx52ffepljpr5kwa5",
-          "type": [
-            "run"
-          ]
-        },
-        {
-          "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "libiconv",
-          "hash": "fh6dfpnr2xivw6w6it4cqjiaqxmnriri",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "pigz",
-          "hash": "zzd6h23kuwwjevu3afiiuubz4tyomdtu",
-          "type": [
-            "run"
-          ]
-        },
-        {
-          "name": "xz",
-          "hash": "gv3m23pon2lqhx5fcg2gu5nj4nomqap6",
-          "type": [
-            "run"
-          ]
-        },
-        {
-          "name": "zstd",
-          "hash": "cx7gkqfm7njjt7is6o65eb3ksqlrzldw",
-          "type": [
-            "run"
-          ]
-        }
-      ],
-      "hash": "axle3yrqal4ul6t2rdud25akvezbpav3"
-    },
-    "zzd6h23kuwwjevu3afiiuubz4tyomdtu": {
-      "name": "pigz",
-      "version": "2.7",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "qsaexggeegq3vvlfb52f627syjifgkn6cl5a7krpc7gokavzjtiq====",
-      "dependencies": [
-        {
-          "name": "zlib",
-          "hash": "ke4alug7ypoxp37jb6namwlxssmws4kp",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "zzd6h23kuwwjevu3afiiuubz4tyomdtu"
-    },
-    "cx7gkqfm7njjt7is6o65eb3ksqlrzldw": {
-      "name": "zstd",
-      "version": "1.5.2",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "compression": [
-          "none"
-        ],
-        "libs": [
-          "shared",
-          "static"
-        ],
-        "programs": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "qepkpvgnidycnst4gail65ea3nxozmfvtoqqg4yogcb7rhmbyluq====",
-      "hash": "cx7gkqfm7njjt7is6o65eb3ksqlrzldw"
-    },
-    "rjvdm33zgkypoyb4nw7cvmnojlsspgkw": {
-      "name": "libffi",
-      "version": "3.4.2",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "jyaxy6b6uaavi4hhp435lz6uwxjhg2w6vrvnk76o7wymwrbzetfq====",
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "rjvdm33zgkypoyb4nw7cvmnojlsspgkw"
-    },
-    "b567ltsfskkafpuucmngvxzugnixy4zl": {
-      "name": "sqlite",
-      "version": "3.38.5",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "column_metadata": true,
-        "dynamic_extensions": true,
-        "fts": true,
-        "functions": false,
-        "rtree": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "z53gjqy6wpdu2z65dgqf4iz2shtp3ry5onxrrf577hg3xvwuwiiq====",
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "readline",
-          "hash": "ua734bl3l4xjbt4ofrbvzbf3qtvd2yij",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "zlib",
-          "hash": "ke4alug7ypoxp37jb6namwlxssmws4kp",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "b567ltsfskkafpuucmngvxzugnixy4zl"
-    },
-    "m5veuumpcn7uxvwoeea3jbz4r5wlvpn7": {
+    "vj3athtttdadud4t2aw5drdbzmsixkk6": {
       "name": "openmpi",
       "version": "4.1.4",
       "arch": {
         "platform": "darwin",
-        "platform_os": "monterey",
+        "platform_os": "ventura",
         "target": {
-          "name": "m1",
+          "name": "m2",
           "vendor": "Apple",
           "features": [
             "aes",
@@ -2342,11 +201,14 @@
             "asimdhp",
             "asimdrdm",
             "atomics",
+            "bf16",
+            "bti",
             "cpuid",
             "crc32",
             "dcpodp",
             "dcpop",
             "dit",
+            "ecv",
             "evtstrm",
             "fcma",
             "flagm",
@@ -2354,6 +216,7 @@
             "fp",
             "fphp",
             "frint",
+            "i8mm",
             "ilrcpc",
             "jscvt",
             "lrcpc",
@@ -2370,17 +233,19 @@
           ],
           "generation": 0,
           "parents": [
-            "aarch64"
+            "m1",
+            "armv8.5a"
           ]
         }
       },
       "compiler": {
         "name": "apple-clang",
-        "version": "13.1.6"
+        "version": "14.0.0"
       },
       "namespace": "builtin",
       "parameters": {
         "atomics": false,
+        "build_system": "autotools",
         "cuda": false,
         "cxx": false,
         "cxx_exceptions": false,
@@ -2409,18 +274,18 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "3st3x5efczpfynxh7vw4vzkiauti47ivxtcjypkkd3qgshnwpyqa====",
+      "package_hash": "u6d5ubk5gfbtrdsqkalq66k5jntmnptu2sswgtre7hqe6ijvyndq====",
       "dependencies": [
         {
           "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
+          "hash": "tuvqicu5hrhdgfytzfkfhvjlqmxx4lis",
           "type": [
             "build"
           ]
         },
         {
           "name": "hwloc",
-          "hash": "3cskzq3izexjfy7egdg37t725uo37vua",
+          "hash": "5mkwgcpoxmyflpviobr34f3yk7fbgpvo",
           "type": [
             "build",
             "link"
@@ -2428,28 +293,28 @@
         },
         {
           "name": "openssh",
-          "hash": "jam34356m62fx7hrcveakbnwlyhbvknp",
+          "hash": "6rvhhsuuxcztjzxzuzpuolvbfdj44jxa",
           "type": [
             "run"
           ]
         },
         {
           "name": "perl",
-          "hash": "256wjmrblmpwyisdoqf6s4ymi6cmhlib",
+          "hash": "qwv32pzk3k6d5gbz4xunejx77l6fwo3w",
           "type": [
             "build"
           ]
         },
         {
           "name": "pkgconf",
-          "hash": "ett7ygi7ft3lg6iekce3ts2qscv7kxk2",
+          "hash": "n63dycza5mjcchtvlunrgw3vz7dcoec4",
           "type": [
             "build"
           ]
         },
         {
           "name": "pmix",
-          "hash": "ozjrtecp3ll54p5jym4miojmzxzxkjeo",
+          "hash": "dqf2ibg6q7rvu4kr2p2dvyjbyn4hgkx3",
           "type": [
             "build",
             "link"
@@ -2457,23 +322,23 @@
         },
         {
           "name": "zlib",
-          "hash": "ke4alug7ypoxp37jb6namwlxssmws4kp",
+          "hash": "hri3tqmdmrncbw3avww4lkdvradjkf34",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "m5veuumpcn7uxvwoeea3jbz4r5wlvpn7"
+      "hash": "vj3athtttdadud4t2aw5drdbzmsixkk6"
     },
-    "3cskzq3izexjfy7egdg37t725uo37vua": {
-      "name": "hwloc",
-      "version": "2.7.1",
+    "tuvqicu5hrhdgfytzfkfhvjlqmxx4lis": {
+      "name": "gnuconfig",
+      "version": "2022-09-17",
       "arch": {
         "platform": "darwin",
-        "platform_os": "monterey",
+        "platform_os": "ventura",
         "target": {
-          "name": "m1",
+          "name": "m2",
           "vendor": "Apple",
           "features": [
             "aes",
@@ -2483,11 +348,14 @@
             "asimdhp",
             "asimdrdm",
             "atomics",
+            "bf16",
+            "bti",
             "cpuid",
             "crc32",
             "dcpodp",
             "dcpop",
             "dit",
+            "ecv",
             "evtstrm",
             "fcma",
             "flagm",
@@ -2495,6 +363,7 @@
             "fp",
             "fphp",
             "frint",
+            "i8mm",
             "ilrcpc",
             "jscvt",
             "lrcpc",
@@ -2511,19 +380,96 @@
           ],
           "generation": 0,
           "parents": [
-            "aarch64"
+            "m1",
+            "armv8.5a"
           ]
         }
       },
       "compiler": {
         "name": "apple-clang",
-        "version": "13.1.6"
+        "version": "14.0.0"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "generic",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "2gikx4ks5wrf2cct3kt2ras4snqcrgwicovqmrn7sfac5g55qzdq====",
+      "hash": "tuvqicu5hrhdgfytzfkfhvjlqmxx4lis"
+    },
+    "5mkwgcpoxmyflpviobr34f3yk7fbgpvo": {
+      "name": "hwloc",
+      "version": "2.8.0",
+      "arch": {
+        "platform": "darwin",
+        "platform_os": "ventura",
+        "target": {
+          "name": "m2",
+          "vendor": "Apple",
+          "features": [
+            "aes",
+            "asimd",
+            "asimddp",
+            "asimdfhm",
+            "asimdhp",
+            "asimdrdm",
+            "atomics",
+            "bf16",
+            "bti",
+            "cpuid",
+            "crc32",
+            "dcpodp",
+            "dcpop",
+            "dit",
+            "ecv",
+            "evtstrm",
+            "fcma",
+            "flagm",
+            "flagm2",
+            "fp",
+            "fphp",
+            "frint",
+            "i8mm",
+            "ilrcpc",
+            "jscvt",
+            "lrcpc",
+            "paca",
+            "pacg",
+            "pmull",
+            "sb",
+            "sha1",
+            "sha2",
+            "sha3",
+            "sha512",
+            "ssbs",
+            "uscat"
+          ],
+          "generation": 0,
+          "parents": [
+            "m1",
+            "armv8.5a"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "apple-clang",
+        "version": "14.0.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
         "cairo": false,
         "cuda": false,
         "gl": false,
+        "libs": [
+          "shared",
+          "static"
+        ],
         "libudev": false,
         "libxml2": true,
         "netloc": false,
@@ -2532,7 +478,6 @@
         "opencl": false,
         "pci": false,
         "rocm": false,
-        "shared": true,
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -2540,18 +485,18 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "pfugjb4ed5cximqkh634cjlkelrbj2rqnsjxjk5xnae5cfaaelkq====",
+      "package_hash": "jm6jat3j6n52xeyfphg6zct6gduwpavztn5tjfabaazzltxd6r5q====",
       "dependencies": [
         {
           "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
+          "hash": "tuvqicu5hrhdgfytzfkfhvjlqmxx4lis",
           "type": [
             "build"
           ]
         },
         {
           "name": "libxml2",
-          "hash": "ozh3lkmxwprziil67lyuvmfli2jmuqtd",
+          "hash": "zsudjzla73ki4pjlmos3ybtozg4buxdq",
           "type": [
             "build",
             "link"
@@ -2559,7 +504,7 @@
         },
         {
           "name": "ncurses",
-          "hash": "muw42gzujqbr7bw5oaggjsugmh7w4njv",
+          "hash": "ysuijdwvq2zq5kaankbwfhl6yhap63pr",
           "type": [
             "build",
             "link"
@@ -2567,22 +512,22 @@
         },
         {
           "name": "pkgconf",
-          "hash": "ett7ygi7ft3lg6iekce3ts2qscv7kxk2",
+          "hash": "n63dycza5mjcchtvlunrgw3vz7dcoec4",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "3cskzq3izexjfy7egdg37t725uo37vua"
+      "hash": "5mkwgcpoxmyflpviobr34f3yk7fbgpvo"
     },
-    "jam34356m62fx7hrcveakbnwlyhbvknp": {
-      "name": "openssh",
-      "version": "9.0p1",
+    "zsudjzla73ki4pjlmos3ybtozg4buxdq": {
+      "name": "libxml2",
+      "version": "2.10.3",
       "arch": {
         "platform": "darwin",
-        "platform_os": "monterey",
+        "platform_os": "ventura",
         "target": {
-          "name": "m1",
+          "name": "m2",
           "vendor": "Apple",
           "features": [
             "aes",
@@ -2592,11 +537,14 @@
             "asimdhp",
             "asimdrdm",
             "atomics",
+            "bf16",
+            "bti",
             "cpuid",
             "crc32",
             "dcpodp",
             "dcpop",
             "dit",
+            "ecv",
             "evtstrm",
             "fcma",
             "flagm",
@@ -2604,6 +552,7 @@
             "fp",
             "fphp",
             "frint",
+            "i8mm",
             "ilrcpc",
             "jscvt",
             "lrcpc",
@@ -2620,16 +569,539 @@
           ],
           "generation": 0,
           "parents": [
-            "aarch64"
+            "m1",
+            "armv8.5a"
           ]
         }
       },
       "compiler": {
         "name": "apple-clang",
-        "version": "13.1.6"
+        "version": "14.0.0"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "autotools",
+        "python": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "ea3hepsqvb2bb5ttapra6kayyi3c54pwpr35zfejewbo4z36m6yq====",
+      "dependencies": [
+        {
+          "name": "gnuconfig",
+          "hash": "tuvqicu5hrhdgfytzfkfhvjlqmxx4lis",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "libiconv",
+          "hash": "wjl5pxuqvxfo3pdxtmtpcaefvcvzelr6",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "pkgconf",
+          "hash": "n63dycza5mjcchtvlunrgw3vz7dcoec4",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "xz",
+          "hash": "gsafryu2eavwk2ftwzlwufs5voojar2j",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "zlib",
+          "hash": "hri3tqmdmrncbw3avww4lkdvradjkf34",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "zsudjzla73ki4pjlmos3ybtozg4buxdq"
+    },
+    "wjl5pxuqvxfo3pdxtmtpcaefvcvzelr6": {
+      "name": "libiconv",
+      "version": "1.16",
+      "arch": {
+        "platform": "darwin",
+        "platform_os": "ventura",
+        "target": {
+          "name": "m2",
+          "vendor": "Apple",
+          "features": [
+            "aes",
+            "asimd",
+            "asimddp",
+            "asimdfhm",
+            "asimdhp",
+            "asimdrdm",
+            "atomics",
+            "bf16",
+            "bti",
+            "cpuid",
+            "crc32",
+            "dcpodp",
+            "dcpop",
+            "dit",
+            "ecv",
+            "evtstrm",
+            "fcma",
+            "flagm",
+            "flagm2",
+            "fp",
+            "fphp",
+            "frint",
+            "i8mm",
+            "ilrcpc",
+            "jscvt",
+            "lrcpc",
+            "paca",
+            "pacg",
+            "pmull",
+            "sb",
+            "sha1",
+            "sha2",
+            "sha3",
+            "sha512",
+            "ssbs",
+            "uscat"
+          ],
+          "generation": 0,
+          "parents": [
+            "m1",
+            "armv8.5a"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "apple-clang",
+        "version": "14.0.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "libs": [
+          "shared",
+          "static"
+        ],
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "iwav2dx3w6bi363i3gqu3ndd2rajsle7ebgznblzarzb46iraw4q====",
+      "dependencies": [
+        {
+          "name": "gnuconfig",
+          "hash": "tuvqicu5hrhdgfytzfkfhvjlqmxx4lis",
+          "type": [
+            "build"
+          ]
+        }
+      ],
+      "hash": "wjl5pxuqvxfo3pdxtmtpcaefvcvzelr6"
+    },
+    "n63dycza5mjcchtvlunrgw3vz7dcoec4": {
+      "name": "pkgconf",
+      "version": "1.9.3",
+      "arch": {
+        "platform": "darwin",
+        "platform_os": "ventura",
+        "target": {
+          "name": "m2",
+          "vendor": "Apple",
+          "features": [
+            "aes",
+            "asimd",
+            "asimddp",
+            "asimdfhm",
+            "asimdhp",
+            "asimdrdm",
+            "atomics",
+            "bf16",
+            "bti",
+            "cpuid",
+            "crc32",
+            "dcpodp",
+            "dcpop",
+            "dit",
+            "ecv",
+            "evtstrm",
+            "fcma",
+            "flagm",
+            "flagm2",
+            "fp",
+            "fphp",
+            "frint",
+            "i8mm",
+            "ilrcpc",
+            "jscvt",
+            "lrcpc",
+            "paca",
+            "pacg",
+            "pmull",
+            "sb",
+            "sha1",
+            "sha2",
+            "sha3",
+            "sha512",
+            "ssbs",
+            "uscat"
+          ],
+          "generation": 0,
+          "parents": [
+            "m1",
+            "armv8.5a"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "apple-clang",
+        "version": "14.0.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "external": {
+        "path": "/opt/homebrew",
+        "module": null,
+        "extra_attributes": {}
+      },
+      "package_hash": "4aqg53rxlbw666hwazif4m5nguiwqcymx6qi5umooyebaqx3e5ua====",
+      "hash": "n63dycza5mjcchtvlunrgw3vz7dcoec4"
+    },
+    "gsafryu2eavwk2ftwzlwufs5voojar2j": {
+      "name": "xz",
+      "version": "5.2.7",
+      "arch": {
+        "platform": "darwin",
+        "platform_os": "ventura",
+        "target": {
+          "name": "m2",
+          "vendor": "Apple",
+          "features": [
+            "aes",
+            "asimd",
+            "asimddp",
+            "asimdfhm",
+            "asimdhp",
+            "asimdrdm",
+            "atomics",
+            "bf16",
+            "bti",
+            "cpuid",
+            "crc32",
+            "dcpodp",
+            "dcpop",
+            "dit",
+            "ecv",
+            "evtstrm",
+            "fcma",
+            "flagm",
+            "flagm2",
+            "fp",
+            "fphp",
+            "frint",
+            "i8mm",
+            "ilrcpc",
+            "jscvt",
+            "lrcpc",
+            "paca",
+            "pacg",
+            "pmull",
+            "sb",
+            "sha1",
+            "sha2",
+            "sha3",
+            "sha512",
+            "ssbs",
+            "uscat"
+          ],
+          "generation": 0,
+          "parents": [
+            "m1",
+            "armv8.5a"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "apple-clang",
+        "version": "14.0.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "libs": [
+          "shared",
+          "static"
+        ],
+        "pic": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "vrji74lnhfhztgaztloko6l73x5hoarnlatandfmr6qi4qsboqtq====",
+      "dependencies": [
+        {
+          "name": "gnuconfig",
+          "hash": "tuvqicu5hrhdgfytzfkfhvjlqmxx4lis",
+          "type": [
+            "build"
+          ]
+        }
+      ],
+      "hash": "gsafryu2eavwk2ftwzlwufs5voojar2j"
+    },
+    "hri3tqmdmrncbw3avww4lkdvradjkf34": {
+      "name": "zlib",
+      "version": "1.2.13",
+      "arch": {
+        "platform": "darwin",
+        "platform_os": "ventura",
+        "target": {
+          "name": "m2",
+          "vendor": "Apple",
+          "features": [
+            "aes",
+            "asimd",
+            "asimddp",
+            "asimdfhm",
+            "asimdhp",
+            "asimdrdm",
+            "atomics",
+            "bf16",
+            "bti",
+            "cpuid",
+            "crc32",
+            "dcpodp",
+            "dcpop",
+            "dit",
+            "ecv",
+            "evtstrm",
+            "fcma",
+            "flagm",
+            "flagm2",
+            "fp",
+            "fphp",
+            "frint",
+            "i8mm",
+            "ilrcpc",
+            "jscvt",
+            "lrcpc",
+            "paca",
+            "pacg",
+            "pmull",
+            "sb",
+            "sha1",
+            "sha2",
+            "sha3",
+            "sha512",
+            "ssbs",
+            "uscat"
+          ],
+          "generation": 0,
+          "parents": [
+            "m1",
+            "armv8.5a"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "apple-clang",
+        "version": "14.0.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "makefile",
+        "optimize": true,
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "ddqbey6mlcu554x3lwuh2gtvagc5shwtyyyhg6fwcwfoefimz5oa====",
+      "hash": "hri3tqmdmrncbw3avww4lkdvradjkf34"
+    },
+    "ysuijdwvq2zq5kaankbwfhl6yhap63pr": {
+      "name": "ncurses",
+      "version": "6.3",
+      "arch": {
+        "platform": "darwin",
+        "platform_os": "ventura",
+        "target": {
+          "name": "m2",
+          "vendor": "Apple",
+          "features": [
+            "aes",
+            "asimd",
+            "asimddp",
+            "asimdfhm",
+            "asimdhp",
+            "asimdrdm",
+            "atomics",
+            "bf16",
+            "bti",
+            "cpuid",
+            "crc32",
+            "dcpodp",
+            "dcpop",
+            "dit",
+            "ecv",
+            "evtstrm",
+            "fcma",
+            "flagm",
+            "flagm2",
+            "fp",
+            "fphp",
+            "frint",
+            "i8mm",
+            "ilrcpc",
+            "jscvt",
+            "lrcpc",
+            "paca",
+            "pacg",
+            "pmull",
+            "sb",
+            "sha1",
+            "sha2",
+            "sha3",
+            "sha512",
+            "ssbs",
+            "uscat"
+          ],
+          "generation": 0,
+          "parents": [
+            "m1",
+            "armv8.5a"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "apple-clang",
+        "version": "14.0.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "abi": "none",
+        "build_system": "autotools",
+        "symlinks": false,
+        "termlib": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "xt4gmttjogkqm2ol74rux4rjqnilsdqxyjjgjrfgkwroyr5eignq====",
+      "dependencies": [
+        {
+          "name": "gnuconfig",
+          "hash": "tuvqicu5hrhdgfytzfkfhvjlqmxx4lis",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "pkgconf",
+          "hash": "n63dycza5mjcchtvlunrgw3vz7dcoec4",
+          "type": [
+            "build"
+          ]
+        }
+      ],
+      "hash": "ysuijdwvq2zq5kaankbwfhl6yhap63pr"
+    },
+    "6rvhhsuuxcztjzxzuzpuolvbfdj44jxa": {
+      "name": "openssh",
+      "version": "9.0p1",
+      "arch": {
+        "platform": "darwin",
+        "platform_os": "ventura",
+        "target": {
+          "name": "m2",
+          "vendor": "Apple",
+          "features": [
+            "aes",
+            "asimd",
+            "asimddp",
+            "asimdfhm",
+            "asimdhp",
+            "asimdrdm",
+            "atomics",
+            "bf16",
+            "bti",
+            "cpuid",
+            "crc32",
+            "dcpodp",
+            "dcpop",
+            "dit",
+            "ecv",
+            "evtstrm",
+            "fcma",
+            "flagm",
+            "flagm2",
+            "fp",
+            "fphp",
+            "frint",
+            "i8mm",
+            "ilrcpc",
+            "jscvt",
+            "lrcpc",
+            "paca",
+            "pacg",
+            "pmull",
+            "sb",
+            "sha1",
+            "sha2",
+            "sha3",
+            "sha512",
+            "ssbs",
+            "uscat"
+          ],
+          "generation": 0,
+          "parents": [
+            "m1",
+            "armv8.5a"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "apple-clang",
+        "version": "14.0.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
         "gssapi": true,
         "cflags": [],
         "cppflags": [],
@@ -2638,66 +1110,22 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "external": {
+        "path": "/usr",
+        "module": null,
+        "extra_attributes": {}
+      },
       "package_hash": "vz35ubfdzmtbulyde2v3grgmkfp5ljfwd4t6thrymnbcij6ylk2q====",
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "krb5",
-          "hash": "jsnjpotri7zx4qfar6gl5mugmmv4izcg",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "libedit",
-          "hash": "b26y5logn5hhm5wez65qe3f7sf5tczwh",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "ncurses",
-          "hash": "muw42gzujqbr7bw5oaggjsugmh7w4njv",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "openssl",
-          "hash": "373h7tjl2ogx6kbvcc2eclcltbhalinf",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "zlib",
-          "hash": "ke4alug7ypoxp37jb6namwlxssmws4kp",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "jam34356m62fx7hrcveakbnwlyhbvknp"
+      "hash": "6rvhhsuuxcztjzxzuzpuolvbfdj44jxa"
     },
-    "jsnjpotri7zx4qfar6gl5mugmmv4izcg": {
-      "name": "krb5",
-      "version": "1.19.3",
+    "qwv32pzk3k6d5gbz4xunejx77l6fwo3w": {
+      "name": "perl",
+      "version": "5.34.0",
       "arch": {
         "platform": "darwin",
-        "platform_os": "monterey",
+        "platform_os": "ventura",
         "target": {
-          "name": "m1",
+          "name": "m2",
           "vendor": "Apple",
           "features": [
             "aes",
@@ -2707,11 +1135,14 @@
             "asimdhp",
             "asimdrdm",
             "atomics",
+            "bf16",
+            "bti",
             "cpuid",
             "crc32",
             "dcpodp",
             "dcpop",
             "dit",
+            "ecv",
             "evtstrm",
             "fcma",
             "flagm",
@@ -2719,6 +1150,7 @@
             "fp",
             "fphp",
             "frint",
+            "i8mm",
             "ilrcpc",
             "jscvt",
             "lrcpc",
@@ -2735,17 +1167,21 @@
           ],
           "generation": 0,
           "parents": [
-            "aarch64"
+            "m1",
+            "armv8.5a"
           ]
         }
       },
       "compiler": {
         "name": "apple-clang",
-        "version": "13.1.6"
+        "version": "14.0.0"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "generic",
+        "cpanm": false,
         "shared": true,
+        "threads": true,
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -2753,413 +1189,22 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "lti7kbibd5mb2y3gvpdzhgphypqfj6wx24ktnmryvuc6m3wz756a====",
-      "dependencies": [
-        {
-          "name": "bison",
-          "hash": "5m3mbj5raiwwz2ipctcaqvzxdrx2dtip",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "diffutils",
-          "hash": "mbrctz7juifwhhzpfxqqewahvkdkghrk",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "gettext",
-          "hash": "fvtlcauusbkjitnxbim2oeylnj6jtje6",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "openssl",
-          "hash": "373h7tjl2ogx6kbvcc2eclcltbhalinf",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "jsnjpotri7zx4qfar6gl5mugmmv4izcg"
+      "external": {
+        "path": "/usr",
+        "module": null,
+        "extra_attributes": {}
+      },
+      "package_hash": "vchz7wuag4b5bgdkqbrmb74zk5zdkwqb7v4tkonrpjrhlbi33xqq====",
+      "hash": "qwv32pzk3k6d5gbz4xunejx77l6fwo3w"
     },
-    "5m3mbj5raiwwz2ipctcaqvzxdrx2dtip": {
-      "name": "bison",
-      "version": "3.8.2",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "d4j62fwvuxqbiez32ltjnhu47ac425wjebsy6fhoptv6saxazcxq====",
-      "dependencies": [
-        {
-          "name": "diffutils",
-          "hash": "mbrctz7juifwhhzpfxqqewahvkdkghrk",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "m4",
-          "hash": "4qfjyew3zo6lqnudz5datefth6p7taiu",
-          "type": [
-            "build",
-            "run"
-          ]
-        },
-        {
-          "name": "perl",
-          "hash": "256wjmrblmpwyisdoqf6s4ymi6cmhlib",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "5m3mbj5raiwwz2ipctcaqvzxdrx2dtip"
-    },
-    "4qfjyew3zo6lqnudz5datefth6p7taiu": {
-      "name": "m4",
-      "version": "1.4.19",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "patches": [
-          "9dc5fbd0d5cb1037ab1e6d0ecc74a30df218d0a94bdd5a02759a97f62daca573",
-          "bfdffa7c2eb01021d5849b36972c069693654ad826c1a20b53534009a4ec7a89"
-        ],
-        "sigsegv": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "patches": [
-        "bfdffa7c2eb01021d5849b36972c069693654ad826c1a20b53534009a4ec7a89",
-        "9dc5fbd0d5cb1037ab1e6d0ecc74a30df218d0a94bdd5a02759a97f62daca573"
-      ],
-      "package_hash": "sqgbfqha5alfkehw2p7okvlj6zwtfvnp7i6k2wpqjcm3iexzchfq====",
-      "dependencies": [
-        {
-          "name": "diffutils",
-          "hash": "mbrctz7juifwhhzpfxqqewahvkdkghrk",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "libsigsegv",
-          "hash": "t5akhjvasqaudloonnxsnrtc427dws3i",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "4qfjyew3zo6lqnudz5datefth6p7taiu"
-    },
-    "t5akhjvasqaudloonnxsnrtc427dws3i": {
-      "name": "libsigsegv",
-      "version": "2.13",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "nmoykqybj2ahbtvuts4ajbnyyzzdezs5s7cozp2o54gmtsvc6wiq====",
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "t5akhjvasqaudloonnxsnrtc427dws3i"
-    },
-    "b26y5logn5hhm5wez65qe3f7sf5tczwh": {
-      "name": "libedit",
-      "version": "3.1-20210216",
-      "arch": {
-        "platform": "darwin",
-        "platform_os": "monterey",
-        "target": {
-          "name": "m1",
-          "vendor": "Apple",
-          "features": [
-            "aes",
-            "asimd",
-            "asimddp",
-            "asimdfhm",
-            "asimdhp",
-            "asimdrdm",
-            "atomics",
-            "cpuid",
-            "crc32",
-            "dcpodp",
-            "dcpop",
-            "dit",
-            "evtstrm",
-            "fcma",
-            "flagm",
-            "flagm2",
-            "fp",
-            "fphp",
-            "frint",
-            "ilrcpc",
-            "jscvt",
-            "lrcpc",
-            "paca",
-            "pacg",
-            "pmull",
-            "sb",
-            "sha1",
-            "sha2",
-            "sha3",
-            "sha512",
-            "ssbs",
-            "uscat"
-          ],
-          "generation": 0,
-          "parents": [
-            "aarch64"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "apple-clang",
-        "version": "13.1.6"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "4cqswxqvvmwdscug74fr5fuswvxmi4tr2boiwrkk4b6b3k2yqtea====",
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "ncurses",
-          "hash": "muw42gzujqbr7bw5oaggjsugmh7w4njv",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "pkgconf",
-          "hash": "ett7ygi7ft3lg6iekce3ts2qscv7kxk2",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "b26y5logn5hhm5wez65qe3f7sf5tczwh"
-    },
-    "ozjrtecp3ll54p5jym4miojmzxzxkjeo": {
+    "dqf2ibg6q7rvu4kr2p2dvyjbyn4hgkx3": {
       "name": "pmix",
       "version": "4.1.2",
       "arch": {
         "platform": "darwin",
-        "platform_os": "monterey",
+        "platform_os": "ventura",
         "target": {
-          "name": "m1",
+          "name": "m2",
           "vendor": "Apple",
           "features": [
             "aes",
@@ -3169,11 +1214,14 @@
             "asimdhp",
             "asimdrdm",
             "atomics",
+            "bf16",
+            "bti",
             "cpuid",
             "crc32",
             "dcpodp",
             "dcpop",
             "dit",
+            "ecv",
             "evtstrm",
             "fcma",
             "flagm",
@@ -3181,6 +1229,7 @@
             "fp",
             "fphp",
             "frint",
+            "i8mm",
             "ilrcpc",
             "jscvt",
             "lrcpc",
@@ -3197,18 +1246,21 @@
           ],
           "generation": 0,
           "parents": [
-            "aarch64"
+            "m1",
+            "armv8.5a"
           ]
         }
       },
       "compiler": {
         "name": "apple-clang",
-        "version": "13.1.6"
+        "version": "14.0.0"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "autotools",
         "docs": false,
         "pmi_backwards_compatibility": true,
+        "python": false,
         "restful": false,
         "cflags": [],
         "cppflags": [],
@@ -3217,18 +1269,18 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "6rz4ed6gsp4fvvx2eeqtftsdv6uwyrgqc2vt4x7psx3uzg7ztxda====",
+      "package_hash": "tpqa7d7zk5xg7yreo54t6pgycq5jbw3wigwrvupf2ymxm6lbtula====",
       "dependencies": [
         {
           "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
+          "hash": "tuvqicu5hrhdgfytzfkfhvjlqmxx4lis",
           "type": [
             "build"
           ]
         },
         {
           "name": "hwloc",
-          "hash": "3cskzq3izexjfy7egdg37t725uo37vua",
+          "hash": "5mkwgcpoxmyflpviobr34f3yk7fbgpvo",
           "type": [
             "build",
             "link"
@@ -3236,23 +1288,23 @@
         },
         {
           "name": "libevent",
-          "hash": "ilhboy5spqx2ntrlfe3twea2odfrs3c6",
+          "hash": "476vth7xae5vnqxbrdahdqvgal7zxlf5",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "ozjrtecp3ll54p5jym4miojmzxzxkjeo"
+      "hash": "dqf2ibg6q7rvu4kr2p2dvyjbyn4hgkx3"
     },
-    "ilhboy5spqx2ntrlfe3twea2odfrs3c6": {
+    "476vth7xae5vnqxbrdahdqvgal7zxlf5": {
       "name": "libevent",
       "version": "2.1.12",
       "arch": {
         "platform": "darwin",
-        "platform_os": "monterey",
+        "platform_os": "ventura",
         "target": {
-          "name": "m1",
+          "name": "m2",
           "vendor": "Apple",
           "features": [
             "aes",
@@ -3262,11 +1314,14 @@
             "asimdhp",
             "asimdrdm",
             "atomics",
+            "bf16",
+            "bti",
             "cpuid",
             "crc32",
             "dcpodp",
             "dcpop",
             "dit",
+            "ecv",
             "evtstrm",
             "fcma",
             "flagm",
@@ -3274,6 +1329,7 @@
             "fp",
             "fphp",
             "frint",
+            "i8mm",
             "ilrcpc",
             "jscvt",
             "lrcpc",
@@ -3290,16 +1346,18 @@
           ],
           "generation": 0,
           "parents": [
-            "aarch64"
+            "m1",
+            "armv8.5a"
           ]
         }
       },
       "compiler": {
         "name": "apple-clang",
-        "version": "13.1.6"
+        "version": "14.0.0"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "autotools",
         "openssl": true,
         "cflags": [],
         "cppflags": [],
@@ -3312,30 +1370,30 @@
       "dependencies": [
         {
           "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
+          "hash": "tuvqicu5hrhdgfytzfkfhvjlqmxx4lis",
           "type": [
             "build"
           ]
         },
         {
           "name": "openssl",
-          "hash": "373h7tjl2ogx6kbvcc2eclcltbhalinf",
+          "hash": "avvoxd7ca5o5pmmgrfefe5zyulvzh34u",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "ilhboy5spqx2ntrlfe3twea2odfrs3c6"
+      "hash": "476vth7xae5vnqxbrdahdqvgal7zxlf5"
     },
-    "niclwegzetq747rec3z3t4tlaa4ss62a": {
-      "name": "swig",
-      "version": "4.1.dev1-fortran",
+    "avvoxd7ca5o5pmmgrfefe5zyulvzh34u": {
+      "name": "openssl",
+      "version": "1.1.1s",
       "arch": {
         "platform": "darwin",
-        "platform_os": "monterey",
+        "platform_os": "ventura",
         "target": {
-          "name": "m1",
+          "name": "m2",
           "vendor": "Apple",
           "features": [
             "aes",
@@ -3345,11 +1403,14 @@
             "asimdhp",
             "asimdrdm",
             "atomics",
+            "bf16",
+            "bti",
             "cpuid",
             "crc32",
             "dcpodp",
             "dcpop",
             "dit",
+            "ecv",
             "evtstrm",
             "fcma",
             "flagm",
@@ -3357,6 +1418,7 @@
             "fp",
             "fphp",
             "frint",
+            "i8mm",
             "ilrcpc",
             "jscvt",
             "lrcpc",
@@ -3373,16 +1435,21 @@
           ],
           "generation": 0,
           "parents": [
-            "aarch64"
+            "m1",
+            "armv8.5a"
           ]
         }
       },
       "compiler": {
         "name": "apple-clang",
-        "version": "13.1.6"
+        "version": "14.0.0"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "generic",
+        "certs": "mozilla",
+        "docs": false,
+        "shared": false,
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -3390,46 +1457,212 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "mogdyemmede35ml3soxjla7y54vhknekefda5fvu4dcvlbsn42xa====",
+      "package_hash": "ohcxotxphs5lvc32uqdbv5yzlyntjsfly6njol6w3lunyfp6u2ma====",
+      "dependencies": [
+        {
+          "name": "ca-certificates-mozilla",
+          "hash": "lxh5ph236siq2oetln6i4dsxcdzi46ka",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "perl",
+          "hash": "qwv32pzk3k6d5gbz4xunejx77l6fwo3w",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "zlib",
+          "hash": "hri3tqmdmrncbw3avww4lkdvradjkf34",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "avvoxd7ca5o5pmmgrfefe5zyulvzh34u"
+    },
+    "lxh5ph236siq2oetln6i4dsxcdzi46ka": {
+      "name": "ca-certificates-mozilla",
+      "version": "2022-10-11",
+      "arch": {
+        "platform": "darwin",
+        "platform_os": "ventura",
+        "target": {
+          "name": "m2",
+          "vendor": "Apple",
+          "features": [
+            "aes",
+            "asimd",
+            "asimddp",
+            "asimdfhm",
+            "asimdhp",
+            "asimdrdm",
+            "atomics",
+            "bf16",
+            "bti",
+            "cpuid",
+            "crc32",
+            "dcpodp",
+            "dcpop",
+            "dit",
+            "ecv",
+            "evtstrm",
+            "fcma",
+            "flagm",
+            "flagm2",
+            "fp",
+            "fphp",
+            "frint",
+            "i8mm",
+            "ilrcpc",
+            "jscvt",
+            "lrcpc",
+            "paca",
+            "pacg",
+            "pmull",
+            "sb",
+            "sha1",
+            "sha2",
+            "sha3",
+            "sha512",
+            "ssbs",
+            "uscat"
+          ],
+          "generation": 0,
+          "parents": [
+            "m1",
+            "armv8.5a"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "apple-clang",
+        "version": "14.0.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "generic",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "534ljqvtxlihbb7evesr4emhe74e6juaardt6dkra4fpa7pcolxa====",
+      "hash": "lxh5ph236siq2oetln6i4dsxcdzi46ka"
+    },
+    "v43b6fo54clyteamuv5vwazshhtyoirf": {
+      "name": "swig",
+      "version": "4.1.dev1-fortran",
+      "arch": {
+        "platform": "darwin",
+        "platform_os": "ventura",
+        "target": {
+          "name": "m2",
+          "vendor": "Apple",
+          "features": [
+            "aes",
+            "asimd",
+            "asimddp",
+            "asimdfhm",
+            "asimdhp",
+            "asimdrdm",
+            "atomics",
+            "bf16",
+            "bti",
+            "cpuid",
+            "crc32",
+            "dcpodp",
+            "dcpop",
+            "dit",
+            "ecv",
+            "evtstrm",
+            "fcma",
+            "flagm",
+            "flagm2",
+            "fp",
+            "fphp",
+            "frint",
+            "i8mm",
+            "ilrcpc",
+            "jscvt",
+            "lrcpc",
+            "paca",
+            "pacg",
+            "pmull",
+            "sb",
+            "sha1",
+            "sha2",
+            "sha3",
+            "sha512",
+            "ssbs",
+            "uscat"
+          ],
+          "generation": 0,
+          "parents": [
+            "m1",
+            "armv8.5a"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "apple-clang",
+        "version": "14.0.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "byvv7ni7xrtg4sjiwtfm7y4hvxslehdkmsg5zn6nj2srqg2wbrfa====",
       "dependencies": [
         {
           "name": "autoconf",
-          "hash": "nzp6wavuaeupera4jcrvfbuvcxl362gh",
+          "hash": "e3ehdtw43hsfnpomvlygiv3oysv6kqgf",
           "type": [
             "build"
           ]
         },
         {
           "name": "automake",
-          "hash": "sgtrensxjtq32uj3jh4jjucrfmkn7lus",
+          "hash": "orbzw4ksebnzoexcdbax4pirnmqna6dx",
           "type": [
             "build"
           ]
         },
         {
           "name": "bison",
-          "hash": "5m3mbj5raiwwz2ipctcaqvzxdrx2dtip",
+          "hash": "4azvqtoniakwjxdj2xeipqfncgrba6rq",
           "type": [
             "build"
           ]
         },
         {
           "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
+          "hash": "tuvqicu5hrhdgfytzfkfhvjlqmxx4lis",
           "type": [
             "build"
           ]
         },
         {
           "name": "libtool",
-          "hash": "ho2bfab5bjg3n6e33rk5rzo7ctrtytip",
+          "hash": "35b5q3hzuqmlrpl67ewlupkpqsxje6bx",
           "type": [
             "build"
           ]
         },
         {
           "name": "pcre",
-          "hash": "o6y4zfuxr6qxofxw3vfvnxjlhyvnlbec",
+          "hash": "brqy4sshj2fkelfvi3edjkap53w56cib",
           "type": [
             "build",
             "link"
@@ -3437,22 +1670,30 @@
         },
         {
           "name": "pkgconf",
-          "hash": "ett7ygi7ft3lg6iekce3ts2qscv7kxk2",
+          "hash": "n63dycza5mjcchtvlunrgw3vz7dcoec4",
           "type": [
             "build"
           ]
+        },
+        {
+          "name": "zlib",
+          "hash": "hri3tqmdmrncbw3avww4lkdvradjkf34",
+          "type": [
+            "build",
+            "link"
+          ]
         }
       ],
-      "hash": "niclwegzetq747rec3z3t4tlaa4ss62a"
+      "hash": "v43b6fo54clyteamuv5vwazshhtyoirf"
     },
-    "nzp6wavuaeupera4jcrvfbuvcxl362gh": {
+    "e3ehdtw43hsfnpomvlygiv3oysv6kqgf": {
       "name": "autoconf",
-      "version": "2.69",
+      "version": "2.71",
       "arch": {
         "platform": "darwin",
-        "platform_os": "monterey",
+        "platform_os": "ventura",
         "target": {
-          "name": "m1",
+          "name": "m2",
           "vendor": "Apple",
           "features": [
             "aes",
@@ -3462,11 +1703,14 @@
             "asimdhp",
             "asimdrdm",
             "atomics",
+            "bf16",
+            "bti",
             "cpuid",
             "crc32",
             "dcpodp",
             "dcpop",
             "dit",
+            "ecv",
             "evtstrm",
             "fcma",
             "flagm",
@@ -3474,6 +1718,7 @@
             "fp",
             "fphp",
             "frint",
+            "i8mm",
             "ilrcpc",
             "jscvt",
             "lrcpc",
@@ -3490,21 +1735,18 @@
           ],
           "generation": 0,
           "parents": [
-            "aarch64"
+            "m1",
+            "armv8.5a"
           ]
         }
       },
       "compiler": {
         "name": "apple-clang",
-        "version": "13.1.6"
+        "version": "14.0.0"
       },
       "namespace": "builtin",
       "parameters": {
-        "patches": [
-          "35c449281546376449766f92d49fc121ca50e330e60fefcfc9be2af3253082c2",
-          "7793209b33013dc0f81208718c68440c5aae80e7a1c4b8d336e382525af791a7",
-          "a49dd5bac3b62daa0ff688ab4d508d71dbd2f4f8d7e2a02321926346161bf3ee"
-        ],
+        "build_system": "autotools",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -3512,47 +1754,22 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "patches": [
-        "7793209b33013dc0f81208718c68440c5aae80e7a1c4b8d336e382525af791a7",
-        "35c449281546376449766f92d49fc121ca50e330e60fefcfc9be2af3253082c2",
-        "a49dd5bac3b62daa0ff688ab4d508d71dbd2f4f8d7e2a02321926346161bf3ee"
-      ],
-      "package_hash": "m5knz2kbrkk4y4rmtair5tgqaj6ia4ektauspszjscawxhjem3mq====",
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "m4",
-          "hash": "4qfjyew3zo6lqnudz5datefth6p7taiu",
-          "type": [
-            "build",
-            "run"
-          ]
-        },
-        {
-          "name": "perl",
-          "hash": "256wjmrblmpwyisdoqf6s4ymi6cmhlib",
-          "type": [
-            "build",
-            "run"
-          ]
-        }
-      ],
-      "hash": "nzp6wavuaeupera4jcrvfbuvcxl362gh"
+      "external": {
+        "path": "/opt/homebrew",
+        "module": null,
+        "extra_attributes": {}
+      },
+      "package_hash": "t22vjl5wm6tzjf2wulhmmxizcgvop5fgspsggccq654brpravlva====",
+      "hash": "e3ehdtw43hsfnpomvlygiv3oysv6kqgf"
     },
-    "sgtrensxjtq32uj3jh4jjucrfmkn7lus": {
+    "orbzw4ksebnzoexcdbax4pirnmqna6dx": {
       "name": "automake",
       "version": "1.16.5",
       "arch": {
         "platform": "darwin",
-        "platform_os": "monterey",
+        "platform_os": "ventura",
         "target": {
-          "name": "m1",
+          "name": "m2",
           "vendor": "Apple",
           "features": [
             "aes",
@@ -3562,11 +1779,14 @@
             "asimdhp",
             "asimdrdm",
             "atomics",
+            "bf16",
+            "bti",
             "cpuid",
             "crc32",
             "dcpodp",
             "dcpop",
             "dit",
+            "ecv",
             "evtstrm",
             "fcma",
             "flagm",
@@ -3574,6 +1794,7 @@
             "fp",
             "fphp",
             "frint",
+            "i8mm",
             "ilrcpc",
             "jscvt",
             "lrcpc",
@@ -3590,16 +1811,18 @@
           ],
           "generation": 0,
           "parents": [
-            "aarch64"
+            "m1",
+            "armv8.5a"
           ]
         }
       },
       "compiler": {
         "name": "apple-clang",
-        "version": "13.1.6"
+        "version": "14.0.0"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "autotools",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -3607,41 +1830,22 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "external": {
+        "path": "/opt/homebrew",
+        "module": null,
+        "extra_attributes": {}
+      },
       "package_hash": "mwdviv4g6xu2ttfs6dnzmwbofpxa4vke3y5egbb6w4fesykvnbda====",
-      "dependencies": [
-        {
-          "name": "autoconf",
-          "hash": "nzp6wavuaeupera4jcrvfbuvcxl362gh",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "perl",
-          "hash": "256wjmrblmpwyisdoqf6s4ymi6cmhlib",
-          "type": [
-            "build",
-            "run"
-          ]
-        }
-      ],
-      "hash": "sgtrensxjtq32uj3jh4jjucrfmkn7lus"
+      "hash": "orbzw4ksebnzoexcdbax4pirnmqna6dx"
     },
-    "ho2bfab5bjg3n6e33rk5rzo7ctrtytip": {
-      "name": "libtool",
-      "version": "2.4.7",
+    "4azvqtoniakwjxdj2xeipqfncgrba6rq": {
+      "name": "bison",
+      "version": "3.8.2",
       "arch": {
         "platform": "darwin",
-        "platform_os": "monterey",
+        "platform_os": "ventura",
         "target": {
-          "name": "m1",
+          "name": "m2",
           "vendor": "Apple",
           "features": [
             "aes",
@@ -3651,11 +1855,14 @@
             "asimdhp",
             "asimdrdm",
             "atomics",
+            "bf16",
+            "bti",
             "cpuid",
             "crc32",
             "dcpodp",
             "dcpop",
             "dit",
+            "ecv",
             "evtstrm",
             "fcma",
             "flagm",
@@ -3663,6 +1870,7 @@
             "fp",
             "fphp",
             "frint",
+            "i8mm",
             "ilrcpc",
             "jscvt",
             "lrcpc",
@@ -3679,16 +1887,94 @@
           ],
           "generation": 0,
           "parents": [
-            "aarch64"
+            "m1",
+            "armv8.5a"
           ]
         }
       },
       "compiler": {
         "name": "apple-clang",
-        "version": "13.1.6"
+        "version": "14.0.0"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "autotools",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "external": {
+        "path": "/opt/homebrew/opt/bison",
+        "module": null,
+        "extra_attributes": {}
+      },
+      "package_hash": "d4j62fwvuxqbiez32ltjnhu47ac425wjebsy6fhoptv6saxazcxq====",
+      "hash": "4azvqtoniakwjxdj2xeipqfncgrba6rq"
+    },
+    "35b5q3hzuqmlrpl67ewlupkpqsxje6bx": {
+      "name": "libtool",
+      "version": "2.4.7",
+      "arch": {
+        "platform": "darwin",
+        "platform_os": "ventura",
+        "target": {
+          "name": "m2",
+          "vendor": "Apple",
+          "features": [
+            "aes",
+            "asimd",
+            "asimddp",
+            "asimdfhm",
+            "asimdhp",
+            "asimdrdm",
+            "atomics",
+            "bf16",
+            "bti",
+            "cpuid",
+            "crc32",
+            "dcpodp",
+            "dcpop",
+            "dit",
+            "ecv",
+            "evtstrm",
+            "fcma",
+            "flagm",
+            "flagm2",
+            "fp",
+            "fphp",
+            "frint",
+            "i8mm",
+            "ilrcpc",
+            "jscvt",
+            "lrcpc",
+            "paca",
+            "pacg",
+            "pmull",
+            "sb",
+            "sha1",
+            "sha2",
+            "sha3",
+            "sha512",
+            "ssbs",
+            "uscat"
+          ],
+          "generation": 0,
+          "parents": [
+            "m1",
+            "armv8.5a"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "apple-clang",
+        "version": "14.0.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -3700,29 +1986,29 @@
       "dependencies": [
         {
           "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
+          "hash": "tuvqicu5hrhdgfytzfkfhvjlqmxx4lis",
           "type": [
             "build"
           ]
         },
         {
           "name": "m4",
-          "hash": "4qfjyew3zo6lqnudz5datefth6p7taiu",
+          "hash": "flaupqta6i2474ulrpcoa3rot65fodmp",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "ho2bfab5bjg3n6e33rk5rzo7ctrtytip"
+      "hash": "35b5q3hzuqmlrpl67ewlupkpqsxje6bx"
     },
-    "o6y4zfuxr6qxofxw3vfvnxjlhyvnlbec": {
-      "name": "pcre",
-      "version": "8.45",
+    "flaupqta6i2474ulrpcoa3rot65fodmp": {
+      "name": "m4",
+      "version": "1.4.6",
       "arch": {
         "platform": "darwin",
-        "platform_os": "monterey",
+        "platform_os": "ventura",
         "target": {
-          "name": "m1",
+          "name": "m2",
           "vendor": "Apple",
           "features": [
             "aes",
@@ -3732,11 +2018,14 @@
             "asimdhp",
             "asimdrdm",
             "atomics",
+            "bf16",
+            "bti",
             "cpuid",
             "crc32",
             "dcpodp",
             "dcpop",
             "dit",
+            "ecv",
             "evtstrm",
             "fcma",
             "flagm",
@@ -3744,6 +2033,7 @@
             "fp",
             "fphp",
             "frint",
+            "i8mm",
             "ilrcpc",
             "jscvt",
             "lrcpc",
@@ -3760,16 +2050,95 @@
           ],
           "generation": 0,
           "parents": [
-            "aarch64"
+            "m1",
+            "armv8.5a"
           ]
         }
       },
       "compiler": {
         "name": "apple-clang",
-        "version": "13.1.6"
+        "version": "14.0.0"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "autotools",
+        "sigsegv": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "external": {
+        "path": "/usr",
+        "module": null,
+        "extra_attributes": {}
+      },
+      "package_hash": "otabgty3hi32kdu7qhyvjdwctr6xvzy6tfclcy7yudbydmyuuida====",
+      "hash": "flaupqta6i2474ulrpcoa3rot65fodmp"
+    },
+    "brqy4sshj2fkelfvi3edjkap53w56cib": {
+      "name": "pcre",
+      "version": "8.45",
+      "arch": {
+        "platform": "darwin",
+        "platform_os": "ventura",
+        "target": {
+          "name": "m2",
+          "vendor": "Apple",
+          "features": [
+            "aes",
+            "asimd",
+            "asimddp",
+            "asimdfhm",
+            "asimdhp",
+            "asimdrdm",
+            "atomics",
+            "bf16",
+            "bti",
+            "cpuid",
+            "crc32",
+            "dcpodp",
+            "dcpop",
+            "dit",
+            "ecv",
+            "evtstrm",
+            "fcma",
+            "flagm",
+            "flagm2",
+            "fp",
+            "fphp",
+            "frint",
+            "i8mm",
+            "ilrcpc",
+            "jscvt",
+            "lrcpc",
+            "paca",
+            "pacg",
+            "pmull",
+            "sb",
+            "sha1",
+            "sha2",
+            "sha3",
+            "sha512",
+            "ssbs",
+            "uscat"
+          ],
+          "generation": 0,
+          "parents": [
+            "m1",
+            "armv8.5a"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "apple-clang",
+        "version": "14.0.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
         "jit": false,
         "multibyte": true,
         "utf": true,
@@ -3784,22 +2153,22 @@
       "dependencies": [
         {
           "name": "gnuconfig",
-          "hash": "6ge5mev6dobcylwn3g5yrkqh4ltosyjj",
+          "hash": "tuvqicu5hrhdgfytzfkfhvjlqmxx4lis",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "o6y4zfuxr6qxofxw3vfvnxjlhyvnlbec"
+      "hash": "brqy4sshj2fkelfvi3edjkap53w56cib"
     },
-    "u2b2zmk23lp3rxsdnlh7u5kfedu6jkc4": {
+    "tb7q7lxdlld7bthh6cafylofufevj6dk": {
       "name": "trilinos",
-      "version": "13.2.0",
+      "version": "13.4.1",
       "arch": {
         "platform": "darwin",
-        "platform_os": "monterey",
+        "platform_os": "ventura",
         "target": {
-          "name": "m1",
+          "name": "m2",
           "vendor": "Apple",
           "features": [
             "aes",
@@ -3809,11 +2178,14 @@
             "asimdhp",
             "asimdrdm",
             "atomics",
+            "bf16",
+            "bti",
             "cpuid",
             "crc32",
             "dcpodp",
             "dcpop",
             "dit",
+            "ecv",
             "evtstrm",
             "fcma",
             "flagm",
@@ -3821,6 +2193,7 @@
             "fp",
             "fphp",
             "frint",
+            "i8mm",
             "ilrcpc",
             "jscvt",
             "lrcpc",
@@ -3837,13 +2210,14 @@
           ],
           "generation": 0,
           "parents": [
-            "aarch64"
+            "m1",
+            "armv8.5a"
           ]
         }
       },
       "compiler": {
         "name": "apple-clang",
-        "version": "13.1.6"
+        "version": "14.0.0"
       },
       "namespace": "builtin",
       "parameters": {
@@ -3856,6 +2230,7 @@
         "basker": false,
         "belos": true,
         "boost": false,
+        "build_system": "cmake",
         "build_type": "RelWithDebInfo",
         "chaco": false,
         "complex": false,
@@ -3928,18 +2303,18 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "afiyakxiqqvnrlj5hoo63k3jyc2vcvfvhrxyjwxnhfazgggeo3hq====",
+      "package_hash": "kft4xrgnvt3r7zgowqxjgvmkbjwgptce2f6uasbxtjbyapnnmtzq====",
       "dependencies": [
         {
           "name": "cmake",
-          "hash": "jjddmrr7avba6v6ircadgmx7ziinfyd5",
+          "hash": "5t34ryriav3q4vjf4radfwsi5wlxmhz5",
           "type": [
             "build"
           ]
         },
         {
           "name": "hwloc",
-          "hash": "3cskzq3izexjfy7egdg37t725uo37vua",
+          "hash": "5mkwgcpoxmyflpviobr34f3yk7fbgpvo",
           "type": [
             "build",
             "link"
@@ -3947,7 +2322,7 @@
         },
         {
           "name": "openblas",
-          "hash": "nhld2jyuhkb7bsgwyizfuvr6ram77lki",
+          "hash": "r3bmge6fnpo6vr2g6wykufmfl7od6c6m",
           "type": [
             "build",
             "link"
@@ -3955,23 +2330,23 @@
         },
         {
           "name": "openmpi",
-          "hash": "m5veuumpcn7uxvwoeea3jbz4r5wlvpn7",
+          "hash": "vj3athtttdadud4t2aw5drdbzmsixkk6",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "u2b2zmk23lp3rxsdnlh7u5kfedu6jkc4"
+      "hash": "tb7q7lxdlld7bthh6cafylofufevj6dk"
     },
-    "nhld2jyuhkb7bsgwyizfuvr6ram77lki": {
+    "r3bmge6fnpo6vr2g6wykufmfl7od6c6m": {
       "name": "openblas",
-      "version": "0.3.20",
+      "version": "0.3.21",
       "arch": {
         "platform": "darwin",
-        "platform_os": "monterey",
+        "platform_os": "ventura",
         "target": {
-          "name": "m1",
+          "name": "m2",
           "vendor": "Apple",
           "features": [
             "aes",
@@ -3981,11 +2356,14 @@
             "asimdhp",
             "asimdrdm",
             "atomics",
+            "bf16",
+            "bti",
             "cpuid",
             "crc32",
             "dcpodp",
             "dcpop",
             "dit",
+            "ecv",
             "evtstrm",
             "fcma",
             "flagm",
@@ -3993,6 +2371,7 @@
             "fp",
             "fphp",
             "frint",
+            "i8mm",
             "ilrcpc",
             "jscvt",
             "lrcpc",
@@ -4009,20 +2388,26 @@
           ],
           "generation": 0,
           "parents": [
-            "aarch64"
+            "m1",
+            "armv8.5a"
           ]
         }
       },
       "compiler": {
         "name": "apple-clang",
-        "version": "13.1.6"
+        "version": "14.0.0"
       },
       "namespace": "builtin",
       "parameters": {
         "bignuma": false,
+        "build_system": "makefile",
         "consistent_fpcsr": false,
+        "fortran": true,
         "ilp64": false,
         "locking": true,
+        "patches": [
+          "d3d9b15fa39e18cdf972e1e5c78b320e36a24a481abd44e440eaf81bad227edd"
+        ],
         "pic": true,
         "shared": true,
         "symbol_suffix": "none",
@@ -4034,17 +2419,20 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "mj6jus4vvlpc4emlolmdwmfy6ok6ixj5tzmkpwpe6os5ofjwtzmq====",
+      "patches": [
+        "d3d9b15fa39e18cdf972e1e5c78b320e36a24a481abd44e440eaf81bad227edd"
+      ],
+      "package_hash": "w5vwzkgb2t2itlgwrks53wr4shcfbxuobikjjni755dgl3agfjoa====",
       "dependencies": [
         {
           "name": "perl",
-          "hash": "256wjmrblmpwyisdoqf6s4ymi6cmhlib",
+          "hash": "qwv32pzk3k6d5gbz4xunejx77l6fwo3w",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "nhld2jyuhkb7bsgwyizfuvr6ram77lki"
+      "hash": "r3bmge6fnpo6vr2g6wykufmfl7od6c6m"
     }
   }
 }
