@@ -3,16 +3,6 @@
 # File : update-local.sh
 ###############################################################################
 
-if [ "$0" != "$BASH_SOURCE" ]; then
-  cecho "31;1" "ERROR: Run this script directly, do not \`source\` it"
-  return 1
-fi
-
-if [ "$USER" == "root" ]; then
-  cecho "31;1" "ERROR: Run this script in user mode, do not \`sudo\` it"
-  exit 1
-fi
-
 # In case the user executed directly with `sh`
 set -e
 
@@ -30,6 +20,11 @@ function error() { cecho "31;1" "ERROR: $@"; exit 1; };
 
 # Verbose call: echo before running
 function vcall() { cecho "37;2" "> $*"; "$@"; }
+
+if [ "$0" != "$BASH_SOURCE" ]; then
+  cecho "31;1" "ERROR: Run this script directly, do not \`source\` it"
+  return 1
+fi
 
 ###############################################################################
 
@@ -61,7 +56,8 @@ if [ ! -d env ]; then
 fi
 
 status "Backing up config and environments to ${CONFIGDIR}"
-vcall cp "${SPACK_ROOT}/etc/spack/"*.yaml "./"
+vcall cp "${SPACK_ROOT}/etc/spack/"*.yaml "./" \
+    || printf "\e[31;1m(no site spack configs are present)\e[0m "
 spack debug report > spack-debug-report.md
 for env in $(cd ${SPACK_ENV_BASE} && ls); do
   printf "$env " >&2
