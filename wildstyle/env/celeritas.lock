@@ -62,6 +62,10 @@
       "spec": "root"
     },
     {
+      "hash": "bzkmxhmosq6zacvdw2xczfhesvugwrsl",
+      "spec": "swig"
+    },
+    {
       "hash": "z76oqdyuispwjeyuan5srbmwg3wqpuqm",
       "spec": "valgrind~ubsan"
     },
@@ -7422,6 +7426,84 @@
         "ldlibs": []
       },
       "hash": "z45ng3se2w3cko7gjt4vwjfbbujhmtbc"
+    },
+    "bzkmxhmosq6zacvdw2xczfhesvugwrsl": {
+      "name": "swig",
+      "version": "4.0.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel8",
+        "target": {
+          "name": "skylake_avx512",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "avx512bw",
+            "avx512cd",
+            "avx512dq",
+            "avx512f",
+            "avx512vl",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "skylake",
+            "x86_64_v4"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "dependencies": [
+        {
+          "name": "pcre",
+          "build_hash": "w3fozux3qazpllntchpzmxjk4wznwu6j",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "pkgconf",
+          "build_hash": "7fzhheni2j3dgtoflx2va5lnkj5767fg",
+          "type": [
+            "build"
+          ]
+        }
+      ],
+      "hash": "dh7tjqsiznoszyte7gaoqutnrerghc2a"
     },
     "z76oqdyuispwjeyuan5srbmwg3wqpuqm": {
       "name": "valgrind",
