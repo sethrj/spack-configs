@@ -14,8 +14,8 @@
       "spec": "doxygen"
     },
     {
-      "hash": "6zja737yaw77bcxrqvq3hiirhlr3aevr",
-      "spec": "geant4@11 cxxstd=17"
+      "hash": "gbr3o25lf45l5zptr5zv5bfdncwicqme",
+      "spec": "geant4@10 cxxstd=17"
     },
     {
       "hash": "faspwvdkcimpcpet4p345zqfuhc46hnq",
@@ -2730,9 +2730,9 @@
       ],
       "hash": "6ltoybciawo2jcbkqddbu3j4kg4oyu32"
     },
-    "6zja737yaw77bcxrqvq3hiirhlr3aevr": {
+    "gbr3o25lf45l5zptr5zv5bfdncwicqme": {
       "name": "geant4",
-      "version": "11.0.3",
+      "version": "10.7.3",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel8",
@@ -2790,10 +2790,8 @@
         "opengl": false,
         "python": false,
         "qt": false,
-        "tbb": false,
         "threads": true,
         "vecgeom": false,
-        "vtk": false,
         "x11": false,
         "cflags": [],
         "cppflags": [],
@@ -2802,7 +2800,7 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "xixy6yr5p2evsk3nuap7ekw6styxznyyrzaidvi6rczd65sp574q====",
+      "package_hash": "wp3cghyvhgufpnz275p6zmarnlope4igwfnomzy7kufki7wutqca====",
       "dependencies": [
         {
           "name": "clhep",
@@ -2829,7 +2827,7 @@
         },
         {
           "name": "geant4-data",
-          "hash": "6leqwcts5ykluzhwf3j3ymxsjruw6hjs",
+          "hash": "kzskq54gzfkvhlhvqjcj3atv47fl2gep",
           "type": [
             "run"
           ]
@@ -2851,7 +2849,7 @@
           ]
         }
       ],
-      "hash": "6zja737yaw77bcxrqvq3hiirhlr3aevr"
+      "hash": "gbr3o25lf45l5zptr5zv5bfdncwicqme"
     },
     "6unsc6yhiftii6wmzrx6vyxokqyesn5f": {
       "name": "clhep",
@@ -2929,9 +2927,9 @@
       ],
       "hash": "6unsc6yhiftii6wmzrx6vyxokqyesn5f"
     },
-    "6leqwcts5ykluzhwf3j3ymxsjruw6hjs": {
+    "kzskq54gzfkvhlhvqjcj3atv47fl2gep": {
       "name": "geant4-data",
-      "version": "11.0.0",
+      "version": "10.7.3",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel8",
@@ -2981,7 +2979,6 @@
       },
       "namespace": "builtin",
       "parameters": {
-        "build_system": "bundle",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -2989,100 +2986,100 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "wswuswa2n2mjcyvuumfnks6dctg75rbsdvumgbqabk5mauxgptqa====",
+      "package_hash": "iypwmodsz4mgva5psmo46ufd5wdnvtftriojjwpl35nlhadbue6a====",
       "dependencies": [
         {
           "name": "g4abla",
-          "hash": "6q4ctyxx4dwgiia7fx6rn46mjorvm4h2",
+          "hash": "2xt7fru26fo53g735s2b7ezzekc66oe5",
           "type": [
             "build",
-            "run"
+            "link"
           ]
         },
         {
           "name": "g4emlow",
-          "hash": "dq5qvhuzq5kgfljrln326rq7sncl7vbp",
+          "hash": "7qy3xkyn5u73yvwb2tgqsdzexc2m347c",
           "type": [
             "build",
-            "run"
+            "link"
           ]
         },
         {
           "name": "g4ensdfstate",
-          "hash": "l6sxixlzgukjbnsxlm6upbccy2qgibt7",
+          "hash": "p4sx2olrwloyf3ig6ealwgtkohixhngg",
           "type": [
             "build",
-            "run"
+            "link"
           ]
         },
         {
           "name": "g4incl",
-          "hash": "upinjqqbgfhzkfaaza5eyoyd6i6uu6ly",
+          "hash": "k5vqy3o7fklcuzpyt6dfshecawconmpt",
           "type": [
             "build",
-            "run"
+            "link"
           ]
         },
         {
           "name": "g4ndl",
-          "hash": "yg7sk4dyci5k3tq2ml3yohskxlku35rd",
+          "hash": "tvht4ylbppxaxs7citgkqtltvnbci3fl",
           "type": [
             "build",
-            "run"
+            "link"
           ]
         },
         {
           "name": "g4particlexs",
-          "hash": "gjcc4id2vwcdhbo37y4h65ncnkg5uq3j",
+          "hash": "chvngtlbshzeuaaghpek7aeog6vqikvb",
           "type": [
             "build",
-            "run"
+            "link"
           ]
         },
         {
           "name": "g4photonevaporation",
-          "hash": "ptduzucpwvutq7ec7bj6kjub5wozg3cf",
+          "hash": "ntdqh26mtour7drvy4hudoyhvibizffi",
           "type": [
             "build",
-            "run"
+            "link"
           ]
         },
         {
           "name": "g4pii",
-          "hash": "hzxjqzvhzgntd6sg37zlc5xe3s437jhs",
+          "hash": "dekcozdslhsn2lylbx6wsqhyqq75vhnt",
           "type": [
             "build",
-            "run"
+            "link"
           ]
         },
         {
           "name": "g4radioactivedecay",
-          "hash": "zglv6kzlt2eb4mar4uaiggutzuqubn47",
+          "hash": "wuyrywbaw3eh7vstq3oxdn6opabcfpl3",
           "type": [
             "build",
-            "run"
+            "link"
           ]
         },
         {
           "name": "g4realsurface",
-          "hash": "si22ktvhvhpoymmfmgamz2w3re6seds7",
+          "hash": "h4d3346z2dlyfzophfjynwkd2bpp2rsn",
           "type": [
             "build",
-            "run"
+            "link"
           ]
         },
         {
           "name": "g4saiddata",
-          "hash": "roop7yi7loxlysyt5h3dgrql3a5vhguc",
+          "hash": "q6yrathbb3te3vo7k6cgagnpncg52izu",
           "type": [
             "build",
-            "run"
+            "link"
           ]
         }
       ],
-      "hash": "6leqwcts5ykluzhwf3j3ymxsjruw6hjs"
+      "hash": "kzskq54gzfkvhlhvqjcj3atv47fl2gep"
     },
-    "6q4ctyxx4dwgiia7fx6rn46mjorvm4h2": {
+    "2xt7fru26fo53g735s2b7ezzekc66oe5": {
       "name": "g4abla",
       "version": "3.1",
       "arch": {
@@ -3134,7 +3131,6 @@
       },
       "namespace": "builtin",
       "parameters": {
-        "build_system": "generic",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -3142,12 +3138,12 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "5mltaz76yiyx3pdt6el5mi52dzfavo2lobturuhqhzxvkpv74y3q====",
-      "hash": "6q4ctyxx4dwgiia7fx6rn46mjorvm4h2"
+      "package_hash": "uisodojbczftafveyhcdb422kin3uharkom3i7uk6cbw4rnhjdja====",
+      "hash": "2xt7fru26fo53g735s2b7ezzekc66oe5"
     },
-    "dq5qvhuzq5kgfljrln326rq7sncl7vbp": {
+    "7qy3xkyn5u73yvwb2tgqsdzexc2m347c": {
       "name": "g4emlow",
-      "version": "8.0",
+      "version": "7.13",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel8",
@@ -3197,7 +3193,6 @@
       },
       "namespace": "builtin",
       "parameters": {
-        "build_system": "generic",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -3205,10 +3200,10 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "e2cvfzvtfklwn5sptys3owsrt44c3smgiqh22iu5vvv7ooyq65wq====",
-      "hash": "dq5qvhuzq5kgfljrln326rq7sncl7vbp"
+      "package_hash": "ziturlkajxpolpuaa7ucikkrvuys6rnzdlwpdv6v3rtot2uf7tbq====",
+      "hash": "7qy3xkyn5u73yvwb2tgqsdzexc2m347c"
     },
-    "l6sxixlzgukjbnsxlm6upbccy2qgibt7": {
+    "p4sx2olrwloyf3ig6ealwgtkohixhngg": {
       "name": "g4ensdfstate",
       "version": "2.3",
       "arch": {
@@ -3260,7 +3255,6 @@
       },
       "namespace": "builtin",
       "parameters": {
-        "build_system": "generic",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -3268,10 +3262,10 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "turx4llgmdydzxto34upvtxtl75w5rntirs4vj6jmfddkwt6dibq====",
-      "hash": "l6sxixlzgukjbnsxlm6upbccy2qgibt7"
+      "package_hash": "4riupxajjvxuil2le4denca6t2e5flak3bteuaqhpae6iryqhila====",
+      "hash": "p4sx2olrwloyf3ig6ealwgtkohixhngg"
     },
-    "upinjqqbgfhzkfaaza5eyoyd6i6uu6ly": {
+    "k5vqy3o7fklcuzpyt6dfshecawconmpt": {
       "name": "g4incl",
       "version": "1.0",
       "arch": {
@@ -3323,7 +3317,6 @@
       },
       "namespace": "builtin",
       "parameters": {
-        "build_system": "generic",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -3331,10 +3324,10 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "os6uuuxqkeameinp7upvjkfsfy4mkl2epq66fm4muflhdsb6kpha====",
-      "hash": "upinjqqbgfhzkfaaza5eyoyd6i6uu6ly"
+      "package_hash": "5eq77f2e3dmuyow5qp57atmo5mbweekv5fcb3bm64ogswf7lv3na====",
+      "hash": "k5vqy3o7fklcuzpyt6dfshecawconmpt"
     },
-    "yg7sk4dyci5k3tq2ml3yohskxlku35rd": {
+    "tvht4ylbppxaxs7citgkqtltvnbci3fl": {
       "name": "g4ndl",
       "version": "4.6",
       "arch": {
@@ -3386,7 +3379,6 @@
       },
       "namespace": "builtin",
       "parameters": {
-        "build_system": "generic",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -3394,12 +3386,12 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "jdxcfnrjkirr7w7spp5soykl42rmcbiolondbvwt3y7rhr572lfq====",
-      "hash": "yg7sk4dyci5k3tq2ml3yohskxlku35rd"
+      "package_hash": "gajcncsddvwr74r5bohmlylavsv7jljcauxpls4uburuglomtosq====",
+      "hash": "tvht4ylbppxaxs7citgkqtltvnbci3fl"
     },
-    "gjcc4id2vwcdhbo37y4h65ncnkg5uq3j": {
+    "chvngtlbshzeuaaghpek7aeog6vqikvb": {
       "name": "g4particlexs",
-      "version": "4.0",
+      "version": "3.1.1",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel8",
@@ -3449,7 +3441,6 @@
       },
       "namespace": "builtin",
       "parameters": {
-        "build_system": "generic",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -3457,10 +3448,10 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "6iexqgs2qrwiejipfujfsvpkfguokya57ucbtcghll7wddw7zftq====",
-      "hash": "gjcc4id2vwcdhbo37y4h65ncnkg5uq3j"
+      "package_hash": "3frumzrrv2yv43ro6nphrhccaya2aqevqpi3yqa4i3gup25sqgra====",
+      "hash": "chvngtlbshzeuaaghpek7aeog6vqikvb"
     },
-    "ptduzucpwvutq7ec7bj6kjub5wozg3cf": {
+    "ntdqh26mtour7drvy4hudoyhvibizffi": {
       "name": "g4photonevaporation",
       "version": "5.7",
       "arch": {
@@ -3512,7 +3503,6 @@
       },
       "namespace": "builtin",
       "parameters": {
-        "build_system": "generic",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -3520,10 +3510,10 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "motuoznk2ydei64sys5mh4as6ewraxnd56rr3lqjr3dhxwgqvcya====",
-      "hash": "ptduzucpwvutq7ec7bj6kjub5wozg3cf"
+      "package_hash": "ool6qrz6cyy7pg575ytlqfqbscy3sgb6mvoseoqnibplhxqfsxvq====",
+      "hash": "ntdqh26mtour7drvy4hudoyhvibizffi"
     },
-    "hzxjqzvhzgntd6sg37zlc5xe3s437jhs": {
+    "dekcozdslhsn2lylbx6wsqhyqq75vhnt": {
       "name": "g4pii",
       "version": "1.3",
       "arch": {
@@ -3575,7 +3565,6 @@
       },
       "namespace": "builtin",
       "parameters": {
-        "build_system": "generic",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -3583,10 +3572,10 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "klspz5z7cbwrwg4fbdqufjemgcxl6y5cpa6gvlxz5ossxzbembra====",
-      "hash": "hzxjqzvhzgntd6sg37zlc5xe3s437jhs"
+      "package_hash": "on4u4iyqbhyoza46vo6yhj2k47d3gjvtgutnonif6jcm6yoyxzra====",
+      "hash": "dekcozdslhsn2lylbx6wsqhyqq75vhnt"
     },
-    "zglv6kzlt2eb4mar4uaiggutzuqubn47": {
+    "wuyrywbaw3eh7vstq3oxdn6opabcfpl3": {
       "name": "g4radioactivedecay",
       "version": "5.6",
       "arch": {
@@ -3638,7 +3627,6 @@
       },
       "namespace": "builtin",
       "parameters": {
-        "build_system": "generic",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -3646,10 +3634,10 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "qu2xupxu46zo4ovjsncy56hmi5btbs2j6ltnbp5k4fifpyjd5vgq====",
-      "hash": "zglv6kzlt2eb4mar4uaiggutzuqubn47"
+      "package_hash": "grvzdwmqsg4sbubwrpbhrvdhokiyxkxrlws2j4lxurzdi3bmfxka====",
+      "hash": "wuyrywbaw3eh7vstq3oxdn6opabcfpl3"
     },
-    "si22ktvhvhpoymmfmgamz2w3re6seds7": {
+    "h4d3346z2dlyfzophfjynwkd2bpp2rsn": {
       "name": "g4realsurface",
       "version": "2.2",
       "arch": {
@@ -3701,7 +3689,6 @@
       },
       "namespace": "builtin",
       "parameters": {
-        "build_system": "generic",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -3709,10 +3696,10 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "xfxvvoe4sby73hzqdiajxgpkva37tqgieblksvdchpla3csoequq====",
-      "hash": "si22ktvhvhpoymmfmgamz2w3re6seds7"
+      "package_hash": "pcw4wvfgbrze3zlah6ughz3pn5q3z7lt7ph7ztbm72m6qduiguyq====",
+      "hash": "h4d3346z2dlyfzophfjynwkd2bpp2rsn"
     },
-    "roop7yi7loxlysyt5h3dgrql3a5vhguc": {
+    "q6yrathbb3te3vo7k6cgagnpncg52izu": {
       "name": "g4saiddata",
       "version": "2.0",
       "arch": {
@@ -3764,7 +3751,6 @@
       },
       "namespace": "builtin",
       "parameters": {
-        "build_system": "generic",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -3772,8 +3758,8 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "ni23nfrdgbs2xuparmors3qfsfwcnwltzq653o4owj2cthxm7ylq====",
-      "hash": "roop7yi7loxlysyt5h3dgrql3a5vhguc"
+      "package_hash": "ktalh5hrcvyoid3gz2aecae7vjpmrs2tjwlsosjqxtqzdmseypza====",
+      "hash": "q6yrathbb3te3vo7k6cgagnpncg52izu"
     },
     "5i3p2fpkyb2xukhqcryn5xz3ovv2ghnj": {
       "name": "xerces-c",
