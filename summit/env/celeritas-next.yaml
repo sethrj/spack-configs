@@ -1,17 +1,15 @@
 spack:
   specs:
-  - cmake~openssl # summit @3.22.2%gcc@11.1.0 lacks openssl
-  - geant4@11.0.1
-  - googletest
-  - hepmc3
-  - mpi
-  - ninja
-  - nlohmann-json
-    # - root
-  - python
-  - veccore
-  - vecgeom +gdml ~shared
-  view: /gpfs/alpine/proj-shared/csc404/celeritas/spack/view-next
+  - cmake %gcc@11.2.0
+  - geant4@11.0 %gcc@11.2.0
+  - googletest %gcc@11.2.0
+  - hepmc3 %gcc@11.2.0
+  - ninja %gcc@11.2.0
+  - nlohmann-json %gcc@11.2.0
+  - python %gcc@11.2.0
+  - veccore %gcc@11.2.0
+  - vecgeom +gdml ~shared %gcc@11.2.0
+  view: /gpfs/alpine/proj-shared/csc404/celeritas-next/spack/view
   concretization: together
   packages:
     root:
@@ -21,4 +19,4 @@ spack:
         blas: [openblas]
         lapack: [openblas]
       variants: cxxstd=17 +cuda cuda_arch=70
-      compiler: [gcc@11.1.0]
+      compiler: [gcc@11.2.0]
