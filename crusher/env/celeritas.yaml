@@ -1,0 +1,19 @@
+spack:
+  specs:
+  - cmake %clang@14.0.0-rocm5.1.0
+  - geant4@11.0 %clang@14.0.0-rocm5.1.0
+  - googletest %clang@14.0.0-rocm5.1.0
+  - hepmc3 %clang@14.0.0-rocm5.1.0
+  - ninja %clang@14.0.0-rocm5.1.0
+  - nlohmann-json %clang@14.0.0-rocm5.1.0
+  - python %clang@14.0.0-rocm5.1.0
+  - veccore %clang@14.0.0-rocm5.1.0
+  - vecgeom +gdml ~shared %clang@14.0.0-rocm5.1.0
+  view: /gpfs/alpine/proj-shared/csc404/celeritas-crusher/spack/view
+  concretization: together
+  packages:
+    root:
+      variants: ~davix ~examples ~opengl ~x ~tbb ~rootfit ~math ~gsl cxxstd=17
+    all:
+      variants: cxxstd=17 +rocm amdgpu_target=gfx90a 
+      compiler: [clang@14.0.0-rocm5.1.0]
