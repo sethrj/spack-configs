@@ -14,8 +14,8 @@
       "spec": "doxygen"
     },
     {
-      "hash": "gbr3o25lf45l5zptr5zv5bfdncwicqme",
-      "spec": "geant4@10 cxxstd=17"
+      "hash": "qycbyjzt7yruhxrqcjoqilr3367nzwis",
+      "spec": "geant4@10.7.3 cxxstd=17 ^clhep@2.4.5.1"
     },
     {
       "hash": "faspwvdkcimpcpet4p345zqfuhc46hnq",
@@ -74,8 +74,8 @@
       "spec": "swig"
     },
     {
-      "hash": "3g3j2ecwndw3b6ilsrbhtb2f2rn3bvya",
-      "spec": "vecgeom+gdml cxxstd=17"
+      "hash": "u7fu3hsk732n32wumcu4bjablokgtyjn",
+      "spec": "vecgeom@1.1.18+gdml cxxstd=17"
     },
     {
       "hash": "fromufzsp4eekp546pjuda7wdigc4l3e",
@@ -2730,7 +2730,7 @@
       ],
       "hash": "6ltoybciawo2jcbkqddbu3j4kg4oyu32"
     },
-    "gbr3o25lf45l5zptr5zv5bfdncwicqme": {
+    "qycbyjzt7yruhxrqcjoqilr3367nzwis": {
       "name": "geant4",
       "version": "10.7.3",
       "arch": {
@@ -2804,7 +2804,7 @@
       "dependencies": [
         {
           "name": "clhep",
-          "hash": "6unsc6yhiftii6wmzrx6vyxokqyesn5f",
+          "hash": "mw7k4fxxpzlpt5vdlsve2vvn3h6vl7x4",
           "type": [
             "build",
             "link"
@@ -2849,11 +2849,11 @@
           ]
         }
       ],
-      "hash": "gbr3o25lf45l5zptr5zv5bfdncwicqme"
+      "hash": "qycbyjzt7yruhxrqcjoqilr3367nzwis"
     },
-    "6unsc6yhiftii6wmzrx6vyxokqyesn5f": {
+    "mw7k4fxxpzlpt5vdlsve2vvn3h6vl7x4": {
       "name": "clhep",
-      "version": "2.4.6.0",
+      "version": "2.4.5.1",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel8",
@@ -2903,9 +2903,7 @@
       },
       "namespace": "builtin",
       "parameters": {
-        "build_system": "cmake",
         "build_type": "RelWithDebInfo",
-        "cms": false,
         "cxxstd": "17",
         "ipo": false,
         "cflags": [],
@@ -2915,17 +2913,917 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "ocsb53omwix7auh3a3lzvagjh75kio7hxsi34qbgqpbsc54d6uva====",
+      "package_hash": "bcau4rsj7ax5t36szgmxt75532qr6x3l5r3oaiclxqzke5sf6vja====",
       "dependencies": [
         {
           "name": "cmake",
-          "hash": "ecccvkomx6a5u4vo4mejch2xmo2w4yiy",
+          "hash": "vdlzinwgdejiexht2yz34y5oiwyqmfpr",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "6unsc6yhiftii6wmzrx6vyxokqyesn5f"
+      "hash": "mw7k4fxxpzlpt5vdlsve2vvn3h6vl7x4"
+    },
+    "vdlzinwgdejiexht2yz34y5oiwyqmfpr": {
+      "name": "cmake",
+      "version": "3.23.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel8",
+        "target": {
+          "name": "skylake_avx512",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "avx512bw",
+            "avx512cd",
+            "avx512dq",
+            "avx512f",
+            "avx512vl",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "skylake",
+            "x86_64_v4"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_type": "Release",
+        "doc": false,
+        "ncurses": true,
+        "ownlibs": true,
+        "qt": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "55e5nwdb5tm4bc4tdlpntcqz2ljwzugf3zs5yhqkqbtk2i5zmuha====",
+      "dependencies": [
+        {
+          "name": "ncurses",
+          "hash": "7pdq5dqgaq654k6eelpsnjm2zmcpbkm4",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "openssl",
+          "hash": "zt3r4ufrekeiynm6pub7hahcbwecgso7",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "vdlzinwgdejiexht2yz34y5oiwyqmfpr"
+    },
+    "7pdq5dqgaq654k6eelpsnjm2zmcpbkm4": {
+      "name": "ncurses",
+      "version": "6.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel8",
+        "target": {
+          "name": "skylake_avx512",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "avx512bw",
+            "avx512cd",
+            "avx512dq",
+            "avx512f",
+            "avx512vl",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "skylake",
+            "x86_64_v4"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "abi": "none",
+        "symlinks": false,
+        "termlib": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "7e2jaqrw4gtqii7yx4toa36nugsrkqv476cn4n2ldzrn7hvx5z4q====",
+      "dependencies": [
+        {
+          "name": "pkgconf",
+          "hash": "7fzhheni2j3dgtoflx2va5lnkj5767fg",
+          "type": [
+            "build"
+          ]
+        }
+      ],
+      "hash": "7pdq5dqgaq654k6eelpsnjm2zmcpbkm4"
+    },
+    "7fzhheni2j3dgtoflx2va5lnkj5767fg": {
+      "name": "pkgconf",
+      "version": "1.8.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel8",
+        "target": {
+          "name": "skylake_avx512",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "avx512bw",
+            "avx512cd",
+            "avx512dq",
+            "avx512f",
+            "avx512vl",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "skylake",
+            "x86_64_v4"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "fyqi6tubbsnep4j5347ukxed72iurme72szky3ureo3jg7ve4eeq====",
+      "hash": "7fzhheni2j3dgtoflx2va5lnkj5767fg"
+    },
+    "zt3r4ufrekeiynm6pub7hahcbwecgso7": {
+      "name": "openssl",
+      "version": "1.1.1o",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel8",
+        "target": {
+          "name": "skylake_avx512",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "avx512bw",
+            "avx512cd",
+            "avx512dq",
+            "avx512f",
+            "avx512vl",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "skylake",
+            "x86_64_v4"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "certs": "system",
+        "docs": false,
+        "shared": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "2loqzmnxgvavrc7orxjeohtzbwqxlycrlbmarnvmwa4dlw3vptrq====",
+      "dependencies": [
+        {
+          "name": "perl",
+          "hash": "oojwf3j6kk5bzlp3rga3wdqzvxgkgms3",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "zlib",
+          "hash": "ybh74e2ndcwz4op4degd4zgscxwvs3q6",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "zt3r4ufrekeiynm6pub7hahcbwecgso7"
+    },
+    "oojwf3j6kk5bzlp3rga3wdqzvxgkgms3": {
+      "name": "perl",
+      "version": "5.34.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel8",
+        "target": {
+          "name": "skylake_avx512",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "avx512bw",
+            "avx512cd",
+            "avx512dq",
+            "avx512f",
+            "avx512vl",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "skylake",
+            "x86_64_v4"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cpanm": true,
+        "shared": true,
+        "threads": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "qmctede5ubjwpiufuoqrzywlgsicofwop7oqa2k2xljkazqmewsq====",
+      "dependencies": [
+        {
+          "name": "berkeley-db",
+          "hash": "qnoxpaifwill2xf7jjpmz7doijee5yt7",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "bzip2",
+          "hash": "dklobcszodp4o7vhduy2qz37oeqcg7yr",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "gdbm",
+          "hash": "56rvcs57rzijamyzodgrkrdkuskojjrv",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "zlib",
+          "hash": "ybh74e2ndcwz4op4degd4zgscxwvs3q6",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "oojwf3j6kk5bzlp3rga3wdqzvxgkgms3"
+    },
+    "qnoxpaifwill2xf7jjpmz7doijee5yt7": {
+      "name": "berkeley-db",
+      "version": "18.1.40",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel8",
+        "target": {
+          "name": "skylake_avx512",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "avx512bw",
+            "avx512cd",
+            "avx512dq",
+            "avx512f",
+            "avx512vl",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "skylake",
+            "x86_64_v4"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cxx": true,
+        "docs": false,
+        "patches": [
+          "b231fcc4d5cff05e5c3a4814f6a5af0e9a966428dc2176540d2c05aff41de522"
+        ],
+        "stl": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "patches": [
+        "b231fcc4d5cff05e5c3a4814f6a5af0e9a966428dc2176540d2c05aff41de522"
+      ],
+      "package_hash": "72bul3cclhyojq5d6vfbtscgjdgg4rtzwjfho2lbrxytzea7ooxa====",
+      "hash": "qnoxpaifwill2xf7jjpmz7doijee5yt7"
+    },
+    "dklobcszodp4o7vhduy2qz37oeqcg7yr": {
+      "name": "bzip2",
+      "version": "1.0.8",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel8",
+        "target": {
+          "name": "skylake_avx512",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "avx512bw",
+            "avx512cd",
+            "avx512dq",
+            "avx512f",
+            "avx512vl",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "skylake",
+            "x86_64_v4"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "debug": false,
+        "pic": false,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "4h3jz43cxswtueiamej5pueoq24vkd2xr4ee6w2qnqt6arhhfdbq====",
+      "dependencies": [
+        {
+          "name": "diffutils",
+          "hash": "eg2uzwtqvy3hzhnt5io3etqtcn22ugop",
+          "type": [
+            "build"
+          ]
+        }
+      ],
+      "hash": "dklobcszodp4o7vhduy2qz37oeqcg7yr"
+    },
+    "eg2uzwtqvy3hzhnt5io3etqtcn22ugop": {
+      "name": "diffutils",
+      "version": "3.8",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel8",
+        "target": {
+          "name": "skylake_avx512",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "avx512bw",
+            "avx512cd",
+            "avx512dq",
+            "avx512f",
+            "avx512vl",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "skylake",
+            "x86_64_v4"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "km4o6nfdxclxrwvtvedy5vqr3kyihligioe55kfyeri6s4dxy37a====",
+      "dependencies": [
+        {
+          "name": "libiconv",
+          "hash": "t7zl2ehytrtgevlfhwpsnt6h6h5xgcak",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "eg2uzwtqvy3hzhnt5io3etqtcn22ugop"
+    },
+    "t7zl2ehytrtgevlfhwpsnt6h6h5xgcak": {
+      "name": "libiconv",
+      "version": "1.16",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel8",
+        "target": {
+          "name": "skylake_avx512",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "avx512bw",
+            "avx512cd",
+            "avx512dq",
+            "avx512f",
+            "avx512vl",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "skylake",
+            "x86_64_v4"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "libs": [
+          "shared",
+          "static"
+        ],
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "zbhkais32h4dyhdbyxm2pzifj7itvqkcag7tpe7miecvmtdixhga====",
+      "hash": "t7zl2ehytrtgevlfhwpsnt6h6h5xgcak"
+    },
+    "56rvcs57rzijamyzodgrkrdkuskojjrv": {
+      "name": "gdbm",
+      "version": "1.19",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel8",
+        "target": {
+          "name": "skylake_avx512",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "avx512bw",
+            "avx512cd",
+            "avx512dq",
+            "avx512f",
+            "avx512vl",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "skylake",
+            "x86_64_v4"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "56zn4zpkyt7u25tp6mekjkn2v64fbyhnn6ammhfwf5b6ihrnghhq====",
+      "dependencies": [
+        {
+          "name": "readline",
+          "hash": "wttg5l3ggaa2ducxagx2dm7am7dhhypc",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "56rvcs57rzijamyzodgrkrdkuskojjrv"
+    },
+    "wttg5l3ggaa2ducxagx2dm7am7dhhypc": {
+      "name": "readline",
+      "version": "8.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel8",
+        "target": {
+          "name": "skylake_avx512",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "avx512bw",
+            "avx512cd",
+            "avx512dq",
+            "avx512f",
+            "avx512vl",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "skylake",
+            "x86_64_v4"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "hefaic7tsd6jf2bxnuq3ez6wplocpq6dbggqxu2caxctt7swpkhq====",
+      "dependencies": [
+        {
+          "name": "ncurses",
+          "hash": "7pdq5dqgaq654k6eelpsnjm2zmcpbkm4",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "wttg5l3ggaa2ducxagx2dm7am7dhhypc"
+    },
+    "ybh74e2ndcwz4op4degd4zgscxwvs3q6": {
+      "name": "zlib",
+      "version": "1.2.12",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel8",
+        "target": {
+          "name": "skylake_avx512",
+          "vendor": "GenuineIntel",
+          "features": [
+            "adx",
+            "aes",
+            "avx",
+            "avx2",
+            "avx512bw",
+            "avx512cd",
+            "avx512dq",
+            "avx512f",
+            "avx512vl",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "f16c",
+            "fma",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "popcnt",
+            "rdrand",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "ssse3",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "skylake",
+            "x86_64_v4"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.5.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "optimize": true,
+        "patches": [
+          "0d38234384870bfd34dfcb738a9083952656f0c766a0f5990b1893076b084b76"
+        ],
+        "pic": true,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "patches": [
+        "0d38234384870bfd34dfcb738a9083952656f0c766a0f5990b1893076b084b76"
+      ],
+      "package_hash": "bm7rut622h3yt5mpm4kvf7pmh7tnmueezgk5yquhr2orbmixwxuq====",
+      "hash": "ybh74e2ndcwz4op4degd4zgscxwvs3q6"
     },
     "kzskq54gzfkvhlhvqjcj3atv47fl2gep": {
       "name": "geant4-data",
@@ -11353,9 +12251,9 @@
       ],
       "hash": "ws425bqxvq62t7x6vwslc6tshws64aj6"
     },
-    "3g3j2ecwndw3b6ilsrbhtb2f2rn3bvya": {
+    "u7fu3hsk732n32wumcu4bjablokgtyjn": {
       "name": "vecgeom",
-      "version": "1.2.0",
+      "version": "1.1.18",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel8",
@@ -11424,7 +12322,7 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "3yxl7zj3qvznscuhsai5ee5jr77s7pt5ajarlktz5zgtsowei2uq====",
+      "package_hash": "twyiumsa2a6x37j3nqb7v4fv6is4mdbr7tnjowppj6ecqyepwrkq====",
       "dependencies": [
         {
           "name": "cmake",
@@ -11458,7 +12356,7 @@
           ]
         }
       ],
-      "hash": "3g3j2ecwndw3b6ilsrbhtb2f2rn3bvya"
+      "hash": "u7fu3hsk732n32wumcu4bjablokgtyjn"
     },
     "j42wqmdmont3sjno3gpa5jlmnr4nczv5": {
       "name": "veccore",
