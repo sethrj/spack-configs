@@ -1,0 +1,7 @@
+config:
+  install_tree:
+    root: $spack/opt/spack
+    projections:
+      all: "{architecture}/{name}/{version}/{hash:7}"
+  deprecated: true
+  build_jobs: 24

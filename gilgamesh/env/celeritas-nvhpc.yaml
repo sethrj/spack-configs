@@ -1,0 +1,18 @@
+spack:
+  specs:
+  - geant4@11 %nvhpc
+  - googletest %nvhpc
+  - hepmc3 %nvhpc
+  - nlohmann-json %nvhpc
+  view: true
+  concretizer:
+    unify: true
+  packages:
+    xerces-c:
+      variants: netaccessor=none
+    all:
+      compiler: [nvhpc]
+      providers:
+        blas: [openblas]
+        lapack: [openblas]
+      variants: cxxstd=17
