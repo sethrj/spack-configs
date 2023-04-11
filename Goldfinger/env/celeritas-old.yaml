@@ -1,23 +1,28 @@
 spack:
+  definitions:
+  - platspecs: []
+  - when: platform == "linux"
+    platspecs:
+    - valgrind
   specs:
   - cmake
   - doxygen
-  - geant4@11:11.0 cxxstd=17
+  - geant4@11.0.3 cxxstd=17 +vecgeom
   - git
   - git-lfs
-  - 'googletest@1.10:'
+  - googletest
   - hepmc3
   - ninja
   - nlohmann-json
-  - mpi
-  - 'python@3.6:'
+  - python
   - py-breathe
   - py-sphinx
   - py-sphinx-rtd-theme
   - py-sphinxcontrib-bibtex
-  - 'root@6.24: cxxstd=17'
-  - 'swig@4.1:'
-  - 'vecgeom@1.2: +gdml cxxstd=17'
+  - root cxxstd=17
+  - swig
+  - vecgeom +gdml cxxstd=17
+  - $platspecs
   view: true
   concretizer:
     unify: true
@@ -28,7 +33,5 @@ spack:
       providers:
         blas: [openblas]
         lapack: [openblas]
-        mpi: [openmpi]
       variants: cxxstd=17
       # NOTE: add `+cuda cuda_arch=70` (or similar) to your site packages.py
-      # spack config add --scope=site packages:all:variants:"+cuda cuda_arch=70"

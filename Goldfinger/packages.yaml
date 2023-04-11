@@ -1,4 +1,10 @@
 packages:
+  m4:
+    externals:
+    - spec: m4@1.4.19
+      prefix: /opt/homebrew/Cellar/m4/1.4.19
+    - spec: m4@1.4.6
+      prefix: /usr
   perl:
     externals:
     - spec: perl@5.30.3~cpanm+shared+threads
@@ -35,10 +41,6 @@ packages:
     externals:
     - spec: cmake@3.25.0
       prefix: /opt/homebrew
-  m4:
-    externals:
-    - spec: m4@1.4.6
-      prefix: /usr
   iwyu:
     externals:
     - spec: iwyu@0.19
