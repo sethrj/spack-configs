@@ -6,12 +6,16 @@
   },
   "roots": [
     {
+      "hash": "djusnyq37yh2y4h5p3osxndrydzu37j3",
+      "spec": "clhep@2.4.6.0%clang@14.0.0-rocm5.1.0"
+    },
+    {
       "hash": "2ji5ymlhbdqxhlfggn4jrldvmm7a3idl",
       "spec": "cmake%clang@14.0.0-rocm5.1.0"
     },
     {
-      "hash": "xhtomxtny4kzsczvlwu45bv2g3gexz52",
-      "spec": "geant4@11.0%clang@14.0.0-rocm5.1.0"
+      "hash": "ypzg5my3a3ipyqnn5s3z4rtsol5sxe7h",
+      "spec": "geant4@11.0.3%clang@14.0.0-rocm5.1.0"
     },
     {
       "hash": "buulnazmh3goxz6wwa4234v233gtlhjs",
@@ -38,11 +42,85 @@
       "spec": "veccore%clang@14.0.0-rocm5.1.0"
     },
     {
-      "hash": "qaccpd6caxubqxy2ryi6jhw3vmye5fvn",
-      "spec": "vecgeom%clang@14.0.0-rocm5.1.0+gdml~shared"
+      "hash": "fuj2s527gvarfuwe3p7kwsulek24zhty",
+      "spec": "vecgeom@1.2.2%clang@14.0.0-rocm5.1.0+gdml~shared"
     }
   ],
   "concrete_specs": {
+    "djusnyq37yh2y4h5p3osxndrydzu37j3": {
+      "name": "clhep",
+      "version": "2.4.6.0",
+      "arch": {
+        "platform": "cray",
+        "platform_os": "sles15",
+        "target": {
+          "name": "zen3",
+          "vendor": "AuthenticAMD",
+          "features": [
+            "abm",
+            "aes",
+            "avx",
+            "avx2",
+            "bmi1",
+            "bmi2",
+            "clflushopt",
+            "clwb",
+            "clzero",
+            "cx16",
+            "f16c",
+            "fma",
+            "fsgsbase",
+            "mmx",
+            "movbe",
+            "pclmulqdq",
+            "pku",
+            "popcnt",
+            "rdseed",
+            "sse",
+            "sse2",
+            "sse4_1",
+            "sse4_2",
+            "sse4a",
+            "ssse3",
+            "vaes",
+            "vpclmulqdq",
+            "xsavec",
+            "xsaveopt"
+          ],
+          "generation": 0,
+          "parents": [
+            "zen2"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "clang",
+        "version": "14.0.0-rocm5.1.0"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_type": "RelWithDebInfo",
+        "cms": false,
+        "cxxstd": "17",
+        "ipo": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "dependencies": [
+        {
+          "name": "cmake",
+          "build_hash": "2ji5ymlhbdqxhlfggn4jrldvmm7a3idl",
+          "type": [
+            "build"
+          ]
+        }
+      ],
+      "hash": "fqt4oncpyah4zoddvjda5g2rmurvpk2o"
+    },
     "2ji5ymlhbdqxhlfggn4jrldvmm7a3idl": {
       "name": "cmake",
       "version": "3.22.2",
@@ -330,7 +408,7 @@
       },
       "hash": "gp7uxzng3ehyqthjact3cbtzdyvbxisr"
     },
-    "xhtomxtny4kzsczvlwu45bv2g3gexz52": {
+    "ypzg5my3a3ipyqnn5s3z4rtsol5sxe7h": {
       "name": "geant4",
       "version": "11.0.3",
       "arch": {
@@ -404,7 +482,7 @@
       "dependencies": [
         {
           "name": "clhep",
-          "build_hash": "4bk3hbr4b72n3a7oprmbr3nwxhbbswqz",
+          "build_hash": "djusnyq37yh2y4h5p3osxndrydzu37j3",
           "type": [
             "build",
             "link"
@@ -449,80 +527,7 @@
           ]
         }
       ],
-      "hash": "swgynycpinhefjsc46dgslccvhoqvppm"
-    },
-    "4bk3hbr4b72n3a7oprmbr3nwxhbbswqz": {
-      "name": "clhep",
-      "version": "2.4.5.1",
-      "arch": {
-        "platform": "cray",
-        "platform_os": "sles15",
-        "target": {
-          "name": "zen3",
-          "vendor": "AuthenticAMD",
-          "features": [
-            "abm",
-            "aes",
-            "avx",
-            "avx2",
-            "bmi1",
-            "bmi2",
-            "clflushopt",
-            "clwb",
-            "clzero",
-            "cx16",
-            "f16c",
-            "fma",
-            "fsgsbase",
-            "mmx",
-            "movbe",
-            "pclmulqdq",
-            "pku",
-            "popcnt",
-            "rdseed",
-            "sse",
-            "sse2",
-            "sse4_1",
-            "sse4_2",
-            "sse4a",
-            "ssse3",
-            "vaes",
-            "vpclmulqdq",
-            "xsavec",
-            "xsaveopt"
-          ],
-          "generation": 0,
-          "parents": [
-            "zen2"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "clang",
-        "version": "14.0.0-rocm5.1.0"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "build_type": "RelWithDebInfo",
-        "cxxstd": "17",
-        "ipo": false,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "cmake",
-          "build_hash": "2ji5ymlhbdqxhlfggn4jrldvmm7a3idl",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "txoglxmpgdsc3viuze6mtmwijdeugs37"
+      "hash": "32qgtjm2giwu5tth44liat2feuyndq3s"
     },
     "fumwsfrlqjasui7jmvionhb3dsmikagm": {
       "name": "expat",
@@ -3272,9 +3277,9 @@
       ],
       "hash": "rauqq2jyaw2ajqn27q3b3ro4d3h6mdj6"
     },
-    "qaccpd6caxubqxy2ryi6jhw3vmye5fvn": {
+    "fuj2s527gvarfuwe3p7kwsulek24zhty": {
       "name": "vecgeom",
-      "version": "1.2.1",
+      "version": "1.2.2",
       "arch": {
         "platform": "cray",
         "platform_os": "sles15",
@@ -3364,7 +3369,7 @@
           ]
         }
       ],
-      "hash": "xfvmiqf7mcc4k5gtnl4zemdphxgwphr5"
+      "hash": "xdi5pczjzwhant6i4ghrulvkztnqrwpz"
     }
   }
 }

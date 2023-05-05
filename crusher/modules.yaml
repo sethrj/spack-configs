@@ -8,7 +8,7 @@ modules:
       - lmod
     lmod:
       core_compilers:
-        - 'gcc@11.2.0'
+        - 'clang@14.0.0-rocm5.1.0'
       hash_length: 4
       hierarchy:: []
       ^python:
@@ -27,4 +27,4 @@ modules:
           '~shared': 'static'
           'cxxstd=98': 'c++98'
           'cxxstd=11': 'c++11'
-          'cxxstd=17': 'c++17'
+          'cxxstd=14': 'c++14'
