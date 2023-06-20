@@ -1,4 +1,4 @@
-* **Spack:** 0.20.0.dev0 (7a77ecbdb6f2c7cf8bd2855c1def95a734aeccbb)
+* **Spack:** 0.21.0.dev0 (166c0897713522a03fcfb1efb5b5d99ce9d00fa1)
 * **Python:** 3.9.6
 * **Platform:** darwin-ventura-m2
 * **Concretizer:** clingo
