@@ -79,3 +79,9 @@ packages:
     externals:
     - spec: git-lfs@3.3.0
       prefix: /opt/homebrew
+  all:
+    providers:
+      blas: [openblas]
+      lapack: [openblas]
+      mpi: [openmpi]
+    variants: cxxstd=17 ~fortran

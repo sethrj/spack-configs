@@ -1,8 +1,9 @@
 spack:
   specs:
+  - adios2
   - cmake
   - doxygen
-  - geant4@11.0.3 cxxstd=17
+  - geant4@11.0 cxxstd=17
   - git
   - git-lfs
   - 'googletest@1.10:'
@@ -22,6 +23,8 @@ spack:
   concretizer:
     unify: true
   packages:
+    adios2:
+      variants: ~blosc ~fortran ~png ~python ~ssc ~sst ~sz ~zfp
     root:
       variants: ~aqua ~davix ~examples ~opengl ~x ~tbb
     all:
