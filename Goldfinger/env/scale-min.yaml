@@ -1,0 +1,42 @@
+spack:
+  specs:
+  - cmake
+  - bison@3.8.2
+  - flex@2.6.4
+  - git
+  - git-lfs
+  - googletest
+  - gnds
+  - hdf5 +hl ~mpi
+  - ninja
+  - nlohmann-json
+  - pugixml
+  - 'python@3.6:'
+  - 'superlu@5:'
+  - trilinos +amesos +amesos2 +anasazi +aztec +belos +ifpack gotype=long_long +epetra
+    +epetraext +kokkos +ifpack2 +intrepid +ml +sacado +shards +tpetra +stratimikos
+    ~mpi
+  - swig
+  view: true
+  concretizer:
+    unify: true
+  packages:
+    adios2:
+      variants: ~blosc ~fortran ~png ~python ~ssc ~sst ~sz ~zfp
+    root:
+      variants: ~aqua ~davix ~examples ~opengl ~x ~tbb
+    trilinos:
+      variants: ~adios2 ~alloptpkgs ~boost ~cgns ~chaco ~complex ~debug ~dtk ~exodus
+        +explicit_template_instantiation ~float +fortran ~fortrilinos ~glm   ~gtest
+        ~hdf5 ~hypre  ~intrepid2 ~isorropia ~matio ~mesquite ~metis ~minitensor ~muelu
+        ~mumps ~netcdf ~nox ~openmp ~phalanx ~piro ~pnetcdf ~python ~rol ~rythmos
+        +shared ~shylu ~stk ~suite-sparse ~superlu ~superlu-dist ~teko ~tempus ~x11
+        ~zlib ~zoltan ~zoltan2
+    all:
+      providers:
+        blas: [openblas]
+        lapack: [openblas]
+        mpi: [openmpi]
+      variants: cxxstd=17
+      # NOTE: add `+cuda cuda_arch=70` (or similar) to your site packages.py
+      # spack config add --scope=site packages:all:variants:"+cuda cuda_arch=70"
