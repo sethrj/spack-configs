@@ -1,0 +1,12 @@
+# From /sw/sources/facility-spack/frontier/hosts/frontier/envs/base/spack.yaml
+config:
+  install_tree: /lustre/orion/proj-shared/csc404/celeritas/spack/opt-frontier
+  install_path_scheme: '{compiler.name}-{compiler.version}/{name}/{hash:7}'
+  build_stage:
+    - $tempdir/$user/spack-stage
+    - $spack/var/spack/stage
+  extensions:
+    - /sw/sources/facility-spack/frontier/share/spack/extensions/spack-olcf
+  build_jobs: 24
+  deprecated: true
+  db_lock_timeout: 120

@@ -1,0 +1,249 @@
+# From /sw/sources/facility-spack/frontier/hosts/frontier/envs/base/spack.yaml
+compilers:
+- compiler:
+    spec: gcc@7.5.0
+    paths:
+      cc: /usr/bin/gcc
+      cxx: /usr/bin/g++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules: []
+    environment:
+      append_path:
+        PKG_CONFIG_PATH: /usr/lib64/pkgconfig
+    extra_rpaths: []
+- compiler:
+    spec: gcc@7-os
+    paths:
+      cc: /usr/bin/gcc
+      cxx: /usr/bin/g++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules: []
+    environment:
+      append_path:
+        PKG_CONFIG_PATH: /usr/lib64/pkgconfig
+      unset: []
+    extra_rpaths: []
+- compiler:
+    spec: gcc@9.3.0
+    paths:
+      cc: /opt/cray/pe/craype/2.7.15/bin/cc
+      cxx: /opt/cray/pe/craype/2.7.15/bin/CC
+      f77: /opt/cray/pe/craype/2.7.15/bin/ftn
+      fc: /opt/cray/pe/craype/2.7.15/bin/ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-gnu
+    - gcc/9.3.0
+    - craype-x86-trento
+    - libfabric
+    environment:
+      prepend_path:
+        LD_LIBRARY_PATH: /opt/cray/pe/pmi/6.0.16/lib
+    extra_rpaths: []
+- compiler:
+    spec: gcc@10.3.0
+    paths:
+      cc: /opt/cray/pe/craype/2.7.15/bin/cc
+      cxx: /opt/cray/pe/craype/2.7.15/bin/CC
+      f77: /opt/cray/pe/craype/2.7.15/bin/ftn
+      fc: /opt/cray/pe/craype/2.7.15/bin/ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-gnu
+    - gcc/10.3.0
+    - craype-x86-trento
+    - libfabric
+    environment:
+      prepend_path:
+        LD_LIBRARY_PATH: /opt/cray/pe/pmi/6.0.16/lib
+    extra_rpaths: []
+- compiler:
+    spec: gcc@11.2.0
+    paths:
+      cc: /opt/cray/pe/craype/2.7.15/bin/cc
+      cxx: /opt/cray/pe/craype/2.7.15/bin/CC
+      f77: /opt/cray/pe/craype/2.7.15/bin/ftn
+      fc: /opt/cray/pe/craype/2.7.15/bin/ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-gnu
+    - gcc/11.2.0
+    - craype-x86-trento
+    - libfabric
+    environment:
+      prepend_path:
+        LD_LIBRARY_PATH: /opt/cray/pe/pmi/6.0.16/lib
+    extra_rpaths: []
+- compiler:
+    spec: cce@13.0.0
+    paths:
+      cc: /opt/cray/pe/craype/2.7.15/bin/cc
+      cxx: /opt/cray/pe/craype/2.7.15/bin/CC
+      f77: /opt/cray/pe/craype/2.7.15/bin/ftn
+      fc: /opt/cray/pe/craype/2.7.15/bin/ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-cray
+    - cce/13.0.0
+    - craype-x86-trento
+    - libfabric
+    environment:
+      set:
+        RFE_811452_DISABLE: '1'
+      append_path:
+        LD_LIBRARY_PATH: /opt/cray/pe/gcc-libs:/opt/cray/libfabric/1.15.0.0/lib64
+      prepend_path:
+        LD_LIBRARY_PATH: /opt/cray/pe/pmi/6.0.16/lib
+    extra_rpaths:
+    - /opt/cray/pe/gcc-libs
+    - /opt/cray/gcc-libs
+- compiler:
+    spec: cce@13.0.1
+    paths:
+      cc: /opt/cray/pe/craype/2.7.15/bin/cc
+      cxx: /opt/cray/pe/craype/2.7.15/bin/CC
+      f77: /opt/cray/pe/craype/2.7.15/bin/ftn
+      fc: /opt/cray/pe/craype/2.7.15/bin/ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-cray
+    - cce/13.0.1
+    - craype-x86-trento
+    - libfabric
+    environment:
+      set:
+        RFE_811452_DISABLE: '1'
+      append_path:
+        LD_LIBRARY_PATH: /opt/cray/pe/gcc-libs:/opt/cray/libfabric/1.15.0.0/lib64
+      prepend_path:
+        LD_LIBRARY_PATH: /opt/cray/pe/pmi/6.0.16/lib
+    extra_rpaths:
+    - /opt/cray/pe/gcc-libs
+    - /opt/cray/gcc-libs
+- compiler:
+    spec: cce@13.0.2
+    paths:
+      cc: /opt/cray/pe/craype/2.7.15/bin/cc
+      cxx: /opt/cray/pe/craype/2.7.15/bin/CC
+      f77: /opt/cray/pe/craype/2.7.15/bin/ftn
+      fc: /opt/cray/pe/craype/2.7.15/bin/ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-cray
+    - cce/13.0.2
+    - craype-x86-trento
+    - libfabric
+    environment:
+      set:
+        RFE_811452_DISABLE: '1'
+      append_path:
+        LD_LIBRARY_PATH: /opt/cray/pe/gcc-libs:/opt/cray/libfabric/1.15.0.0/lib64
+      prepend_path:
+        LD_LIBRARY_PATH: /opt/cray/pe/pmi/6.0.16/lib
+    extra_rpaths:
+    - /opt/cray/pe/gcc-libs
+    - /opt/cray/gcc-libs
+- compiler:
+    spec: cce@14.0.0
+    paths:
+      cc: /opt/cray/pe/craype/2.7.15/bin/cc
+      cxx: /opt/cray/pe/craype/2.7.15/bin/CC
+      f77: /opt/cray/pe/craype/2.7.15/bin/ftn
+      fc: /opt/cray/pe/craype/2.7.15/bin/ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-cray/8.3.3
+    - cce/14.0.0
+    - craype-x86-trento
+    - libfabric
+    - cray-pmi/6.1.2
+    environment:
+      set:
+        RFE_811452_DISABLE: '1'
+      append_path:
+        LD_LIBRARY_PATH: /opt/cray/pe/gcc-libs:/opt/cray/libfabric/1.15.0.0/lib64
+      prepend_path:
+        LD_LIBRARY_PATH: /opt/cray/pe/pmi/6.1.2/lib
+    extra_rpaths:
+    - /opt/cray/pe/gcc-libs
+    - /opt/cray/gcc-libs
+- compiler:
+    spec: clang@13.0.0-rocm4.5.0
+    paths:
+      cc: /opt/cray/pe/craype/2.7.15/bin/cc
+      cxx: /opt/cray/pe/craype/2.7.15/bin/CC
+      f77: /opt/cray/pe/craype/2.7.15/bin/ftn
+      fc: /opt/cray/pe/craype/2.7.15/bin/ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-amd
+    - amd/4.5.0
+    - craype-x86-trento
+    - libfabric
+    environment:
+      set:
+        RFE_811452_DISABLE: '1'
+      append_path:
+        LD_LIBRARY_PATH: /opt/cray/pe/gcc-libs:/opt/cray/libfabric/1.15.0.0/lib64
+      prepend_path:
+        LD_LIBRARY_PATH: /opt/cray/pe/pmi/6.0.16/lib
+        LIBRARY_PATH: /opt/rocm-4.5.0/lib:/opt/rocm-4.5.0/lib64
+    extra_rpaths:
+    - /opt/rocm-4.5.0/lib
+    - /opt/rocm-4.5.0/lib64
+    - /opt/cray/pe/gcc-libs
+    - /opt/cray/gcc-libs
+- compiler:
+    spec: clang@14.0.0-rocm5.1.0
+    paths:
+      cc: /opt/cray/pe/craype/2.7.15/bin/cc
+      cxx: /opt/cray/pe/craype/2.7.15/bin/CC
+      f77: /opt/cray/pe/craype/2.7.15/bin/ftn
+      fc: /opt/cray/pe/craype/2.7.15/bin/ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-amd/8.3.3
+    - amd/5.1.0
+    - craype-x86-trento
+    - libfabric
+    - cray-pmi/6.1.2
+    environment:
+      set:
+        RFE_811452_DISABLE: '1'
+      append_path:
+        LD_LIBRARY_PATH: /opt/cray/pe/gcc-libs:/opt/cray/libfabric/1.15.0.0/lib64
+      prepend_path:
+        LD_LIBRARY_PATH: /opt/cray/pe/pmi/6.1.2/lib
+        LIBRARY_PATH: /opt/rocm-5.1.0/lib:/opt/rocm-5.1.0/lib64
+    extra_rpaths:
+    - /opt/rocm-5.1.0/lib
+    - /opt/rocm-5.1.0/lib64
+    - /opt/cray/pe/gcc-libs
+    - /opt/cray/gcc-libs
+
