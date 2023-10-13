@@ -1,26 +1,26 @@
 compilers:
 - compiler:
-    spec: apple-clang@14.0.0
+    spec: apple-clang@=15.0.0
     paths:
       cc: /usr/bin/clang
       cxx: /usr/bin/clang++
       f77: /opt/homebrew/bin/gfortran
       fc: /opt/homebrew/bin/gfortran
     flags: {}
-    operating_system: ventura
+    operating_system: macos
     target: aarch64
     modules: []
     environment: {}
     extra_rpaths: []
 - compiler:
-    spec: gcc@12.2.0
+    spec: gcc@=13.2.0
     paths:
-      cc: /opt/homebrew/Cellar/gcc/12.2.0/bin/gcc-12
-      cxx: /opt/homebrew/Cellar/gcc/12.2.0/bin/g++-12
-      f77: /opt/homebrew/Cellar/gcc/12.2.0/bin/gfortran-12
-      fc: /opt/homebrew/Cellar/gcc/12.2.0/bin/gfortran-12
+      cc: /opt/homebrew/bin/gcc-13
+      cxx: /opt/homebrew/bin/g++-13
+      f77: /opt/homebrew/bin/gfortran-13
+      fc: /opt/homebrew/bin/gfortran-13
     flags: {}
-    operating_system: ventura
+    operating_system: macos
     target: aarch64
     modules: []
     environment: {}
