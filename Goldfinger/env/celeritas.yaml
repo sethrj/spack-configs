@@ -1,6 +1,6 @@
 spack:
   specs:
-  - adios2
+    #- adios2
   - cmake
   - doxygen
   - geant4@11.0 cxxstd=17
@@ -10,7 +10,7 @@ spack:
   - hepmc3
   - ninja
   - nlohmann-json
-  - mpi
+    # - mpi
   - 'python@3.6:'
   - py-breathe
   - py-furo
@@ -23,8 +23,8 @@ spack:
   concretizer:
     unify: true
   packages:
-    adios2:
-      variants: ~blosc ~fortran ~png ~python ~ssc ~sst ~sz ~zfp
+    #adios2:
+    #  variants: ~blosc ~fortran ~png ~python ~ssc ~sst ~sz ~zfp
     root:
       variants: ~aqua ~davix ~examples ~opengl ~x ~tbb
     all:

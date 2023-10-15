@@ -69,10 +69,7 @@ packages:
     externals:
     - spec: ninja@1.11.1
       prefix: /opt/homebrew/Cellar/ninja/1.11.1
-  pkgconf:
-    externals:
-    - spec: pkgconf@2.0.3
-      prefix: /opt/homebrew/Cellar/pkgconf/2.0.3
+  # NOTE: do not include homebrew pkgconf
   all:
     providers:
       blas: [openblas]
