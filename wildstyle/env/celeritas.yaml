@@ -1,9 +1,4 @@
 spack:
-  definitions:
-  - platspecs: []
-  - when: platform == "linux"
-    platspecs:
-    - valgrind
   specs:
   - cmake
   - doxygen
@@ -22,8 +17,7 @@ spack:
   - py-sphinxcontrib-bibtex
   - root cxxstd=17
   - swig
-  - vecgeom +gdml cxxstd=17
-  - $platspecs
+  - vecgeom@1.2.4 +gdml cxxstd=17
   view: true
   concretizer:
     unify: true

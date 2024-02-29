@@ -1,16 +1,16 @@
 spack:
   specs:
-  - clhep@2.4.6.0 %clang@14.0.0-rocm5.1.0
+  - clhep@2.4.6.4 %clang@14.0.0-rocm5.1.0
   - cmake %clang@14.0.0-rocm5.1.0
-  - geant4@11.0.3 %clang@14.0.0-rocm5.1.0
+  - geant4@11.0.4 %clang@14.0.0-rocm5.1.0
   - googletest %clang@14.0.0-rocm5.1.0
   - hepmc3 %clang@14.0.0-rocm5.1.0
   - ninja %clang@14.0.0-rocm5.1.0
   - nlohmann-json %clang@14.0.0-rocm5.1.0
   - python %clang@14.0.0-rocm5.1.0
   - veccore %clang@14.0.0-rocm5.1.0
-  - vecgeom@1.2.2 +gdml ~shared %clang@14.0.0-rocm5.1.0
-  view: /lustre/orion/proj-shared/csc404/celeritas-crusher/spack/view
+  - vecgeom +gdml ~shared %clang@14.0.0-rocm5.1.0
+  view: /lustre/orion/proj-shared/csc404/celeritas-frontier/spack/view
   concretization: together
   packages:
     root:

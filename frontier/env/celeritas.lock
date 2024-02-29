@@ -6,16 +6,16 @@
   },
   "roots": [
     {
-      "hash": "djusnyq37yh2y4h5p3osxndrydzu37j3",
-      "spec": "clhep@2.4.6.0%clang@14.0.0-rocm5.1.0"
+      "hash": "nppqufsrbhrunmdqdvfaiwbysn3digqg",
+      "spec": "clhep@2.4.6.4%clang@14.0.0-rocm5.1.0"
     },
     {
       "hash": "2ji5ymlhbdqxhlfggn4jrldvmm7a3idl",
       "spec": "cmake%clang@14.0.0-rocm5.1.0"
     },
     {
-      "hash": "ypzg5my3a3ipyqnn5s3z4rtsol5sxe7h",
-      "spec": "geant4@11.0.3%clang@14.0.0-rocm5.1.0"
+      "hash": "pxzlzi6lvlkxgcy755dpg6j4x3acte3h",
+      "spec": "geant4@11.0.4%clang@14.0.0-rocm5.1.0"
     },
     {
       "hash": "buulnazmh3goxz6wwa4234v233gtlhjs",
@@ -42,14 +42,14 @@
       "spec": "veccore%clang@14.0.0-rocm5.1.0"
     },
     {
-      "hash": "fuj2s527gvarfuwe3p7kwsulek24zhty",
-      "spec": "vecgeom@1.2.2%clang@14.0.0-rocm5.1.0+gdml~shared"
+      "hash": "7vgw2hagct2hfpqoo6z33ebtpyoqhaxb",
+      "spec": "vecgeom%clang@14.0.0-rocm5.1.0+gdml~shared"
     }
   ],
   "concrete_specs": {
-    "djusnyq37yh2y4h5p3osxndrydzu37j3": {
+    "nppqufsrbhrunmdqdvfaiwbysn3digqg": {
       "name": "clhep",
-      "version": "2.4.6.0",
+      "version": "2.4.6.4",
       "arch": {
         "platform": "cray",
         "platform_os": "sles15",
@@ -119,7 +119,7 @@
           ]
         }
       ],
-      "hash": "fqt4oncpyah4zoddvjda5g2rmurvpk2o"
+      "hash": "y73fnu5myrdjyjbkel6gcqwedml3ozuq"
     },
     "2ji5ymlhbdqxhlfggn4jrldvmm7a3idl": {
       "name": "cmake",
@@ -408,9 +408,9 @@
       },
       "hash": "gp7uxzng3ehyqthjact3cbtzdyvbxisr"
     },
-    "ypzg5my3a3ipyqnn5s3z4rtsol5sxe7h": {
+    "pxzlzi6lvlkxgcy755dpg6j4x3acte3h": {
       "name": "geant4",
-      "version": "11.0.3",
+      "version": "11.0.4",
       "arch": {
         "platform": "cray",
         "platform_os": "sles15",
@@ -482,7 +482,7 @@
       "dependencies": [
         {
           "name": "clhep",
-          "build_hash": "djusnyq37yh2y4h5p3osxndrydzu37j3",
+          "build_hash": "nppqufsrbhrunmdqdvfaiwbysn3digqg",
           "type": [
             "build",
             "link"
@@ -527,7 +527,7 @@
           ]
         }
       ],
-      "hash": "32qgtjm2giwu5tth44liat2feuyndq3s"
+      "hash": "o6lro2ra72pmivsbpv7pt6fvju7a6sds"
     },
     "fumwsfrlqjasui7jmvionhb3dsmikagm": {
       "name": "expat",
@@ -3277,9 +3277,9 @@
       ],
       "hash": "rauqq2jyaw2ajqn27q3b3ro4d3h6mdj6"
     },
-    "fuj2s527gvarfuwe3p7kwsulek24zhty": {
+    "7vgw2hagct2hfpqoo6z33ebtpyoqhaxb": {
       "name": "vecgeom",
-      "version": "1.2.2",
+      "version": "1.1.17",
       "arch": {
         "platform": "cray",
         "platform_os": "sles15",
@@ -3369,7 +3369,7 @@
           ]
         }
       ],
-      "hash": "xdi5pczjzwhant6i4ghrulvkztnqrwpz"
+      "hash": "4yprbq46wjlpyj3q3fpih72ww2oosocx"
     }
   }
 }
