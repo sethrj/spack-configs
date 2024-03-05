@@ -1,4 +1,4 @@
-* **Spack:** 0.17.1-1494-cf80b28a81
+* **Spack:** 0.21.1 (e30fedab102f9281a220fb4fae82e3f8c43a82ac)
 * **Python:** 3.6.15
-* **Platform:** cray-sles15-zen3
+* **Platform:** linux-sles15-zen3
 * **Concretizer:** clingo
