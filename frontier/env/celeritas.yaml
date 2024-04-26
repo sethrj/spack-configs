@@ -14,6 +14,20 @@ spack:
   view: /lustre/orion/proj-shared/hep143/opt-view
   concretizer:
     unify: true
+  modules:
+    default:
+      roots:
+        lmod: /lustre/orion/proj-shared/hep143/share/lmod
+      enable:
+        - lmod
+      lmod:
+        all:
+          autoload: direct
+        hash_length: 0
+        hide_implicits: False
+        core_compilers: ["rocmcc@5.7.1"]
+        projections:
+          all: '{name}/{version}'
   packages:
     cmake:
       buildable: false
