@@ -41,3 +41,27 @@ compilers:
     - /opt/rocm-5.6.0/lib64
     - /opt/cray/pe/gcc-libs
     - /opt/cray/gcc-libs
+- compiler:
+    spec: rocmcc@=5.7.0
+    paths:
+      cc: /opt/cray/pe/craype/2.7.30/bin/cc
+      cxx: /opt/cray/pe/craype/2.7.30/bin/CC
+      f77: /opt/cray/pe/craype/2.7.30/bin/ftn
+      fc: /opt/cray/pe/craype/2.7.30/bin/ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-amd/8.5.0
+    - cpe/23.12
+    - amd/5.7.0
+    - craype-x86-trento
+    - cray-libsci/23.12.5
+      #- cray-mpich/8.1.28
+    - craype/2.7.30
+    - libfabric/1.15.2.0
+      #    environment:
+      #      prepend_path:
+      #        LD_LIBRARY_PATH: /opt/cray/pe/mpich/8.1.28/ofi/amd/5.0/lib:/opt/cray/pe/mpich/8.1.28/gtl/lib
+    extra_rpaths:
+    - /opt/rocm-5.7.0/lib

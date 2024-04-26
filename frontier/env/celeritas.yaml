@@ -1,20 +1,25 @@
 spack:
   specs:
-  - clhep@2.4.6.4 %clang@14.0.0-rocm5.1.0
-  - cmake %clang@14.0.0-rocm5.1.0
-  - geant4@11.0.4 %clang@14.0.0-rocm5.1.0
-  - googletest %clang@14.0.0-rocm5.1.0
-  - hepmc3 %clang@14.0.0-rocm5.1.0
-  - ninja %clang@14.0.0-rocm5.1.0
-  - nlohmann-json %clang@14.0.0-rocm5.1.0
-  - python %clang@14.0.0-rocm5.1.0
-  - veccore %clang@14.0.0-rocm5.1.0
-  - vecgeom +gdml ~shared %clang@14.0.0-rocm5.1.0
-  view: /lustre/orion/proj-shared/csc404/celeritas-frontier/spack/view
-  concretization: together
+  - adios2
+  - cmake
+  - doxygen
+  - geant4@11 cxxstd=17
+  - git
+  - git-lfs
+  - 'googletest@1.10:'
+  - hepmc3
+  - ninja
+  - nlohmann-json
+  - mpi
+  - 'python@3.6:'
+  - 'root@6.24: cxxstd=17'
+  - 'swig@4.1:'
+  - 'vecgeom@1.2.4: +gdml cxxstd=17'
+  view: /lustre/orion/proj-shared/hep143/view
+  concretizer:
+    unify: true
   packages:
     root:
-      variants: ~davix ~examples ~opengl ~x ~tbb ~rootfit ~math ~gsl cxxstd=17
+      variants: ~aqua ~davix ~examples ~opengl ~x ~tbb cxxstd=17
     all:
-      variants: cxxstd=17 +rocm amdgpu_target=gfx90a 
-      compiler: [clang@14.0.0-rocm5.1.0]
+      variants: cxxstd=17 +rocm amdgpu_target=gfx90a
