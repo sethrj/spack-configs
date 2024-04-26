@@ -106,6 +106,12 @@ packages:
     - modules:
       - cray-mpich/8.1.28
       spec: cray-mpich@8.1.28
+  libfabric:
+    buildable: false
+    externals:
+    - modules:
+      - libfabric/1.15.2.0
+      spec: libfabric@1.15.2.0
   slurm:
     buildable: false
     externals:
