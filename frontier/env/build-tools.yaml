@@ -1,0 +1,33 @@
+spack:
+  config:
+    install_tree:
+      root: /ccs/proj/hep143/opt
+      projections:
+        all: '{compiler.name}-{compiler.version}/{name}/{version}/{hash:4}'
+  compilers:
+  - compiler:
+      spec: gcc@12.2.0
+      paths:
+        cc: gcc
+        cxx: g++
+        f77: gfortran
+        fc: gfortran
+      flags: {}
+      operating_system: sles15
+      target: any
+      modules:
+      - PrgEnv-gnu
+      - gcc/12.2.0
+      environment: {}
+      extra_rpaths: []
+
+  specs:
+  - cmake
+  - git-lfs
+  - ninja
+  view: /ccs/proj/hep143/opt-view
+  concretizer:
+    unify: true
+  packages:
+    all:
+      compiler: [gcc@12.2.0]

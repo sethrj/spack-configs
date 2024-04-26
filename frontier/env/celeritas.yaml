@@ -2,24 +2,36 @@ spack:
   specs:
   - adios2
   - cmake
-  - doxygen
+  - ninja
+  - git-lfs
   - geant4@11 cxxstd=17
-  - git
   - git-lfs
   - 'googletest@1.10:'
   - hepmc3
-  - ninja
   - nlohmann-json
   - mpi
-  - 'python@3.6:'
   - 'root@6.24: cxxstd=17'
-  - 'swig@4.1:'
-  - 'vecgeom@1.2.4: +gdml cxxstd=17'
   view: /lustre/orion/proj-shared/hep143/view
   concretizer:
     unify: true
   packages:
+    cmake:
+      buildable: false
+      externals:
+        - spec: cmake@3.27.7~doc+ncurses+ownlibs
+          prefix: /ccs/proj/hep143/opt/gcc-12.2.0/cmake/3.27.7/4kd5/
+    git-lfs:
+      buildable: false
+      externals:
+        - spec: git-lfs@3.3.0
+          prefix: /ccs/proj/hep143/opt/gcc-12.2.0/git-lfs/3.3.0/wg6c/
+    ninja:
+      buildable: false
+      externals:
+        - spec: ninja@1.11.1+re2c
+          prefix: /ccs/proj/hep143/opt/gcc-12.2.0/ninja/1.11.1/7s3b/
     root:
       variants: ~aqua ~davix ~examples ~opengl ~x ~tbb cxxstd=17
     all:
       variants: cxxstd=17 +rocm amdgpu_target=gfx90a
+      compiler: [rocmcc@5.7.1]
