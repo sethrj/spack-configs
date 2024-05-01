@@ -1,4 +1,12 @@
 packages:
+  python:
+    externals:
+    - spec: python@3.12.3+bz2+crypt+ctypes+dbm+lzma+nis+pyexpat+pythoncmd+readline+sqlite3+ssl+tix+tkinter+uuid+zlib
+      prefix: /ccs/proj/hep143/conda-frontier
+    - spec: python@3.10.13+bz2+crypt+ctypes+dbm+lzma+nis+pyexpat+pythoncmd+readline+sqlite3+ssl+tix+tkinter+uuid+zlib
+      prefix: /sw/frontier/miniforge3/23.11.0
+    - spec: python@3.6.15+bz2+crypt+ctypes+dbm+lzma+nis+pyexpat~pythoncmd+readline+sqlite3+ssl~tkinter+uuid+zlib
+      prefix: /usr
   all:
     buildable: true
     compiler: [rocmcc@5.7.1]
@@ -11,12 +19,6 @@ packages:
     - spec: perl@5.34.0+cpanm+opcode+open+shared+threads
       prefix: /sw/frontier/spack-envs/base/opt/linux-sles15-x86_64/gcc-7.5.0/perl-5.34.0-2f4kqqwg4xkrrapb5peh5m6fw2cargdl
     - spec: perl@5.26.1~cpanm+opcode+open+shared+threads
-      prefix: /usr
-  python:
-    externals:
-    - spec: python@3.10.13+bz2+crypt+ctypes+dbm+lzma+nis+pyexpat+pythoncmd+readline+sqlite3+ssl+tix+tkinter+uuid+zlib
-      prefix: /sw/frontier/miniforge3/23.11.0
-    - spec: python@3.6.15+bz2+crypt+ctypes+dbm+lzma+nis+pyexpat~pythoncmd+readline+sqlite3+ssl~tkinter+uuid+zlib
       prefix: /usr
   openssl:
     externals:

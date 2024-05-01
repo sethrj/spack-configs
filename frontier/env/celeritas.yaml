@@ -4,20 +4,25 @@ spack:
   - cmake
   - ninja
   - git-lfs
-  - geant4@11 cxxstd=17
+  - geant4@11.0.4 cxxstd=17
   - git-lfs
   - 'googletest@1.10:'
   - hepmc3
   - nlohmann-json
   - mpi
   - 'root@6.24: cxxstd=17'
-  view: /lustre/orion/proj-shared/hep143/opt-view
+  view: /lustre/orion/world-shared/hep143/opt-view
   concretizer:
     unify: true
+  config:
+    install_tree:
+      root: /lustre/orion/world-shared/hep143/opt
+      projections:
+        all: '{compiler.name}-{compiler.version}/{name}/{version}/{hash:4}'
   modules:
     default:
       roots:
-        lmod: /lustre/orion/proj-shared/hep143/share/lmod
+        lmod: /lustre/orion/world-shared/hep143/share/lmod
       enable:
         - lmod
       lmod:
