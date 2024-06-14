@@ -1,0 +1,15 @@
+modules:
+  default:
+    roots:
+      lmod: /opt/spack/share/spack/lmod
+    enable:
+      - lmod
+    lmod:
+      all:
+        autoload: direct
+      hash_length: 0
+      hide_implicits: False
+      core_compilers: ["apple-clang@15.0.0"]
+      projections:
+        all: '{name}/{version}'
+
