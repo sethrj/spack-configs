@@ -1,26 +1,26 @@
 compilers:
 - compiler:
-    spec: apple-clang@=15.0.0
+    spec: apple-clang@=16.0.0
     paths:
       cc: /usr/bin/clang
       cxx: /usr/bin/clang++
       f77: /opt/homebrew/bin/gfortran
       fc: /opt/homebrew/bin/gfortran
     flags: {}
-    operating_system: sonoma
+    operating_system: sequoia
     target: aarch64
     modules: []
     environment: {}
     extra_rpaths: []
 - compiler:
-    spec: gcc@=14.1.0
+    spec: gcc@=14.2.0
     paths:
       cc: /opt/homebrew/bin/gcc-14
       cxx: /opt/homebrew/bin/g++-14
       f77: /opt/homebrew/bin/gfortran-14
       fc: /opt/homebrew/bin/gfortran-14
     flags: {}
-    operating_system: sonoma
+    operating_system: sequoia
     target: aarch64
     modules: []
     environment: {}

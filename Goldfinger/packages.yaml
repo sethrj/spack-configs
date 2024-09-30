@@ -1,8 +1,8 @@
 packages:
-  coreutils:
+  curl:
     externals:
-    - spec: coreutils@9.4
-      prefix: /opt/homebrew/Cellar/coreutils/9.4
+    - spec: curl@8.1.2+gssapi+ldap+nghttp2
+      prefix: /usr
   openssh:
     externals:
     - spec: openssh@9.3p2
@@ -14,59 +14,59 @@ packages:
   autoconf:
     externals:
     - spec: autoconf@2.72
-      prefix: /opt/homebrew/Cellar/autoconf/2.72
+      prefix: /opt/homebrew/opt/autoconf
   automake:
     externals:
-    - spec: automake@1.16.5
-      prefix: /opt/homebrew/Cellar/automake/1.16.5
+    - spec: automake@1.17
+      prefix: /opt/homebrew/opt/automake
   bison:
     externals:
     - spec: bison@3.8.2
-      prefix: /opt/homebrew/Cellar/bison/3.8.2
+      prefix: /opt/homebrew/opt/bison
     - spec: bison@2.3
       prefix: /usr
   cmake:
     externals:
-    - spec: cmake@3.30.2
-      prefix: /opt/homebrew/Cellar/cmake/3.30.2
-  curl:
+    - spec: cmake@3.30.4
+      prefix: /opt/homebrew/opt/cmake
+  coreutils:
     externals:
-    - spec: curl@8.1.2+gssapi+ldap+nghttp2
-      prefix: /usr
+    - spec: coreutils@9.5
+      prefix: /opt/homebrew/opt/coreutils
   doxygen:
     externals:
-    - spec: doxygen@1.10.0~graphviz~mscgen
-      prefix: /opt/homebrew/Cellar/doxygen/1.10.0
+    - spec: doxygen@1.12.0~graphviz~mscgen
+      prefix: /opt/homebrew/opt/doxygen
   flex:
     externals:
     - spec: flex@2.6.4+lex
       prefix: /usr
   git:
     externals:
-    - spec: git@2.43.0~tcltk
-      prefix: /opt/homebrew/Cellar/git/2.43.0
-    - spec: git@2.39.3~tcltk
+    - spec: git@2.46.2~tcltk
+      prefix: /opt/homebrew/opt/git
+    - spec: git@2.39.5~tcltk
       prefix: /usr
   git-lfs:
     externals:
-    - spec: git-lfs@3.4.1
-      prefix: /opt/homebrew/Cellar/git-lfs/3.4.1
+    - spec: git-lfs@3.5.1
+      prefix: /opt/homebrew/opt/git-lfs
   gmake:
     externals:
     - spec: gmake@3.81
       prefix: /usr
   graphviz:
     externals:
-    - spec: graphviz@10.0.1
-      prefix: /opt/homebrew/Cellar/graphviz/10.0.1
+    - spec: graphviz@12.1.2
+      prefix: /opt/homebrew/opt/graphviz
   m4:
     externals:
     - spec: m4@1.4.19
-      prefix: /opt/homebrew/Cellar/m4/1.4.19
+      prefix: /opt/homebrew/opt/m4
   ninja:
     externals:
-    - spec: ninja@1.11.1
-      prefix: /opt/homebrew/Cellar/ninja/1.11.1
+    - spec: ninja@1.12.1
+      prefix: /opt/homebrew/opt/ninja
   # NOTE: do not include homebrew pkgconf
   all:
     providers:
