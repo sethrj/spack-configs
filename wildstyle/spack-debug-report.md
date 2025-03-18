@@ -1,3 +1,3 @@
-* **Spack:** 1.0.0.dev0 (699de3e16234472b8b8d4079512775e610522354)
+* **Spack:** 1.0.0.dev0 (38309ced3344d06168c25482083fc733bb654a63)
 * **Python:** 3.6.8
 * **Platform:** linux-rhel8-cascadelake
