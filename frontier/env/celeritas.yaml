@@ -1,16 +1,17 @@
 spack:
   specs:
   - adios2
+  - cli11
   - cmake
   - ninja
   - git-lfs
-  - geant4@11.0.4 cxxstd=17
+  - geant4@11.3
   - git-lfs
   - 'googletest@1.10:'
   - hepmc3
   - nlohmann-json
   - mpi
-  - 'root@6.24: cxxstd=17'
+  - 'root@6.28:'
   view: /lustre/orion/world-shared/hep143/opt-view
   concretizer:
     unify: true
@@ -50,7 +51,7 @@ spack:
         - spec: ninja@1.11.1+re2c
           prefix: /ccs/proj/hep143/opt/gcc-12.2.0/ninja/1.11.1/7s3b/
     root:
-      variants: ~aqua ~davix ~examples ~opengl ~x ~tbb cxxstd=17
+      variants: ~aqua ~davix ~examples ~opengl ~x ~tbb cxxstd=20
     all:
-      variants: cxxstd=17 +rocm amdgpu_target=gfx90a
-      compiler: [rocmcc@5.7.1]
+      variants: cxxstd=20 +rocm amdgpu_target=gfx90a
+      compiler: [rocmcc@6.24]

@@ -13,51 +13,22 @@ compilers:
     environment: {}
     extra_rpaths: []
 - compiler:
-    spec: rocmcc@=5.6.0
+    spec: rocmcc@=6.2.4
     paths:
-      cc: /opt/cray/pe/craype/2.7.19/bin/cc
-      cxx: /opt/cray/pe/craype/2.7.19/bin/CC
-      f77: /opt/cray/pe/craype/2.7.19/bin/ftn
-      fc: /opt/cray/pe/craype/2.7.19/bin/ftn
+      cc: /opt/cray/pe/craype/2.7.33/bin/cc
+      cxx: /opt/cray/pe/craype/2.7.33/bin/CC
+      f77: /opt/cray/pe/craype/2.7.33/bin/ftn
+      fc: /opt/cray/pe/craype/2.7.33/bin/ftn
     flags: {}
     operating_system: sles15
     target: any
     modules:
-    - PrgEnv-amd/8.3.3
-    - amd/5.6.0
+    - PrgEnv-amd/8.6.0
+    - cpe/24.11
+    - amd/6.2.4
+    - rocm/6.2.4
     - craype-x86-trento
-    - libfabric/1.15.2.0
-    - cray-pmi/6.1.2
-    environment:
-      set:
-        RFE_811452_DISABLE: '1'
-      append_path:
-        LD_LIBRARY_PATH: /opt/cray/pe/gcc-libs:/opt/cray/libfabric/1.15.2.0/lib64
-      prepend_path:
-        LD_LIBRARY_PATH: /opt/cray/pe/pmi/6.1.8/lib
-        LIBRARY_PATH: /opt/rocm-5.6.0/lib:/opt/rocm-5.6.0/lib64
+    - craype/2.7.33
+    - libfabric/1.22.0
     extra_rpaths:
-    - /opt/rocm-5.6.0/lib
-    - /opt/rocm-5.6.0/lib64
-    - /opt/cray/pe/gcc-libs
-    - /opt/cray/gcc-libs
-- compiler:
-    spec: rocmcc@=5.7.1
-    paths:
-      cc: /opt/cray/pe/craype/2.7.30/bin/cc
-      cxx: /opt/cray/pe/craype/2.7.30/bin/CC
-      f77: /opt/cray/pe/craype/2.7.30/bin/ftn
-      fc: /opt/cray/pe/craype/2.7.30/bin/ftn
-    flags: {}
-    operating_system: sles15
-    target: any
-    modules:
-    - PrgEnv-amd/8.5.0
-    - cpe/23.12
-    - amd/5.7.1
-    - craype-x86-trento
-    - cray-libsci/23.12.5
-    - craype/2.7.30
-    - libfabric/1.15.2.0
-    extra_rpaths:
-    - /opt/rocm-5.7.1/lib
+    - /opt/rocm-6.2.4/lib
