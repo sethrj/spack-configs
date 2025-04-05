@@ -1,4 +1,20 @@
 packages:
+  typescript:
+    externals:
+    - spec: typescript@5.7.3
+      prefix: /opt/homebrew/Cellar/typescript/5.7.3
+  node-js:
+    externals:
+    - spec: node-js@22.9.0
+      prefix: /opt/homebrew/opt/node.js
+  llvm:
+    externals:
+    - spec: llvm@19.1.7
+      prefix: /opt/homebrew/opt/llvm@19
+  npm:
+    externals:
+    - spec: npm@10.8.3
+      prefix: /opt/homebrew/opt/npm
   curl:
     externals:
     - spec: curl@8.1.2+gssapi+ldap+nghttp2
@@ -68,6 +84,10 @@ packages:
     - spec: ninja@1.12.1
       prefix: /opt/homebrew/opt/ninja
   # NOTE: do not include homebrew pkgconf
+  mgard:
+    variants: ~openmp
+  root:
+    variants: ~davix ~examples ~opengl ~x ~tbb
   all:
     providers:
       blas: [openblas]

@@ -18,8 +18,10 @@ spack:
   - py-sphinxcontrib-bibtex
   - py-sphinxcontrib-mermaid
   - 'root@6.24: cxxstd=17'
-  - 'vecgeom@1.2.4: +gdml cxxstd=17'
+  - 'vecgeom@2.0.0-surfacedev.2:+surface+gdml cxxstd=17'
   view: true
+  config:
+    deprecated: true
   concretizer:
     unify: true
   packages:
