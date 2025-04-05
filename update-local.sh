@@ -68,6 +68,20 @@ for env in $(cd ${SPACK_ENV_BASE} && ls); do
 done
 cecho 32 "...done"
 
+if type brew 2> /dev/null; then
+  status "Saving homebrew"
+  brew bundle dump --describe -f
+fi
+
+if type conda > /dev/null; then
+  status "Saving conda environments"
+  for env in $(conda env list | awk '{print $1}' | tail -n +4); do
+    status "Saving conda environment: $env"
+    conda list -n "$env" > "conda-${env}-packages.txt" \
+      || printf "\e[31;1m(failed to save conda environment: $env)\e[0m "
+  done
+fi
+
 if ! git config user.name >/dev/null; then
   info "Setting default git user name to $USER"
   git config --global user.name "$USER"
