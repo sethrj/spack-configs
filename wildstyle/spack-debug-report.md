@@ -1,4 +1,3 @@
-* **Spack:** 0.20.0.dev0 (ce596a985023f0908a76745464948e6123c3d2f6)
+* **Spack:** 1.0.0.dev0 (572ae762b861cd8791a32504dffc6326de436011)
 * **Python:** 3.6.8
 * **Platform:** linux-rhel8-cascadelake
-* **Concretizer:** clingo

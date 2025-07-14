@@ -1,5 +1,5 @@
 config:
-  install_tree: $spack/opt/spack
-  install_path_scheme: '{compiler.name}-{compiler.version}/{name}/{hash:7}'
-  template_dirs:
-    - $spack/var/spack/repos/ornl-spack/templates
+  install_tree:
+    root: $spack/opt/spack
+    projections:
+      all: '{compiler.name}-{compiler.version}/{name}/{hash:7}'
