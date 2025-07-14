@@ -1,29 +1,27 @@
 spack:
   specs:
-  - cli11
-  - covfie
-  - cmake
-  - doxygen
-  - geant4@11.3
-  - g4vg
-  - git
-  - git-lfs
-  - 'googletest@1.10:'
-  - hepmc3
-  - libpng
-  - ninja
-  - nlohmann-json
-  - mpi
-  - python
-  - py-breathe
-  - py-furo
-  - py-pre-commit
-  - py-sphinx
-  - py-sphinxcontrib-bibtex
-  - py-sphinxcontrib-mermaid
-  - root
-  - vecgeom@1.2.10:1 +gdml
-  - valgrind
+    - cli11
+    - cmake
+    - doxygen
+    - "geant4@11.3"
+    - g4vg
+    - git
+    - git-lfs
+    - "googletest@1.10:"
+    - hepmc3
+    - libpng
+    - ninja
+    - nlohmann-json
+    - mpi
+    - python
+    - py-breathe
+    - py-furo
+    - py-pre-commit
+    - py-sphinx
+    - py-sphinxcontrib-bibtex
+    - py-sphinxcontrib-mermaid
+    - root
+    - "vecgeom@1.2.10:1 +gdml"
   view: true
   concretizer:
     unify: true
@@ -36,5 +34,5 @@ spack:
       # Note: for CUDA support run this command in your environment:
       # spack config add packages:all:variants:"cxxstd=17 +cuda cuda_arch=<ARCH>"
       require:
-      - '%llvm'
-      - any_of: [cxxstd=20, '@:']
+        - '%llvm'
+        - any_of: [cxxstd=17, '@:']
