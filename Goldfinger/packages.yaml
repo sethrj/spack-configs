@@ -88,9 +88,11 @@ packages:
     variants: ~openmp
   root:
     variants: ~davix ~examples ~opengl ~x ~tbb
+  dd4hep:
+    variants: ~ddcad ~ddeve ~utilityapps +hepmc3 
   all:
     providers:
       blas: [openblas]
       lapack: [openblas]
       mpi: [openmpi]
-    variants: cxxstd=17 ~fortran
+    variants: cxxstd=20 ~fortran
