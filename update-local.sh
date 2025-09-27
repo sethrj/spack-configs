@@ -73,25 +73,18 @@ if type brew 2> /dev/null; then
   brew bundle dump --describe -f
 fi
 
-if type conda > /dev/null; then
+if type conda 2> /dev/null; then
   status "Saving conda environments"
   for env in $(conda env list | awk '{print $1}' | tail -n +4); do
     status "Saving conda environment: $env"
-    conda list -n "$env" > "conda-${env}-packages.txt" \
+    conda list -n "$env" --export > "conda-${env}-packages.txt" \
       || printf "\e[31;1m(failed to save conda environment: $env)\e[0m "
   done
 fi
 
 if ! git config user.name >/dev/null; then
-  info "Setting default git user name to $USER"
-  git config --global user.name "$USER"
+  error "Please execute 'git config --global user "Name <email>"'"
 fi
-if ! git config user.email >/dev/null; then
-  _email=scalehelp@ornl.gov
-  info "Setting default git user email to ${_email}"
-  git config --global user.email "${_email}"
-fi
-
 
 git add .
 if [ -n "$(git diff --name-only --cached -- .)" ]; then
