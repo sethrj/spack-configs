@@ -1,4 +1,3 @@
-tap "aide-qc/deploy"
 tap "homebrew/cask"
 tap "homebrew/core"
 # Tool for generating GNU Standards-compliant Makefiles
@@ -51,14 +50,14 @@ brew "go"
 brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
+# Next-gen compiler infrastructure
+brew "llvm"
 # Tool to analyze #includes in C and C++ source files
 brew "include-what-you-use"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Add indentation to LaTeX files
 brew "latexindent"
-# Next-gen compiler infrastructure
-brew "llvm"
 # Lua-based environment modules system to modify PATH variable
 brew "lmod"
 # Small build system for use with gyp or CMake
@@ -91,14 +90,16 @@ brew "typescript"
 cask "anaconda"
 # Cross-platform Git credential storage for multiple hosting providers
 cask "git-credential-manager"
+# Utility to provide quick look previews for files that aren't natively supported
+cask "glance-chamburr"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Utility to render Jupyter notebooks
 cask "jupyter-notebook-viewer"
 # Open-source cross-platform alternative to AirDrop
 cask "localsend"
-# Full TeX Live distribution with GUI applications
-cask "mactex"
+# Full TeX Live distribution without GUI applications
+cask "mactex-no-gui"
 # Smart card libraries and utilities
 cask "opensc-app"
 vscode "bierner.markdown-mermaid"
