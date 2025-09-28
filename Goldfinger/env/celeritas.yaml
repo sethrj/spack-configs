@@ -4,8 +4,8 @@ spack:
   - covfie
   - cmake
   - doxygen
-  - 'g4vg@1.0.3:'
-  - geant4@11.3 cxxstd=17
+  - 'g4vg@1.0.4:'
+  - geant4@11.3 cxxstd=20
   - git
   - git-lfs
   - 'googletest@1.10:'
@@ -13,14 +13,13 @@ spack:
   - ninja
   - nlohmann-json
   - mpi
-  - 'python@3.6:'
+  - 'python@3.8:'
   - py-breathe
   - py-furo
   - py-sphinx
   - py-sphinxcontrib-bibtex
-  - py-sphinxcontrib-mermaid
-  - 'root@6.30: cxxstd=17'
-  - 'vecgeom@1.2.10: +gdml cxxstd=17'
+  - 'root@6.30: cxxstd=20'
+  - 'vecgeom@1.2.10:1 +gdml cxxstd=20'
   view: true
   concretizer:
     unify: true
@@ -71,6 +70,4 @@ spack:
         blas: [openblas]
         lapack: [openblas]
         mpi: [openmpi]
-      variants: cxxstd=17
-      # NOTE: add `+cuda cuda_arch=70` (or similar) to your site packages.py
-      # spack config add --scope=site packages:all:variants:"+cuda cuda_arch=70"
+      variants: cxxstd=20
