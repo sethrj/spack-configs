@@ -1,0 +1,75 @@
+spack:
+  specs:
+  - cli11
+  - covfie
+  - cmake
+  - doxygen
+  - 'g4vg@1.0.4:'
+  - geant4@11.3 cxxstd=20
+  - git
+  - git-lfs
+  - 'googletest@1.10:'
+  - hepmc3
+  - ninja
+  - nlohmann-json
+  - mpi
+  - 'python@3.8:'
+  - py-breathe
+  - py-furo
+  - py-sphinx
+  - py-sphinxcontrib-bibtex
+  - 'root@6.30: cxxstd=20'
+  - vecgeom@1.2.10:1 +gdml cxxstd=20
+  - boost
+  - py-gcovr
+  view: true
+  concretizer:
+    unify: true
+  packages:
+    gcc:
+      externals:
+      - spec: gcc@14.2.0 languages=fortran
+        prefix: /opt/homebrew
+        extra_attributes:
+          compilers:
+            fortran: /opt/homebrew/bin/gfortran
+          flags: {}
+          environment: {}
+          extra_rpaths: []
+      - spec: gcc@14.2.0 languages='c,c++,fortran'
+        prefix: /opt/homebrew
+        extra_attributes:
+          compilers:
+            c: /opt/homebrew/bin/gcc-14
+            cxx: /opt/homebrew/bin/g++-14
+            fortran: /opt/homebrew/bin/gfortran-14
+          flags: {}
+          environment: {}
+          extra_rpaths: []
+    apple-clang:
+      externals:
+      - spec: apple-clang@17.0.0
+        prefix: /usr
+        extra_attributes:
+          compilers:
+            c: /usr/bin/clang
+            cxx: /usr/bin/clang++
+          flags: {}
+          environment: {}
+          extra_rpaths: []
+    npm:
+      externals:
+      - spec: npm@10.8.3
+        prefix: /opt/homebrew
+    adios2:
+      variants: ~blosc ~fortran ~png ~python ~ssc ~sst ~sz ~zfp
+    mgard:
+      variants: ~openmp
+    root:
+      variants: ~aqua ~davix ~examples ~opengl ~x ~tbb
+    all:
+      providers:
+        blas: [openblas]
+        lapack: [openblas]
+        mpi: [openmpi]
+      variants: cxxstd=20
