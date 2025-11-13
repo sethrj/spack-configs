@@ -56,7 +56,8 @@ if [ ! -d env ]; then
 fi
 
 status "Backing up config and environments to ${CONFIGDIR}"
-vcall cp "${SPACK_ROOT}/etc/spack/"*.yaml "./" \
+vcall cp "${SPACK_ROOT}/etc/spack/site/"*.yaml "./" \
+    || vcall cp "${SPACK_ROOT}/etc/spack/"*.yaml "./" \
     || printf "\e[31;1m(no site spack configs are present)\e[0m "
 spack debug report > spack-debug-report.md
 for env in $(cd ${SPACK_ENV_BASE} && ls); do
