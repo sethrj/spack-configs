@@ -43,7 +43,7 @@ elif [ -n "${PBS_O_HOST}" ]; then
   # On compute node
   SHORTHOST=${PBS_O_HOST}
 else
-  SHORTHOST=${HOSTNAME}
+  SHORTHOST=$(uname -n)
 fi
 SHORTHOST=${SHORTHOST%%.*}
 CONFIGDIR="$( cd "$( dirname "$0" )" && pwd )"/$SHORTHOST
@@ -69,12 +69,12 @@ for env in $(cd ${SPACK_ENV_BASE} && ls); do
 done
 cecho 32 "...done"
 
-if type brew 2> /dev/null; then
+if command -v brew > /dev/null 2>&1; then
   status "Saving homebrew"
   brew bundle dump --describe -f
 fi
 
-if type conda 2> /dev/null; then
+if command -v conda > /dev/null 2>&1; then
   status "Saving conda environments"
   for env in $(conda env list | awk '{print $1}' | tail -n +4); do
     status "Saving conda environment: $env"
