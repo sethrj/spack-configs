@@ -1,0 +1,54 @@
+spack:
+  specs:
+    # Packages required for a *truly minimal* build
+  - cli11
+  - cmake
+  - nlohmann-json
+    # ... plus packages required for development
+  - geant4@11
+  - git
+  - 'googletest@1.10:'
+  - 'py-pre-commit ^py-identify@2.6:'
+  - 'python@3.9:'
+  - ccache
+    # ... plus *recommended* options
+  - 'covfie@0.13:'
+  - hepmc3
+  - libpng
+  - ninja
+  - 'root@6.28:'
+    # ... plus utilities
+  - libtree
+  view: true
+  concretizer:
+    unify: true
+  toolchains:
+    amdclang:
+    - spec: "%c=llvm-amdgpu"
+      when: "%c"
+    - spec: "%cxx=llvm-amdgpu"
+      when: "%cxx"
+    - spec: "%fortran=llvm-amdgpu"
+      when: "%fortran"
+  packages:
+    llvm-amdgpu:
+      externals:
+      - spec: llvm-amdgpu@7.0.1
+        prefix: /opt/rocm-7.0.1
+        extra_attributes:
+          compilers:
+            c: /opt/rocm-7.0.1/bin/amdclang
+            cxx: /opt/rocm-7.0.1/bin/amdclang++
+            fortran: /opt/rocm-7.0.1/bin/amdflang
+    root:
+      # Note: dd4hep requires +gsl+math
+      # ROOT here is built without GUI to reduce build time
+      variants: ~aqua ~davix ~examples ~opengl ~x ~tbb
+    all:
+      require:
+      - '%amdclang'
+      - any_of: [cxxstd=20, '@:']
+      - any_of: [build_system=cmake, '@:']
+      - any_of: [build_type=Release, '@:']
+      - any_of: [+rocm amdgpu_target=gfx942, '@:']
+      - any_of: [~cuda, '@:']
