@@ -1,4 +1,8 @@
 packages:
+  graphviz:
+    externals:
+    - spec: graphviz@14.0.1
+      prefix: /opt/homebrew/opt/graphviz
   apple-clang:
     externals:
     - spec: apple-clang@17.0.0
@@ -38,7 +42,7 @@ packages:
       prefix: /opt/homebrew/opt/include-what-you-use
   doxygen:
     externals:
-    - spec: doxygen@1.14.0+graphviz~mscgen
+    - spec: doxygen@1.15.0+graphviz~mscgen
       prefix: /opt/homebrew/opt/doxygen
   bzip2:
     externals:

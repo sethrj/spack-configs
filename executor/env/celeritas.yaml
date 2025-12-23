@@ -3,9 +3,10 @@ spack:
   - cli11
   - covfie
   - cmake
+  - dd4hep
   - doxygen
   - 'g4vg@1.0.4:'
-  - geant4@11.3 cxxstd=20
+  - geant4@11.3
   - git
   - git-lfs
   - 'googletest@1.10:'
@@ -18,34 +19,15 @@ spack:
   - py-furo
   - py-sphinx
   - py-sphinxcontrib-bibtex
-  - 'root@6.30: cxxstd=20'
-  - vecgeom@1.2.10:1 +gdml cxxstd=20
+  - 'root@6.30:'
+  - vecgeom@1.2.10:1 +gdml
   - boost
   - py-gcovr
+  - py-sphinxcontrib-mermaid
   view: true
   concretizer:
     unify: true
   packages:
-    gcc:
-      externals:
-      - spec: gcc@14.2.0 languages=fortran
-        prefix: /opt/homebrew
-        extra_attributes:
-          compilers:
-            fortran: /opt/homebrew/bin/gfortran
-          flags: {}
-          environment: {}
-          extra_rpaths: []
-      - spec: gcc@14.2.0 languages='c,c++,fortran'
-        prefix: /opt/homebrew
-        extra_attributes:
-          compilers:
-            c: /opt/homebrew/bin/gcc-14
-            cxx: /opt/homebrew/bin/g++-14
-            fortran: /opt/homebrew/bin/gfortran-14
-          flags: {}
-          environment: {}
-          extra_rpaths: []
     apple-clang:
       externals:
       - spec: apple-clang@17.0.0
@@ -63,13 +45,11 @@ spack:
         prefix: /opt/homebrew
     adios2:
       variants: ~blosc ~fortran ~png ~python ~ssc ~sst ~sz ~zfp
+    dd4hep:
+      variants: ~utilityapps ~ddeve
     mgard:
       variants: ~openmp
     root:
       variants: ~aqua ~davix ~examples ~opengl ~x ~tbb +root7
     all:
-      providers:
-        blas: [openblas]
-        lapack: [openblas]
-        mpi: [openmpi]
-      variants: cxxstd=20
+      require: cxxstd=20
