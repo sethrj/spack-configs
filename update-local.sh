@@ -71,7 +71,7 @@ cecho 32 "...done"
 
 if command -v brew > /dev/null 2>&1; then
   status "Saving homebrew"
-  brew bundle dump --describe -f
+  HOMEBREW_NO_AUTO_UPDATE=1 brew bundle dump --describe -f
 fi
 
 if command -v conda > /dev/null 2>&1; then
