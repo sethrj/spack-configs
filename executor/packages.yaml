@@ -103,12 +103,10 @@ packages:
       prefix: /opt/homebrew/opt/cmake
   python:
     externals:
-    - spec: python@3.13.7+bz2+ctypes+dbm+lzma+pyexpat+pythoncmd+readline+sqlite3+ssl~tkinter+uuid+zlib
-      prefix: /Users/seth/.local
-    - spec: python@3.9.6+bz2+crypt+ctypes+dbm+lzma+pyexpat~pythoncmd+readline+sqlite3+ssl+tix+tkinter+uuid+zlib
-      prefix: /usr
     - spec: python@3.13.7+bz2+ctypes+dbm+lzma+pyexpat~pythoncmd+readline+sqlite3+ssl~tkinter+uuid+zlib
       prefix: /opt/homebrew/opt/python@3.13
+    - spec: python@3.9.6+bz2+crypt+ctypes+dbm+lzma+pyexpat~pythoncmd+readline+sqlite3+ssl+tix+tkinter+uuid+zlib
+      prefix: /usr
   libtool:
     externals:
     - spec: libtool@2.5.4
@@ -198,7 +196,7 @@ packages:
   mgard:
     variants: ~openmp
   root:
-    variants: ~davix ~examples ~opengl ~x ~tbb
+    variants: ~aqua ~davix ~examples ~opengl ~x ~tbb +root7
   dd4hep:
     variants: ~ddcad ~ddeve ~utilityapps +hepmc3
   all:
@@ -206,4 +204,3 @@ packages:
       blas: [openblas]
       lapack: [openblas]
       mpi: [openmpi]
-    variants: cxxstd=20 ~fortran

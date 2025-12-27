@@ -4,7 +4,7 @@ spack:
   - covfie
   - cmake
   - dd4hep
-  - doxygen
+  - 'doxygen@:1.14'
   - 'g4vg@1.0.4:'
   - geant4@11.3
   - git
@@ -28,21 +28,6 @@ spack:
   concretizer:
     unify: true
   packages:
-    apple-clang:
-      externals:
-      - spec: apple-clang@17.0.0
-        prefix: /usr
-        extra_attributes:
-          compilers:
-            c: /usr/bin/clang
-            cxx: /usr/bin/clang++
-          flags: {}
-          environment: {}
-          extra_rpaths: []
-    npm:
-      externals:
-      - spec: npm@10.8.3
-        prefix: /opt/homebrew
     adios2:
       variants: ~blosc ~fortran ~png ~python ~ssc ~sst ~sz ~zfp
     dd4hep:
@@ -52,4 +37,4 @@ spack:
     root:
       variants: ~aqua ~davix ~examples ~opengl ~x ~tbb +root7
     all:
-      require: cxxstd=20
+      require: cxxstd=20 ~fortran 
