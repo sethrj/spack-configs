@@ -1,0 +1,47 @@
+spack:
+  specs:
+  - cmake
+  - git
+  - git-lfs
+  - googletest
+  - gnds
+  - hdf5 +hl
+  - ninja
+  - nlohmann-json
+  - pugixml
+  - python
+  - 'superlu@5.3'
+  - py-pint
+  - py-furo
+  - py-sphinx
+  - py-sphinxcontrib-bibtex
+  # - trilinos +amesos +amesos2 +anasazi +aztec +belos +ifpack gotype=long_long +epetra +epetraext +kokkos +ifpack2 +intrepid +ml +sacado +shards +tpetra +stratimikos ~mpi
+  - >-
+    trilinos@14.4: +kokkos
+    +shared
+    +epetra +intrepid +ifpack +anasazi
+    +ml +ifpack2 +tpetra +epetraext +belos +stratimikos +amesos +amesos2 +aztec
+  - swig
+  view: true
+  concretizer:
+    unify: true
+  toolchains:
+    clang_gf:
+    - spec: "%c=apple-clang"
+      when: "%c"
+    - spec: "%cxx=apple-clang"
+      when: "%cxx"
+    - spec: "%fortran=gcc"
+      when: "%fortran"
+  packages:
+    all:
+      require:
+        - "%clang_gf"
+      prefer:
+        - ~mpi
+        - cxxstd=17
+      providers:
+        blas: [openblas]
+        lapack: [openblas]
+        mpi: [openmpi]
+      
