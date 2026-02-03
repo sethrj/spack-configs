@@ -1,0 +1,12 @@
+spack:
+  specs:
+    - ccache
+  packages:
+    ccache:
+      externals:
+      - spec: ccache@4.12
+        prefix: /opt/homebrew/opt/ccache
+      buildable: False
+    all:
+      require:
+      - any_of: [generator=ninja, '@:']

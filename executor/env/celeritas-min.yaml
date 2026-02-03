@@ -1,0 +1,20 @@
+spack:
+  specs:
+    # Packages required for a *truly minimal* build
+    - cli11
+    - cmake
+    - nlohmann-json
+    - "googletest@1.10:"
+    - "python@3.9:"
+    - ccache
+    - ninja
+  view: true
+  concretizer:
+    unify: true
+  packages:
+    all:
+      variants: generator=ninja build_system=cmake
+      require:
+      - any_of: [build_type=Release, '@:']
+      - any_of: [cxxstd=20, '@:']
+      - any_of: [~openmp, '@:']

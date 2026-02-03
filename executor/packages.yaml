@@ -11,6 +11,7 @@ packages:
         compilers:
           c: /usr/bin/clang
           cxx: /usr/bin/clang++
+    buildable: False
   gcc:
     externals:
     - spec: gcc@15.1.0 languages:='c,c++,fortran'
@@ -20,6 +21,7 @@ packages:
           c: /opt/homebrew/opt/gcc@15/bin/gcc-15
           cxx: /opt/homebrew/opt/gcc@15/bin/g++-15
           fortran: /opt/homebrew/opt/gcc@15/bin/gfortran
+    buildable: False
   git-lfs:
     externals:
     - spec: git-lfs@3.7.0
@@ -28,6 +30,7 @@ packages:
     externals:
     - spec: ninja@1.13.1
       prefix: /opt/homebrew/opt/ninja
+    buildable: False
   ncurses:
     externals:
     - spec: ncurses@6.0.20150808 abi=5
@@ -93,10 +96,12 @@ packages:
     externals:
     - spec: curl@8.7.1+gssapi+ldap+nghttp2
       prefix: /usr
+    buildable: False
   ccache:
     externals:
     - spec: ccache@4.12
       prefix: /opt/homebrew/opt/ccache
+    buildable: False
   cmake:
     externals:
     - spec: cmake@4.1.1
@@ -115,6 +120,7 @@ packages:
     externals:
     - spec: go@1.25.1
       prefix: /opt/homebrew/opt/go@1.25
+    buildable: False
   npm:
     externals:
     - spec: npm@11.6.0
@@ -135,16 +141,19 @@ packages:
       prefix: /usr
     - spec: perl@5.40.2~cpanm+opcode+open+shared+threads
       prefix: /opt/homebrew/opt/perl@5.40
+    buildable: False
   go-bootstrap:
     externals:
     - spec: go-bootstrap@1.25.1
       prefix: /opt/homebrew/opt/go@1.25
+    buildable: False
   ruby:
     externals:
     - spec: ruby@2.6.10
       prefix: /usr
     - spec: ruby@3.4.6
       prefix: /opt/homebrew/opt/ruby@3.4
+    buildable: False
   bison:
     externals:
     - spec: bison@2.3
@@ -171,6 +180,7 @@ packages:
       prefix: /usr
     - spec: git@2.51.0~tcltk
       prefix: /opt/homebrew/opt/git
+    buildable: False
   gmake:
     externals:
     - spec: gmake@3.81
@@ -193,6 +203,7 @@ packages:
         compilers:
           c: /opt/homebrew/opt/llvm@21/bin/clang
           cxx: /opt/homebrew/opt/llvm@21/bin/clang++
+    buildable: False
   mgard:
     variants: ~openmp
   root:
