@@ -1,208 +1,218 @@
 packages:
-  graphviz:
-    externals:
-    - spec: graphviz@14.0.1
-      prefix: /opt/homebrew/opt/graphviz
   apple-clang:
     externals:
-    - spec: apple-clang@17.0.0
-      prefix: /usr
-      extra_attributes:
-        compilers:
-          c: /usr/bin/clang
-          cxx: /usr/bin/clang++
+      - spec: apple-clang@21.0.0
+        prefix: /usr
+        extra_attributes:
+          compilers:
+            c: /usr/bin/clang
+            cxx: /usr/bin/clang++
     buildable: False
-  gcc:
-    externals:
-    - spec: gcc@15.1.0 languages:='c,c++,fortran'
-      prefix: /opt/homebrew/opt/gcc@15
-      extra_attributes:
-        compilers:
-          c: /opt/homebrew/opt/gcc@15/bin/gcc-15
-          cxx: /opt/homebrew/opt/gcc@15/bin/g++-15
-          fortran: /opt/homebrew/opt/gcc@15/bin/gfortran
-    buildable: False
-  git-lfs:
-    externals:
-    - spec: git-lfs@3.7.0
-      prefix: /opt/homebrew/opt/git-lfs
-  ninja:
-    externals:
-    - spec: ninja@1.13.1
-      prefix: /opt/homebrew/opt/ninja
-    buildable: False
-  ncurses:
-    externals:
-    - spec: ncurses@6.0.20150808 abi=5
-      prefix: /usr
-  file:
-    externals:
-    - spec: file@5.41
-      prefix: /usr
-  iwyu:
-    externals:
-    - spec: iwyu@0.25
-      prefix: /opt/homebrew/opt/include-what-you-use
-  doxygen:
-    externals:
-    - spec: doxygen@1.15.0+graphviz~mscgen
-      prefix: /opt/homebrew/opt/doxygen
   bzip2:
     externals:
-    - spec: bzip2@1.0.8
-      prefix: /usr
-  typescript:
-    externals:
-    - spec: typescript@5.9.2
-      prefix: /opt/homebrew/opt/tsc
-  pkgconf: {} # DO NOT USE HOMEBREW! It breaks things
-  rsync:
-    externals:
-    - spec: rsync@2.6.9
-      prefix: /usr
-  win-file:
-    externals:
-    - spec: win-file@5.41
-      prefix: /usr
-  zip:
-    externals:
-    - spec: zip@3.0
-      prefix: /usr
-  autoconf:
-    externals:
-    - spec: autoconf@2.72
-      prefix: /opt/homebrew/opt/autoconf@2.72
-  gettext:
-    externals:
-    - spec: gettext@0.26
-      prefix: /opt/homebrew/opt/gettext
-  openssl:
-    externals:
-    - spec: openssl@3.5.2
-      prefix: /opt/homebrew/opt/openssl@3.5
-  krb5:
-    externals:
-    - spec: krb5@1.7-prerelease
-      prefix: /usr
-  node-js:
-    externals:
-    - spec: node-js@24.9.0
-      prefix: /opt/homebrew/opt/node.js
-  xz:
-    externals:
-    - spec: xz@5.8.1
-      prefix: /opt/homebrew/opt/xz
+      - spec: bzip2@1.0.8
+        prefix: /usr
   curl:
     externals:
-    - spec: curl@8.7.1+gssapi+ldap+nghttp2
-      prefix: /usr
+      - spec: curl@8.7.1+gssapi+ldap+nghttp2
+        prefix: /usr
     buildable: False
+  file:
+    externals:
+      - spec: file@5.41
+        prefix: /usr
+  flex:
+    externals:
+      - spec: flex@2.6.4+lex
+        prefix: /usr
+  gmake:
+    externals:
+      - spec: gmake@3.81
+        prefix: /usr
+  grep:
+    externals:
+      - spec: grep@2.6.0
+        prefix: /usr
+  krb5:
+    externals:
+      - spec: krb5@1.7-prerelease
+        prefix: /usr
+  ncurses:
+    externals:
+      - spec: ncurses@6.0.20150808 abi=5
+        prefix: /usr
+  openssh:
+    externals:
+      - spec: openssh@10.2p1
+        prefix: /usr
+  rsync:
+    externals:
+      - spec: rsync@2.6.9
+        prefix: /usr
+  zip:
+    externals:
+      - spec: zip@3.0
+        prefix: /usr
+  # Homebrew packages (from /opt/homebrew)
+  autoconf:
+    externals:
+      - spec: autoconf@2.73
+        prefix: /opt/homebrew/opt/autoconf
+    buildable: False
+  automake:
+    externals:
+      - spec: automake@1.18.1
+        prefix: /opt/homebrew/opt/automake
+    buildable: False
+  berkeley-db:
+    externals:
+      - spec: berkeley-db@5.3.28
+        prefix: /opt/homebrew/opt/berkeley-db
+  bison:
+    externals:
+      - spec: bison@3.8.2
+        prefix: /opt/homebrew/opt/bison
   ccache:
     externals:
-    - spec: ccache@4.12
-      prefix: /opt/homebrew/opt/ccache
+      - spec: ccache@4.13.2
+        prefix: /opt/homebrew/opt/ccache
     buildable: False
   cmake:
     externals:
-    - spec: cmake@4.1.1
-      prefix: /opt/homebrew/opt/cmake
-  python:
+      - spec: cmake@4.3.1
+        prefix: /opt/homebrew/opt/cmake
+    buildable: False
+  doxygen:
     externals:
-    - spec: python@3.13.7+bz2+ctypes+dbm+lzma+pyexpat~pythoncmd+readline+sqlite3+ssl~tkinter+uuid+zlib
-      prefix: /opt/homebrew/opt/python@3.13
-    - spec: python@3.9.6+bz2+crypt+ctypes+dbm+lzma+pyexpat~pythoncmd+readline+sqlite3+ssl+tix+tkinter+uuid+zlib
-      prefix: /usr
-  libtool:
+      - spec: doxygen@1.16.1+graphviz~mscgen
+        prefix: /opt/homebrew/opt/doxygen
+    buildable: False
+  gcc:
     externals:
-    - spec: libtool@2.5.4
-      prefix: /opt/homebrew/opt/libtool
+      - spec: gcc@15.1.0 languages:='c,c++,fortran'
+        prefix: /opt/homebrew/opt/gcc@15
+        extra_attributes:
+          compilers:
+            c: /opt/homebrew/opt/gcc@15/bin/gcc-15
+            cxx: /opt/homebrew/opt/gcc@15/bin/g++-15
+            fortran: /opt/homebrew/opt/gcc@15/bin/gfortran
+    buildable: False
+  gettext:
+    externals:
+      - spec: gettext@1.0
+        prefix: /opt/homebrew/opt/gettext
+  gh:
+    externals:
+      - spec: gh@2.89.0
+        prefix: /opt/homebrew/opt/gh
+    buildable: False
+  git:
+    externals:
+      - spec: git@2.50.1~tcltk
+        prefix: /usr
+      - spec: git@2.53.0~tcltk
+        prefix: /opt/homebrew/opt/git
+    buildable: False
+  git-lfs:
+    externals:
+      - spec: git-lfs@3.7.1
+        prefix: /opt/homebrew/opt/git-lfs
+    buildable: False
   go:
     externals:
-    - spec: go@1.25.1
-      prefix: /opt/homebrew/opt/go@1.25
-    buildable: False
-  npm:
-    externals:
-    - spec: npm@11.6.0
-      prefix: /opt/homebrew/opt/node.js
-  flex:
-    externals:
-    - spec: flex@2.6.4+lex
-      prefix: /usr
-  sqlite:
-    externals:
-    - spec: sqlite@3.51.0+fts~functions+rtree
-      prefix: /usr
-    - spec: sqlite@3.50.4+fts~functions+rtree
-      prefix: /opt/homebrew/opt/sqlite
-  perl:
-    externals:
-    - spec: perl@5.34.1~cpanm+opcode+open+shared+threads
-      prefix: /usr
-    - spec: perl@5.40.2~cpanm+opcode+open+shared+threads
-      prefix: /opt/homebrew/opt/perl@5.40
+      - spec: go@1.26.1
+        prefix: /opt/homebrew/opt/go
     buildable: False
   go-bootstrap:
     externals:
-    - spec: go-bootstrap@1.25.1
-      prefix: /opt/homebrew/opt/go@1.25
+      - spec: go-bootstrap@1.26.1
+        prefix: /opt/homebrew/opt/go
     buildable: False
-  ruby:
+  graphviz:
     externals:
-    - spec: ruby@2.6.10
-      prefix: /usr
-    - spec: ruby@3.4.6
-      prefix: /opt/homebrew/opt/ruby@3.4
+      - spec: graphviz@14.1.4
+        prefix: /opt/homebrew/opt/graphviz
     buildable: False
-  bison:
+  iwyu:
     externals:
-    - spec: bison@2.3
-      prefix: /usr
-    - spec: bison@3.8.2
-      prefix: /opt/homebrew/opt/bison@3.8
-  openssh:
-    externals:
-    - spec: openssh@10.0p2
-      prefix: /usr
-  automake:
-    externals:
-    - spec: automake@1.18.1
-      prefix: /opt/homebrew/opt/automake
-  berkeley-db:
-    externals:
-    - spec: berkeley-db@4.7.25
-      prefix: /usr
-    - spec: berkeley-db@5.3.28
-      prefix: /opt/homebrew/opt/berkeley-db@5
-  git:
-    externals:
-    - spec: git@2.50.1~tcltk
-      prefix: /usr
-    - spec: git@2.51.0~tcltk
-      prefix: /opt/homebrew/opt/git
+      - spec: iwyu@0.26
+        prefix: /opt/homebrew/opt/include-what-you-use
     buildable: False
-  gmake:
+  libtool:
     externals:
-    - spec: gmake@3.81
-      prefix: /usr
-  grep:
-    externals:
-    - spec: grep@2.6.0
-      prefix: /usr
-  m4:
-    externals:
-    - spec: m4@1.4.6
-      prefix: /usr
-    - spec: m4@1.4.20
-      prefix: /opt/homebrew/opt/m4
+      - spec: libtool@2.5.4
+        prefix: /opt/homebrew/opt/libtool
   llvm:
     externals:
-    - spec: llvm@21.1.2+clang~flang~lld+lldb
-      prefix: /opt/homebrew/opt/llvm@21
-      extra_attributes:
-        compilers:
-          c: /opt/homebrew/opt/llvm@21/bin/clang
-          cxx: /opt/homebrew/opt/llvm@21/bin/clang++
+      - spec: llvm@22.1.2+clang~flang~lld+lldb
+        prefix: /opt/homebrew/opt/llvm@22
+        extra_attributes:
+          compilers:
+            c: /opt/homebrew/opt/llvm@22/bin/clang
+            cxx: /opt/homebrew/opt/llvm@22/bin/clang++
+    buildable: False
+  m4:
+    externals:
+      - spec: m4@1.4.6
+        prefix: /usr
+      - spec: m4@1.4.21
+        prefix: /opt/homebrew/opt/m4
+    buildable: False
+  ninja:
+    externals:
+      - spec: ninja@1.13.2
+        prefix: /opt/homebrew/opt/ninja
+    buildable: False
+  node-js:
+    externals:
+      - spec: node-js@24.9.0
+        prefix: /opt/homebrew/opt/node.js
+    buildable: False
+  npm:
+    externals:
+      - spec: npm@11.6.0
+        prefix: /opt/homebrew/opt/node.js
+    buildable: False
+  openssl:
+    externals:
+      - spec: openssl@3.6.1
+        prefix: /opt/homebrew/opt/openssl@3
+  perl:
+    externals:
+      - spec: perl@5.34.1~cpanm+opcode+open+shared+threads
+        prefix: /usr
+      - spec: perl@5.42.1~cpanm+opcode+open+shared+threads
+        prefix: /opt/homebrew/opt/perl
+    buildable: False
+  pkgconf: {} # DO NOT USE HOMEBREW! It breaks things
+  python:
+    externals:
+      - spec: python@3.9.6+bz2+crypt+ctypes+dbm+lzma+pyexpat~pythoncmd+readline+sqlite3+ssl+tix+tkinter+uuid+zlib
+        prefix: /usr
+      - spec: python@3.14.3+bz2+ctypes+dbm+lzma+pyexpat~pythoncmd+readline+sqlite3+ssl~tkinter+uuid+zlib
+        prefix: /opt/homebrew/opt/python@3
+  ruby:
+    externals:
+      - spec: ruby@2.6.10
+        prefix: /usr
+      - spec: ruby@4.0.2
+        prefix: /opt/homebrew/opt/ruby@4
+    buildable: False
+  sqlite:
+    externals:
+      - spec: sqlite@3.51.0+fts~functions+rtree
+        prefix: /usr
+      - spec: sqlite@3.51.3+fts~functions+rtree
+        prefix: /opt/homebrew/opt/sqlite
+  typescript:
+    externals:
+      - spec: typescript@6.0.2
+        prefix: /opt/homebrew/opt/tsc
+    buildable: False
+  xz:
+    externals:
+      - spec: xz@5.8.2
+        prefix: /opt/homebrew/opt/xz
     buildable: False
   mgard:
     variants: ~openmp

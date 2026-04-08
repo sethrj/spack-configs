@@ -1,53 +1,84 @@
 spack:
   specs:
-    # Packages required for a *truly minimal* build
-    - cli11
-    - cmake
-    - nlohmann-json
-    # ... plus packages required for development
-    - "geant4@11.3"
-    - git
-    - git-lfs
-    - "googletest@1.10:"
-    # - "py-pre-commit ^py-identify@2.6:"
-    - "python@3.9:"
-    - ccache
-    # ... plus *recommended* options
-    - "covfie@0.13:"
-    - "g4vg@1.0.3:"
-    - hepmc3
-    - libpng
-    - ninja
-    - "root@6.28:"
-    - "vecgeom@1.2.10:1 +gdml"
-    # ... plus optional dependencies
-    - "dd4hep@1.33:"
-    # - mpi
-    # ... plus utilities
-    # - gh
-    - py-gcovr
-    # Documentation
-    - 'doxygen@:1.14'
-    - py-breathe
-    - py-furo
-    - py-sphinx
-    - py-sphinxcontrib-bibtex
+  # Packages required for a *truly minimal* build
+  - cli11
+  - cmake
+  - nlohmann-json
+  # ... plus packages required for *basic* realistic development
+  - geant4
+  - git
+  - googletest
+  - py-pre-commit
+  - python
+  # ... plus *recommended* options
+  - covfie
+  - g4vg
+  - hepmc3
+  - ninja
+  - vecgeom
+  # Uncomment the following lines for additional supported optional packages
+  - root
+  # documentation
+  - doxygen
+  - py-breathe
+  - py-furo
+  - py-sphinx
+  - py-sphinxcontrib-bibtex
+  # experimental
+  - dd4hep
+  #- mpi
+  # Utilities
+  - git-lfs
+  - gh
+  - py-gcovr
   view: true
   concretizer:
     unify: true
+  # These encode version and variant requirements for packages used by Celeritas.
+  # Update this file when modifying the top-level CMakeLists.txt.
   packages:
-    adios2:
-      variants: ~blosc ~fortran ~png ~python ~ssc ~sst ~sz ~zfp
-    pcre:
-      require:
-      - build_system=autotools
-    dd4hep:
-      variants: ~ddcad ~ddeve ~utilityapps +hepmc3
-    root:
-      variants: ~aqua ~davix ~examples ~opengl ~x ~tbb +root7
     all:
-      variants: generator=ninja build_system=cmake
+      prefer:
+      - "generator=ninja"
+      - "build_system=cmake"
+      - "build_type=Release"
+      - "cxxstd=20"
+      - "~openmp"
+      # Note: for CUDA support run this command in your environment:
+      # spack config add packages:all:prefer:"+cuda cuda_arch=<ARCH>"
+    cli11:
+      require: '@2.4:'
+    cmake:
+      require: '@3.18:'
+    nlohmann-json:
+      require: '@3.7.0:'
+    geant4:
+      require: '@10.5:'
+      prefer:
+      - '@11.3'
+      - 'generator=ninja'
+    googletest:
+      require: '@1.10:'
+    py-identify: # needed by py-pre-commit
+      require: '@2.6:'
+    python:
+      require: '@3.14'
+    covfie:
+      require: '@0.13:'
+    g4vg:
+      require: '@1.0.3:'
+    vecgeom:
       require:
-      - any_of: [build_type=Release, '@:']
-      - any_of: [cxxstd=20, '@:']
-      - any_of: [~openmp, '@:']
+      - '@1.2.10:'
+      - +gdml
+    root:
+      require:
+      - '@6.28:'
+      variants:
+      # Prefer building without GUI and with ROOT 7 support if available
+      - ~aqua ~davix ~examples ~opengl ~x ~tbb ~webgui +root7
+    dd4hep:
+      require:
+      - '@1.33:'
+      prefer:
+      - ~utilityapps ~ddeve

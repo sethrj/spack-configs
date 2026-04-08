@@ -1,0 +1,15 @@
+spack:
+  specs:
+  - doxygen
+  view: true
+  concretizer:
+    unify: true
+  packages:
+    all:
+      prefer:
+      - "generator=ninja"
+    doxygen:
+      externals:
+        - spec: doxygen@1.16.1+graphviz~mscgen
+          prefix: /opt/homebrew/opt/doxygen
+        

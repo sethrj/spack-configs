@@ -45,6 +45,6 @@ spack:
       require:
       - '%gcc'
       - any_of: [cxxstd=20, '@:']
-      - any_of: [build_system=cmake, '@:']
+      - any_of: [build_system=cmake, build_system=make, '@:']
       - any_of: [build_type=Release, '@:']
       - any_of: ["+cuda cuda_arch=70", '@:']
