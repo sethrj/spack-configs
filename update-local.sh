@@ -56,7 +56,7 @@ if [ ! -d env ]; then
 fi
 
 status "Backing up config and environments to ${CONFIGDIR}"
-vcall cp "${SPACK_ROOT}/etc/spack/site/"*.yaml "./" \
+vcall cp "${SPACK_ROOT}/etc/spack/site/"*.yaml "./" 2>/dev/null \
     || vcall cp "${SPACK_ROOT}/etc/spack/"*.yaml "./" \
     || printf "\e[31;1m(no site spack configs are present)\e[0m "
 spack debug report > spack-debug-report.md
@@ -71,7 +71,12 @@ cecho 32 "...done"
 
 if command -v brew > /dev/null 2>&1; then
   status "Saving homebrew"
-  HOMEBREW_NO_AUTO_UPDATE=1 brew bundle dump --describe -f
+  export HOMEBREW_NO_AUTO_UPDATE=1 
+  brew bundle dump --describe -f
+  printf "# Pinned\n" > homebrew-versions.txt
+  brew list --pinned >> homebrew-versions.txt
+  printf "# Versions\n" >> homebrew-versions.txt
+  brew list --versions >> homebrew-versions.txt
 fi
 
 if command -v conda > /dev/null 2>&1; then

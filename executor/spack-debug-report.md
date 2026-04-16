@@ -1,4 +1,4 @@
-* **Spack:** 1.2.0.dev0 (https://github.com/spack/spack/commit/f799ac9c71dbcb3f5bbb14613098be77cb204537)
-* **Builtin repo:** https://github.com/spack/spack-packages/commit/7e626b9f36b54386b513b8d85086fc4dda927a09
+* **Spack:** 1.2.0.dev0 (https://github.com/spack/spack/commit/d42d88d68f99437cbd1a7c20c966dc34f09d7cd2)
+* **Builtin repo:** https://github.com/spack/spack-packages/commit/aab628663ce26222da0f49ce20630f683e9840da
 * **Python:** 3.9.6
-* **Platform:** darwin-tahoe-m2
+* **Platform:** darwin-tahoe-m4
