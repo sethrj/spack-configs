@@ -1,75 +1,113 @@
 spack:
   specs:
-    # Packages required for a *truly minimal* build
+  # Packages required for a *truly minimal* build
   - cli11
   - cmake
   - nlohmann-json
-    # ... plus packages required for development
-  - geant4@11
+  # ... plus packages required for *basic* realistic development
+  - geant4@11.3
   - git
-  - 'googletest@1.10:'
-  - 'py-pre-commit ^py-identify@2.6:'
-  - 'python@3.9:'
-  - ccache
-    # ... plus *recommended* options
-  - 'covfie@0.13:'
+  - googletest
+  - py-pre-commit
+  - python
+  # ... plus *recommended* options
+  - covfie
+    # - g4vg
   - hepmc3
-  - libpng
   - ninja
-  - 'root@6.28:'
-    # ... plus utilities
+    # - vecgeom@1
+  # Uncomment the following lines for additional supported optional packages
+  - root
+  # experimental
+  # - dd4hep
+  # - mpi
+  # R&D repositories
+  - git-lfs
+  # Utilities
   - libtree
   view: true
   concretizer:
     unify: true
   config:
-    #install_tree:
-    #  root: '/auto/projects/celeritas/opt'
-    #  projections:
-    #    all: '{architecture.os}/{compiler.name}-{compiler.version}/{name}/{version}/{hash:7}'
+    install_tree:
+      root: /auto/projects/celeritas/opt
+      projections:
+        all: '{architecture.os}/{compiler.name}-{compiler.version}/{name}/{version}/{hash:7}'
     toolchains:
-      llvm:
-      - spec: '%c=llvm'
+      llvmcxx:
+      - spec: '%c=llvm-amdgpu'
         when: '%c'
-      - spec: '%cxx=llvm'
+      - spec: '%cxx=llvm-amdgpu'
         when: '%cxx'
-      - spec: '%fortran=llvm'
+      - spec: '%fortran=llvm-amdgpu'
         when: '%fortran'
   packages:
-    hip:
+    gcc:
       externals:
-      - spec: hip@3.19.21
+      - spec: gcc@13.3.0 languages:='c,c++,fortran'
         prefix: /usr
-      - spec: hip@7.0.1
-        prefix: /opt/rocm-7.0.1
-    llvm:
-      externals:
-      - spec: llvm@20.0.0+clang+flang~lld~lldb
-        prefix: /opt/rocm-7.0.1/lib/llvm
         extra_attributes:
           compilers:
-            c: /opt/rocm-7.0.1/lib/llvm/bin/clang
-            cxx: /opt/rocm-7.0.1/lib/llvm/bin/clang++
-            fortran: /opt/rocm-7.0.1/lib/llvm/bin/flang
+            c: /usr/bin/gcc
+            cxx: /usr/bin/g++
+            fortran: /usr/bin/gfortran
     llvm-amdgpu:
-      buildable: false
       externals:
-      - spec: llvm-amdgpu@7.0.1
-        prefix: /opt/rocm-7.0.1
+      - spec: llvm-amdgpu@7.2.0
+        prefix: /opt/rocm-7.2.0
         extra_attributes:
           compilers:
-            c: /opt/rocm-7.0.1/lib/llvm/bin/amdclang
-            cxx: /opt/rocm-7.0.1/lib/llvm/bin/amdclang++
-            fortran: /opt/rocm-7.0.1/lib/llvm/bin/amdflang
-    root:
-      # Note: dd4hep requires +gsl+math
-      # ROOT here is built without GUI to reduce build time
-      variants: ~aqua ~davix ~examples ~opengl ~x ~tbb
+            c: /opt/rocm-7.2.0/bin/amdclang
+            cxx: /opt/rocm-7.2.0/bin/amdclang++
+            fortran: /opt/rocm-7.2.0/bin/amdflang
+    rocm-gdb:
+      externals:
+      - spec: rocm-gdb@7.2
+        prefix: /opt/rocm-7.2.0
+      buildable: false
+    rocprofiler-systems:
+      externals:
+      - spec: rocprofiler-systems@7.2
+        prefix: /opt/rocm-7.2.0
+      buildable: false
     all:
       require:
       - '%llvmcxx'
-      - any_of: [cxxstd=20, '@:']
-      - any_of: [build_system=cmake, '@:']
-      - any_of: [build_type=Release, '@:']
-      - any_of: [+rocm amdgpu_target=gfx942, '@:']
-      - any_of: [~cuda, '@:']
+      prefer:
+      - generator=ninja build_system=cmake
+      - build_type=Release
+      - cxxstd=20
+      - +rocm amdgpu_target=gfx942
+      - ~cuda
+    cli11:
+      require: '@2.4:'
+    cmake:
+      require: '@3.18:'
+    nlohmann-json:
+      require: '@3.7.0:'
+    geant4:
+      require: '@10.5:'
+    googletest:
+      require: '@1.10:'
+    py-identify: # needed by py-pre-commit
+      require: '@2.6:'
+    python:
+      require: '@3.9:'
+    covfie:
+      require: '@0.13:'
+    g4vg:
+      require: '@1.0.3:'
+    vecgeom:
+      require:
+      - '@1.2.10:'
+      - +gdml
+    root:
+      require:
+      - '@6.28:'
+      variants:
+      # Prefer building without GUI and with ROOT 7 support if available
+      - ~aqua ~davix ~examples ~opengl ~x ~tbb ~webgui +root7
+    dd4hep:
+      require:
+      - '@1.18:'
+      - ~utilityapps ~ddeve
