@@ -16,37 +16,38 @@ spack:
   - ninja
   - vecgeom +cuda cuda_arch=70
   - git-lfs
-  # TODO on next configure
-  # install_tree:
-  #   root: /opt/spack
-  #   padded_length: 128
-  #   projections:
-  #     all: "{name}/{version}/{hash:7}"
+    # Additional
+  - gh
+  - cuda@12.9
+  config:
+    install_tree:
+      root: /auto/projects/celeritas/opt
+      padded_length: 128
+      projections:
+        all: "{name}/{version}/{hash:7}"
   view: true
   concretizer:
     unify: true
+  toolchains:
+    gcc13:
+    - spec: "%c=gcc@13"
+      when: "%c"
+    - spec: "%cxx=gcc@13"
+      when: "%cxx"
+    - spec: "%fortran=gcc@13"
+      when: "%fortran"
   packages:
-    cuda:
-      externals:
-      - spec: cuda@12.0.140
-        prefix: /usr
     gcc:
       externals:
-      - spec: gcc@12.4.0 languages:='c,c++'
-        prefix: /usr
-        extra_attributes:
-          compilers:
-            c: /usr/bin/gcc-12
-            cxx: /usr/bin/g++-12
       - spec: gcc@13.3.0 languages:='c,c++,fortran'
         prefix: /usr
         extra_attributes:
           compilers:
-            c: /usr/bin/gcc
-            cxx: /usr/bin/g++
-            fortran: /usr/bin/gfortran
+            c: /usr/bin/gcc-13
+            cxx: /usr/bin/g++-13
+            fortran: /usr/bin/gfortran-13
     all:
       target: [x86_64_v3]
       require:
-      - '%gcc'
+      - '%gcc13'
       - target=x86_64_v3

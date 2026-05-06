@@ -10,26 +10,21 @@ spack:
   - googletest
   - py-pre-commit
   - python
-  - covfie +cuda cuda_arch=70
+  - covfie ~cuda
   - g4vg
   - hepmc3
   - ninja
-  - vecgeom +cuda cuda_arch=70
+  - vecgeom ~cuda
   - git-lfs
-  # TODO on next configure
-  # install_tree:
-  #   root: /opt/spack
-  #   padded_length: 128
-  #   projections:
-  #     all: "{name}/{version}/{hash:7}"
+  config:
+    install_tree:
+      root: $spack/opt
+      projections:
+        all: "{name}/{version}/{hash:7}"
   view: true
   concretizer:
     unify: true
   packages:
-    cuda:
-      externals:
-      - spec: cuda@12.0.140
-        prefix: /usr
     gcc:
       externals:
       - spec: gcc@12.4.0 languages:='c,c++'

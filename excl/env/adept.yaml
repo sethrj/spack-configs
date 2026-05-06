@@ -11,6 +11,11 @@ spack:
     - ninja
     - "vecgeom@2: +gdml"
   view: true
+  config:
+    install_tree:
+      root: $spack/opt
+      projections:
+        all: "{name}/{version}/{hash:7}"
   concretizer:
     unify: true
   packages:

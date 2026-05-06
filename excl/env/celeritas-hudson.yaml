@@ -29,6 +29,10 @@ spack:
   concretizer:
     unify: true
   config:
+    install_tree:
+      root: $spack/opt
+      projections:
+        all: "{name}/{version}/{hash:7}"
     build_jobs: 64
     concurrent_packages: 4
   packages:
