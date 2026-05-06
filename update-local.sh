@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/sh -e
 ###############################################################################
 # File : update-local.sh
 ###############################################################################
@@ -6,33 +6,27 @@
 # In case the user executed directly with `sh`
 set -e
 
-function cecho()
-{
+cecho() {
   local color=$1
   shift
   local text=$1
   shift
-  printf "\e[${color}m${text//%/%%}\e[0m\n" >&2
+  printf "\e[${color}m%s\e[0m\n" "${text}" >&2
 }
-function info() { cecho 32 "-- $@"; };
-function status() { cecho "34;1" "-- $@"; };
-function error() { cecho "31;1" "ERROR: $@"; exit 1; };
+info() { cecho 32 "-- $@"; };
+status() { cecho "34;1" "-- $@"; };
+error() { cecho "31;1" "ERROR: $@"; exit 1; };
 
 # Verbose call: echo before running
-function vcall() { cecho "37;2" "> $*"; "$@"; }
-
-if [ "$0" != "$BASH_SOURCE" ]; then
-  cecho "31;1" "ERROR: Run this script directly, do not \`source\` it"
-  return 1
-fi
+vcall() { cecho "37;2" "> $*"; "$@"; }
 
 ###############################################################################
 
 if [ -z "${SPACK_ROOT}" ]; then
   error "Spack not loaded: ${SPACK_ROOT} must be defined"
 fi
-if ! hash spack 2>/dev/null; then
-  source ${SPACK_ROOT}/share/spack/setup-env.sh
+if ! command -v spack 2>/dev/null; then
+  . ${SPACK_ROOT}/share/spack/setup-env.sh
 fi
 SPACK_ENV_BASE="$SPACK_ROOT/var/spack/environments"
 
@@ -55,17 +49,27 @@ if [ ! -d env ]; then
   mkdir env
 fi
 
+print_error() {
+  printf "\e[31;1m(%s)\e[0m " "$1"
+}
+
 status "Backing up config and environments to ${CONFIGDIR}"
 vcall cp "${SPACK_ROOT}/etc/spack/site/"*.yaml "./" 2>/dev/null \
     || vcall cp "${SPACK_ROOT}/etc/spack/"*.yaml "./" \
     || printf "\e[31;1m(no site spack configs are present)\e[0m "
 spack debug report > spack-debug-report.md
 for env in $(cd ${SPACK_ENV_BASE} && ls); do
-  printf "$env " >&2
-  cp "${SPACK_ENV_BASE}/${env}/spack.yaml" "env/${env}.yaml" \
-    || printf "\e[31;1m(missing environment)\e[0m "
-  cp "${SPACK_ENV_BASE}/${env}/spack.lock" "env/${env}.lock" 2>/dev/null \
-    || printf "\e[31;1m(missing lock)\e[0m "
+  (
+    _prefix="${CONFIGDIR}/env/${env}"
+    if [ ! -d "${SPACK_ENV_BASE}/${env}" ]; then
+      return
+    fi
+    printf "$env " >&2
+    cd "${SPACK_ENV_BASE}/${env}" 
+    cp spack.yaml "${_prefix}.yaml" || print_error "missing environment"
+    cp spack.lock "${_prefix}.lock" || print_error "missing lock"
+    spack -e . config blame 2>/dev/null >"${_prefix}.config.yaml" || print_error "config blame failed"
+  )
 done
 cecho 32 "...done"
 
