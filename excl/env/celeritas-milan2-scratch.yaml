@@ -1,5 +1,6 @@
 spack:
   include:
+  - excl.yaml
   - celeritas-packages.yaml
   specs:
   - cli11
@@ -16,36 +17,26 @@ spack:
   - ninja
   - vecgeom +cuda cuda_arch=70
   - git-lfs
+    # Additional
+    #- gh
+  - cuda@12.9
   - root
-  install_tree:
-    root: $spack/opt/spack
-    projections:
-      all: "{name}/{version}/{hash:7}"
-  view: true
-  concretizer:
-    unify: true
   packages:
-    cuda:
+    bash:
+      buildable: False
       externals:
-      - spec: cuda@12.0.140
+      - spec: bash@5.2.21
         prefix: /usr
     gcc:
       externals:
-      - spec: gcc@12.4.0 languages:='c,c++'
-        prefix: /usr
-        extra_attributes:
-          compilers:
-            c: /usr/bin/gcc-12
-            cxx: /usr/bin/g++-12
       - spec: gcc@13.3.0 languages:='c,c++,fortran'
         prefix: /usr
         extra_attributes:
           compilers:
-            c: /usr/bin/gcc
-            cxx: /usr/bin/g++
-            fortran: /usr/bin/gfortran
+            c: /usr/bin/gcc-13
+            cxx: /usr/bin/g++-13
+            fortran: /usr/bin/gfortran-13
     all:
       target: [x86_64_v3]
       require:
-      - '%gcc'
       - target=x86_64_v3

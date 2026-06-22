@@ -1,0 +1,20 @@
+spack:
+  specs:
+  - larsim
+  view: true
+  packages:
+    gcc:
+      buildable: false
+      externals:
+      - spec: gcc@11.4.0 languages:='c,c++,fortran'
+        prefix: /usr
+        extra_attributes:
+          compilers:
+            c: /usr/bin/gcc
+            cxx: /usr/bin/g++
+            fortran: /usr/bin/gfortran
+  repos:
+    fnal_art:
+      git: https://github.com/FNALssi/fnal_art.git
+    larsoft:
+      git: https://github.com/LArSoft/larsoft-spack-recipes.git

@@ -1,0 +1,36 @@
+config:
+  build_jobs: 48
+  install_tree:
+    padded_length: 128
+    root: /scratch/celeritas/opt
+    projections:
+      all: '{name}/{version}/{hash:7}'
+mirrors:
+  projects:
+    url: /auto/projects/celeritas/buildcache
+    signed: false
+view:
+  default:
+    root: /scratch/celeritas/view
+concretizer:
+  unify: true
+toolchains:
+  gcc12:
+  - spec: '%c=gcc@12'
+    when: '%c'
+  - spec: '%cxx=gcc@12'
+    when: '%cxx'
+  - spec: '%fortran=gcc@12'
+    when: '%fortran'
+  gcc13:
+  - spec: '%c=gcc@13'
+    when: '%c'
+  - spec: '%cxx=gcc@13'
+    when: '%cxx'
+  - spec: '%fortran=gcc@13'
+    when: '%fortran'
+packages:
+  all:
+    target: [x86_64_v3]
+    require:
+    - target=x86_64_v3

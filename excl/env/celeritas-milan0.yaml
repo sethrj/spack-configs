@@ -22,13 +22,14 @@ spack:
     - "vecgeom@1.2.10:1 +gdml"
     # ... plus utilities
     - libtree
+    - jq
     - gh
   view: true
   concretizer:
     unify: true
   config:
     install_tree:
-      root: $spack/opt
+      root: $spack/opt/spack
       projections:
         all: "{name}/{version}/{hash:7}"
   packages:
