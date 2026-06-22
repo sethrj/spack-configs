@@ -58,6 +58,7 @@ vcall cp "${SPACK_ROOT}/etc/spack/site/"*.yaml "./" 2>/dev/null \
     || vcall cp "${SPACK_ROOT}/etc/spack/"*.yaml "./" \
     || printf "\e[31;1m(no site spack configs are present)\e[0m "
 spack debug report > spack-debug-report.md
+cp $SPACK_ENV_BASE/*.yaml .
 for env in $(cd ${SPACK_ENV_BASE} && ls); do
   (
     _prefix="${CONFIGDIR}/env/${env}"
