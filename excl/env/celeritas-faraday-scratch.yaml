@@ -1,0 +1,38 @@
+spack:
+  include:
+  - excl.yaml
+  - celeritas-packages.yaml
+  - rocm-packages.yaml
+  specs:
+  - cli11
+  - cmake
+  - nlohmann-json
+  - geant4
+  - git
+  - googletest
+  - py-pre-commit
+  - python
+  - covfie +rocm amdgpu_target=gfx942
+  - hepmc3
+  - ninja
+  - git-lfs
+  - root
+  packages:
+    bash:
+      buildable: false
+      externals:
+      - spec: bash@5.2.21
+        prefix: /usr
+    gcc:
+      externals:
+      - spec: gcc@13.3.0 languages:='c,c++,fortran'
+        prefix: /usr
+        extra_attributes:
+          compilers:
+            c: /usr/bin/gcc-13
+            cxx: /usr/bin/g++-13
+            fortran: /usr/bin/gfortran-13
+    all:
+      target: [x86_64_v3]
+      require:
+      - target=x86_64_v3

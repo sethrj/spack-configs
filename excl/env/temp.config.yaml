@@ -1,118 +1,48 @@
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:1     spack:
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:2       specs:
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:3       - cmake
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:4       - geant4@11
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:5       - git
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:6       - 'googletest@1.10:'
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:7       - 'python@3.9:'
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:8       - cuda@12
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:9       - 'covfie@0.13:'
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:10      - 'g4vg@1.0.3:'
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:11      - ninja
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:12      - 'vecgeom@2: +gdml'
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:13      view: True
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:14      config:
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:15        install_tree:
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:16          root: $spack/opt
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:17          projections:
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:18            all: '{name}/{version}/{hash:7}'
-/auto/projects/celeritas/spack/etc/spack/site/config.yaml:3                        padded_length: 128
-/auto/projects/celeritas/spack/etc/spack/site/config.yaml:8                      connect_timeout: 600
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:33            template_dirs:
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:34            - $spack/share/spack/templates
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:37            license_dir: $spack/etc/spack/licenses
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:69            build_stage:
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:70            - $tempdir/$user/spack-stage
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:71            - $user_cache_path/stage
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:75            stage_name: spack-stage-{name}-{version}-{hash}
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:80            test_stage: $user_cache_path/test
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:84            source_cache: $spack/var/spack/cache
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:93            misc_cache: $user_cache_path/cache
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:102           verify_ssl: True
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:108           ssl_certs: $SSL_CERT_FILE
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:116           suppress_gpg_warnings: False
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:121           checksum: True
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:126           deprecated: False
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:131           dirty: False
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:139           build_language: C
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:148           locks: True
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:153           url_fetch_method: urllib
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:160           build_jobs: 16
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:168           concurrent_packages: 0
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:171           installer: new
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:179           sandbox:
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:180             enable: False
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:182             allow_network: True
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:184             allow_read: []
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:186             allow_write: []
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:189           ccache: False
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:195           db_lock_timeout: 60
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:203           package_lock_timeout: null
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:208           shared_linking:
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:213             type: rpath
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:219             bind: False
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:225             missing_library_policy: ignore
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:230           allow_sgid: True
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:236           install_status: True
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:240           binary_index_ttl: 600
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:242           flags:
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:244             keep_werror: none
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:249           aliases:
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:250             concretise: concretize
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:251             containerise: containerize
-/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:252             rm: remove
-_builtin                                                                         debug: False
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:19      concretizer:
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:20        unify: True
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:18       reuse: True
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:23       targets:
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:28         granularity: microarchitectures
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:32         host_compatible: True
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:40       duplicates:
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:45         strategy: minimal
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:48         max_dupes:
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:49           default: 1
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:51           c: 2
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:52           cxx: 2
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:53           fortran: 1
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:55           cmake: 2
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:56           gmake: 2
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:57           python: 2
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:58           python-venv: 2
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:59           py-cython: 2
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:60           py-flit-core: 2
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:61           py-pip: 2
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:62           py-setuptools: 2
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:63           py-versioneer: 2
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:64           py-wheel: 2
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:65           xcb-proto: 2
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:67           gcc: 2
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:68           llvm: 2
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:73       os_compatible: {}
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:77       compiler_mixing: True
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:81       splice:
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:82         explicit: []
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:83         automatic: False
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:85       timeout: 0
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:91       error_on_timeout: True
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:95       static_analysis: False
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:99       concretization_cache:
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:100        enable: True
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:103      externals:
-/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:107        completion: default_variants
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:21      packages:
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:22        all:
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:23          require:
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:24          - any_of: [cxxstd=20, '@:']
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:25          - any_of: [build_system=cmake, '@:']
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:26          - any_of: [build_type=Release, '@:']
-/auto/projects/celeritas/spack/etc/spack/site/packages.yaml:9                      - target=x86_64_v3
-/auto/projects/celeritas/spack/var/spack/environments/adept/spack.yaml:29          variants: +cuda cuda_arch=90
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:1      spack:
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:2        include:
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:3        - excl.yaml
+/auto/projects/celeritas/spack/etc/spack/include.yaml:3                        - name: user
+/auto/projects/celeritas/spack/etc/spack/include.yaml:4                          path_override_env_var: SPACK_USER_CONFIG_PATH
+/auto/projects/celeritas/spack/etc/spack/include.yaml:5                          path: ~/.spack
+/auto/projects/celeritas/spack/etc/spack/include.yaml:6                          optional: True
+/auto/projects/celeritas/spack/etc/spack/include.yaml:7                          prefer_modify: True
+/auto/projects/celeritas/spack/etc/spack/include.yaml:8                          when: '"SPACK_DISABLE_LOCAL_CONFIG" not in env'
+/auto/projects/celeritas/spack/etc/spack/include.yaml:11                       - name: site
+/auto/projects/celeritas/spack/etc/spack/include.yaml:12                         path: $spack/etc/spack/site
+/auto/projects/celeritas/spack/etc/spack/include.yaml:13                         optional: True
+/auto/projects/celeritas/spack/etc/spack/include.yaml:16                       - name: system
+/auto/projects/celeritas/spack/etc/spack/include.yaml:17                         path_override_env_var: SPACK_SYSTEM_CONFIG_PATH
+/auto/projects/celeritas/spack/etc/spack/include.yaml:18                         path: /etc/spack
+/auto/projects/celeritas/spack/etc/spack/include.yaml:19                         optional: True
+/auto/projects/celeritas/spack/etc/spack/include.yaml:20                         when: '"SPACK_DISABLE_LOCAL_CONFIG" not in env'
+/auto/projects/celeritas/spack/etc/spack/defaults/include.yaml:3               - path: ${platform}
+/auto/projects/celeritas/spack/etc/spack/defaults/include.yaml:4                 optional: True
+/auto/projects/celeritas/spack/etc/spack/defaults/include.yaml:7               - path: base
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:4        specs:
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:5        - cmake
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:6        packages:
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:7          bash:
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:8            buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:9            externals:
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:10           - spec: bash@5.2.21
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:11             prefix: /usr
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:12         gcc:
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:13           externals:
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:14           - spec: gcc@13.3.0 languages:='c,c++,fortran'
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:15             prefix: /usr
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:16             extra_attributes:
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:17               compilers:
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:18                 c: /usr/bin/gcc-13
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:19                 cxx: /usr/bin/g++-13
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:20                 fortran: /usr/bin/gfortran-13
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:21         all:
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:22           target: [x86_64_v3]
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:23           require:
+/auto/projects/celeritas/spack/var/spack/environments/temp/spack.yaml:24           - target=x86_64_v3
 /auto/projects/celeritas/spack/etc/spack/site/packages.yaml:3                      prefer:
 /auto/projects/celeritas/spack/etc/spack/site/packages.yaml:4                      - generator=ninja build_system=cmake
 /auto/projects/celeritas/spack/etc/spack/site/packages.yaml:5                      - build_type=Release
 /auto/projects/celeritas/spack/etc/spack/site/packages.yaml:6                      - cxxstd=20
-/auto/projects/celeritas/spack/etc/spack/site/packages.yaml:7                      target: [x86_64_v3]
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:18            providers:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:19              awk: [gawk]
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:20              armci: [armcimpi]
@@ -214,28 +144,55 @@ _builtin                                                                        
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:112         xl:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:113           buildable: False
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:113       compilers: []
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:113       definitions: []
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:113       env_vars: {}
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:113       include:
-/auto/projects/celeritas/spack/etc/spack/include.yaml:3                        - name: user
-/auto/projects/celeritas/spack/etc/spack/include.yaml:4                          path_override_env_var: SPACK_USER_CONFIG_PATH
-/auto/projects/celeritas/spack/etc/spack/include.yaml:5                          path: ~/.spack
-/auto/projects/celeritas/spack/etc/spack/include.yaml:6                          optional: True
-/auto/projects/celeritas/spack/etc/spack/include.yaml:7                          prefer_modify: True
-/auto/projects/celeritas/spack/etc/spack/include.yaml:8                          when: '"SPACK_DISABLE_LOCAL_CONFIG" not in env'
-/auto/projects/celeritas/spack/etc/spack/include.yaml:11                       - name: site
-/auto/projects/celeritas/spack/etc/spack/include.yaml:12                         path: $spack/etc/spack/site
-/auto/projects/celeritas/spack/etc/spack/include.yaml:13                         optional: True
-/auto/projects/celeritas/spack/etc/spack/include.yaml:16                       - name: system
-/auto/projects/celeritas/spack/etc/spack/include.yaml:17                         path_override_env_var: SPACK_SYSTEM_CONFIG_PATH
-/auto/projects/celeritas/spack/etc/spack/include.yaml:18                         path: /etc/spack
-/auto/projects/celeritas/spack/etc/spack/include.yaml:19                         optional: True
-/auto/projects/celeritas/spack/etc/spack/include.yaml:20                         when: '"SPACK_DISABLE_LOCAL_CONFIG" not in env'
-/auto/projects/celeritas/spack/etc/spack/defaults/include.yaml:3               - path: ${platform}
-/auto/projects/celeritas/spack/etc/spack/defaults/include.yaml:4                 optional: True
-/auto/projects/celeritas/spack/etc/spack/defaults/include.yaml:7               - path: base
-/auto/projects/celeritas/spack/etc/spack/defaults/include.yaml:7               develop: {}
-/auto/projects/celeritas/spack/etc/spack/defaults/include.yaml:7               mirrors:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:113       concretizer:
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:17          unify: True
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:18          targets:
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:19            granularity: generic
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:20            host_compatible: True
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:18       reuse: True
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:40       duplicates:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:45         strategy: minimal
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:48         max_dupes:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:49           default: 1
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:51           c: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:52           cxx: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:53           fortran: 1
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:55           cmake: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:56           gmake: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:57           python: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:58           python-venv: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:59           py-cython: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:60           py-flit-core: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:61           py-pip: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:62           py-setuptools: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:63           py-versioneer: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:64           py-wheel: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:65           xcb-proto: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:67           gcc: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:68           llvm: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:73       os_compatible: {}
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:77       compiler_mixing: True
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:81       splice:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:82         explicit: []
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:83         automatic: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:85       timeout: 0
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:91       error_on_timeout: True
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:95       static_analysis: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:99       concretization_cache:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:100        enable: True
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:103      externals:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:107        completion: default_variants
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:107    definitions: []
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:107    env_vars: {}
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:107    view:
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:14          default:
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:15            root: /scratch/s3j/temp/view
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:15        develop: {}
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:15        mirrors:
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:9           projects:
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:10            url: /auto/projects/celeritas/buildcache
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:11            binary: True
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:12            signed: False
 /auto/projects/celeritas/spack/etc/spack/defaults/base/mirrors.yaml:2            spack-public:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/mirrors.yaml:3              binary: False
 /auto/projects/celeritas/spack/etc/spack/defaults/base/mirrors.yaml:4              url: https://mirror.spack.io
@@ -273,8 +230,59 @@ _builtin                                                                        
 /auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:53                 autoload: direct
 /auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:54               hierarchy:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:55               - mpi
-/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:55         upstreams: {}
-/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:55         bootstrap:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:55         config:
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:2           build_jobs: 48
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:3           install_tree:
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:4             padded_length: 128
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:5             root: /scratch/s3j/temp/opt
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:6             projections:
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:7               all: '{name}/{version}/{hash:7}'
+/auto/projects/celeritas/spack/etc/spack/site/config.yaml:8                      connect_timeout: 600
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:33            template_dirs:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:34            - $spack/share/spack/templates
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:37            license_dir: $spack/etc/spack/licenses
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:69            build_stage:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:70            - $tempdir/$user/spack-stage
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:71            - $user_cache_path/stage
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:75            stage_name: spack-stage-{name}-{version}-{hash}
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:80            test_stage: $user_cache_path/test
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:84            source_cache: $spack/var/spack/cache
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:93            misc_cache: $user_cache_path/cache
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:102           verify_ssl: True
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:108           ssl_certs: $SSL_CERT_FILE
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:116           suppress_gpg_warnings: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:121           checksum: True
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:126           deprecated: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:131           dirty: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:139           build_language: C
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:148           locks: True
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:153           url_fetch_method: urllib
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:168           concurrent_packages: 0
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:171           installer: new
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:179           sandbox:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:180             enable: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:182             allow_network: True
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:184             allow_read: []
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:186             allow_write: []
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:189           ccache: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:195           db_lock_timeout: 60
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:203           package_lock_timeout: null
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:208           shared_linking:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:213             type: rpath
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:219             bind: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:225             missing_library_policy: ignore
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:230           allow_sgid: True
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:236           install_status: True
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:240           binary_index_ttl: 600
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:242           flags:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:244             keep_werror: none
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:249           aliases:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:250             concretise: concretize
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:251             containerise: containerize
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:252             rm: remove
+_builtin                                                                         debug: False
+_builtin                                                                       upstreams: {}
+_builtin                                                                       bootstrap:
 /auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:4               enable: True
 /auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:7               root: $user_cache_path/bootstrap
 /auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:11              sources:
@@ -290,4 +298,18 @@ _builtin                                                                        
 /auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:23                spack-install: True
 /auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:23            ci: {}
 /auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:23            cdash: {}
-/auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:23            toolchains: {}
+/auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:23            toolchains:
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:22          gcc12:
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:23          - spec: '%c=gcc@12'
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:24            when: '%c'
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:25          - spec: '%cxx=gcc@12'
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:26            when: '%cxx'
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:27          - spec: '%fortran=gcc@12'
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:28            when: '%fortran'
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:29          gcc13:
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:30          - spec: '%c=gcc@13'
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:31            when: '%c'
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:32          - spec: '%cxx=gcc@13'
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:33            when: '%cxx'
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:34          - spec: '%fortran=gcc@13'
+/auto/projects/celeritas/spack/var/spack/environments/temp/excl.yaml:35            when: '%fortran'

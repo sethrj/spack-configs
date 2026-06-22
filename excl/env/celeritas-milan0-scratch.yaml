@@ -1,0 +1,58 @@
+spack:
+  include:
+  - excl.yaml
+  - celeritas-packages.yaml
+  specs:
+    - group: compiler
+      specs:
+      - "llvm@19"
+    - group: libs
+      needs: [compiler]
+      specs:
+      - cli11
+    - cmake
+    - nlohmann-json
+    - geant4
+    - git
+    - googletest
+    - py-pre-commit
+    - python
+    - covfie +cuda cuda_arch=80
+    - g4vg
+    - hepmc3
+    - ninja
+    - vecgeom +cuda cuda_arch=80
+    - git-lfs
+      # Additional
+      #- gh
+    - cuda@13
+    - root
+
+  toolchains:
+    llvm19:
+    - spec: '%c=llvm@19'
+      when: '%c'
+    - spec: '%cxx=llvm@19'
+      when: '%cxx'
+    - spec: '%fortran=gcc@12'
+      when: '%fortran'
+
+  packages:
+    bash:
+      buildable: False
+      externals:
+      - spec: bash@5.2.21
+        prefix: /usr
+    gcc:
+      buildable: False
+      externals:
+      - spec: gcc@12.3.0 languages:='c,c++'
+        prefix: /usr
+        extra_attributes:
+          compilers:
+            c: /usr/bin/gcc-12
+            cxx: /usr/bin/g++-12
+    all:
+      target: [x86_64_v3]
+      require:
+      - "target=x86_64_v3"

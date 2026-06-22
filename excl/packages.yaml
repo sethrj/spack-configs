@@ -1,23 +1,4 @@
 packages:
-  libxml2:
-    externals:
-    - spec: libxml2@2.9.14
-      prefix: /usr
-  gcc:
-    externals:
-    - spec: gcc@12.4.0 languages:='c,c++'
-      prefix: /usr
-      extra_attributes:
-        compilers:
-          c: /usr/bin/gcc-12
-          cxx: /usr/bin/g++-12
-    - spec: gcc@13.3.0 languages:='c,c++,fortran'
-      prefix: /usr
-      extra_attributes:
-        compilers:
-          c: /usr/bin/gcc
-          cxx: /usr/bin/g++
-          fortran: /usr/bin/gfortran
   all:
     prefer:
     - "generator=ninja build_system=cmake"

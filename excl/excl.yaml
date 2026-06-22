@@ -8,12 +8,17 @@ config:
 mirrors:
   projects:
     url: /auto/projects/celeritas/buildcache
+    binary: true
     signed: false
+    autopush: true
 view:
   default:
     root: /scratch/celeritas/view
 concretizer:
   unify: true
+  targets:
+    granularity: generic
+    host_compatible: true
 toolchains:
   gcc12:
   - spec: '%c=gcc@12'

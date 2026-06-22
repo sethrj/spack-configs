@@ -122,12 +122,6 @@ _builtin                                                                        
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-faraday/spack.yaml:51               c: /usr/bin/gcc
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-faraday/spack.yaml:52               cxx: /usr/bin/g++
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-faraday/spack.yaml:53               fortran: /usr/bin/gfortran
-/auto/projects/celeritas/spack/etc/spack/site/packages.yaml:8                                 - spec: gcc@12.4.0 languages:='c,c++'
-/auto/projects/celeritas/spack/etc/spack/site/packages.yaml:9                                   prefix: /usr
-/auto/projects/celeritas/spack/etc/spack/site/packages.yaml:10                                  extra_attributes:
-/auto/projects/celeritas/spack/etc/spack/site/packages.yaml:11                                    compilers:
-/auto/projects/celeritas/spack/etc/spack/site/packages.yaml:12                                      c: /usr/bin/gcc-12
-/auto/projects/celeritas/spack/etc/spack/site/packages.yaml:13                                      cxx: /usr/bin/g++-12
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-faraday/spack.yaml:54       llvm-amdgpu:
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-faraday/spack.yaml:55         externals:
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-faraday/spack.yaml:56         - spec: llvm-amdgpu@7.2.0
@@ -150,14 +144,14 @@ _builtin                                                                        
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-faraday/spack.yaml:73       all:
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-faraday/spack.yaml:74         require:
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-faraday/spack.yaml:75         - '%llvmcxx'
-/auto/projects/celeritas/spack/etc/spack/site/packages.yaml:28                                - target=x86_64_v3
+/auto/projects/celeritas/spack/etc/spack/site/packages.yaml:9                                 - target=x86_64_v3
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-faraday/spack.yaml:76         prefer:
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-faraday/spack.yaml:77         - generator=ninja build_system=cmake
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-faraday/spack.yaml:78         - build_type=Release
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-faraday/spack.yaml:79         - cxxstd=20
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-faraday/spack.yaml:80         - +rocm amdgpu_target=gfx942
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-faraday/spack.yaml:81         - ~cuda
-/auto/projects/celeritas/spack/etc/spack/site/packages.yaml:26                                target: [x86_64_v3]
+/auto/projects/celeritas/spack/etc/spack/site/packages.yaml:7                                 target: [x86_64_v3]
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:18                       providers:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:19                         awk: [gawk]
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:20                         armci: [armcimpi]
@@ -251,10 +245,6 @@ _builtin                                                                        
 /auto/projects/celeritas/spack/etc/spack/packages.yaml:3                                      externals:
 /auto/projects/celeritas/spack/etc/spack/packages.yaml:4                                      - spec: coreutils@9.4
 /auto/projects/celeritas/spack/etc/spack/packages.yaml:5                                        prefix: /usr
-/auto/projects/celeritas/spack/etc/spack/site/packages.yaml:2                               libxml2:
-/auto/projects/celeritas/spack/etc/spack/site/packages.yaml:3                                 externals:
-/auto/projects/celeritas/spack/etc/spack/site/packages.yaml:4                                 - spec: libxml2@2.9.14
-/auto/projects/celeritas/spack/etc/spack/site/packages.yaml:5                                   prefix: /usr
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:76                     cce:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:77                       buildable: False
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:78                     cray-fftw:
