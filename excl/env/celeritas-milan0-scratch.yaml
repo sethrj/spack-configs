@@ -10,23 +10,24 @@ spack:
       needs: [compiler]
       specs:
       - cli11
-    - cmake
-    - nlohmann-json
-    - geant4
-    - git
-    - googletest
-    - py-pre-commit
-    - python
-    - covfie +cuda cuda_arch=80
-    - g4vg
-    - hepmc3
-    - ninja
-    - vecgeom +cuda cuda_arch=80
-    - git-lfs
-      # Additional
-      #- gh
-    - cuda@13
-    - root
+      - ccache
+      - cmake
+      - nlohmann-json
+      - geant4
+      - git
+      - googletest
+      - py-pre-commit
+      - python
+      - covfie +cuda cuda_arch=80
+      - g4vg
+      - hepmc3
+      - ninja
+      - vecgeom +cuda cuda_arch=80
+      - git-lfs
+        # Additional
+        #- gh
+      - cuda@13
+      - root
 
   toolchains:
     llvm19:

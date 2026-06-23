@@ -3,27 +3,10 @@ spack:
   - excl.yaml
   - celeritas-packages.yaml
   specs:
-  - cli11
-  - ccache
-  - cmake
-  - nlohmann-json
-  - geant4
-  - git
-  - googletest
-  - py-pre-commit
-  - python
-  - covfie ~cuda
-  - g4vg
-  - hepmc3
-  - ninja
-  - vecgeom ~cuda
-  - git-lfs
-    # Additional
-    #- gh
   - root
   packages:
     bash:
-      buildable: False
+      buildable: false
       externals:
       - spec: bash@5.2.21
         prefix: /usr

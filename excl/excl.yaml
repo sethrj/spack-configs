@@ -1,4 +1,6 @@
 config:
+  concurrent_packages: 1
+  locks: false
   build_jobs: 48
   install_tree:
     padded_length: 128
@@ -10,7 +12,7 @@ mirrors:
     url: /auto/projects/celeritas/buildcache
     binary: true
     signed: false
-    autopush: true
+    autopush: false
 view:
   default:
     root: /scratch/celeritas/view
@@ -34,8 +36,3 @@ toolchains:
     when: '%cxx'
   - spec: '%fortran=gcc@13'
     when: '%fortran'
-packages:
-  all:
-    target: [x86_64_v3]
-    require:
-    - target=x86_64_v3

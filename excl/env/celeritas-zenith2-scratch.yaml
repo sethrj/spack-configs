@@ -12,18 +12,19 @@ spack:
   - googletest
   - py-pre-commit
   - python
-  - covfie ~cuda
+  - covfie +cuda cuda_arch=120
   - g4vg
   - hepmc3
   - ninja
-  - vecgeom ~cuda
+  - vecgeom +cuda cuda_arch=120
   - git-lfs
     # Additional
     #- gh
+  - cuda@13
   - root
   packages:
     bash:
-      buildable: False
+      buildable: false
       externals:
       - spec: bash@5.2.21
         prefix: /usr

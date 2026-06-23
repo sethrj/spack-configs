@@ -4,6 +4,7 @@ spack:
   - celeritas-packages.yaml
   specs:
   - cli11
+  - ccache
   - cmake
   - nlohmann-json
   - geant4
@@ -23,7 +24,7 @@ spack:
   - root
   packages:
     bash:
-      buildable: False
+      buildable: false
       externals:
       - spec: bash@5.2.21
         prefix: /usr

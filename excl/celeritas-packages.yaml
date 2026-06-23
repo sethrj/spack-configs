@@ -12,8 +12,8 @@ packages:
     require: '@3.7.0:'
   geant4:
     require: '@10.5:'
-    prefer:
-    - '@11.3'
+    version:
+    - '11.3'
   googletest:
     require: '@1.10:'
   py-identify: # needed by py-pre-commit
@@ -28,15 +28,17 @@ packages:
     require:
     - '@1.2.10:'
     - +gdml
-    prefer:
-    - '@1'
+    version:
+    - '1'
   root:
     require:
     - '@6.28:'
-    prefer:
+    variants:
+    # These are "default starting values", not required
+    # using it rather than *prefer* prevents all:prefer: from being overwritten
     - ~aqua ~davix ~examples ~opengl ~x ~tbb ~webgui +root7
   dd4hep:
     require:
     - '@1.33:'
-    prefer:
+    variants:
     - ~utilityapps ~ddeve
