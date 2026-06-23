@@ -2,6 +2,24 @@ spack:
   include:
     - excl.yaml
     - celeritas-packages.yaml
+
+  toolchains:
+    llvm19:
+      - spec: "%c=llvm@19"
+        when: "%c"
+      - spec: "%cxx=llvm@19"
+        when: "%cxx"
+      - spec: "%fortran=gcc@12"
+        when: "%fortran"
+
+    gcc:
+      - spec: "%c=gcc@12"
+        when: "%c"
+      - spec: "%cxx=gcc@12"
+        when: "%cxx"
+      - spec: "%fortran=gcc@12"
+        when: "%fortran"
+      
   specs:
     - group: tools
       specs:
@@ -14,9 +32,13 @@ spack:
         #- gh
         - libtree
         - python
+        - cuda@13
+    - group: compilers
+      needs: [tools]
+      specs:
         - llvm@19
     - group: libs
-      needs: [tools]
+      needs: [compilers]
       specs:
         - cli11
         - nlohmann-json
@@ -26,7 +48,6 @@ spack:
         - g4vg
         - hepmc3
         - vecgeom +cuda cuda_arch=80
-        - cuda@13
         - root
 
   view:
@@ -39,15 +60,6 @@ spack:
       root: /scratch/celeritas/tools
       group: tools
       link: run
-
-  toolchains:
-    llvm19:
-      - spec: "%c=llvm@19"
-        when: "%c"
-      - spec: "%cxx=llvm@19"
-        when: "%cxx"
-      - spec: "%fortran=gcc@12"
-        when: "%fortran"
 
   packages:
     bash:
