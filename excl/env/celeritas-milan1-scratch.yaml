@@ -1,42 +1,42 @@
 spack:
   include:
-  - excl.yaml
-  - celeritas-packages.yaml
+    - excl.yaml
+    - celeritas-packages.yaml
   specs:
-  - cli11
-  - ccache
-  - cmake
-  - nlohmann-json
-  - geant4
-  - git
-  - googletest
-  - py-pre-commit
-  - python
-  - covfie ~cuda
-  - g4vg
-  - hepmc3
-  - ninja
-  - vecgeom ~cuda
-  - git-lfs
-    # Additional
-    #- gh
-  - root
+    - cli11
+    - ccache
+    - cmake
+    - nlohmann-json
+    - geant4
+    - git
+    - googletest
+    - py-pre-commit
+    - python
+    - covfie ~cuda
+    - g4vg
+    - hepmc3
+    - ninja
+    - vecgeom ~cuda
+    - git-lfs
+      # Additional
+      #- gh
+    - root
   packages:
     bash:
       buildable: False
       externals:
-      - spec: bash@5.2.21
-        prefix: /usr
+        - spec: bash@5.2.21
+          prefix: /usr
     gcc:
       externals:
-      - spec: gcc@13.3.0 languages:='c,c++,fortran'
-        prefix: /usr
-        extra_attributes:
-          compilers:
-            c: /usr/bin/gcc-13
-            cxx: /usr/bin/g++-13
-            fortran: /usr/bin/gfortran-13
+        - spec: gcc@13.3.0 languages:='c,c++,fortran'
+          prefix: /usr
+          extra_attributes:
+            compilers:
+              c: /usr/bin/gcc-13
+              cxx: /usr/bin/g++-13
+              fortran: /usr/bin/gfortran-13
     all:
       target: [x86_64_v3]
       require:
-      - target=x86_64_v3
+        - target=x86_64_v3

@@ -1,59 +1,70 @@
 spack:
   include:
-  - excl.yaml
-  - celeritas-packages.yaml
+    - excl.yaml
+    - celeritas-packages.yaml
   specs:
-    - group: compiler
+    - group: tools
       specs:
-      - "llvm@19"
-    - group: libs
-      needs: [compiler]
-      specs:
-      - cli11
-      - ccache
-      - cmake
-      - nlohmann-json
-      - geant4
-      - git
-      - googletest
-      - py-pre-commit
-      - python
-      - covfie +cuda cuda_arch=80
-      - g4vg
-      - hepmc3
-      - ninja
-      - vecgeom +cuda cuda_arch=80
-      - git-lfs
-        # Additional
+        - ccache
+        - py-pre-commit
+        - cmake
+        - ninja
+        - git-lfs
+        - git
         #- gh
-      - cuda@13
-      - root
+        - libtree
+        - python
+        - llvm@19
+    - group: libs
+      needs: [tools]
+      specs:
+        - cli11
+        - nlohmann-json
+        - geant4
+        - googletest
+        - covfie +cuda cuda_arch=80
+        - g4vg
+        - hepmc3
+        - vecgeom +cuda cuda_arch=80
+        - cuda@13
+        - root
+
+  view:
+    default:
+      # Includes g4data, cuda
+      root: /scratch/celeritas/view
+      group: libs
+    tools:
+      # Excludes anything downstream of LLVM
+      root: /scratch/celeritas/tools
+      group: tools
+      link: run
 
   toolchains:
     llvm19:
-    - spec: '%c=llvm@19'
-      when: '%c'
-    - spec: '%cxx=llvm@19'
-      when: '%cxx'
-    - spec: '%fortran=gcc@12'
-      when: '%fortran'
+      - spec: "%c=llvm@19"
+        when: "%c"
+      - spec: "%cxx=llvm@19"
+        when: "%cxx"
+      - spec: "%fortran=gcc@12"
+        when: "%fortran"
 
   packages:
     bash:
-      buildable: False
+      buildable: false
       externals:
-      - spec: bash@5.2.21
-        prefix: /usr
+        - spec: bash@5.2.21
+          prefix: /usr
     gcc:
-      buildable: False
+      buildable: false
       externals:
-      - spec: gcc@12.3.0 languages:='c,c++'
-        prefix: /usr
-        extra_attributes:
-          compilers:
-            c: /usr/bin/gcc-12
-            cxx: /usr/bin/g++-12
+        - spec: gcc@12.3.0 languages:='c,c++'
+          prefix: /usr
+          extra_attributes:
+            compilers:
+              c: /usr/bin/gcc-12
+              cxx: /usr/bin/g++-12
     all:
       target: [x86_64_v3]
       require:
-      - "target=x86_64_v3"
+        - target=x86_64_v3
