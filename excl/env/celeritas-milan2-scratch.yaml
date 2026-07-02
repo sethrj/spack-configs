@@ -2,6 +2,7 @@ spack:
   include:
     - excl.yaml
     - celeritas-packages.yaml
+    - milan2.yaml
   specs:
     - cli11
     - ccache
@@ -20,22 +21,3 @@ spack:
     - git-lfs
     - cuda@12.9
     - root
-  packages:
-    bash:
-      buildable: false
-      externals:
-        - spec: bash@5.2.21
-          prefix: /usr
-    gcc:
-      externals:
-        - spec: gcc@13.3.0 languages:='c,c++,fortran'
-          prefix: /usr
-          extra_attributes:
-            compilers:
-              c: /usr/bin/gcc-13
-              cxx: /usr/bin/g++-13
-              fortran: /usr/bin/gfortran-13
-    all:
-      target: [x86_64_v3]
-      require:
-        - target=x86_64_v3

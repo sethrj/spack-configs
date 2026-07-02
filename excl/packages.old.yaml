@@ -1,0 +1,10 @@
+packages:
+  all:
+    prefer:
+    - "generator=ninja build_system=cmake"
+    - "build_type=Release"
+    - "cxxstd=20"
+    target: [x86_64_v3]
+    require:
+    - target=x86_64_v3
+

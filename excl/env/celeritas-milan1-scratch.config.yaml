@@ -51,27 +51,14 @@
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/spack.yaml:36                           c: /usr/bin/gcc-13
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/spack.yaml:37                           cxx: /usr/bin/g++-13
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/spack.yaml:38                           fortran: /usr/bin/gfortran-13
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:4                                                         - spec: gcc@11.4.0 languages:='c,c++,fortran'
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:5                                                           prefix: /usr
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:6                                                           extra_attributes:
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:7                                                             compilers:
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:8                                                               c: /usr/bin/gcc
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:9                                                               cxx: /usr/bin/g++
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:10                                                              fortran: /usr/bin/gfortran
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:11                                                        - spec: gcc@12.3.0 languages:='c,c++'
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:12                                                          prefix: /usr
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:13                                                          extra_attributes:
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:14                                                            compilers:
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:15                                                              c: /usr/bin/gcc-12
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:16                                                              cxx: /usr/bin/g++-12
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/spack.yaml:39                   all:
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/spack.yaml:40                     target: [x86_64_v3]
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/spack.yaml:41                     require:
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/spack.yaml:42                     - target=x86_64_v3
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/celeritas-packages.yaml:3         prefer:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/celeritas-packages.yaml:4         - generator=ninja build_system=cmake
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/celeritas-packages.yaml:5         - build_type=Release
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/celeritas-packages.yaml:6         - cxxstd=20
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:46                      prefer:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:47                      - generator=ninja build_system=cmake
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:48                      - build_type=Release
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:49                      - cxxstd=20
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:18                                          providers:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:19                                            awk: [gawk]
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:20                                            armci: [armcimpi]
@@ -166,10 +153,6 @@
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/celeritas-packages.yaml:42        - '@1.33:'
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/celeritas-packages.yaml:43        variants:
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/celeritas-packages.yaml:44        - ~utilityapps ~ddeve
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:17                                                      coreutils:
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:18                                                        externals:
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:19                                                        - spec: coreutils@9.4
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:20                                                          prefix: /usr
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:76                                        cce:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:77                                          buildable: False
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:78                                        cray-fftw:
@@ -210,10 +193,10 @@
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:113                                         buildable: False
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:113                                     compilers: []
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:113                                     concretizer:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:20                    unify: True
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:21                    targets:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:22                      granularity: generic
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:23                      host_compatible: True
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:22                    unify: True
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:23                    targets:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:24                      granularity: generic
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:25                      host_compatible: True
 /auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:18                                     reuse: True
 /auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:40                                     duplicates:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:45                                       strategy: minimal
@@ -250,15 +233,10 @@
 /auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:107                                  definitions: []
 /auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:107                                  env_vars: {}
 /auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:107                                  view:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:17                    default:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:18                      root: /scratch/celeritas/view
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:18                  develop: {}
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:18                  mirrors:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:11                    projects:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:12                      url: /auto/projects/celeritas/buildcache
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:13                      binary: True
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:14                      signed: False
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:15                      autopush: False
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:19                    default:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:20                      root: /scratch/celeritas/view
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:20                  develop: {}
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:20                  mirrors:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/mirrors.yaml:2                                          spack-public:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/mirrors.yaml:3                                            binary: False
 /auto/projects/celeritas/spack/etc/spack/defaults/base/mirrors.yaml:4                                            url: https://mirror.spack.io
@@ -365,17 +343,17 @@ _builtin                                                                        
 /auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:23                                          ci: {}
 /auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:23                                          cdash: {}
 /auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:23                                          toolchains:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:25                    gcc12:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:26                    - spec: '%c=gcc@12'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:27                      when: '%c'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:28                    - spec: '%cxx=gcc@12'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:29                      when: '%cxx'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:30                    - spec: '%fortran=gcc@12'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:31                      when: '%fortran'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:32                    gcc13:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:33                    - spec: '%c=gcc@13'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:34                      when: '%c'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:35                    - spec: '%cxx=gcc@13'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:36                      when: '%cxx'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:37                    - spec: '%fortran=gcc@13'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:38                      when: '%fortran'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:27                    gcc12:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:28                    - spec: '%c=gcc@12'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:29                      when: '%c'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:30                    - spec: '%cxx=gcc@12'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:31                      when: '%cxx'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:32                    - spec: '%fortran=gcc@12'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:33                      when: '%fortran'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:34                    gcc13:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:35                    - spec: '%c=gcc@13'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:36                      when: '%c'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:37                    - spec: '%cxx=gcc@13'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:38                      when: '%cxx'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:39                    - spec: '%fortran=gcc@13'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-milan1-scratch/excl.yaml:40                      when: '%fortran'

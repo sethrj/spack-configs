@@ -1,8 +1,8 @@
 config:
   install_tree:
     padded_length: 128
-      #root: /auto/projects/celeritas/opt
-    root: /scratch/celeritas/opt
+    root: /auto/projects/celeritas/opt
+      #root: /scratch/celeritas/opt
     projections:
       all: '{architecture.os}/{architecture.target}/{name}/{version}/{hash:7}'
   connect_timeout: 600

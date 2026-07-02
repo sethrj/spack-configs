@@ -7,12 +7,14 @@ config:
     root: /scratch/celeritas/opt
     projections:
       all: "{name}/{version}/{hash:7}"
-mirrors:
-  projects:
-    url: /auto/projects/celeritas/buildcache
-    binary: true
-    signed: false
-    autopush: false
+
+        # mirrors:
+        #   projects:
+        #     url: /auto/projects/celeritas/buildcache
+        #     binary: true
+        #     signed: false
+        #     autopush: false
+
 view:
   default:
     root: /scratch/celeritas/view
@@ -36,3 +38,12 @@ toolchains:
       when: "%cxx"
     - spec: "%fortran=gcc@13"
       when: "%fortran"
+packages:
+  all:
+    target: [x86_64_v3]
+    require:
+      - target=x86_64_v3
+    prefer:
+    - "generator=ninja build_system=cmake"
+    - "build_type=Release"
+    - "cxxstd=20"

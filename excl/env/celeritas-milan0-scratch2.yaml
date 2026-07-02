@@ -29,10 +29,16 @@ spack:
         - ninja
         - git-lfs
         - git
-        #- gh
         - libtree
         - python
         - cuda@13
+      override:
+        packages:
+          all:
+            target: [x86_64_v3]
+            require:
+              - target=x86_64_v3
+              - "%gcc12"
     - group: compilers
       needs: [tools]
       specs:
@@ -50,16 +56,26 @@ spack:
         - vecgeom +cuda cuda_arch=80
         - root
 
+  config:
+    concurrent_packages: 1
+    locks: false
+    build_jobs: 48
+    install_tree:
+      padded_length: 128
+      root: /scratch/celeritas/opt-temp
+
   view:
     default:
       # Includes g4data, cuda
-      root: /scratch/celeritas/view
-      group: libs
+      root: /scratch/celeritas/view-temp
+        #group: libs
+      select: ["%llvm"]
     tools:
       # Excludes anything downstream of LLVM
-      root: /scratch/celeritas/tools
-      group: tools
+      root: /scratch/celeritas/tools-temp
+        #group: tools
       link: run
+      exclude: ["%llvm"]
 
   packages:
     bash:
@@ -67,6 +83,10 @@ spack:
       externals:
         - spec: bash@5.2.21
           prefix: /usr
+    python:
+      variants: ["+libxml2"]
+    zstd:
+      variants: ["+programs"]
     gcc:
       buildable: false
       externals:

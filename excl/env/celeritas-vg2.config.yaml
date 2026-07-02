@@ -116,13 +116,7 @@ _builtin                                                                        
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-vg2/spack.yaml:40        - any_of: [cxxstd=20, '@:']
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-vg2/spack.yaml:41        - any_of: [build_system=cmake, '@:']
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-vg2/spack.yaml:42        - any_of: [build_type=Release, '@:']
-/auto/projects/celeritas/spack/etc/spack/site/packages.yaml:9                            - target=x86_64_v3
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-vg2/spack.yaml:45        variants: +cuda cuda_arch=90
-/auto/projects/celeritas/spack/etc/spack/site/packages.yaml:3                            prefer:
-/auto/projects/celeritas/spack/etc/spack/site/packages.yaml:4                            - generator=ninja build_system=cmake
-/auto/projects/celeritas/spack/etc/spack/site/packages.yaml:5                            - build_type=Release
-/auto/projects/celeritas/spack/etc/spack/site/packages.yaml:6                            - cxxstd=20
-/auto/projects/celeritas/spack/etc/spack/site/packages.yaml:7                            target: [x86_64_v3]
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:18                  providers:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:19                    awk: [gawk]
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:20                    armci: [armcimpi]
@@ -181,25 +175,6 @@ _builtin                                                                        
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:73                  permissions:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:74                    read: world
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:75                    write: user
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:2                               gcc:
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:3                                 externals:
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:4                                 - spec: gcc@11.4.0 languages:='c,c++,fortran'
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:5                                   prefix: /usr
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:6                                   extra_attributes:
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:7                                     compilers:
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:8                                       c: /usr/bin/gcc
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:9                                       cxx: /usr/bin/g++
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:10                                      fortran: /usr/bin/gfortran
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:11                                - spec: gcc@12.3.0 languages:='c,c++'
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:12                                  prefix: /usr
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:13                                  extra_attributes:
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:14                                    compilers:
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:15                                      c: /usr/bin/gcc-12
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:16                                      cxx: /usr/bin/g++-12
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:17                              coreutils:
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:18                                externals:
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:19                                - spec: coreutils@9.4
-/auto/projects/celeritas/spack/etc/spack/packages.yaml:20                                  prefix: /usr
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:76                cce:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:77                  buildable: False
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:78                cray-fftw:
