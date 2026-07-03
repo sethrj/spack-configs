@@ -1,28 +1,30 @@
 config:
-  concurrent_packages: 1
+  concurrent_packages: 8
   locks: false
   build_jobs: 48
   install_tree:
     padded_length: 128
-    root: /scratch/celeritas/opt
+    root: /scratch/celeritas/opt-temp
     projections:
       all: "{name}/{version}/{hash:7}"
 
-        # mirrors:
-        #   projects:
-        #     url: /auto/projects/celeritas/buildcache
-        #     binary: true
-        #     signed: false
-        #     autopush: false
+mirrors:
+  projects:
+    url: /auto/projects/celeritas/buildcache
+    binary: true
+    signed: false
+    autopush: false
 
 view:
   default:
     root: /scratch/celeritas/view
+
 concretizer:
   unify: true
   targets:
     granularity: generic
     host_compatible: true
+
 toolchains:
   gcc12:
     - spec: "%c=gcc@12"
@@ -38,12 +40,24 @@ toolchains:
       when: "%cxx"
     - spec: "%fortran=gcc@13"
       when: "%fortran"
+
 packages:
+  geant4:
+    variants:
+      - generator=ninja
+  covfie:
+    variants:
+      - generator=ninja
+        #  ninja:
+        #    prefer:
+        #      - ^python@3.10
+  root:
+    variants:
+      - generator=ninja
+  vecgeom:
+    variants:
+      - generator=ninja
   all:
     target: [x86_64_v3]
     require:
       - target=x86_64_v3
-    prefer:
-    - "generator=ninja build_system=cmake"
-    - "build_type=Release"
-    - "cxxstd=20"

@@ -1,98 +1,26 @@
 spack:
   include:
-    - excl.yaml
-    - celeritas-packages.yaml
+  - excl.yaml
+  - celeritas-packages.yaml
+  - milan0.yaml
 
-  toolchains:
-    llvm19:
-      - spec: "%c=llvm@19"
-        when: "%c"
-      - spec: "%cxx=llvm@19"
-        when: "%cxx"
-      - spec: "%fortran=gcc@12"
-        when: "%fortran"
-
-    gcc:
-      - spec: "%c=gcc@12"
-        when: "%c"
-      - spec: "%cxx=gcc@12"
-        when: "%cxx"
-      - spec: "%fortran=gcc@12"
-        when: "%fortran"
-      
   specs:
-    - group: tools
-      specs:
-        - ccache
-        - py-pre-commit
-        - cmake
-        - ninja
-        - git-lfs
-        - git
-        - libtree
-        - python
-        - cuda@13
-      override:
-        packages:
-          all:
-            target: [x86_64_v3]
-            require:
-              - target=x86_64_v3
-              - "%gcc12"
-    - group: compilers
-      needs: [tools]
-      specs:
-        - llvm@19
-    - group: libs
-      needs: [compilers]
-      specs:
-        - cli11
-        - nlohmann-json
-        - geant4
-        - googletest
-        - covfie +cuda cuda_arch=80
-        - g4vg
-        - hepmc3
-        - vecgeom +cuda cuda_arch=80
-        - root
+  - ccache
+  - py-pre-commit
+  - cmake
+  - ninja
+  - git-lfs
+  - git
+  - libtree
+  - python
+  - cuda@13
 
-  config:
-    concurrent_packages: 1
-    locks: false
-    build_jobs: 48
-    install_tree:
-      padded_length: 128
-      root: /scratch/celeritas/opt-temp
-
-  view:
-    default:
-      # Includes g4data, cuda
-      root: /scratch/celeritas/view-temp
-        #group: libs
-      select: ["%llvm"]
-    tools:
-      # Excludes anything downstream of LLVM
-      root: /scratch/celeritas/tools-temp
-        #group: tools
-      link: run
-      exclude: ["%llvm"]
-
-  packages:
-    bash:
-      buildable: false
-      externals:
-        - spec: bash@5.2.21
-          prefix: /usr
-    python:
-      variants: ["+libxml2"]
-    zstd:
-      variants: ["+programs"]
-    gcc:
-      buildable: false
-      externals:
-        - spec: gcc@12.3.0 languages:='c,c++'
-          prefix: /usr
-          extra_attributes:
-            compilers:
-              c: /usr/bin/gcc-12
-              cxx: /usr/bin/g++-12
+  - cli11
+  - nlohmann-json
+  - geant4
+  - googletest
+  - covfie +cuda cuda_arch=80
+  - g4vg
+  - hepmc3
+  - vecgeom +cuda cuda_arch=80
+  - root

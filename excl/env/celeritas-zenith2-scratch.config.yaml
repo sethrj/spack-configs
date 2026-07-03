@@ -56,10 +56,8 @@
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/spack.yaml:39                     target: [x86_64_v3]
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/spack.yaml:40                     require:
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/spack.yaml:41                     - target=x86_64_v3
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:46                      prefer:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:47                      - generator=ninja build_system=cmake
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:48                      - build_type=Release
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:49                      - cxxstd=20
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:3         prefer:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:4         - cxxstd=20
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:18                                           providers:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:19                                             awk: [gawk]
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:20                                             armci: [armcimpi]
@@ -118,42 +116,49 @@
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:73                                           permissions:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:74                                             read: world
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:75                                             write: user
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:7       cli11:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:8         require: '@2.4:'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:9       cmake:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:10        require: '@3.21:'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:11      nlohmann-json:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:12        require: '@3.7.0:'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:13      geant4:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:14        require: '@10.5:'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:15        version:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:16        - '11.3'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:17      googletest:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:18        require: '@1.10:'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:19      py-identify:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:20        require: '@2.6:'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:21      python:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:22        require: '@3.9:'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:23      covfie:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:24        require: '@0.13:'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:25      g4vg:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:26        require: '@1.0.3:'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:27      vecgeom:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:28        require:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:29        - '@1.2.10:'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:30        - +gdml
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:31        version:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:32        - '1'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:33      root:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:34        require:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:35        - '@6.28:'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:36        variants:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:39        - ~aqua ~davix ~examples ~opengl ~x ~tbb ~webgui +root7
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:40      dd4hep:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:41        require:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:42        - '@1.33:'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:43        variants:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:44        - ~utilityapps ~ddeve
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:45                    geant4:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:46                      variants:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:47                      - generator=ninja
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:12        require: '@10.5:'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:13        version:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:14        - '11.3'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:48                    covfie:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:49                      variants:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:50                      - generator=ninja
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:22        require: '@0.13:'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:54                    root:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:55                      variants:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:56                      - generator=ninja
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:37        - ~aqua ~davix ~examples ~opengl ~x ~tbb ~webgui +root7
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:32        require:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:33        - '@6.28:'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:57                    vecgeom:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:58                      variants:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:59                      - generator=ninja
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:26        require:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:27        - '@1.2.10:'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:28        - +gdml
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:29        version:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:30        - '1'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:5       cli11:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:6         require: '@2.4:'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:7       cmake:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:8         require: '@3.21:'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:9       nlohmann-json:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:10        require: '@3.7.0:'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:15      googletest:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:16        require: '@1.10:'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:17      py-identify:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:18        require: '@2.6:'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:19      python:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:20        require: '@3.9:'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:23      g4vg:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:24        require: '@1.0.3:'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:38      dd4hep:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:39        require:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:40        - '@1.33:'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:41        variants:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/celeritas-packages.yaml:42        - ~utilityapps ~ddeve
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:76                                         cce:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:77                                           buildable: False
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:78                                         cray-fftw:
@@ -194,10 +199,10 @@
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:113                                          buildable: False
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:113                                      compilers: []
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:113                                      concretizer:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:22                    unify: True
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:23                    targets:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:24                      granularity: generic
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:25                      host_compatible: True
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:23                    unify: True
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:24                    targets:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:25                      granularity: generic
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:26                      host_compatible: True
 /auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:18                                      reuse: True
 /auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:40                                      duplicates:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:45                                        strategy: minimal
@@ -238,6 +243,11 @@
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:20                      root: /scratch/celeritas/view
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:20                  develop: {}
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:20                  mirrors:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:12                    projects:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:13                      url: /auto/projects/celeritas/buildcache
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:14                      binary: True
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:15                      signed: False
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:16                      autopush: False
 /auto/projects/celeritas/spack/etc/spack/defaults/base/mirrors.yaml:2                                           spack-public:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/mirrors.yaml:3                                             binary: False
 /auto/projects/celeritas/spack/etc/spack/defaults/base/mirrors.yaml:4                                             url: https://mirror.spack.io
@@ -276,12 +286,12 @@
 /auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:54                                              hierarchy:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:55                                              - mpi
 /auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:55                                        config:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:2                     concurrent_packages: 1
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:2                     concurrent_packages: 8
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:3                     locks: False
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:4                     build_jobs: 48
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:5                     install_tree:
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:6                       padded_length: 128
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:7                       root: /scratch/celeritas/opt
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:7                       root: /scratch/celeritas/opt-temp
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:8                       projections:
 /auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:9                         all: '{name}/{version}/{hash:7}'
 /auto/projects/celeritas/spack/etc/spack/site/config.yaml:8                                                     connect_timeout: 600
@@ -344,17 +354,17 @@ _builtin                                                                        
 /auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:23                                           ci: {}
 /auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:23                                           cdash: {}
 /auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:23                                           toolchains:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:27                    gcc12:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:28                    - spec: '%c=gcc@12'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:29                      when: '%c'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:30                    - spec: '%cxx=gcc@12'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:31                      when: '%cxx'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:32                    - spec: '%fortran=gcc@12'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:33                      when: '%fortran'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:34                    gcc13:
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:35                    - spec: '%c=gcc@13'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:36                      when: '%c'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:37                    - spec: '%cxx=gcc@13'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:38                      when: '%cxx'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:39                    - spec: '%fortran=gcc@13'
-/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:40                      when: '%fortran'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:29                    gcc12:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:30                    - spec: '%c=gcc@12'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:31                      when: '%c'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:32                    - spec: '%cxx=gcc@12'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:33                      when: '%cxx'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:34                    - spec: '%fortran=gcc@12'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:35                      when: '%fortran'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:36                    gcc13:
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:37                    - spec: '%c=gcc@13'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:38                      when: '%c'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:39                    - spec: '%cxx=gcc@13'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:40                      when: '%cxx'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:41                    - spec: '%fortran=gcc@13'
+/auto/projects/celeritas/spack/var/spack/environments/celeritas-zenith2-scratch/excl.yaml:42                      when: '%fortran'
