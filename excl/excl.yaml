@@ -4,7 +4,7 @@ config:
   build_jobs: 48
   install_tree:
     padded_length: 128
-    root: /scratch/celeritas/opt-temp
+    root: /scratch/celeritas/opt
     projections:
       all: "{name}/{version}/{hash:7}"
 
@@ -25,22 +25,6 @@ concretizer:
     granularity: generic
     host_compatible: true
 
-toolchains:
-  gcc12:
-    - spec: "%c=gcc@12"
-      when: "%c"
-    - spec: "%cxx=gcc@12"
-      when: "%cxx"
-    - spec: "%fortran=gcc@12"
-      when: "%fortran"
-  gcc13:
-    - spec: "%c=gcc@13"
-      when: "%c"
-    - spec: "%cxx=gcc@13"
-      when: "%cxx"
-    - spec: "%fortran=gcc@13"
-      when: "%fortran"
-
 packages:
   geant4:
     variants:
@@ -48,9 +32,6 @@ packages:
   covfie:
     variants:
       - generator=ninja
-        #  ninja:
-        #    prefer:
-        #      - ^python@3.10
   root:
     variants:
       - generator=ninja

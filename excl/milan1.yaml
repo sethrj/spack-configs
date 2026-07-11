@@ -6,12 +6,6 @@ packages:
   gcc:
     buildable: false
     externals:
-      - spec: gcc@12.3.0 languages:='c,c++'
-        prefix: /usr
-        extra_attributes:
-          compilers:
-            c: /usr/bin/gcc-12
-            cxx: /usr/bin/g++-12
       - spec: gcc@13.3.0 languages:='c,c++,fortran'
         prefix: /usr
         extra_attributes:
@@ -19,3 +13,12 @@ packages:
             c: /usr/bin/gcc-13
             cxx: /usr/bin/g++-13
             fortran: /usr/bin/gfortran-13
+
+toolchains:
+  gcc13:
+    - spec: "%c=gcc@13"
+      when: "%c"
+    - spec: "%cxx=gcc@13"
+      when: "%cxx"
+    - spec: "%fortran=gcc@13"
+      when: "%fortran"

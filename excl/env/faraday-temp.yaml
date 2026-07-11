@@ -1,0 +1,41 @@
+spack:
+  include:
+    - excl.yaml
+    - celeritas-packages.yaml
+    - faraday.yaml
+
+  concretizer:
+    unify: false
+
+  view:
+    libs:
+      root: /scratch/celeritas/view-libs
+      select: ["%rocm7"]
+      projections:
+        all: "{compiler.name}/{name}"
+
+    tools:
+      root: /scratch/celeritas/view-tools
+      exclude: ["%rocm7"]
+      link: run
+
+  specs:
+    - ccache %gcc13
+    - py-pre-commit %gcc13
+    - cmake %gcc13
+    - ninja %gcc13
+    - git-lfs %gcc13
+    - git %gcc13
+    - libtree %gcc13
+    - python %gcc13
+
+    - llvm-amdgpu
+
+    - cli11 %rocm7
+    - nlohmann-json %rocm7
+    - geant4 %rocm7
+    - googletest %rocm7
+    - covfie +rocm amdgpu_target=gfx942 %rocm7
+    - g4vg %rocm7
+    - hepmc3 %rocm7
+    - root %rocm7
