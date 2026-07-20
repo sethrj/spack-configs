@@ -1,0 +1,579 @@
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:1                spack:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:2                  include:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:3                  - excl.yaml
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:4                  - celeritas-packages.yaml
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:5                  - faraday.yaml
+/auto/projects/celeritas/spack/etc/spack/include.yaml:3                                          - name: user
+/auto/projects/celeritas/spack/etc/spack/include.yaml:4                                            path_override_env_var: SPACK_USER_CONFIG_PATH
+/auto/projects/celeritas/spack/etc/spack/include.yaml:5                                            path: ~/.spack
+/auto/projects/celeritas/spack/etc/spack/include.yaml:6                                            optional: True
+/auto/projects/celeritas/spack/etc/spack/include.yaml:7                                            prefer_modify: True
+/auto/projects/celeritas/spack/etc/spack/include.yaml:8                                            when: '"SPACK_DISABLE_LOCAL_CONFIG" not in env'
+/auto/projects/celeritas/spack/etc/spack/include.yaml:11                                         - name: site
+/auto/projects/celeritas/spack/etc/spack/include.yaml:12                                           path: $spack/etc/spack/site
+/auto/projects/celeritas/spack/etc/spack/include.yaml:13                                           optional: True
+/auto/projects/celeritas/spack/etc/spack/include.yaml:16                                         - name: system
+/auto/projects/celeritas/spack/etc/spack/include.yaml:17                                           path_override_env_var: SPACK_SYSTEM_CONFIG_PATH
+/auto/projects/celeritas/spack/etc/spack/include.yaml:18                                           path: /etc/spack
+/auto/projects/celeritas/spack/etc/spack/include.yaml:19                                           optional: True
+/auto/projects/celeritas/spack/etc/spack/include.yaml:20                                           when: '"SPACK_DISABLE_LOCAL_CONFIG" not in env'
+/auto/projects/celeritas/spack/etc/spack/defaults/include.yaml:3                                 - path: ${platform}
+/auto/projects/celeritas/spack/etc/spack/defaults/include.yaml:4                                   optional: True
+/auto/projects/celeritas/spack/etc/spack/defaults/include.yaml:7                                 - path: base
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:7                  concretizer:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:8                    unify: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:24                    targets:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:25                      granularity: generic
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:26                      host_compatible: True
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:18                         reuse: True
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:40                         duplicates:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:45                           strategy: minimal
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:48                           max_dupes:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:49                             default: 1
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:51                             c: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:52                             cxx: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:53                             fortran: 1
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:55                             cmake: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:56                             gmake: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:57                             python: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:58                             python-venv: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:59                             py-cython: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:60                             py-flit-core: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:61                             py-pip: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:62                             py-setuptools: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:63                             py-setuptools-scm: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:64                             py-versioneer: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:65                             py-wheel: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:66                             xcb-proto: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:68                             gcc: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:69                             llvm: 2
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:74                         os_compatible: {}
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:78                         compiler_mixing: True
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:82                         splice:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:83                           explicit: []
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:84                           automatic: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:86                         timeout: 0
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:92                         error_on_timeout: True
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:96                         static_analysis: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:100                        concretization_cache:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:101                          enable: True
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:104                        externals:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/concretizer.yaml:108                          completion: default_variants
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:10                 view:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:11                   libs:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:12                     root: /scratch/celeritas/view-libs
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:13                     select: ['%rocm7']
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:14                     projections:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:15                       all: '{compiler.name}/{name}'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:17                   tools:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:18                     root: /scratch/celeritas/view-tools
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:19                     exclude: ['%rocm7']
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:20                     link: run
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:22                 specs:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:23                 - ccache %gcc13
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:24                 - py-pre-commit %gcc13
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:25                 - cmake %gcc13
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:26                 - ninja %gcc13
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:27                 - git-lfs %gcc13
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:28                 - git %gcc13
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:29                 - libtree %gcc13
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:30                 - python %gcc13
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:32                 - llvm-amdgpu
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:34                 - cli11 %rocm7
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:35                 - nlohmann-json %rocm7
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:36                 - geant4 %rocm7
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:37                 - googletest %rocm7
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:38                 - covfie +rocm amdgpu_target=gfx942 %rocm7
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:39                 - g4vg %rocm7
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:40                 - hepmc3 %rocm7
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:41                 - root %rocm7
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:41                 compilers: []
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:41                 definitions: []
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:41                 env_vars: {}
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:41                 develop: {}
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:41                 mirrors:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:12                    projects:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:13                      url: /auto/projects/celeritas/buildcache
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:14                      binary: True
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:15                      signed: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:16                      autopush: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/mirrors.yaml:2                              spack-public:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/mirrors.yaml:3                                binary: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/mirrors.yaml:4                                url: https://mirror.spack.io
+/auto/projects/celeritas/spack/etc/spack/defaults/base/mirrors.yaml:4                            repos:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/repos.yaml:14                               builtin:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/repos.yaml:15                                 git: https://github.com/spack/spack-packages.git
+/auto/projects/celeritas/spack/etc/spack/defaults/base/repos.yaml:15                             packages:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:29                    geant4:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:30                      variants:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:31                      - generator=ninja
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:12        require: '@10.5:'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:13        version:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:14        - '11.3'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:32                    covfie:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:33                      variants:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:34                      - generator=ninja
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:22        require: '@0.13:'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:35                    root:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:36                      variants:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:37                      - generator=ninja
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:37        - ~aqua ~davix ~examples ~opengl ~x ~tbb ~webgui +root7
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:32        require:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:33        - '@6.28:'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:38                    vecgeom:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:39                      variants:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:40                      - generator=ninja
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:26        require:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:27        - '@1.2.10:'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:28        - +gdml
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:29        version:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:30        - '1'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:41                    all:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:42                      target: [x86_64_v3]
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:43                      require:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:44                      - target=x86_64_v3
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:3         prefer:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:4         - cxxstd=20
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:18                              providers:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:19                                awk: [gawk]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:20                                armci: [armcimpi]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:21                                blas: [openblas]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:22                                c: [gcc, llvm, intel-oneapi-compilers]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:23                                cuda-lang: [cuda]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:24                                cxx: [gcc, llvm, intel-oneapi-compilers]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:25                                daal: [intel-oneapi-daal]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:26                                elf: [elfutils]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:27                                fftw-api: [fftw, amdfftw]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:28                                flame: [libflame, amdlibflame]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:29                                fortran: [gcc, llvm, intel-oneapi-compilers]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:30                                fortran-rt: [gcc-runtime, intel-oneapi-runtime]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:31                                fuse: [libfuse]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:32                                gl: [glx, osmesa]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:33                                glu: [mesa-glu, openglu]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:34                                golang: [go, gcc]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:35                                go-or-gccgo-bootstrap: [go-bootstrap, gcc]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:36                                hip-lang: [llvm-amdgpu]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:37                                iconv: [libiconv]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:38                                ipp: [intel-oneapi-ipp]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:39                                java: [openjdk, jdk]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:40                                jpeg: [libjpeg-turbo, libjpeg]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:41                                lapack: [openblas]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:42                                libc: [glibc, musl]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:43                                libgfortran: [gcc-runtime]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:44                                libglx: [mesa+glx]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:45                                libifcore: [intel-oneapi-runtime]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:46                                libllvm: [llvm]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:47                                lua-lang: [lua, lua-luajit-openresty, lua-luajit]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:48                                luajit: [lua-luajit-openresty, lua-luajit]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:49                                mariadb-client: [mariadb-c-client, mariadb]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:50                                mkl: [intel-oneapi-mkl]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:51                                mpe: [mpe2]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:52                                mpi: [openmpi, mpich]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:53                                mysql-client: [mysql, mariadb-c-client]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:54                                opencl: [pocl]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:55                                onedal: [intel-oneapi-dal]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:56                                pbs: [openpbs, torque]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:57                                pil: [py-pillow]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:58                                pkgconfig: [pkgconf, pkg-config]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:59                                qmake: [qt-base, qt]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:60                                rpc: [libtirpc]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:61                                scalapack: [netlib-scalapack, amdscalapack]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:62                                sycl: [hipsycl]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:63                                szip: [libaec, libszip]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:64                                tbb: [intel-tbb]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:65                                unwind: [libunwind]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:66                                uuid: [util-linux-uuid, libuuid]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:67                                wasi-sdk: [wasi-sdk-prebuilt]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:68                                xkbdata-api: [xkeyboard-config, xkbdata]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:69                                xxd: [xxd-standalone, vim]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:70                                yacc: [bison, byacc]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:71                                ziglang: [zig]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:72                                zlib-api: [zlib-ng+compat, zlib]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:73                              permissions:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:74                                read: world
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:75                                write: user
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:5       cli11:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:6         require: '@2.4:'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:7       cmake:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:8         require: '@3.21:'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:9       nlohmann-json:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:10        require: '@3.7.0:'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:15      googletest:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:16        require: '@1.10:'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:17      py-identify:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:18        require: '@2.6:'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:19      python:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:20        require: '@3.9:'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:23      g4vg:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:24        require: '@1.0.3:'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:38      dd4hep:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:39        require:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:40        - '@1.33:'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:41        variants:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:42        - ~utilityapps ~ddeve
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:4                  libllvm:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:5                    buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:6                  c:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:7                    buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:8                  fortran:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:9                    buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:10                 cxx:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:11                   buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:12                 rocprofiler-register:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:13                   externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:14                   - spec: rocprofiler-register@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:15                     prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:16                   buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:17                 mivisionx:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:18                   externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:19                   - spec: mivisionx@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:20                     prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:21                   buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:22                 rocprofiler-systems:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:23                   externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:24                   - spec: rocprofiler-systems@7.2
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:25                     prefix: /usr
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:26                   buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:27                 rocrand:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:28                   externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:29                   - spec: rocrand@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:30                     prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:31                   buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:32                 composable-kernel:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:33                   externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:34                   - spec: composable-kernel@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:35                     prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:36                   buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:37                 hsa-amd-aqlprofile:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:38                   externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:39                   - spec: hsa-amd-aqlprofile@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:40                     prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:41                   buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:42                 rocblas:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:43                   externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:44                   - spec: rocblas@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:45                     prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:46                   buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:47                 rocsparse:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:48                   externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:49                   - spec: rocsparse@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:50                     prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:51                   buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:52                 miopen-hip:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:53                   externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:54                   - spec: miopen-hip@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:55                     prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:56                   buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:57                 rocm-smi-lib:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:58                   externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:59                   - spec: rocm-smi-lib@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:60                     prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:61                   buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:62                 hipfft:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:63                   externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:64                   - spec: hipfft@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:65                     prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:66                   buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:67                 rocm-debug-agent:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:68                   externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:69                   - spec: rocm-debug-agent@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:70                     prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:71                   buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:72                 rccl:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:73                   externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:74                   - spec: rccl@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:75                     prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:76                   buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:77                 hip-tensor:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:78                   externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:79                   - spec: hip-tensor@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:80                     prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:81                   buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:82                 hipsolver:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:83                   externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:84                   - spec: hipsolver@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:85                     prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:86                   buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:87                 hsa-rocr-dev:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:88                   externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:89                   - spec: hsa-rocr-dev@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:90                     prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:91                   buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:92                 migraphx:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:93                   externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:94                   - spec: migraphx@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:95                     prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:96                   buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:97                 hipblaslt:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:98                   externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:99                   - spec: hipblaslt@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:100                    prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:101                  buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:102                rocm-opencl:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:103                  externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:104                  - spec: rocm-opencl@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:105                    prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:106                  buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:107                hipsparselt:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:108                  externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:109                  - spec: hipsparselt@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:110                    prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:111                  buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:112                hipblas:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:113                  externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:114                  - spec: hipblas@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:115                    prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:116                  buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:117                hipsparse:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:118                  externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:119                  - spec: hipsparse@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:120                    prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:121                  buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:122                rocalution:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:123                  externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:124                  - spec: rocalution@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:125                    prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:126                  buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:127                rocsolver:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:128                  externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:129                  - spec: rocsolver@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:130                    prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:131                  buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:132                rocal:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:133                  externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:134                  - spec: rocal@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:135                    prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:136                  buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:137                amdsmi:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:138                  externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:139                  - spec: amdsmi@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:140                    prefix: /usr
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:141                  buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:142                rocprofiler-sdk:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:143                  externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:144                  - spec: rocprofiler-sdk@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:145                    prefix: /usr
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:146                  buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:147                roctracer-dev:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:148                  externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:149                  - spec: roctracer-dev@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:150                    prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:151                  buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:152                hipfort:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:153                  externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:154                  - spec: hipfort@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:155                    prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:156                  buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:157                hip:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:158                  externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:159                  - spec: hip@3.19.21
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:160                    prefix: /usr
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:161                  - spec: hip@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:162                    prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:163                  buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:164                rocm-dbgapi:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:165                  externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:166                  - spec: rocm-dbgapi@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:167                    prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:168                  buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:169                rocfft:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:170                  externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:171                  - spec: rocfft@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:172                    prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:173                  buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:174                rocprofiler-dev:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:175                  externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:176                  - spec: rocprofiler-dev@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:177                    prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:178                  buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:179                rocm-core:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:180                  externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:181                  - spec: rocm-core@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:182                    prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:183                  buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:184                rpp:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:185                  externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:186                  - spec: rpp@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:187                    prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:188                  buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:189                llvm-amdgpu:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:190                  externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:191                  - spec: llvm-amdgpu@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:192                    prefix: /opt/rocm-7.2.0/lib/llvm
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:193                    extra_attributes:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:194                      compilers:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:195                        c: /opt/rocm-7.2.0/lib/llvm/bin/amdclang
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:196                        cxx: /opt/rocm-7.2.0/lib/llvm/bin/amdclang++
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:197                        fortran: /opt/rocm-7.2.0/lib/llvm/bin/amdflang
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:198                  buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:199                hiprand:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:200                  externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:201                  - spec: hiprand@7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:202                    prefix: /opt/rocm-7.2.0
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:203                  buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:206                bash:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:207                  externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:208                  - spec: bash@5.2.21
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:209                    prefix: /usr
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:210                gcc:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:211                  buildable: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:212                  externals:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:213                  - spec: gcc@13.3.0 languages:='c,c++,fortran'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:214                    prefix: /usr
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:215                    extra_attributes:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:216                      compilers:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:217                        c: /usr/bin/gcc-13
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:218                        cxx: /usr/bin/g++-13
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:219                        fortran: /usr/bin/gfortran-13
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:76                            cce:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:77                              buildable: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:78                            cray-fftw:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:79                              buildable: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:80                            cray-libsci:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:81                              buildable: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:82                            cray-mpich:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:83                              buildable: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:84                            cray-mvapich2:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:85                              buildable: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:86                            cray-pmi:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:87                              buildable: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:88                            egl:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:89                              buildable: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:90                            essl:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:91                              buildable: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:92                            fj:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:93                              buildable: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:94                            fujitsu-mpi:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:95                              buildable: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:96                            fujitsu-ssl2:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:97                              buildable: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:98                            glibc:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:99                              buildable: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:100                           hpcx-mpi:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:101                             buildable: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:102                           iconv:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:103                             prefer: [libiconv]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:104                           mpt:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:105                             buildable: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:106                           musl:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:107                             buildable: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:108                           opengl:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:109                             buildable: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:110                           spectrum-mpi:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:111                             buildable: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:112                           xl:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:113                             buildable: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:113                         modules:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:19                             prefix_inspections:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:20                               ./bin:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:21                               - PATH
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:22                               ./man:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:23                               - MANPATH
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:24                               ./share/man:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:25                               - MANPATH
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:26                               ./share/aclocal:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:27                               - ACLOCAL_PATH
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:28                               ./lib/pkgconfig:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:29                               - PKG_CONFIG_PATH
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:30                               ./lib64/pkgconfig:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:31                               - PKG_CONFIG_PATH
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:32                               ./share/pkgconfig:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:33                               - PKG_CONFIG_PATH
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:34                               ./:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:35                               - CMAKE_PREFIX_PATH
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:38                             default:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:40                               roots:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:41                                 tcl: $spack/share/spack/modules
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:42                                 lmod: $spack/share/spack/lmod
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:44                               enable: []
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:46                               tcl:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:47                                 all:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:48                                   autoload: direct
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:51                               lmod:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:52                                 all:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:53                                   autoload: direct
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:54                                 hierarchy:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:55                                 - mpi
+/auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:55                           config:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:2                     concurrent_packages: 8
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:3                     locks: False
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:4                     build_jobs: 48
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:5                     install_tree:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:6                       padded_length: 128
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:7                       root: /scratch/celeritas/opt
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:8                       projections:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:9                         all: '{compiler.name}/{name}/{version}/{hash:7}'
+/auto/projects/celeritas/spack/etc/spack/site/config.yaml:8                                        connect_timeout: 600
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:33                              template_dirs:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:34                              - $spack/share/spack/templates
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:37                              license_dir: $spack/etc/spack/licenses
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:69                              build_stage:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:70                              - $tempdir/$user/spack-stage
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:71                              - $user_cache_path/stage
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:75                              stage_name: spack-stage-{name}-{version}-{hash}
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:80                              test_stage: $user_cache_path/test
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:84                              source_cache: $spack/var/spack/cache
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:93                              misc_cache: $user_cache_path/cache
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:102                             verify_ssl: True
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:108                             ssl_certs: $SSL_CERT_FILE
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:116                             suppress_gpg_warnings: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:121                             checksum: True
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:126                             deprecated: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:131                             dirty: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:139                             build_language: C
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:153                             url_fetch_method: urllib
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:171                             installer: new
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:179                             sandbox:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:180                               enable: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:182                               allow_network: True
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:184                               allow_read: []
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:186                               allow_write: []
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:189                             ccache: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:195                             db_lock_timeout: 60
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:203                             package_lock_timeout: null
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:208                             shared_linking:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:213                               type: rpath
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:219                               bind: False
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:225                               missing_library_policy: ignore
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:230                             allow_sgid: True
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:236                             install_status: True
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:240                             binary_index_ttl: 600
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:242                             flags:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:244                               keep_werror: none
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:249                             aliases:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:250                               concretise: concretize
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:251                               containerise: containerize
+/auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:252                               rm: remove
+_builtin                                                                                           debug: False
+_builtin                                                                                         upstreams: {}
+_builtin                                                                                         bootstrap:
+/auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:4                                 enable: True
+/auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:7                                 root: $user_cache_path/bootstrap
+/auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:11                                sources:
+/auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:12                                - name: github-actions-v2
+/auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:13                                  metadata: $spack/share/spack/bootstrap/github-actions-v2
+/auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:14                                - name: github-actions-v0.6
+/auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:15                                  metadata: $spack/share/spack/bootstrap/github-actions-v0.6
+/auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:16                                - name: spack-install
+/auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:17                                  metadata: $spack/share/spack/bootstrap/spack-install
+/auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:18                                trusted:
+/auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:21                                  github-actions-v2: True
+/auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:22                                  github-actions-v0.6: True
+/auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:23                                  spack-install: True
+/auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:23                              ci: {}
+/auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:23                              cdash: {}
+/auto/projects/celeritas/spack/etc/spack/defaults/bootstrap.yaml:23                              toolchains:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:222                rocm7:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:223                - spec: '%c=rocmcc@7'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:224                  when: '%c'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:225                - spec: '%cxx=rocmcc@7'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:226                  when: '%cxx'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:227                - spec: '%fortran=gcc@13'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:228                  when: '%fortran'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:229                gcc13:
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:230                - spec: '%c=gcc@13'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:231                  when: '%c'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:232                - spec: '%cxx=gcc@13'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:233                  when: '%cxx'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:234                - spec: '%fortran=gcc@13'
+/auto/projects/celeritas/spack/var/spack/environments/faraday-temp/faraday.yaml:235                  when: '%fortran'

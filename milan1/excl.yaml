@@ -1,0 +1,47 @@
+config:
+  concurrent_packages: 8
+  locks: false
+  build_jobs: 48
+  install_tree:
+    padded_length: 128
+    root: /scratch/celeritas/opt
+    projections:
+      all: "{name}/{version}/{hash:7}"
+
+mirrors:
+  projects:
+    url: /auto/projects/celeritas/buildcache
+    binary: true
+    signed: false
+    autopush: false
+
+view:
+  default:
+    root: /scratch/celeritas/view
+
+concretizer:
+  unify: true
+  targets:
+    granularity: generic
+    host_compatible: true
+
+packages:
+  geant4:
+    variants:
+      - generator=ninja
+  covfie:
+    variants:
+      - generator=ninja
+  root:
+    variants:
+      - generator=ninja
+  vecgeom:
+    variants:
+      - generator=ninja
+  python:
+    version:
+      - "3.14" # spack installation July 2026
+  all:
+    target: [x86_64_v3]
+    require:
+      - target=x86_64_v3
