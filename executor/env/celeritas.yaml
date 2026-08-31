@@ -1,36 +1,38 @@
 spack:
+  include:
+    - celeritas-packages.yaml
   specs:
-  # Packages required for a *truly minimal* build
-  - cli11
-  - cmake
-  - nlohmann-json
-  # ... plus packages required for *basic* realistic development
-  - geant4
-  - git
-  - googletest
-  - py-pre-commit
-  - python
-  # ... plus *recommended* options
-  - covfie
-  - g4vg
-  - hepmc3
-  - ninja
-  - vecgeom
-  # Uncomment the following lines for additional supported optional packages
-  - root
-  # documentation
-  - doxygen
-  - py-breathe
-  - py-furo
-  - py-sphinx
-  - py-sphinxcontrib-bibtex
-  # experimental
-  - dd4hep
-  #- mpi
-  # Utilities
-  - git-lfs
-  - gh
-  - py-gcovr
+    # Packages required for a *truly minimal* build
+    - cli11
+    - cmake
+    - nlohmann-json
+    # ... plus packages required for *basic* realistic development
+    - geant4
+    - git
+    - googletest
+    - py-pre-commit
+    - python
+    # ... plus *recommended* options
+    - covfie
+    - g4vg
+    - hepmc3
+    - ninja
+    - vecgeom
+    # Uncomment the following lines for additional supported optional packages
+    - root
+    # documentation
+    - doxygen
+    - py-breathe
+    - py-furo
+    - py-sphinx
+    - py-sphinxcontrib-bibtex
+    # experimental
+    #- dd4hep
+    #- mpi
+    # Utilities
+    - git-lfs
+    - gh
+    - py-gcovr
   view: true
   concretizer:
     unify: true

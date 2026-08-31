@@ -1,0 +1,594 @@
+/opt/spack/var/spack/environments/celeritas/spack.yaml:1                spack:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:2                  include:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:3                  - celeritas-packages.yaml
+/opt/spack/etc/spack/include.yaml:3                                       - name: user
+/opt/spack/etc/spack/include.yaml:4                                         path_override_env_var: SPACK_USER_CONFIG_PATH
+/opt/spack/etc/spack/include.yaml:5                                         path: ~/.spack
+/opt/spack/etc/spack/include.yaml:6                                         optional: True
+/opt/spack/etc/spack/include.yaml:7                                         prefer_modify: True
+/opt/spack/etc/spack/include.yaml:8                                         when: '"SPACK_DISABLE_LOCAL_CONFIG" not in env'
+/opt/spack/etc/spack/include.yaml:11                                      - name: site
+/opt/spack/etc/spack/include.yaml:12                                        path: $spack/etc/spack/site
+/opt/spack/etc/spack/include.yaml:13                                        optional: True
+/opt/spack/etc/spack/include.yaml:16                                      - name: system
+/opt/spack/etc/spack/include.yaml:17                                        path_override_env_var: SPACK_SYSTEM_CONFIG_PATH
+/opt/spack/etc/spack/include.yaml:18                                        path: /etc/spack
+/opt/spack/etc/spack/include.yaml:19                                        optional: True
+/opt/spack/etc/spack/include.yaml:20                                        when: '"SPACK_DISABLE_LOCAL_CONFIG" not in env'
+/opt/spack/etc/spack/defaults/include.yaml:3                              - path: ${platform}
+/opt/spack/etc/spack/defaults/include.yaml:4                                optional: True
+/opt/spack/etc/spack/defaults/include.yaml:7                              - path: base
+/opt/spack/var/spack/environments/celeritas/spack.yaml:4                  specs:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:6                  - cli11
+/opt/spack/var/spack/environments/celeritas/spack.yaml:7                  - cmake
+/opt/spack/var/spack/environments/celeritas/spack.yaml:8                  - nlohmann-json
+/opt/spack/var/spack/environments/celeritas/spack.yaml:10                 - geant4
+/opt/spack/var/spack/environments/celeritas/spack.yaml:11                 - git
+/opt/spack/var/spack/environments/celeritas/spack.yaml:12                 - googletest
+/opt/spack/var/spack/environments/celeritas/spack.yaml:13                 - py-pre-commit
+/opt/spack/var/spack/environments/celeritas/spack.yaml:14                 - python
+/opt/spack/var/spack/environments/celeritas/spack.yaml:16                 - covfie
+/opt/spack/var/spack/environments/celeritas/spack.yaml:17                 - g4vg
+/opt/spack/var/spack/environments/celeritas/spack.yaml:18                 - hepmc3
+/opt/spack/var/spack/environments/celeritas/spack.yaml:19                 - ninja
+/opt/spack/var/spack/environments/celeritas/spack.yaml:20                 - vecgeom
+/opt/spack/var/spack/environments/celeritas/spack.yaml:22                 - root
+/opt/spack/var/spack/environments/celeritas/spack.yaml:24                 - doxygen
+/opt/spack/var/spack/environments/celeritas/spack.yaml:25                 - py-breathe
+/opt/spack/var/spack/environments/celeritas/spack.yaml:26                 - py-furo
+/opt/spack/var/spack/environments/celeritas/spack.yaml:27                 - py-sphinx
+/opt/spack/var/spack/environments/celeritas/spack.yaml:28                 - py-sphinxcontrib-bibtex
+/opt/spack/var/spack/environments/celeritas/spack.yaml:33                 - git-lfs
+/opt/spack/var/spack/environments/celeritas/spack.yaml:34                 - gh
+/opt/spack/var/spack/environments/celeritas/spack.yaml:35                 - py-gcovr
+/opt/spack/var/spack/environments/celeritas/spack.yaml:36                 view: True
+/opt/spack/var/spack/environments/celeritas/spack.yaml:37                 concretizer:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:38                   unify: True
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:18                      reuse: True
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:23                      targets:
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:28                        granularity: microarchitectures
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:32                        host_compatible: True
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:40                      duplicates:
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:45                        strategy: minimal
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:48                        max_dupes:
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:49                          default: 1
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:51                          c: 2
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:52                          cxx: 2
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:53                          fortran: 1
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:55                          cmake: 2
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:56                          gmake: 2
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:57                          python: 2
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:58                          python-venv: 2
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:59                          py-cython: 2
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:60                          py-flit-core: 2
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:61                          py-pip: 2
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:62                          py-setuptools: 2
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:63                          py-setuptools-scm: 2
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:64                          py-versioneer: 2
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:65                          py-wheel: 2
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:66                          xcb-proto: 2
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:68                          gcc: 2
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:69                          llvm: 2
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:74                      os_compatible: {}
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:78                      compiler_mixing: True
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:82                      splice:
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:83                        explicit: []
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:84                        automatic: False
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:86                      timeout: 0
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:92                      error_on_timeout: True
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:96                      static_analysis: False
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:100                     concretization_cache:
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:101                       enable: True
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:104                     externals:
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:108                       completion: default_variants
+/opt/spack/var/spack/environments/celeritas/spack.yaml:41                 packages:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:42                   all:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:43                     prefer:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:44                     - generator=ninja
+/opt/spack/var/spack/environments/celeritas/spack.yaml:45                     - build_system=cmake
+/opt/spack/var/spack/environments/celeritas/spack.yaml:46                     - build_type=Release
+/opt/spack/var/spack/environments/celeritas/spack.yaml:47                     - cxxstd=20
+/opt/spack/var/spack/environments/celeritas/spack.yaml:48                     - ~openmp
+/opt/spack/var/spack/environments/celeritas/celeritas-packages.yaml:4         - generator=ninja build_system=cmake
+/opt/spack/etc/spack/packages.yaml:224                                        providers:
+/opt/spack/etc/spack/defaults/base/packages.yaml:52                             mpi: [openmpi, mpich]
+/opt/spack/etc/spack/defaults/base/packages.yaml:22                             c: [apple-clang, llvm, gcc, intel-oneapi-compilers]
+/opt/spack/etc/spack/defaults/base/packages.yaml:24                             cxx: [apple-clang, llvm, gcc, intel-oneapi-compilers]
+/opt/spack/etc/spack/defaults/base/packages.yaml:26                             elf: [libelf, elfutils]
+/opt/spack/etc/spack/defaults/base/packages.yaml:29                             fortran: [gcc, llvm, intel-oneapi-compilers]
+/opt/spack/etc/spack/defaults/base/packages.yaml:31                             fuse: [macfuse, libfuse]
+/opt/spack/etc/spack/defaults/base/packages.yaml:32                             gl: [apple-gl, glx, osmesa]
+/opt/spack/etc/spack/defaults/base/packages.yaml:33                             glu: [apple-glu, mesa-glu, openglu]
+/opt/spack/etc/spack/defaults/base/packages.yaml:65                             unwind: [apple-libunwind, libunwind]
+/opt/spack/etc/spack/defaults/base/packages.yaml:66                             uuid: [apple-libuuid, util-linux-uuid, libuuid]
+/opt/spack/etc/spack/defaults/base/packages.yaml:19                             awk: [gawk]
+/opt/spack/etc/spack/defaults/base/packages.yaml:20                             armci: [armcimpi]
+/opt/spack/etc/spack/defaults/base/packages.yaml:21                             blas: [openblas]
+/opt/spack/etc/spack/defaults/base/packages.yaml:23                             cuda-lang: [cuda]
+/opt/spack/etc/spack/defaults/base/packages.yaml:25                             daal: [intel-oneapi-daal]
+/opt/spack/etc/spack/defaults/base/packages.yaml:27                             fftw-api: [fftw, amdfftw]
+/opt/spack/etc/spack/defaults/base/packages.yaml:28                             flame: [libflame, amdlibflame]
+/opt/spack/etc/spack/defaults/base/packages.yaml:30                             fortran-rt: [gcc-runtime, intel-oneapi-runtime]
+/opt/spack/etc/spack/defaults/base/packages.yaml:34                             golang: [go, gcc]
+/opt/spack/etc/spack/defaults/base/packages.yaml:35                             go-or-gccgo-bootstrap: [go-bootstrap, gcc]
+/opt/spack/etc/spack/defaults/base/packages.yaml:36                             hip-lang: [llvm-amdgpu]
+/opt/spack/etc/spack/defaults/base/packages.yaml:37                             iconv: [libiconv]
+/opt/spack/etc/spack/defaults/base/packages.yaml:38                             ipp: [intel-oneapi-ipp]
+/opt/spack/etc/spack/defaults/base/packages.yaml:39                             java: [openjdk, jdk]
+/opt/spack/etc/spack/defaults/base/packages.yaml:40                             jpeg: [libjpeg-turbo, libjpeg]
+/opt/spack/etc/spack/defaults/base/packages.yaml:41                             lapack: [openblas]
+/opt/spack/etc/spack/defaults/base/packages.yaml:42                             libc: [glibc, musl]
+/opt/spack/etc/spack/defaults/base/packages.yaml:43                             libgfortran: [gcc-runtime]
+/opt/spack/etc/spack/defaults/base/packages.yaml:44                             libglx: [mesa+glx]
+/opt/spack/etc/spack/defaults/base/packages.yaml:45                             libifcore: [intel-oneapi-runtime]
+/opt/spack/etc/spack/defaults/base/packages.yaml:46                             libllvm: [llvm]
+/opt/spack/etc/spack/defaults/base/packages.yaml:47                             lua-lang: [lua, lua-luajit-openresty, lua-luajit]
+/opt/spack/etc/spack/defaults/base/packages.yaml:48                             luajit: [lua-luajit-openresty, lua-luajit]
+/opt/spack/etc/spack/defaults/base/packages.yaml:49                             mariadb-client: [mariadb-c-client, mariadb]
+/opt/spack/etc/spack/defaults/base/packages.yaml:50                             mkl: [intel-oneapi-mkl]
+/opt/spack/etc/spack/defaults/base/packages.yaml:51                             mpe: [mpe2]
+/opt/spack/etc/spack/defaults/base/packages.yaml:53                             mysql-client: [mysql, mariadb-c-client]
+/opt/spack/etc/spack/defaults/base/packages.yaml:54                             opencl: [pocl]
+/opt/spack/etc/spack/defaults/base/packages.yaml:55                             onedal: [intel-oneapi-dal]
+/opt/spack/etc/spack/defaults/base/packages.yaml:56                             pbs: [openpbs, torque]
+/opt/spack/etc/spack/defaults/base/packages.yaml:57                             pil: [py-pillow]
+/opt/spack/etc/spack/defaults/base/packages.yaml:58                             pkgconfig: [pkgconf, pkg-config]
+/opt/spack/etc/spack/defaults/base/packages.yaml:59                             qmake: [qt-base, qt]
+/opt/spack/etc/spack/defaults/base/packages.yaml:60                             rpc: [libtirpc]
+/opt/spack/etc/spack/defaults/base/packages.yaml:61                             scalapack: [netlib-scalapack, amdscalapack]
+/opt/spack/etc/spack/defaults/base/packages.yaml:62                             sycl: [hipsycl]
+/opt/spack/etc/spack/defaults/base/packages.yaml:63                             szip: [libaec, libszip]
+/opt/spack/etc/spack/defaults/base/packages.yaml:64                             tbb: [intel-tbb]
+/opt/spack/etc/spack/defaults/base/packages.yaml:67                             wasi-sdk: [wasi-sdk-prebuilt]
+/opt/spack/etc/spack/defaults/base/packages.yaml:68                             xkbdata-api: [xkeyboard-config, xkbdata]
+/opt/spack/etc/spack/defaults/base/packages.yaml:69                             xxd: [xxd-standalone, vim]
+/opt/spack/etc/spack/defaults/base/packages.yaml:70                             yacc: [bison, byacc]
+/opt/spack/etc/spack/defaults/base/packages.yaml:71                             ziglang: [zig]
+/opt/spack/etc/spack/defaults/base/packages.yaml:72                             zlib-api: [zlib-ng+compat, zlib]
+/opt/spack/etc/spack/defaults/base/packages.yaml:73                           permissions:
+/opt/spack/etc/spack/defaults/base/packages.yaml:74                             read: world
+/opt/spack/etc/spack/defaults/base/packages.yaml:75                             write: user
+/opt/spack/var/spack/environments/celeritas/spack.yaml:51                   cli11:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:52                     require: '@2.4:'
+/opt/spack/var/spack/environments/celeritas/spack.yaml:53                   cmake:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:54                     require: '@3.18:'
+/opt/spack/etc/spack/packages.yaml:81                                         externals:
+/opt/spack/etc/spack/packages.yaml:82                                         - spec: cmake@4.3.1
+/opt/spack/etc/spack/packages.yaml:83                                           prefix: /opt/homebrew/opt/cmake
+/opt/spack/etc/spack/packages.yaml:84                                         buildable: False
+/opt/spack/var/spack/environments/celeritas/spack.yaml:55                   nlohmann-json:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:56                     require: '@3.7.0:'
+/opt/spack/var/spack/environments/celeritas/spack.yaml:57                   geant4:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:58                     require: '@10.5:'
+/opt/spack/var/spack/environments/celeritas/spack.yaml:59                     prefer:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:60                     - '@11.3'
+/opt/spack/var/spack/environments/celeritas/spack.yaml:61                     - generator=ninja
+/opt/spack/var/spack/environments/celeritas/celeritas-packages.yaml:15        version:
+/opt/spack/var/spack/environments/celeritas/celeritas-packages.yaml:16        - '11.3'
+/opt/spack/var/spack/environments/celeritas/spack.yaml:62                   googletest:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:63                     require: '@1.10:'
+/opt/spack/var/spack/environments/celeritas/spack.yaml:64                   py-identify:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:65                     require: '@2.6:'
+/opt/spack/var/spack/environments/celeritas/spack.yaml:66                   python:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:67                     require: '@3.14'
+/opt/spack/etc/spack/packages.yaml:189                                        externals:
+/opt/spack/etc/spack/packages.yaml:190                                        - spec: python@3.9.6+bz2+crypt+ctypes+dbm+lzma+pyexpat~pythoncmd+readline+sqlite3+ssl+tix+tkinter+uuid+zlib
+/opt/spack/etc/spack/packages.yaml:191                                          prefix: /usr
+/opt/spack/etc/spack/packages.yaml:192                                        - spec: python@3.14.3+bz2+ctypes+dbm+lzma+pyexpat~pythoncmd+readline+sqlite3+ssl~tkinter+uuid+zlib
+/opt/spack/etc/spack/packages.yaml:193                                          prefix: /opt/homebrew/opt/python@3
+/opt/spack/var/spack/environments/celeritas/spack.yaml:68                   covfie:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:69                     require: '@0.13:'
+/opt/spack/var/spack/environments/celeritas/spack.yaml:70                   g4vg:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:71                     require: '@1.0.3:'
+/opt/spack/var/spack/environments/celeritas/spack.yaml:72                   vecgeom:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:73                     require:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:74                     - '@1.2.10:'
+/opt/spack/var/spack/environments/celeritas/spack.yaml:75                     - +gdml
+/opt/spack/var/spack/environments/celeritas/celeritas-packages.yaml:31        version:
+/opt/spack/var/spack/environments/celeritas/celeritas-packages.yaml:32        - '1'
+/opt/spack/var/spack/environments/celeritas/spack.yaml:76                   root:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:77                     require:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:78                     - '@6.28:'
+/opt/spack/var/spack/environments/celeritas/spack.yaml:79                     variants:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:81                     - ~aqua ~davix ~examples ~opengl ~x ~tbb ~webgui +root7
+/opt/spack/var/spack/environments/celeritas/spack.yaml:82                   dd4hep:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:83                     require:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:84                     - '@1.33:'
+/opt/spack/var/spack/environments/celeritas/spack.yaml:85                     prefer:
+/opt/spack/var/spack/environments/celeritas/spack.yaml:86                     - ~utilityapps ~ddeve
+/opt/spack/var/spack/environments/celeritas/celeritas-packages.yaml:41        variants:
+/opt/spack/var/spack/environments/celeritas/celeritas-packages.yaml:42        - ~utilityapps ~ddeve
+/opt/spack/etc/spack/packages.yaml:2                                        apple-clang:
+/opt/spack/etc/spack/packages.yaml:3                                          externals:
+/opt/spack/etc/spack/packages.yaml:4                                          - spec: apple-clang@21.0.0
+/opt/spack/etc/spack/packages.yaml:5                                            prefix: /usr
+/opt/spack/etc/spack/packages.yaml:6                                            extra_attributes:
+/opt/spack/etc/spack/packages.yaml:7                                              compilers:
+/opt/spack/etc/spack/packages.yaml:8                                                c: /usr/bin/clang
+/opt/spack/etc/spack/packages.yaml:9                                                cxx: /usr/bin/clang++
+/opt/spack/etc/spack/packages.yaml:10                                         buildable: False
+/opt/spack/etc/spack/packages.yaml:11                                       bzip2:
+/opt/spack/etc/spack/packages.yaml:12                                         externals:
+/opt/spack/etc/spack/packages.yaml:13                                         - spec: bzip2@1.0.8
+/opt/spack/etc/spack/packages.yaml:14                                           prefix: /usr
+/opt/spack/etc/spack/packages.yaml:15                                       curl:
+/opt/spack/etc/spack/packages.yaml:16                                         externals:
+/opt/spack/etc/spack/packages.yaml:17                                         - spec: curl@8.7.1+gssapi+ldap+nghttp2
+/opt/spack/etc/spack/packages.yaml:18                                           prefix: /usr
+/opt/spack/etc/spack/packages.yaml:19                                         buildable: False
+/opt/spack/etc/spack/packages.yaml:20                                       file:
+/opt/spack/etc/spack/packages.yaml:21                                         externals:
+/opt/spack/etc/spack/packages.yaml:22                                         - spec: file@5.41
+/opt/spack/etc/spack/packages.yaml:23                                           prefix: /usr
+/opt/spack/etc/spack/packages.yaml:24                                       flex:
+/opt/spack/etc/spack/packages.yaml:25                                         externals:
+/opt/spack/etc/spack/packages.yaml:26                                         - spec: flex@2.6.4+lex
+/opt/spack/etc/spack/packages.yaml:27                                           prefix: /usr
+/opt/spack/etc/spack/packages.yaml:28                                       gmake:
+/opt/spack/etc/spack/packages.yaml:29                                         externals:
+/opt/spack/etc/spack/packages.yaml:30                                         - spec: gmake@3.81
+/opt/spack/etc/spack/packages.yaml:31                                           prefix: /usr
+/opt/spack/etc/spack/packages.yaml:32                                       grep:
+/opt/spack/etc/spack/packages.yaml:33                                         externals:
+/opt/spack/etc/spack/packages.yaml:34                                         - spec: grep@2.6.0
+/opt/spack/etc/spack/packages.yaml:35                                           prefix: /usr
+/opt/spack/etc/spack/packages.yaml:36                                       krb5:
+/opt/spack/etc/spack/packages.yaml:37                                         externals:
+/opt/spack/etc/spack/packages.yaml:38                                         - spec: krb5@1.7-prerelease
+/opt/spack/etc/spack/packages.yaml:39                                           prefix: /usr
+/opt/spack/etc/spack/packages.yaml:40                                       ncurses:
+/opt/spack/etc/spack/packages.yaml:41                                         externals:
+/opt/spack/etc/spack/packages.yaml:42                                         - spec: ncurses@6.0.20150808 abi=5
+/opt/spack/etc/spack/packages.yaml:43                                           prefix: /usr
+/opt/spack/etc/spack/packages.yaml:44                                       openssh:
+/opt/spack/etc/spack/packages.yaml:45                                         externals:
+/opt/spack/etc/spack/packages.yaml:46                                         - spec: openssh@10.2p1
+/opt/spack/etc/spack/packages.yaml:47                                           prefix: /usr
+/opt/spack/etc/spack/packages.yaml:48                                       rsync:
+/opt/spack/etc/spack/packages.yaml:49                                         externals:
+/opt/spack/etc/spack/packages.yaml:50                                         - spec: rsync@2.6.9
+/opt/spack/etc/spack/packages.yaml:51                                           prefix: /usr
+/opt/spack/etc/spack/packages.yaml:52                                       zip:
+/opt/spack/etc/spack/packages.yaml:53                                         externals:
+/opt/spack/etc/spack/packages.yaml:54                                         - spec: zip@3.0
+/opt/spack/etc/spack/packages.yaml:55                                           prefix: /usr
+/opt/spack/etc/spack/packages.yaml:57                                       autoconf:
+/opt/spack/etc/spack/packages.yaml:58                                         externals:
+/opt/spack/etc/spack/packages.yaml:59                                         - spec: autoconf@2.73
+/opt/spack/etc/spack/packages.yaml:60                                           prefix: /opt/homebrew/opt/autoconf
+/opt/spack/etc/spack/packages.yaml:61                                         buildable: False
+/opt/spack/etc/spack/packages.yaml:62                                       automake:
+/opt/spack/etc/spack/packages.yaml:63                                         externals:
+/opt/spack/etc/spack/packages.yaml:64                                         - spec: automake@1.18.1
+/opt/spack/etc/spack/packages.yaml:65                                           prefix: /opt/homebrew/opt/automake
+/opt/spack/etc/spack/packages.yaml:66                                         buildable: False
+/opt/spack/etc/spack/packages.yaml:67                                       berkeley-db:
+/opt/spack/etc/spack/packages.yaml:68                                         externals:
+/opt/spack/etc/spack/packages.yaml:69                                         - spec: berkeley-db@5.3.28
+/opt/spack/etc/spack/packages.yaml:70                                           prefix: /opt/homebrew/opt/berkeley-db
+/opt/spack/etc/spack/packages.yaml:71                                       bison:
+/opt/spack/etc/spack/packages.yaml:72                                         externals:
+/opt/spack/etc/spack/packages.yaml:73                                         - spec: bison@3.8.2
+/opt/spack/etc/spack/packages.yaml:74                                           prefix: /opt/homebrew/opt/bison
+/opt/spack/etc/spack/packages.yaml:75                                       ccache:
+/opt/spack/etc/spack/packages.yaml:76                                         externals:
+/opt/spack/etc/spack/packages.yaml:77                                         - spec: ccache@4.13.2
+/opt/spack/etc/spack/packages.yaml:78                                           prefix: /opt/homebrew/opt/ccache
+/opt/spack/etc/spack/packages.yaml:79                                         buildable: False
+/opt/spack/etc/spack/packages.yaml:85                                       doxygen:
+/opt/spack/etc/spack/packages.yaml:86                                         externals:
+/opt/spack/etc/spack/packages.yaml:87                                         - spec: doxygen@1.16.1+graphviz~mscgen
+/opt/spack/etc/spack/packages.yaml:88                                           prefix: /opt/homebrew/opt/doxygen
+/opt/spack/etc/spack/packages.yaml:89                                         buildable: False
+/opt/spack/etc/spack/packages.yaml:90                                       gcc:
+/opt/spack/etc/spack/packages.yaml:91                                         externals:
+/opt/spack/etc/spack/packages.yaml:92                                         - spec: gcc@15.1.0 languages:='c,c++,fortran'
+/opt/spack/etc/spack/packages.yaml:93                                           prefix: /opt/homebrew/opt/gcc@15
+/opt/spack/etc/spack/packages.yaml:94                                           extra_attributes:
+/opt/spack/etc/spack/packages.yaml:95                                             compilers:
+/opt/spack/etc/spack/packages.yaml:96                                               c: /opt/homebrew/opt/gcc@15/bin/gcc-15
+/opt/spack/etc/spack/packages.yaml:97                                               cxx: /opt/homebrew/opt/gcc@15/bin/g++-15
+/opt/spack/etc/spack/packages.yaml:98                                               fortran: /opt/homebrew/opt/gcc@15/bin/gfortran
+/opt/spack/etc/spack/packages.yaml:99                                         buildable: False
+/opt/spack/etc/spack/packages.yaml:100                                      gettext:
+/opt/spack/etc/spack/packages.yaml:101                                        externals:
+/opt/spack/etc/spack/packages.yaml:102                                        - spec: gettext@1.0
+/opt/spack/etc/spack/packages.yaml:103                                          prefix: /opt/homebrew/opt/gettext
+/opt/spack/etc/spack/packages.yaml:104                                      gh:
+/opt/spack/etc/spack/packages.yaml:105                                        externals:
+/opt/spack/etc/spack/packages.yaml:106                                        - spec: gh@2.89.0
+/opt/spack/etc/spack/packages.yaml:107                                          prefix: /opt/homebrew/opt/gh
+/opt/spack/etc/spack/packages.yaml:108                                        buildable: False
+/opt/spack/etc/spack/packages.yaml:109                                      git:
+/opt/spack/etc/spack/packages.yaml:110                                        externals:
+/opt/spack/etc/spack/packages.yaml:111                                        - spec: git@2.50.1~tcltk
+/opt/spack/etc/spack/packages.yaml:112                                          prefix: /usr
+/opt/spack/etc/spack/packages.yaml:113                                        - spec: git@2.53.0~tcltk
+/opt/spack/etc/spack/packages.yaml:114                                          prefix: /opt/homebrew/opt/git
+/opt/spack/etc/spack/packages.yaml:115                                        buildable: False
+/opt/spack/etc/spack/packages.yaml:116                                      git-lfs:
+/opt/spack/etc/spack/packages.yaml:117                                        externals:
+/opt/spack/etc/spack/packages.yaml:118                                        - spec: git-lfs@3.7.1
+/opt/spack/etc/spack/packages.yaml:119                                          prefix: /opt/homebrew/opt/git-lfs
+/opt/spack/etc/spack/packages.yaml:120                                        buildable: False
+/opt/spack/etc/spack/packages.yaml:121                                      go:
+/opt/spack/etc/spack/packages.yaml:122                                        externals:
+/opt/spack/etc/spack/packages.yaml:123                                        - spec: go@1.26.1
+/opt/spack/etc/spack/packages.yaml:124                                          prefix: /opt/homebrew/opt/go
+/opt/spack/etc/spack/packages.yaml:125                                        buildable: False
+/opt/spack/etc/spack/packages.yaml:126                                      go-bootstrap:
+/opt/spack/etc/spack/packages.yaml:127                                        externals:
+/opt/spack/etc/spack/packages.yaml:128                                        - spec: go-bootstrap@1.26.1
+/opt/spack/etc/spack/packages.yaml:129                                          prefix: /opt/homebrew/opt/go
+/opt/spack/etc/spack/packages.yaml:130                                        buildable: False
+/opt/spack/etc/spack/packages.yaml:131                                      graphviz:
+/opt/spack/etc/spack/packages.yaml:132                                        externals:
+/opt/spack/etc/spack/packages.yaml:133                                        - spec: graphviz@14.1.4
+/opt/spack/etc/spack/packages.yaml:134                                          prefix: /opt/homebrew/opt/graphviz
+/opt/spack/etc/spack/packages.yaml:135                                        buildable: False
+/opt/spack/etc/spack/packages.yaml:136                                      iwyu:
+/opt/spack/etc/spack/packages.yaml:137                                        externals:
+/opt/spack/etc/spack/packages.yaml:138                                        - spec: iwyu@0.26
+/opt/spack/etc/spack/packages.yaml:139                                          prefix: /opt/homebrew/opt/include-what-you-use
+/opt/spack/etc/spack/packages.yaml:140                                        buildable: False
+/opt/spack/etc/spack/packages.yaml:141                                      libtool:
+/opt/spack/etc/spack/packages.yaml:142                                        externals:
+/opt/spack/etc/spack/packages.yaml:143                                        - spec: libtool@2.5.4
+/opt/spack/etc/spack/packages.yaml:144                                          prefix: /opt/homebrew/opt/libtool
+/opt/spack/etc/spack/packages.yaml:145                                      llvm:
+/opt/spack/etc/spack/packages.yaml:146                                        externals:
+/opt/spack/etc/spack/packages.yaml:147                                        - spec: llvm@22.1.2+clang~flang~lld+lldb
+/opt/spack/etc/spack/packages.yaml:148                                          prefix: /opt/homebrew/opt/llvm@22
+/opt/spack/etc/spack/packages.yaml:149                                          extra_attributes:
+/opt/spack/etc/spack/packages.yaml:150                                            compilers:
+/opt/spack/etc/spack/packages.yaml:151                                              c: /opt/homebrew/opt/llvm@22/bin/clang
+/opt/spack/etc/spack/packages.yaml:152                                              cxx: /opt/homebrew/opt/llvm@22/bin/clang++
+/opt/spack/etc/spack/packages.yaml:153                                        buildable: False
+/opt/spack/etc/spack/packages.yaml:154                                      m4:
+/opt/spack/etc/spack/packages.yaml:155                                        externals:
+/opt/spack/etc/spack/packages.yaml:156                                        - spec: m4@1.4.6
+/opt/spack/etc/spack/packages.yaml:157                                          prefix: /usr
+/opt/spack/etc/spack/packages.yaml:158                                        - spec: m4@1.4.21
+/opt/spack/etc/spack/packages.yaml:159                                          prefix: /opt/homebrew/opt/m4
+/opt/spack/etc/spack/packages.yaml:160                                        buildable: False
+/opt/spack/etc/spack/packages.yaml:161                                      ninja:
+/opt/spack/etc/spack/packages.yaml:162                                        externals:
+/opt/spack/etc/spack/packages.yaml:163                                        - spec: ninja@1.13.2
+/opt/spack/etc/spack/packages.yaml:164                                          prefix: /opt/homebrew/opt/ninja
+/opt/spack/etc/spack/packages.yaml:165                                        buildable: False
+/opt/spack/etc/spack/packages.yaml:166                                      node-js:
+/opt/spack/etc/spack/packages.yaml:167                                        externals:
+/opt/spack/etc/spack/packages.yaml:168                                        - spec: node-js@24.9.0
+/opt/spack/etc/spack/packages.yaml:169                                          prefix: /opt/homebrew/opt/node.js
+/opt/spack/etc/spack/packages.yaml:170                                        buildable: False
+/opt/spack/etc/spack/packages.yaml:171                                      npm:
+/opt/spack/etc/spack/packages.yaml:172                                        externals:
+/opt/spack/etc/spack/packages.yaml:173                                        - spec: npm@11.6.0
+/opt/spack/etc/spack/packages.yaml:174                                          prefix: /opt/homebrew/opt/node.js
+/opt/spack/etc/spack/packages.yaml:175                                        buildable: False
+/opt/spack/etc/spack/packages.yaml:176                                      openssl:
+/opt/spack/etc/spack/packages.yaml:177                                        externals:
+/opt/spack/etc/spack/packages.yaml:178                                        - spec: openssl@3.6.1
+/opt/spack/etc/spack/packages.yaml:179                                          prefix: /opt/homebrew/opt/openssl@3
+/opt/spack/etc/spack/packages.yaml:180                                      perl:
+/opt/spack/etc/spack/packages.yaml:181                                        externals:
+/opt/spack/etc/spack/packages.yaml:182                                        - spec: perl@5.34.1~cpanm+opcode+open+shared+threads
+/opt/spack/etc/spack/packages.yaml:183                                          prefix: /usr
+/opt/spack/etc/spack/packages.yaml:184                                        - spec: perl@5.42.1~cpanm+opcode+open+shared+threads
+/opt/spack/etc/spack/packages.yaml:185                                          prefix: /opt/homebrew/opt/perl
+/opt/spack/etc/spack/packages.yaml:186                                        buildable: False
+/opt/spack/etc/spack/packages.yaml:187                                      pkgconf: {}
+/opt/spack/etc/spack/packages.yaml:194                                      ruby:
+/opt/spack/etc/spack/packages.yaml:195                                        externals:
+/opt/spack/etc/spack/packages.yaml:196                                        - spec: ruby@2.6.10
+/opt/spack/etc/spack/packages.yaml:197                                          prefix: /usr
+/opt/spack/etc/spack/packages.yaml:198                                        - spec: ruby@4.0.2
+/opt/spack/etc/spack/packages.yaml:199                                          prefix: /opt/homebrew/opt/ruby@4
+/opt/spack/etc/spack/packages.yaml:200                                        buildable: False
+/opt/spack/etc/spack/packages.yaml:201                                      sqlite:
+/opt/spack/etc/spack/packages.yaml:202                                        externals:
+/opt/spack/etc/spack/packages.yaml:203                                        - spec: sqlite@3.51.0+fts~functions+rtree
+/opt/spack/etc/spack/packages.yaml:204                                          prefix: /usr
+/opt/spack/etc/spack/packages.yaml:205                                        - spec: sqlite@3.51.3+fts~functions+rtree
+/opt/spack/etc/spack/packages.yaml:206                                          prefix: /opt/homebrew/opt/sqlite
+/opt/spack/etc/spack/packages.yaml:207                                      typescript:
+/opt/spack/etc/spack/packages.yaml:208                                        externals:
+/opt/spack/etc/spack/packages.yaml:209                                        - spec: typescript@6.0.2
+/opt/spack/etc/spack/packages.yaml:210                                          prefix: /opt/homebrew/opt/tsc
+/opt/spack/etc/spack/packages.yaml:211                                        buildable: False
+/opt/spack/etc/spack/packages.yaml:212                                      xz:
+/opt/spack/etc/spack/packages.yaml:213                                        externals:
+/opt/spack/etc/spack/packages.yaml:214                                        - spec: xz@5.8.2
+/opt/spack/etc/spack/packages.yaml:215                                          prefix: /opt/homebrew/opt/xz
+/opt/spack/etc/spack/packages.yaml:216                                        buildable: False
+/opt/spack/etc/spack/packages.yaml:217                                      mgard:
+/opt/spack/etc/spack/packages.yaml:218                                        variants: ~openmp
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:30                       apple-gl:
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:31                         buildable: False
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:32                         externals:
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:33                         - spec: apple-gl@4.1.0
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:34                           prefix: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:35                       apple-glu:
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:36                         buildable: False
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:37                         externals:
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:38                         - spec: apple-glu@1.3.0
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:39                           prefix: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:40                       apple-libunwind:
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:41                         buildable: False
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:42                         externals:
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:45                         - spec: apple-libunwind@35.3
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:46                           prefix: /usr
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:47                       apple-libuuid:
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:48                         buildable: False
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:49                         externals:
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:52                         - spec: apple-libuuid@1353.100.2
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:53                           prefix: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:54                       c:
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:55                         prefer:
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:56                         - apple-clang
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:57                       cxx:
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:58                         prefer:
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:59                         - apple-clang
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:60                       fortran:
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:61                         prefer:
+/opt/spack/etc/spack/defaults/darwin/packages.yaml:62                         - gcc
+/opt/spack/etc/spack/defaults/base/packages.yaml:76                         cce:
+/opt/spack/etc/spack/defaults/base/packages.yaml:77                           buildable: False
+/opt/spack/etc/spack/defaults/base/packages.yaml:78                         cray-fftw:
+/opt/spack/etc/spack/defaults/base/packages.yaml:79                           buildable: False
+/opt/spack/etc/spack/defaults/base/packages.yaml:80                         cray-libsci:
+/opt/spack/etc/spack/defaults/base/packages.yaml:81                           buildable: False
+/opt/spack/etc/spack/defaults/base/packages.yaml:82                         cray-mpich:
+/opt/spack/etc/spack/defaults/base/packages.yaml:83                           buildable: False
+/opt/spack/etc/spack/defaults/base/packages.yaml:84                         cray-mvapich2:
+/opt/spack/etc/spack/defaults/base/packages.yaml:85                           buildable: False
+/opt/spack/etc/spack/defaults/base/packages.yaml:86                         cray-pmi:
+/opt/spack/etc/spack/defaults/base/packages.yaml:87                           buildable: False
+/opt/spack/etc/spack/defaults/base/packages.yaml:88                         egl:
+/opt/spack/etc/spack/defaults/base/packages.yaml:89                           buildable: False
+/opt/spack/etc/spack/defaults/base/packages.yaml:90                         essl:
+/opt/spack/etc/spack/defaults/base/packages.yaml:91                           buildable: False
+/opt/spack/etc/spack/defaults/base/packages.yaml:92                         fj:
+/opt/spack/etc/spack/defaults/base/packages.yaml:93                           buildable: False
+/opt/spack/etc/spack/defaults/base/packages.yaml:94                         fujitsu-mpi:
+/opt/spack/etc/spack/defaults/base/packages.yaml:95                           buildable: False
+/opt/spack/etc/spack/defaults/base/packages.yaml:96                         fujitsu-ssl2:
+/opt/spack/etc/spack/defaults/base/packages.yaml:97                           buildable: False
+/opt/spack/etc/spack/defaults/base/packages.yaml:98                         glibc:
+/opt/spack/etc/spack/defaults/base/packages.yaml:99                           buildable: False
+/opt/spack/etc/spack/defaults/base/packages.yaml:100                        hpcx-mpi:
+/opt/spack/etc/spack/defaults/base/packages.yaml:101                          buildable: False
+/opt/spack/etc/spack/defaults/base/packages.yaml:102                        iconv:
+/opt/spack/etc/spack/defaults/base/packages.yaml:103                          prefer: [libiconv]
+/opt/spack/etc/spack/defaults/base/packages.yaml:104                        mpt:
+/opt/spack/etc/spack/defaults/base/packages.yaml:105                          buildable: False
+/opt/spack/etc/spack/defaults/base/packages.yaml:106                        musl:
+/opt/spack/etc/spack/defaults/base/packages.yaml:107                          buildable: False
+/opt/spack/etc/spack/defaults/base/packages.yaml:108                        opengl:
+/opt/spack/etc/spack/defaults/base/packages.yaml:109                          buildable: False
+/opt/spack/etc/spack/defaults/base/packages.yaml:110                        spectrum-mpi:
+/opt/spack/etc/spack/defaults/base/packages.yaml:111                          buildable: False
+/opt/spack/etc/spack/defaults/base/packages.yaml:112                        xl:
+/opt/spack/etc/spack/defaults/base/packages.yaml:113                          buildable: False
+/opt/spack/etc/spack/defaults/base/packages.yaml:113                      compilers: []
+/opt/spack/etc/spack/defaults/base/packages.yaml:113                      definitions: []
+/opt/spack/etc/spack/defaults/base/packages.yaml:113                      env_vars: {}
+/opt/spack/etc/spack/defaults/base/packages.yaml:113                      develop: {}
+/opt/spack/etc/spack/defaults/base/packages.yaml:113                      mirrors:
+/opt/spack/etc/spack/defaults/base/mirrors.yaml:2                           spack-public:
+/opt/spack/etc/spack/defaults/base/mirrors.yaml:3                             binary: False
+/opt/spack/etc/spack/defaults/base/mirrors.yaml:4                             url: https://mirror.spack.io
+/opt/spack/etc/spack/defaults/base/mirrors.yaml:4                         repos:
+/Users/seth/.spack/repos.yaml:2                                             qsc:
+/Users/seth/.spack/repos.yaml:3                                               git: ssh://github.com/sethrj/qsc-spack-packages.git
+/opt/spack/etc/spack/defaults/base/repos.yaml:14                            builtin:
+/opt/spack/etc/spack/defaults/base/repos.yaml:15                              git: https://github.com/spack/spack-packages.git
+/opt/spack/etc/spack/defaults/base/repos.yaml:15                          modules:
+/opt/spack/etc/spack/modules.yaml:2                                         default:
+/opt/spack/etc/spack/modules.yaml:3                                           roots:
+/opt/spack/etc/spack/modules.yaml:4                                             lmod: /opt/spack/share/spack/lmod
+/opt/spack/etc/spack/defaults/base/modules.yaml:41                              tcl: $spack/share/spack/modules
+/opt/spack/etc/spack/modules.yaml:5                                           enable:
+/opt/spack/etc/spack/modules.yaml:6                                           - lmod
+/opt/spack/etc/spack/modules.yaml:7                                           lmod:
+/opt/spack/etc/spack/modules.yaml:8                                             all:
+/opt/spack/etc/spack/modules.yaml:9                                               autoload: direct
+/opt/spack/etc/spack/modules.yaml:10                                            hash_length: 0
+/opt/spack/etc/spack/modules.yaml:11                                            hide_implicits: False
+/opt/spack/etc/spack/modules.yaml:12                                            core_compilers: [apple-clang@16.0.0]
+/opt/spack/etc/spack/modules.yaml:13                                            projections:
+/opt/spack/etc/spack/modules.yaml:14                                              all: '{name}/{version}'
+/opt/spack/etc/spack/defaults/base/modules.yaml:54                              hierarchy:
+/opt/spack/etc/spack/defaults/base/modules.yaml:55                              - mpi
+/opt/spack/etc/spack/defaults/base/modules.yaml:46                            tcl:
+/opt/spack/etc/spack/defaults/base/modules.yaml:47                              all:
+/opt/spack/etc/spack/defaults/base/modules.yaml:48                                autoload: direct
+/opt/spack/etc/spack/defaults/darwin/modules.yaml:17                        prefix_inspections:
+/opt/spack/etc/spack/defaults/darwin/modules.yaml:18                          ./lib:
+/opt/spack/etc/spack/defaults/darwin/modules.yaml:19                          - DYLD_FALLBACK_LIBRARY_PATH
+/opt/spack/etc/spack/defaults/darwin/modules.yaml:20                          ./lib64:
+/opt/spack/etc/spack/defaults/darwin/modules.yaml:21                          - DYLD_FALLBACK_LIBRARY_PATH
+/opt/spack/etc/spack/defaults/base/modules.yaml:20                            ./bin:
+/opt/spack/etc/spack/defaults/base/modules.yaml:21                            - PATH
+/opt/spack/etc/spack/defaults/base/modules.yaml:22                            ./man:
+/opt/spack/etc/spack/defaults/base/modules.yaml:23                            - MANPATH
+/opt/spack/etc/spack/defaults/base/modules.yaml:24                            ./share/man:
+/opt/spack/etc/spack/defaults/base/modules.yaml:25                            - MANPATH
+/opt/spack/etc/spack/defaults/base/modules.yaml:26                            ./share/aclocal:
+/opt/spack/etc/spack/defaults/base/modules.yaml:27                            - ACLOCAL_PATH
+/opt/spack/etc/spack/defaults/base/modules.yaml:28                            ./lib/pkgconfig:
+/opt/spack/etc/spack/defaults/base/modules.yaml:29                            - PKG_CONFIG_PATH
+/opt/spack/etc/spack/defaults/base/modules.yaml:30                            ./lib64/pkgconfig:
+/opt/spack/etc/spack/defaults/base/modules.yaml:31                            - PKG_CONFIG_PATH
+/opt/spack/etc/spack/defaults/base/modules.yaml:32                            ./share/pkgconfig:
+/opt/spack/etc/spack/defaults/base/modules.yaml:33                            - PKG_CONFIG_PATH
+/opt/spack/etc/spack/defaults/base/modules.yaml:34                            ./:
+/opt/spack/etc/spack/defaults/base/modules.yaml:35                            - CMAKE_PREFIX_PATH
+/opt/spack/etc/spack/defaults/base/modules.yaml:35                        config:
+/opt/spack/etc/spack/config.yaml:2                                          install_tree:
+/opt/spack/etc/spack/config.yaml:3                                            root: $spack/opt/spack
+/opt/spack/etc/spack/config.yaml:4                                            projections:
+/opt/spack/etc/spack/config.yaml:5                                              all: '{architecture.os}/{name}/{version}/{hash:7}'
+/opt/spack/etc/spack/config.yaml:6                                          deprecated: True
+/opt/spack/etc/spack/config.yaml:7                                          build_jobs: 8
+/opt/spack/etc/spack/defaults/base/config.yaml:33                           template_dirs:
+/opt/spack/etc/spack/defaults/base/config.yaml:34                           - $spack/share/spack/templates
+/opt/spack/etc/spack/defaults/base/config.yaml:37                           license_dir: $spack/etc/spack/licenses
+/opt/spack/etc/spack/defaults/base/config.yaml:69                           build_stage:
+/opt/spack/etc/spack/defaults/base/config.yaml:70                           - $tempdir/$user/spack-stage
+/opt/spack/etc/spack/defaults/base/config.yaml:71                           - $user_cache_path/stage
+/opt/spack/etc/spack/defaults/base/config.yaml:75                           stage_name: spack-stage-{name}-{version}-{hash}
+/opt/spack/etc/spack/defaults/base/config.yaml:80                           test_stage: $user_cache_path/test
+/opt/spack/etc/spack/defaults/base/config.yaml:84                           source_cache: $spack/var/spack/cache
+/opt/spack/etc/spack/defaults/base/config.yaml:93                           misc_cache: $user_cache_path/cache
+/opt/spack/etc/spack/defaults/base/config.yaml:97                           connect_timeout: 30
+/opt/spack/etc/spack/defaults/base/config.yaml:102                          verify_ssl: True
+/opt/spack/etc/spack/defaults/base/config.yaml:108                          ssl_certs: $SSL_CERT_FILE
+/opt/spack/etc/spack/defaults/base/config.yaml:116                          suppress_gpg_warnings: False
+/opt/spack/etc/spack/defaults/base/config.yaml:121                          checksum: True
+/opt/spack/etc/spack/defaults/base/config.yaml:131                          dirty: False
+/opt/spack/etc/spack/defaults/base/config.yaml:139                          build_language: C
+/opt/spack/etc/spack/defaults/base/config.yaml:148                          locks: True
+/opt/spack/etc/spack/defaults/base/config.yaml:153                          url_fetch_method: urllib
+/opt/spack/etc/spack/defaults/base/config.yaml:168                          concurrent_packages: 0
+/opt/spack/etc/spack/defaults/base/config.yaml:171                          installer: new
+/opt/spack/etc/spack/defaults/base/config.yaml:179                          sandbox:
+/opt/spack/etc/spack/defaults/base/config.yaml:180                            enable: False
+/opt/spack/etc/spack/defaults/base/config.yaml:182                            allow_network: True
+/opt/spack/etc/spack/defaults/base/config.yaml:184                            allow_read: []
+/opt/spack/etc/spack/defaults/base/config.yaml:186                            allow_write: []
+/opt/spack/etc/spack/defaults/base/config.yaml:189                          ccache: False
+/opt/spack/etc/spack/defaults/base/config.yaml:195                          db_lock_timeout: 60
+/opt/spack/etc/spack/defaults/base/config.yaml:203                          package_lock_timeout: null
+/opt/spack/etc/spack/defaults/base/config.yaml:208                          shared_linking:
+/opt/spack/etc/spack/defaults/base/config.yaml:213                            type: rpath
+/opt/spack/etc/spack/defaults/base/config.yaml:219                            bind: False
+/opt/spack/etc/spack/defaults/base/config.yaml:225                            missing_library_policy: ignore
+/opt/spack/etc/spack/defaults/base/config.yaml:230                          allow_sgid: True
+/opt/spack/etc/spack/defaults/base/config.yaml:236                          install_status: True
+/opt/spack/etc/spack/defaults/base/config.yaml:240                          binary_index_ttl: 600
+/opt/spack/etc/spack/defaults/base/config.yaml:242                          flags:
+/opt/spack/etc/spack/defaults/base/config.yaml:244                            keep_werror: none
+/opt/spack/etc/spack/defaults/base/config.yaml:249                          aliases:
+/opt/spack/etc/spack/defaults/base/config.yaml:250                            concretise: concretize
+/opt/spack/etc/spack/defaults/base/config.yaml:251                            containerise: containerize
+/opt/spack/etc/spack/defaults/base/config.yaml:252                            rm: remove
+_builtin                                                                    debug: False
+_builtin                                                                  upstreams: {}
+_builtin                                                                  bootstrap:
+/opt/spack/etc/spack/defaults/bootstrap.yaml:4                              enable: True
+/opt/spack/etc/spack/defaults/bootstrap.yaml:7                              root: $user_cache_path/bootstrap
+/opt/spack/etc/spack/defaults/bootstrap.yaml:11                             sources:
+/opt/spack/etc/spack/defaults/bootstrap.yaml:12                             - name: github-actions-v2
+/opt/spack/etc/spack/defaults/bootstrap.yaml:13                               metadata: $spack/share/spack/bootstrap/github-actions-v2
+/opt/spack/etc/spack/defaults/bootstrap.yaml:14                             - name: github-actions-v0.6
+/opt/spack/etc/spack/defaults/bootstrap.yaml:15                               metadata: $spack/share/spack/bootstrap/github-actions-v0.6
+/opt/spack/etc/spack/defaults/bootstrap.yaml:16                             - name: spack-install
+/opt/spack/etc/spack/defaults/bootstrap.yaml:17                               metadata: $spack/share/spack/bootstrap/spack-install
+/opt/spack/etc/spack/defaults/bootstrap.yaml:18                             trusted:
+/opt/spack/etc/spack/defaults/bootstrap.yaml:21                               github-actions-v2: True
+/opt/spack/etc/spack/defaults/bootstrap.yaml:22                               github-actions-v0.6: True
+/opt/spack/etc/spack/defaults/bootstrap.yaml:23                               spack-install: True
+/opt/spack/etc/spack/defaults/bootstrap.yaml:23                           ci: {}
+/opt/spack/etc/spack/defaults/bootstrap.yaml:23                           cdash: {}
+/opt/spack/etc/spack/defaults/bootstrap.yaml:23                           toolchains: {}

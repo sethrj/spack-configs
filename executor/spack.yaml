@@ -1,0 +1,19 @@
+spack:
+  include:
+    - celeritas-packages.yaml
+
+  specs:
+    - cli11
+    - cmake
+    - nlohmann-json
+    - geant4
+    - git
+    - googletest
+    - py-pre-commit
+    - python
+    - covfie
+    - hepmc3
+    - ninja
+  view: true
+  concretizer:
+    unify: true
