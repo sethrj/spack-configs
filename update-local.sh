@@ -63,7 +63,7 @@ for env in $(cd ${SPACK_ENV_BASE} && ls); do
   (
     _prefix="${CONFIGDIR}/env/${env}"
     if [ ! -d "${SPACK_ENV_BASE}/${env}" ]; then
-      return
+      exit
     fi
     printf "$env " >&2
     cd "${SPACK_ENV_BASE}/${env}" 
@@ -77,7 +77,7 @@ cecho 32 "...done"
 if command -v brew > /dev/null 2>&1; then
   status "Saving homebrew"
   export HOMEBREW_NO_AUTO_UPDATE=1 
-  brew bundle dump --describe -f
+  brew bundle dump -f
   printf "# Pinned\n" > homebrew-versions.txt
   brew list --pinned >> homebrew-versions.txt
   printf "# Versions\n" >> homebrew-versions.txt
