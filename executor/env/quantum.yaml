@@ -5,7 +5,14 @@
 spack:
   # add package specs to the `specs` list
   specs:
+  - py-qiskit-aer
   - py-qiskit
+  - dcapp
+  - dmrgpp
+  - py-physics-tenpy
+  - qiree +lightning
+  - qmcpack
   view: true
   concretizer:
     unify: true
+

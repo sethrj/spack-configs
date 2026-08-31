@@ -74,28 +74,28 @@ packages:
         prefix: /opt/homebrew/opt/bison
   ccache:
     externals:
-      - spec: ccache@4.13.2
+      - spec: ccache@4.13.6
         prefix: /opt/homebrew/opt/ccache
     buildable: False
   cmake:
     externals:
-      - spec: cmake@4.3.1
+      - spec: cmake@4.4.0
         prefix: /opt/homebrew/opt/cmake
     buildable: False
   doxygen:
     externals:
-      - spec: doxygen@1.16.1+graphviz~mscgen
+      - spec: doxygen@1.17.0+graphviz~mscgen
         prefix: /opt/homebrew/opt/doxygen
     buildable: False
   gcc:
     externals:
-      - spec: gcc@15.1.0 languages:='c,c++,fortran'
-        prefix: /opt/homebrew/opt/gcc@15
+      - spec: gcc@16.1.0 languages:='c,c++,fortran'
+        prefix: /opt/homebrew/opt/gcc@16
         extra_attributes:
           compilers:
-            c: /opt/homebrew/opt/gcc@15/bin/gcc-15
-            cxx: /opt/homebrew/opt/gcc@15/bin/g++-15
-            fortran: /opt/homebrew/opt/gcc@15/bin/gfortran
+            c: /opt/homebrew/opt/gcc@16/bin/gcc-16
+            cxx: /opt/homebrew/opt/gcc@16/bin/g++-16
+            fortran: /opt/homebrew/opt/gcc@16/bin/gfortran
     buildable: False
   gettext:
     externals:
@@ -103,14 +103,12 @@ packages:
         prefix: /opt/homebrew/opt/gettext
   gh:
     externals:
-      - spec: gh@2.89.0
+      - spec: gh@2.96.0
         prefix: /opt/homebrew/opt/gh
     buildable: False
   git:
     externals:
-      - spec: git@2.50.1~tcltk
-        prefix: /usr
-      - spec: git@2.53.0~tcltk
+      - spec: git@2.55.0~tcltk
         prefix: /opt/homebrew/opt/git
     buildable: False
   git-lfs:
@@ -120,7 +118,7 @@ packages:
     buildable: False
   go:
     externals:
-      - spec: go@1.26.1
+      - spec: go@1.26.5
         prefix: /opt/homebrew/opt/go
     buildable: False
   go-bootstrap:
@@ -130,7 +128,7 @@ packages:
     buildable: False
   graphviz:
     externals:
-      - spec: graphviz@14.1.4
+      - spec: graphviz@15.1.0
         prefix: /opt/homebrew/opt/graphviz
     buildable: False
   iwyu:
@@ -140,11 +138,11 @@ packages:
     buildable: False
   libtool:
     externals:
-      - spec: libtool@2.5.4
+      - spec: libtool@2.6.2
         prefix: /opt/homebrew/opt/libtool
   llvm:
     externals:
-      - spec: llvm@22.1.2+clang~flang~lld+lldb
+      - spec: llvm@22.1.8+clang~flang~lld+lldb
         prefix: /opt/homebrew/opt/llvm@22
         extra_attributes:
           compilers:
@@ -153,8 +151,6 @@ packages:
     buildable: False
   m4:
     externals:
-      - spec: m4@1.4.6
-        prefix: /usr
       - spec: m4@1.4.21
         prefix: /opt/homebrew/opt/m4
     buildable: False
@@ -165,23 +161,23 @@ packages:
     buildable: False
   node-js:
     externals:
-      - spec: node-js@24.9.0
+      - spec: node-js@26.5.0
         prefix: /opt/homebrew/opt/node.js
     buildable: False
   npm:
     externals:
-      - spec: npm@11.6.0
+      - spec: npm@11.17.0
         prefix: /opt/homebrew/opt/node.js
     buildable: False
   openssl:
     externals:
-      - spec: openssl@3.6.1
+      - spec: openssl@3.6.3
         prefix: /opt/homebrew/opt/openssl@3
   perl:
     externals:
       - spec: perl@5.34.1~cpanm+opcode+open+shared+threads
         prefix: /usr
-      - spec: perl@5.42.1~cpanm+opcode+open+shared+threads
+      - spec: perl@5.42.2~cpanm+opcode+open+shared+threads
         prefix: /opt/homebrew/opt/perl
     buildable: False
   pkgconf: {} # DO NOT USE HOMEBREW! It breaks things
@@ -189,7 +185,7 @@ packages:
     externals:
       - spec: python@3.9.6+bz2+crypt+ctypes+dbm+lzma+pyexpat~pythoncmd+readline+sqlite3+ssl+tix+tkinter+uuid+zlib
         prefix: /usr
-      - spec: python@3.14.3+bz2+ctypes+dbm+lzma+pyexpat~pythoncmd+readline+sqlite3+ssl~tkinter+uuid+zlib
+      - spec: python@3.14.6+bz2+ctypes+dbm+lzma+pyexpat~pythoncmd+readline+sqlite3+ssl~tkinter+uuid+zlib
         prefix: /opt/homebrew/opt/python@3
   ruby:
     externals:
@@ -206,7 +202,7 @@ packages:
         prefix: /opt/homebrew/opt/sqlite
   typescript:
     externals:
-      - spec: typescript@6.0.2
+      - spec: typescript@7.0.2
         prefix: /opt/homebrew/opt/tsc
     buildable: False
   xz:

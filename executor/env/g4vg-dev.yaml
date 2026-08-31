@@ -1,0 +1,13 @@
+spack:
+  include:
+    -  celeritas-packages.yaml
+
+  specs:
+  - cmake
+  - googletest
+  - geant4
+  - vecgeom
+
+  view: true
+  concretizer:
+    unify: true

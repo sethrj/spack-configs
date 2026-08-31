@@ -1,0 +1,23 @@
+spack:
+  include:
+    -  celeritas-packages.yaml
+
+  specs:
+    - cli11
+    - cmake
+    - nlohmann-json
+    - geant4
+    - git
+    - googletest
+    - py-pre-commit
+    - python
+    - covfie
+    - hepmc3
+    - ninja
+    # VecGeom deps
+    - veccore
+    - xerces-c
+    - curl # transient for xerces-c
+  view: true
+  concretizer:
+    unify: true

@@ -1,0 +1,20 @@
+spack:
+  include:
+    - celeritas-packages.yaml
+  specs:
+    - cmake
+    - nlohmann-json
+    - boost +random
+    - root +geom +math
+    - eigen
+    # Modules:
+    - geant4
+    - hepmc3
+    # - lcio
+    # - libapx (https://gitlab.cern.ch/allpix-squared/libapx.git ): no spack package, builds internally
+    # - libpqxx (https://pqxx.org/libpqxx/): no spack package
+    # Optional: docs and optional doc components
+    - doxygen
+  view: true
+  concretizer:
+    unify: true
