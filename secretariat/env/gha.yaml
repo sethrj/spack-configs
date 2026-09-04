@@ -7,6 +7,8 @@ spack:
   view: false
   concretizer:
     unify: false
+  config:
+    deprecated: true
 
   mirrors:
     github:
@@ -37,20 +39,19 @@ spack:
     - g4vg
     - hepmc3
     - vecgeom
+    - 'vecgeom@2.0.0-rc.7'
     - root
 
-      #     # Specific versions
-      #     - 'vecgeom@1.2 cxxstd=17' # needed for geant4 compatibility
-      #     - 'vecgeom@1.2 cxxstd=20'
-      #     - 'vecgeom@2.1.0'
-      #     - 'geant4@10.5 cxxstd=17'
-      #     - 'geant4@10.6 cxxstd=17'
-      #     - 'geant4@10.7 cxxstd=20'
-      #     - 'geant4@11.0 cxxstd=20'
-      #     - 'geant4@11.1 cxxstd=20'
-      #     - 'geant4@11.2 cxxstd=20'
-      #     - 'geant4@11.3 cxxstd=20'
-      # 
+    # Specific versions
+    - 'vecgeom@1.2'
+    - 'geant4@10.5'
+    - 'geant4@10.6'
+    - 'geant4@10.7'
+    - 'geant4@11.0'
+    - 'geant4@11.1'
+    - 'geant4@11.2'
+    - 'geant4@11.3'
+    - 'geant4@11.4'
 
   specs:
   - matrix:
