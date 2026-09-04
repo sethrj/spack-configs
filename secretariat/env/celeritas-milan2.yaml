@@ -1,0 +1,52 @@
+spack:
+  include:
+  - celeritas-packages.yaml
+  specs:
+  - cli11
+  - cmake
+  - nlohmann-json
+  - geant4
+  - git
+  - googletest
+  - py-pre-commit
+  - python
+  - covfie +cuda cuda_arch=70
+  - g4vg
+  - hepmc3
+  - ninja
+  - vecgeom +cuda cuda_arch=70
+  - git-lfs
+  - root
+  config:
+    install_tree:
+      root: $spack/opt/spack
+      projections:
+        all: "{name}/{version}/{hash:7}"
+  view: true
+  concretizer:
+    unify: true
+  packages:
+    cuda:
+      externals:
+      - spec: cuda@12.0.140
+        prefix: /usr
+    gcc:
+      externals:
+      - spec: gcc@12.4.0 languages:='c,c++'
+        prefix: /usr
+        extra_attributes:
+          compilers:
+            c: /usr/bin/gcc-12
+            cxx: /usr/bin/g++-12
+      - spec: gcc@13.3.0 languages:='c,c++,fortran'
+        prefix: /usr
+        extra_attributes:
+          compilers:
+            c: /usr/bin/gcc
+            cxx: /usr/bin/g++
+            fortran: /usr/bin/gfortran
+    all:
+      target: [x86_64_v3]
+      require:
+      - '%gcc'
+      - target=x86_64_v3

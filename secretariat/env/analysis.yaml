@@ -1,0 +1,26 @@
+spack:
+  include:
+  - excl.yaml
+  - celeritas-packages.yaml
+  - milan1.yaml
+
+  config:
+    install_tree:
+      root: /auto/projects/celeritas/analysis/opt
+
+  view:
+    default:
+      root: /auto/projects/celeritas/analysis/view
+
+  specs:
+  - root
+  - py-uproot
+  - py-numpy
+  - py-pandas +performance
+  - py-matplotlib
+  - py-ipykernel
+  packages:
+    py-uproot:
+      variants:
+      - ~xrootd
+

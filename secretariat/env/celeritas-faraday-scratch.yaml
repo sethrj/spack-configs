@@ -1,0 +1,26 @@
+spack:
+  include:
+  - excl.yaml
+  - celeritas-packages.yaml
+  - faraday.yaml
+
+  specs:
+  - ccache
+  - cmake
+  - git
+  - git-lfs
+  - jq
+  - libtree
+  - llvm
+  - ninja
+  - py-pre-commit
+  - python
+
+  - cli11
+  - nlohmann-json
+  - geant4
+  - googletest
+    #- covfie +rocm amdgpu_target=gfx942
+  - g4vg
+  - hepmc3
+  - root

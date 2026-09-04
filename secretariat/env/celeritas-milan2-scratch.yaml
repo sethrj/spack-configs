@@ -1,0 +1,31 @@
+spack:
+  include:
+    - excl.yaml
+    - celeritas-packages.yaml
+    - milan2.yaml
+
+  specs:
+    - ccache
+    - cmake
+    - gh
+    - git
+    - git-lfs
+    - jq
+    - libtree
+    - llvm
+    - ninja
+    - py-pre-commit
+    - python
+
+    - cuda@12.9
+
+    - cli11
+    - nlohmann-json
+    - geant4
+    - googletest
+    - covfie +cuda cuda_arch=70
+    - g4vg
+    - hepmc3
+    - vecgeom +cuda cuda_arch=70
+    - root
+

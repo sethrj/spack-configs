@@ -1,0 +1,58 @@
+spack:
+  # NOTE: earlier includes have higher precedence
+  include:
+  - secretariat.yaml
+  - excl.yaml
+  - celeritas-packages.yaml
+  view: false
+  concretizer:
+    unify: false
+
+  mirrors:
+    github:
+      url: oci://ghcr.io/sethrj/spack-buildcache
+      binary: true
+      signed: false
+      autopush: false
+      access_pair:
+        id_variable: GITHUB_USER
+        secret_variable: GITHUB_TOKEN
+
+  definitions:
+  - compilers:
+    - llvm_gfortran
+  - packages:
+    - ccache
+    - cmake
+    - ninja
+    - git
+    - python
+    - py-gcovr
+
+    - cli11
+    - nlohmann-json
+    - geant4
+    - googletest
+    - covfie
+    - g4vg
+    - hepmc3
+    - vecgeom
+    - root
+
+      #     # Specific versions
+      #     - 'vecgeom@1.2 cxxstd=17' # needed for geant4 compatibility
+      #     - 'vecgeom@1.2 cxxstd=20'
+      #     - 'vecgeom@2.1.0'
+      #     - 'geant4@10.5 cxxstd=17'
+      #     - 'geant4@10.6 cxxstd=17'
+      #     - 'geant4@10.7 cxxstd=20'
+      #     - 'geant4@11.0 cxxstd=20'
+      #     - 'geant4@11.1 cxxstd=20'
+      #     - 'geant4@11.2 cxxstd=20'
+      #     - 'geant4@11.3 cxxstd=20'
+      # 
+
+  specs:
+  - matrix:
+    - [$%compilers]
+    - [$packages]
