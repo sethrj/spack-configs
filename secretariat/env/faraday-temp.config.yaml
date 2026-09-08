@@ -17,7 +17,6 @@
 /auto/projects/celeritas/spack/etc/spack/include.yaml:18                                           path: /etc/spack
 /auto/projects/celeritas/spack/etc/spack/include.yaml:19                                           optional: True
 /auto/projects/celeritas/spack/etc/spack/include.yaml:20                                           when: '"SPACK_DISABLE_LOCAL_CONFIG" not in env'
-/auto/projects/celeritas/spack/etc/spack/site/include.yaml:2                                     - /auto/projects/celeritas/environments/excl.yaml
 /auto/projects/celeritas/spack/etc/spack/defaults/include.yaml:3                                 - path: ${platform}
 /auto/projects/celeritas/spack/etc/spack/defaults/include.yaml:4                                   optional: True
 /auto/projects/celeritas/spack/etc/spack/defaults/include.yaml:7                                 - path: base
@@ -72,8 +71,6 @@
 /auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:18                     root: /scratch/celeritas/view-tools
 /auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:19                     exclude: ['%rocm7']
 /auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:20                     link: run
-/auto/projects/celeritas/environments/excl.yaml:20                                                 default:
-/auto/projects/celeritas/environments/excl.yaml:21                                                   root: /scratch/celeritas/view
 /auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:22                 specs:
 /auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:23                 - ccache %gcc13
 /auto/projects/celeritas/spack/var/spack/environments/faraday-temp/spack.yaml:24                 - py-pre-commit %gcc13
@@ -209,8 +206,6 @@
 /auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:18        require: '@2.6:'
 /auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:19      python:
 /auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:20        require: '@3.9:'
-/auto/projects/celeritas/environments/excl.yaml:43                                                   version:
-/auto/projects/celeritas/environments/excl.yaml:44                                                   - '3.14'
 /auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:23      g4vg:
 /auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:24        require: '@1.0.3:'
 /auto/projects/celeritas/spack/var/spack/environments/faraday-temp/celeritas-packages.yaml:38      dd4hep:
@@ -510,7 +505,7 @@
 /auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:7                       root: /scratch/celeritas/opt
 /auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:8                       projections:
 /auto/projects/celeritas/spack/var/spack/environments/faraday-temp/excl.yaml:9                         all: '{compiler.name}/{name}/{version}/{hash:7}'
-/auto/projects/celeritas/environments/excl.yaml:5                                                  source_cache: /auto/projects/celeritas/spack-cache/source
+/auto/projects/celeritas/spack/etc/spack/site/config.yaml:5                                        source_cache: /auto/projects/celeritas/spack-cache/source
 /auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:33                              template_dirs:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:34                              - $spack/share/spack/templates
 /auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:37                              license_dir: $spack/etc/spack/licenses

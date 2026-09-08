@@ -1,0 +1,10 @@
+config:
+  concurrent_packages: 8
+  locks: false
+  build_jobs: 48
+  source_cache: /auto/projects/celeritas/spack-cache/source
+  install_tree:
+    padded_length: 128
+    root: /scratch/celeritas/opt
+    projections:
+      all: "{name}/{version}/{hash:7}"

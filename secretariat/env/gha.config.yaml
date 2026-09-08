@@ -18,7 +18,6 @@
 /auto/projects/celeritas/spack/etc/spack/include.yaml:18                                  path: /etc/spack
 /auto/projects/celeritas/spack/etc/spack/include.yaml:19                                  optional: True
 /auto/projects/celeritas/spack/etc/spack/include.yaml:20                                  when: '"SPACK_DISABLE_LOCAL_CONFIG" not in env'
-/auto/projects/celeritas/spack/etc/spack/site/include.yaml:2                            - /auto/projects/celeritas/environments/excl.yaml
 /auto/projects/celeritas/spack/etc/spack/defaults/include.yaml:3                        - path: ${platform}
 /auto/projects/celeritas/spack/etc/spack/defaults/include.yaml:4                          optional: True
 /auto/projects/celeritas/spack/etc/spack/defaults/include.yaml:7                        - path: base
@@ -116,7 +115,7 @@
 /auto/projects/celeritas/spack/etc/spack/defaults/base/config.yaml:252                      rm: remove
 _builtin                                                                                  debug: False
 /auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:13                 mirrors:
-/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:14                   github:
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:14                   sethrj:
 /auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:15                     url: oci://ghcr.io/sethrj/spack-buildcache
 /auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:16                     binary: True
 /auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:17                     signed: False
@@ -135,43 +134,103 @@ _builtin                                                                        
 /auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:23                 definitions:
 /auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:24                 - compilers:
 /auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:25                   - llvm_gfortran
-/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:26                 - packages:
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:26                 - core:
 /auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:27                   - ccache
 /auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:28                   - cmake
 /auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:29                   - ninja
 /auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:30                   - git
 /auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:31                   - python
 /auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:32                   - py-gcovr
-/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:34                   - cli11
-/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:35                   - nlohmann-json
-/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:36                   - geant4
-/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:37                   - googletest
-/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:38                   - covfie
-/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:39                   - g4vg
-/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:40                   - hepmc3
-/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:41                   - vecgeom
-/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:42                   - vecgeom@2.0.0-rc.7
-/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:43                   - root
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:34                 - cxx17:
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:35                   - googletest cxxstd=17
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:36                   - vecgeom@1.2 cxxstd=17
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:37                   - geant4@10.5 cxxstd=17
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:38                   - geant4@10.6 cxxstd=17
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:39                   - g4vg ^vecgeom@1.2 cxxstd=17
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:41                 - cxx20:
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:42                   - cli11
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:43                   - covfie
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:44                   - hepmc3
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:45                   - nlohmann-json
 /auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:46                   - vecgeom@1.2
-/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:47                   - geant4@10.5
-/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:48                   - geant4@10.6
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:47                   - vecgeom@2.0.0-rc.7
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:48                   - root
 /auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:49                   - geant4@10.7
 /auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:50                   - geant4@11.0
 /auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:51                   - geant4@11.1
 /auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:52                   - geant4@11.2
 /auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:53                   - geant4@11.3
 /auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:54                   - geant4@11.4
-/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:56                 specs:
-/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:57                 - matrix:
-/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:58                   - [$%compilers]
-/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:59                   - [$packages]
-/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:59                 compilers: []
-/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:59                 env_vars: {}
-/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:59                 develop: {}
-/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:59                 repos:
-/auto/projects/celeritas/spack/etc/spack/defaults/base/repos.yaml:14                      builtin:
-/auto/projects/celeritas/spack/etc/spack/defaults/base/repos.yaml:15                        git: https://github.com/spack/spack-packages.git
-/auto/projects/celeritas/spack/etc/spack/defaults/base/repos.yaml:15                    packages:
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:55                   - g4vg ^vecgeom@1.2 cxxstd=20
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:57                 specs:
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:58                 - matrix:
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:59                   - [$%compilers]
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:60                   - [$core, $cxx17, $cxx20]
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:62                 packages:
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:63                   all:
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:64                     prefer:
+/auto/projects/celeritas/spack/var/spack/environments/gha/spack.yaml:65                     - cxxstd=20
+/auto/projects/celeritas/spack/var/spack/environments/gha/excl.yaml:46                      target: [x86_64_v3]
+/auto/projects/celeritas/spack/var/spack/environments/gha/excl.yaml:47                      require:
+/auto/projects/celeritas/spack/var/spack/environments/gha/excl.yaml:48                      - target=x86_64_v3
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:18                     providers:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:19                       awk: [gawk]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:20                       armci: [armcimpi]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:21                       blas: [openblas]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:22                       c: [gcc, llvm, intel-oneapi-compilers]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:23                       cuda-lang: [cuda]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:24                       cxx: [gcc, llvm, intel-oneapi-compilers]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:25                       daal: [intel-oneapi-daal]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:26                       elf: [elfutils]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:27                       fftw-api: [fftw, amdfftw]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:28                       flame: [libflame, amdlibflame]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:29                       fortran: [gcc, llvm, intel-oneapi-compilers]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:30                       fortran-rt: [gcc-runtime, intel-oneapi-runtime]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:31                       fuse: [libfuse]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:32                       gl: [glx, osmesa]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:33                       glu: [mesa-glu, openglu]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:34                       golang: [go, gcc]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:35                       go-or-gccgo-bootstrap: [go-bootstrap, gcc]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:36                       hip-lang: [llvm-amdgpu]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:37                       iconv: [libiconv]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:38                       ipp: [intel-oneapi-ipp]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:39                       java: [openjdk, jdk]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:40                       jpeg: [libjpeg-turbo, libjpeg]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:41                       lapack: [openblas]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:42                       libc: [glibc, musl]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:43                       libgfortran: [gcc-runtime]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:44                       libglx: [mesa+glx]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:45                       libifcore: [intel-oneapi-runtime]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:46                       libllvm: [llvm]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:47                       lua-lang: [lua, lua-luajit-openresty, lua-luajit]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:48                       luajit: [lua-luajit-openresty, lua-luajit]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:49                       mariadb-client: [mariadb-c-client, mariadb]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:50                       mkl: [intel-oneapi-mkl]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:51                       mpe: [mpe2]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:52                       mpi: [openmpi, mpich]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:53                       mysql-client: [mysql, mariadb-c-client]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:54                       opencl: [pocl]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:55                       onedal: [intel-oneapi-dal]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:56                       pbs: [openpbs, torque]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:57                       pil: [py-pillow]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:58                       pkgconfig: [pkgconf, pkg-config]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:59                       qmake: [qt-base, qt]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:60                       rpc: [libtirpc]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:61                       scalapack: [netlib-scalapack, amdscalapack]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:62                       sycl: [hipsycl]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:63                       szip: [libaec, libszip]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:64                       tbb: [intel-tbb]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:65                       unwind: [libunwind]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:66                       uuid: [util-linux-uuid, libuuid]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:67                       wasi-sdk: [wasi-sdk-prebuilt]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:68                       xkbdata-api: [xkeyboard-config, xkbdata]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:69                       xxd: [xxd-standalone, vim]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:70                       yacc: [bison, byacc]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:71                       ziglang: [zig]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:72                       zlib-api: [zlib-ng+compat, zlib]
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:73                     permissions:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:74                       read: world
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:75                       write: user
 /auto/projects/celeritas/spack/var/spack/environments/gha/ubunutu24.yaml:11               bash:
 /auto/projects/celeritas/spack/var/spack/environments/gha/ubunutu24.yaml:12                 buildable: False
 /auto/projects/celeritas/spack/var/spack/environments/gha/ubunutu24.yaml:13                 externals:
@@ -251,70 +310,6 @@ _builtin                                                                        
 /auto/projects/celeritas/spack/var/spack/environments/gha/excl.yaml:43                      version:
 /auto/projects/celeritas/spack/var/spack/environments/gha/excl.yaml:44                      - '3.14'
 /auto/projects/celeritas/spack/var/spack/environments/gha/celeritas-packages.yaml:35        require: '@3.9:'
-/auto/projects/celeritas/spack/var/spack/environments/gha/excl.yaml:45                    all:
-/auto/projects/celeritas/spack/var/spack/environments/gha/excl.yaml:46                      target: [x86_64_v3]
-/auto/projects/celeritas/spack/var/spack/environments/gha/excl.yaml:47                      require:
-/auto/projects/celeritas/spack/var/spack/environments/gha/excl.yaml:48                      - target=x86_64_v3
-/auto/projects/celeritas/spack/var/spack/environments/gha/celeritas-packages.yaml:3         prefer:
-/auto/projects/celeritas/spack/var/spack/environments/gha/celeritas-packages.yaml:4         - cxxstd=20
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:18                     providers:
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:19                       awk: [gawk]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:20                       armci: [armcimpi]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:21                       blas: [openblas]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:22                       c: [gcc, llvm, intel-oneapi-compilers]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:23                       cuda-lang: [cuda]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:24                       cxx: [gcc, llvm, intel-oneapi-compilers]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:25                       daal: [intel-oneapi-daal]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:26                       elf: [elfutils]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:27                       fftw-api: [fftw, amdfftw]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:28                       flame: [libflame, amdlibflame]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:29                       fortran: [gcc, llvm, intel-oneapi-compilers]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:30                       fortran-rt: [gcc-runtime, intel-oneapi-runtime]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:31                       fuse: [libfuse]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:32                       gl: [glx, osmesa]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:33                       glu: [mesa-glu, openglu]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:34                       golang: [go, gcc]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:35                       go-or-gccgo-bootstrap: [go-bootstrap, gcc]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:36                       hip-lang: [llvm-amdgpu]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:37                       iconv: [libiconv]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:38                       ipp: [intel-oneapi-ipp]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:39                       java: [openjdk, jdk]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:40                       jpeg: [libjpeg-turbo, libjpeg]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:41                       lapack: [openblas]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:42                       libc: [glibc, musl]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:43                       libgfortran: [gcc-runtime]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:44                       libglx: [mesa+glx]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:45                       libifcore: [intel-oneapi-runtime]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:46                       libllvm: [llvm]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:47                       lua-lang: [lua, lua-luajit-openresty, lua-luajit]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:48                       luajit: [lua-luajit-openresty, lua-luajit]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:49                       mariadb-client: [mariadb-c-client, mariadb]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:50                       mkl: [intel-oneapi-mkl]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:51                       mpe: [mpe2]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:52                       mpi: [openmpi, mpich]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:53                       mysql-client: [mysql, mariadb-c-client]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:54                       opencl: [pocl]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:55                       onedal: [intel-oneapi-dal]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:56                       pbs: [openpbs, torque]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:57                       pil: [py-pillow]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:58                       pkgconfig: [pkgconf, pkg-config]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:59                       qmake: [qt-base, qt]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:60                       rpc: [libtirpc]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:61                       scalapack: [netlib-scalapack, amdscalapack]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:62                       sycl: [hipsycl]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:63                       szip: [libaec, libszip]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:64                       tbb: [intel-tbb]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:65                       unwind: [libunwind]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:66                       uuid: [util-linux-uuid, libuuid]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:67                       wasi-sdk: [wasi-sdk-prebuilt]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:68                       xkbdata-api: [xkeyboard-config, xkbdata]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:69                       xxd: [xxd-standalone, vim]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:70                       yacc: [bison, byacc]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:71                       ziglang: [zig]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:72                       zlib-api: [zlib-ng+compat, zlib]
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:73                     permissions:
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:74                       read: world
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:75                       write: user
 /auto/projects/celeritas/spack/var/spack/environments/gha/celeritas-packages.yaml:5       cli11:
 /auto/projects/celeritas/spack/var/spack/environments/gha/celeritas-packages.yaml:6         require: '@2.4:'
 /auto/projects/celeritas/spack/var/spack/environments/gha/celeritas-packages.yaml:7       cmake:
@@ -373,7 +368,13 @@ _builtin                                                                        
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:111                    buildable: False
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:112                  xl:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:113                    buildable: False
-/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:113                modules:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:113                compilers: []
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:113                env_vars: {}
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:113                develop: {}
+/auto/projects/celeritas/spack/etc/spack/defaults/base/packages.yaml:113                repos:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/repos.yaml:14                      builtin:
+/auto/projects/celeritas/spack/etc/spack/defaults/base/repos.yaml:15                        git: https://github.com/spack/spack-packages.git
+/auto/projects/celeritas/spack/etc/spack/defaults/base/repos.yaml:15                    modules:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:19                    prefix_inspections:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:20                      ./bin:
 /auto/projects/celeritas/spack/etc/spack/defaults/base/modules.yaml:21                      - PATH
