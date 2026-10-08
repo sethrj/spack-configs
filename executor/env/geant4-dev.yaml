@@ -1,24 +1,22 @@
 spack:
   include:
     - reqs-celer.yaml
-
 #  concretizer:
-#    unify: true
-  concretizer:
-    # Allow multiple g4 data versions simultaneously
-    unify: false
+#    # Allow multiple g4 data versions simultaneously
+#    unify: false
 #    duplicates:
 #      max_dupes:
 #        g4emlow: 2
 #        geant4-data: 2
 
-  view:
-    default:
-     root: .spack-env/view
-     projections:
-       g4emlow@8: prefix
-       g4emlow@9: prefix
-       all: prefix
+  view: true
+#  view:
+#    default:
+#     root: .spack-env/view
+#     projections:
+#       g4emlow@8: prefix
+#       #g4emlow@9: prefix
+#       all: prefix
 
   specs:
     - cmake
@@ -26,7 +24,7 @@ spack:
     - curl # transient for xerces-c
     - expat
     - geant4-data@=11.5
-    - g4emlow@9.0
+    #- g4emlow@9.0
     - git
     - googletest
     - ninja

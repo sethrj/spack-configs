@@ -7,13 +7,7 @@ spack:
     - cmake
     - nlohmann-json
     - git
-    # ... plus packages required for *basic* realistic development
     - googletest
-    - py-pre-commit
-    - python
     # ... plus *recommended* options
     - ninja
     - mpi
-  view: true
-  concretizer:
-    unify: true

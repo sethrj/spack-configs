@@ -1,6 +1,7 @@
 spack:
   include:
     - reqs-celer.yaml
+  view: true
 
   specs:
     - cli11
@@ -9,7 +10,6 @@ spack:
     - geant4
     - git
     - googletest
-    - py-pre-commit
     - python
     - covfie
     - hepmc3
@@ -18,6 +18,3 @@ spack:
     - veccore
     - xerces-c
     - curl # transient for xerces-c
-  view: true
-  concretizer:
-    unify: true

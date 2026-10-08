@@ -1,221 +1,150 @@
 packages:
-  apple-clang:
-    externals:
-      - spec: apple-clang@21.0.0
-        prefix: /usr
-        extra_attributes:
-          compilers:
-            c: /usr/bin/clang
-            cxx: /usr/bin/clang++
-    buildable: False
-  bzip2:
-    externals:
-      - spec: bzip2@1.0.8
-        prefix: /usr
-  curl:
-    externals:
-      - spec: curl@8.7.1+gssapi+ldap+nghttp2
-        prefix: /usr
-    buildable: False
-  file:
-    externals:
-      - spec: file@5.41
-        prefix: /usr
-  flex:
-    externals:
-      - spec: flex@2.6.4+lex
-        prefix: /usr
-  gmake:
-    externals:
-      - spec: gmake@3.81
-        prefix: /usr
-  grep:
-    externals:
-      - spec: grep@2.6.0
-        prefix: /usr
-  krb5:
-    externals:
-      - spec: krb5@1.7-prerelease
-        prefix: /usr
-  ncurses:
-    externals:
-      - spec: ncurses@6.0.20150808 abi=5
-        prefix: /usr
-  openssh:
-    externals:
-      - spec: openssh@10.2p1
-        prefix: /usr
-  rsync:
-    externals:
-      - spec: rsync@2.6.9
-        prefix: /usr
-  zip:
-    externals:
-      - spec: zip@3.0
-        prefix: /usr
-  # Homebrew packages (from /opt/homebrew)
-  autoconf:
-    externals:
-      - spec: autoconf@2.73
-        prefix: /opt/homebrew/opt/autoconf
-    buildable: False
-  automake:
-    externals:
-      - spec: automake@1.18.1
-        prefix: /opt/homebrew/opt/automake
-    buildable: False
-  berkeley-db:
-    externals:
-      - spec: berkeley-db@5.3.28
-        prefix: /opt/homebrew/opt/berkeley-db
-  bison:
-    externals:
-      - spec: bison@3.8.2
-        prefix: /opt/homebrew/opt/bison
-  ccache:
-    externals:
-      - spec: ccache@4.13.6
-        prefix: /opt/homebrew/opt/ccache
-    buildable: False
-  cmake:
-    externals:
-      - spec: cmake@4.4.0
-        prefix: /opt/homebrew/opt/cmake
-    buildable: False
-  doxygen:
-    externals:
-      - spec: doxygen@1.17.0+graphviz~mscgen
-        prefix: /opt/homebrew/opt/doxygen
-    buildable: False
-  gcc:
-    externals:
-      - spec: gcc@16.1.0 languages:='c,c++,fortran'
-        prefix: /opt/homebrew/opt/gcc@16
-        extra_attributes:
-          compilers:
-            c: /opt/homebrew/opt/gcc@16/bin/gcc-16
-            cxx: /opt/homebrew/opt/gcc@16/bin/g++-16
-            fortran: /opt/homebrew/opt/gcc@16/bin/gfortran
-    buildable: False
-  gettext:
-    externals:
-      - spec: gettext@1.0
-        prefix: /opt/homebrew/opt/gettext
-  gh:
-    externals:
-      - spec: gh@2.96.0
-        prefix: /opt/homebrew/opt/gh
-    buildable: False
-  git:
-    externals:
-      - spec: git@2.55.0~tcltk
-        prefix: /opt/homebrew/opt/git
-    buildable: False
-  git-lfs:
-    externals:
-      - spec: git-lfs@3.7.1
-        prefix: /opt/homebrew/opt/git-lfs
-    buildable: False
-  go:
-    externals:
-      - spec: go@1.26.5
-        prefix: /opt/homebrew/opt/go
-    buildable: False
-  go-bootstrap:
-    externals:
-      - spec: go-bootstrap@1.26.1
-        prefix: /opt/homebrew/opt/go
-    buildable: False
-  graphviz:
-    externals:
-      - spec: graphviz@15.1.1
-        prefix: /opt/homebrew/opt/graphviz
-    buildable: False
-  iwyu:
-    externals:
-      - spec: iwyu@0.26
-        prefix: /opt/homebrew/opt/include-what-you-use
-    buildable: False
-  libtool:
-    externals:
-      - spec: libtool@2.6.2
-        prefix: /opt/homebrew/opt/libtool
-  llvm:
-    externals:
-      - spec: llvm@22.1.8+clang~flang~lld+lldb
-        prefix: /opt/homebrew/opt/llvm@22
-        extra_attributes:
-          compilers:
-            c: /opt/homebrew/opt/llvm@22/bin/clang
-            cxx: /opt/homebrew/opt/llvm@22/bin/clang++
-    buildable: False
-  m4:
-    externals:
-      - spec: m4@1.4.21
-        prefix: /opt/homebrew/opt/m4
-    buildable: False
-  ninja:
-    externals:
-      - spec: ninja@1.13.2
-        prefix: /opt/homebrew/opt/ninja
-    buildable: False
-  node-js:
-    externals:
-      - spec: node-js@26.5.0
-        prefix: /opt/homebrew/opt/node.js
-    buildable: False
-  npm:
-    externals:
-      - spec: npm@11.17.0
-        prefix: /opt/homebrew/opt/node.js
-    buildable: False
   openssl:
     externals:
-      - spec: openssl@3.6.3
-        prefix: /opt/homebrew/opt/openssl@3
-  perl:
+    - spec: openssl@3.6.5
+      prefix: /opt/homebrew/opt/openssl@3.6
+  gcc:
     externals:
-      - spec: perl@5.34.1~cpanm+opcode+open+shared+threads
-        prefix: /usr
-      - spec: perl@5.42.2~cpanm+opcode+open+shared+threads
-        prefix: /opt/homebrew/opt/perl
-    buildable: False
-  pkgconf: {} # DO NOT USE HOMEBREW! It breaks things
-  python:
+    - spec: gcc@16.2.0 languages:='c,c++,fortran'
+      prefix: /opt/homebrew/opt/gcc@16
+      extra_attributes:
+        compilers:
+          c: /opt/homebrew/opt/gcc@16/bin/gcc-16
+          cxx: /opt/homebrew/opt/gcc@16/bin/g++-16
+          fortran: /opt/homebrew/opt/gcc@16/bin/gfortran
+    buildable: false
+  apple-clang:
     externals:
-      - spec: python@3.9.6+bz2+crypt+ctypes+dbm+lzma+pyexpat~pythoncmd+readline+sqlite3+ssl+tix+tkinter+uuid+zlib
-        prefix: /usr
-      - spec: python@3.14.6+bz2+ctypes+dbm+lzma+pyexpat~pythoncmd+readline+sqlite3+ssl~tkinter+uuid+zlib
-        prefix: /opt/homebrew/opt/python@3
-  ruby:
+    - spec: apple-clang@21.0.0
+      prefix: /Library/Developer/CommandLineTools/usr
+      extra_attributes:
+        compilers:
+          c: /Library/Developer/CommandLineTools/usr/bin/clang
+          cxx: /Library/Developer/CommandLineTools/usr/bin/clang++
+  git:
     externals:
-      - spec: ruby@2.6.10
-        prefix: /usr
-      - spec: ruby@4.0.2
-        prefix: /opt/homebrew/opt/ruby@4
-    buildable: False
-  sqlite:
+    - spec: git@2.56.0~tcltk
+      prefix: /opt/homebrew/opt/git
+  ninja:
     externals:
-      - spec: sqlite@3.51.0+fts~functions+rtree
-        prefix: /usr
-      - spec: sqlite@3.51.3+fts~functions+rtree
-        prefix: /opt/homebrew/opt/sqlite
+    - spec: ninja@1.13.2
+      prefix: /opt/homebrew/opt/ninja
+  bison:
+    externals:
+    - spec: bison@3.8.2
+      prefix: /opt/homebrew/opt/bison@3.8
+  libtool:
+    externals:
+    - spec: libtool@2.6.2
+      prefix: /opt/homebrew/opt/libtool
+  iwyu:
+    externals:
+    - spec: iwyu@0.27
+      prefix: /opt/homebrew/opt/iwyu
+  m4:
+    externals:
+    - spec: m4@1.4.21
+      prefix: /opt/homebrew/opt/m4
+  gettext:
+    externals:
+    - spec: gettext@1.0
+      prefix: /opt/homebrew/opt/gettext
+  ccache:
+    externals:
+    - spec: ccache@4.14.1
+      prefix: /opt/homebrew/opt/ccache
   typescript:
     externals:
-      - spec: typescript@7.0.2
-        prefix: /opt/homebrew/opt/tsc
-    buildable: False
-  xz:
+    - spec: typescript@7.0.2
+      prefix: /opt/homebrew/opt/typescript
+  git-lfs:
     externals:
-      - spec: xz@5.8.2
-        prefix: /opt/homebrew/opt/xz
-    buildable: False
-  mgard:
-    variants: ~openmp
-  root:
-    variants: ~aqua ~davix ~examples ~opengl ~x ~tbb +root7
-  dd4hep:
-    variants: ~ddcad ~ddeve ~utilityapps +hepmc3
+    - spec: git-lfs@3.8.0
+      prefix: /opt/homebrew/opt/git-lfs
+  doxygen:
+    externals:
+    - spec: doxygen@1.18.0+graphviz~mscgen
+      prefix: /opt/homebrew/opt/doxygen
+  automake:
+    externals:
+    - spec: automake@1.19
+      prefix: /opt/homebrew/opt/automake
+  npm:
+    externals:
+    - spec: npm@11.20.0
+      prefix: /opt/homebrew/opt/nodejs
+  go:
+    externals:
+    - spec: go@1.27.1
+      prefix: /opt/homebrew/opt/google-go
+  cmake:
+    externals:
+    - spec: cmake@4.4.4
+      prefix: /opt/homebrew/opt/cmake
+  graphviz:
+    externals:
+    - spec: graphviz@16.1.0
+      prefix: /opt/homebrew/opt/graphviz
+  perl:
+    externals:
+    - spec: perl@5.44.0~cpanm+opcode+open+shared+threads
+      prefix: /opt/homebrew/opt/perl
+  autoconf:
+    externals:
+    - spec: autoconf@2.73
+      prefix: /opt/homebrew/opt/autoconf
+  py-pre-commit:
+    # Use external brew
+    buildable: false
+
+  ### CELERITAS PREFS ###
+
   all:
     providers:
       mpi: [openmpi]
+    prefer:
+      - "cxxstd=20"
+  covfie:
+    variants:
+      - generator=ninja
+  hdf5:
+    prefer: [~cxx] # override cxxstd preference
+  geant4:
+    variants:
+      - generator=ninja
+  g4vg:
+    variants:
+      - generator=ninja
+  vecgeom:
+    variants:
+      - generator=ninja
+      
+  ## prefs-hep-nogui.yaml ##
+  boost:
+    variants:
+      # Requirements from Allpix^2
+      - "+random"
+  dd4hep:
+    variants:
+      # Disable GUI
+      - "~utilityapps ~ddeve"
+  hepmc3:
+    variants:
+      # Requirements from Allpix^2
+      - "+rootio +python"
+  llvm:
+    variants:
+      - "+lldb +python"
+  root:
+    variants:
+      - generator=ninja
+      # Disable GUI for a lighter build
+      # We generally don't use TBB threading
+      # Examples aren't needed
+      # Edm4hep requires root7
+      # Allpix requires geom, math
+      - >-
+        ~aqua ~opengl ~x ~webgui
+        ~davix ~examples ~tbb
+        +root7
+        +geom +math

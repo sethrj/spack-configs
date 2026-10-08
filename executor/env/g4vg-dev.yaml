@@ -1,13 +1,11 @@
 spack:
   include:
     - reqs-celer.yaml
+  view: true
 
   specs:
-  - cmake
-  - googletest
-  - geant4
-  - vecgeom
+   - cmake
+   - googletest
+   - geant4
+   - vecgeom
 
-  view: true
-  concretizer:
-    unify: true
