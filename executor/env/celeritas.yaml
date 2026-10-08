@@ -1,6 +1,6 @@
 spack:
   include:
-    - celeritas-packages.yaml
+    - reqs-celer.yaml
   specs:
     # Packages required for a *truly minimal* build
     - cli11
@@ -22,10 +22,11 @@ spack:
     - root
     # documentation
     - doxygen
-    - py-breathe
+    ## NOTE : use local breathe/bibtex
+    #- py-breathe
+    #- py-sphinxcontrib-bibtex
     - py-furo
     - py-sphinx
-    - py-sphinxcontrib-bibtex
     # experimental
     #- dd4hep
     #- mpi

@@ -57,10 +57,10 @@
 /opt/spack/etc/spack/defaults/base/concretizer.yaml:88         timeout: 0
 /opt/spack/etc/spack/defaults/base/concretizer.yaml:94         error_on_timeout: True
 /opt/spack/etc/spack/defaults/base/concretizer.yaml:98         static_analysis: False
-/opt/spack/etc/spack/defaults/base/concretizer.yaml:102        concretization_cache:
-/opt/spack/etc/spack/defaults/base/concretizer.yaml:103          enable: True
-/opt/spack/etc/spack/defaults/base/concretizer.yaml:106        externals:
-/opt/spack/etc/spack/defaults/base/concretizer.yaml:110          completion: default_variants
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:104        concretization_cache:
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:105          enable: True
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:108        externals:
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:112          completion: default_variants
 /opt/spack/var/spack/environments/scale-min/spack.yaml:27    packages:
 /opt/spack/var/spack/environments/scale-min/spack.yaml:28      adios2:
 /opt/spack/var/spack/environments/scale-min/spack.yaml:29        variants: ~blosc ~fortran ~png ~python ~ssc ~sst ~sz ~zfp
@@ -128,6 +128,11 @@
 /opt/spack/etc/spack/defaults/base/packages.yaml:73              permissions:
 /opt/spack/etc/spack/defaults/base/packages.yaml:74                read: world
 /opt/spack/etc/spack/defaults/base/packages.yaml:75                write: user
+/opt/spack/etc/spack/packages.yaml:2                           cmake:
+/opt/spack/etc/spack/packages.yaml:3                             externals:
+/opt/spack/etc/spack/site/packages.yaml:82                       - spec: cmake@4.4.0
+/opt/spack/etc/spack/site/packages.yaml:83                         prefix: /opt/homebrew/opt/cmake
+/opt/spack/etc/spack/site/packages.yaml:84                       buildable: False
 /opt/spack/etc/spack/site/packages.yaml:2                      apple-clang:
 /opt/spack/etc/spack/site/packages.yaml:3                        externals:
 /opt/spack/etc/spack/site/packages.yaml:4                        - spec: apple-clang@21.0.0
@@ -205,11 +210,6 @@
 /opt/spack/etc/spack/site/packages.yaml:77                       - spec: ccache@4.13.6
 /opt/spack/etc/spack/site/packages.yaml:78                         prefix: /opt/homebrew/opt/ccache
 /opt/spack/etc/spack/site/packages.yaml:79                       buildable: False
-/opt/spack/etc/spack/site/packages.yaml:80                     cmake:
-/opt/spack/etc/spack/site/packages.yaml:81                       externals:
-/opt/spack/etc/spack/site/packages.yaml:82                       - spec: cmake@4.4.0
-/opt/spack/etc/spack/site/packages.yaml:83                         prefix: /opt/homebrew/opt/cmake
-/opt/spack/etc/spack/site/packages.yaml:84                       buildable: False
 /opt/spack/etc/spack/site/packages.yaml:85                     doxygen:
 /opt/spack/etc/spack/site/packages.yaml:86                       externals:
 /opt/spack/etc/spack/site/packages.yaml:87                       - spec: doxygen@1.17.0+graphviz~mscgen
@@ -409,7 +409,6 @@
 /opt/spack/etc/spack/defaults/base/packages.yaml:111             buildable: False
 /opt/spack/etc/spack/defaults/base/packages.yaml:112           xl:
 /opt/spack/etc/spack/defaults/base/packages.yaml:113             buildable: False
-/opt/spack/etc/spack/defaults/base/packages.yaml:113         compilers: []
 /opt/spack/etc/spack/defaults/base/packages.yaml:113         definitions: []
 /opt/spack/etc/spack/defaults/base/packages.yaml:113         env_vars: {}
 /opt/spack/etc/spack/defaults/base/packages.yaml:113         include:
@@ -436,9 +435,11 @@
 /opt/spack/etc/spack/defaults/base/mirrors.yaml:3                binary: False
 /opt/spack/etc/spack/defaults/base/mirrors.yaml:4                url: https://mirror.spack.io
 /opt/spack/etc/spack/defaults/base/mirrors.yaml:4            repos:
-/Users/seth/.spack/repos.yaml:2                                qsc:
-/Users/seth/.spack/repos.yaml:3                                  git: ssh://github.com/sethrj/qsc-spack-packages.git
-/opt/spack/etc/spack/defaults/base/repos.yaml:14               builtin:
+/opt/spack/etc/spack/site/repos.yaml:2                         qsc:
+/opt/spack/etc/spack/site/repos.yaml:3                           git: ssh://github.com/sethrj/qsc-spack-packages.git
+/opt/spack/etc/spack/site/repos.yaml:4                           destination: /Users/seth/Code/qsc-spack
+/opt/spack/etc/spack/site/repos.yaml:5                         builtin:
+/opt/spack/etc/spack/site/repos.yaml:6                           destination: /Users/seth/Code/spack-packages
 /opt/spack/etc/spack/defaults/base/repos.yaml:15                 git: https://github.com/spack/spack-packages.git
 /opt/spack/etc/spack/defaults/base/repos.yaml:15             modules:
 /opt/spack/etc/spack/site/modules.yaml:2                       default:
@@ -486,8 +487,7 @@
 /opt/spack/etc/spack/site/config.yaml:3                          root: $spack/opt/spack
 /opt/spack/etc/spack/site/config.yaml:4                          projections:
 /opt/spack/etc/spack/site/config.yaml:5                            all: '{architecture.os}/{name}/{version}/{hash:7}'
-/opt/spack/etc/spack/site/config.yaml:6                        deprecated: True
-/opt/spack/etc/spack/site/config.yaml:7                        build_jobs: 8
+/opt/spack/etc/spack/site/config.yaml:6                        build_jobs: 8
 /opt/spack/etc/spack/defaults/base/config.yaml:33              template_dirs:
 /opt/spack/etc/spack/defaults/base/config.yaml:34              - $spack/share/spack/templates
 /opt/spack/etc/spack/defaults/base/config.yaml:37              license_dir: $spack/etc/spack/licenses
@@ -503,33 +503,34 @@
 /opt/spack/etc/spack/defaults/base/config.yaml:108             ssl_certs: $SSL_CERT_FILE
 /opt/spack/etc/spack/defaults/base/config.yaml:116             suppress_gpg_warnings: False
 /opt/spack/etc/spack/defaults/base/config.yaml:121             checksum: True
+/opt/spack/etc/spack/defaults/base/config.yaml:126             deprecated: False
 /opt/spack/etc/spack/defaults/base/config.yaml:131             dirty: False
 /opt/spack/etc/spack/defaults/base/config.yaml:139             build_language: C
 /opt/spack/etc/spack/defaults/base/config.yaml:148             locks: True
 /opt/spack/etc/spack/defaults/base/config.yaml:153             url_fetch_method: urllib
-/opt/spack/etc/spack/defaults/base/config.yaml:168             concurrent_packages: 0
-/opt/spack/etc/spack/defaults/base/config.yaml:171             installer: new
-/opt/spack/etc/spack/defaults/base/config.yaml:179             sandbox:
-/opt/spack/etc/spack/defaults/base/config.yaml:180               enable: False
-/opt/spack/etc/spack/defaults/base/config.yaml:182               allow_network: True
-/opt/spack/etc/spack/defaults/base/config.yaml:184               allow_read: []
-/opt/spack/etc/spack/defaults/base/config.yaml:186               allow_write: []
-/opt/spack/etc/spack/defaults/base/config.yaml:189             ccache: False
-/opt/spack/etc/spack/defaults/base/config.yaml:195             db_lock_timeout: 60
-/opt/spack/etc/spack/defaults/base/config.yaml:203             package_lock_timeout: null
-/opt/spack/etc/spack/defaults/base/config.yaml:208             shared_linking:
-/opt/spack/etc/spack/defaults/base/config.yaml:213               type: rpath
-/opt/spack/etc/spack/defaults/base/config.yaml:219               bind: False
-/opt/spack/etc/spack/defaults/base/config.yaml:225               missing_library_policy: ignore
-/opt/spack/etc/spack/defaults/base/config.yaml:230             allow_sgid: True
-/opt/spack/etc/spack/defaults/base/config.yaml:236             install_status: True
-/opt/spack/etc/spack/defaults/base/config.yaml:240             binary_index_ttl: 600
-/opt/spack/etc/spack/defaults/base/config.yaml:242             flags:
-/opt/spack/etc/spack/defaults/base/config.yaml:244               keep_werror: none
-/opt/spack/etc/spack/defaults/base/config.yaml:249             aliases:
-/opt/spack/etc/spack/defaults/base/config.yaml:250               concretise: concretize
-/opt/spack/etc/spack/defaults/base/config.yaml:251               containerise: containerize
-/opt/spack/etc/spack/defaults/base/config.yaml:252               rm: remove
+/opt/spack/etc/spack/defaults/base/config.yaml:166             concurrent_packages: 0
+/opt/spack/etc/spack/defaults/base/config.yaml:169             installer: new
+/opt/spack/etc/spack/defaults/base/config.yaml:177             sandbox:
+/opt/spack/etc/spack/defaults/base/config.yaml:178               enable: False
+/opt/spack/etc/spack/defaults/base/config.yaml:180               allow_network: True
+/opt/spack/etc/spack/defaults/base/config.yaml:182               allow_read: []
+/opt/spack/etc/spack/defaults/base/config.yaml:184               allow_write: []
+/opt/spack/etc/spack/defaults/base/config.yaml:187             ccache: False
+/opt/spack/etc/spack/defaults/base/config.yaml:193             db_lock_timeout: 60
+/opt/spack/etc/spack/defaults/base/config.yaml:201             package_lock_timeout: null
+/opt/spack/etc/spack/defaults/base/config.yaml:206             shared_linking:
+/opt/spack/etc/spack/defaults/base/config.yaml:211               type: rpath
+/opt/spack/etc/spack/defaults/base/config.yaml:217               bind: False
+/opt/spack/etc/spack/defaults/base/config.yaml:223               missing_library_policy: ignore
+/opt/spack/etc/spack/defaults/base/config.yaml:228             allow_sgid: True
+/opt/spack/etc/spack/defaults/base/config.yaml:234             install_status: True
+/opt/spack/etc/spack/defaults/base/config.yaml:238             binary_index_ttl: 600
+/opt/spack/etc/spack/defaults/base/config.yaml:240             flags:
+/opt/spack/etc/spack/defaults/base/config.yaml:242               keep_werror: none
+/opt/spack/etc/spack/defaults/base/config.yaml:247             aliases:
+/opt/spack/etc/spack/defaults/base/config.yaml:248               concretise: concretize
+/opt/spack/etc/spack/defaults/base/config.yaml:249               containerise: containerize
+/opt/spack/etc/spack/defaults/base/config.yaml:250               rm: remove
 _builtin                                                       debug: False
 _builtin                                                     upstreams: {}
 _builtin                                                     bootstrap:
