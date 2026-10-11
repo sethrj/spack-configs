@@ -1,0 +1,38 @@
+spack:
+  include:
+    - reqs-celer.yaml
+  view: true
+  specs:
+    - cli11
+    - cmake
+    - nlohmann-json
+      # ... plus packages required for *basic* realistic development
+    - geant4
+    - git
+    - googletest
+    ## NOTE: use local brew install
+    # - py-pre-commit
+    - python
+      # ... plus *recommended* options
+    - covfie
+    - g4vg
+    - hepmc3
+    - ninja
+    - vecgeom@1
+      # Uncomment the following lines for additional supported optional packages
+    - root
+      # documentation
+    - doxygen
+      ## NOTE : use local breathe/bibtex
+      #- py-breathe
+      #- py-sphinxcontrib-bibtex
+    - py-furo
+    - py-sphinx
+      # experimental
+      #- dd4hep
+      #- mpi
+      # Utilities
+    - git-lfs
+    #- gh
+    #- py-gcovr
+

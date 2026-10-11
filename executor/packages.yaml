@@ -34,14 +34,17 @@ packages:
     - spec: bison@3.8.2
       prefix: /opt/homebrew/opt/bison@3.8
   libtool:
+    buildable: false
     externals:
     - spec: libtool@2.6.2
       prefix: /opt/homebrew/opt/libtool
   iwyu:
+    buildable: false
     externals:
     - spec: iwyu@0.27
       prefix: /opt/homebrew/opt/iwyu
   m4:
+    buildable: false
     externals:
     - spec: m4@1.4.21
       prefix: /opt/homebrew/opt/m4
@@ -50,46 +53,57 @@ packages:
     - spec: gettext@1.0
       prefix: /opt/homebrew/opt/gettext
   ccache:
+    buildable: false
     externals:
     - spec: ccache@4.14.1
       prefix: /opt/homebrew/opt/ccache
   typescript:
+    buildable: false
     externals:
     - spec: typescript@7.0.2
       prefix: /opt/homebrew/opt/typescript
   git-lfs:
+    buildable: false
     externals:
     - spec: git-lfs@3.8.0
       prefix: /opt/homebrew/opt/git-lfs
   doxygen:
+    buildable: false
     externals:
     - spec: doxygen@1.18.0+graphviz~mscgen
       prefix: /opt/homebrew/opt/doxygen
   automake:
+    buildable: false
     externals:
     - spec: automake@1.19
       prefix: /opt/homebrew/opt/automake
   npm:
+    buildable: false
     externals:
     - spec: npm@11.20.0
       prefix: /opt/homebrew/opt/nodejs
   go:
+    buildable: false
     externals:
     - spec: go@1.27.1
       prefix: /opt/homebrew/opt/google-go
   cmake:
+    buildable: false
     externals:
     - spec: cmake@4.4.4
       prefix: /opt/homebrew/opt/cmake
   graphviz:
+    buildable: false
     externals:
     - spec: graphviz@16.1.0
       prefix: /opt/homebrew/opt/graphviz
   perl:
+    buildable: false
     externals:
     - spec: perl@5.44.0~cpanm+opcode+open+shared+threads
       prefix: /opt/homebrew/opt/perl
   autoconf:
+    buildable: false
     externals:
     - spec: autoconf@2.73
       prefix: /opt/homebrew/opt/autoconf

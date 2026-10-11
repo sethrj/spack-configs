@@ -1,0 +1,13 @@
+spack:
+  include:
+    - reqs-celer.yaml
+  view: true
+  specs:
+    - cabana@0.8
+  packages:
+    all:
+      prefer:
+        - "~mpi"
+    cabana:
+      require:
+        - "+arborx"
