@@ -118,9 +118,9 @@
 /opt/spack/var/spack/environments/g4vg-dev/reqs-celer.yaml:25      root:
 /opt/spack/var/spack/environments/g4vg-dev/reqs-celer.yaml:26        require:
 /opt/spack/var/spack/environments/g4vg-dev/reqs-celer.yaml:27        - '@6.28:'
-/opt/spack/etc/spack/site/packages.yaml:153                          variants:
-/opt/spack/etc/spack/site/packages.yaml:154                          - generator=ninja
-/opt/spack/etc/spack/site/packages.yaml:160                          - ~aqua ~opengl ~x ~webgui ~davix ~examples ~tbb +root7 +geom +math
+/opt/spack/etc/spack/site/packages.yaml:156                          variants:
+/opt/spack/etc/spack/site/packages.yaml:157                          - generator=ninja
+/opt/spack/etc/spack/site/packages.yaml:163                          - ~aqua ~opengl ~x ~webgui ~tiff ~davix ~examples ~tbb ~builtin_llvm +root7 +geom +math +gsl
 /opt/spack/var/spack/environments/g4vg-dev/reqs-celer.yaml:28      vecgeom:
 /opt/spack/var/spack/environments/g4vg-dev/reqs-celer.yaml:29        require:
 /opt/spack/var/spack/environments/g4vg-dev/reqs-celer.yaml:30        - '@1.2.10:'
@@ -306,7 +306,7 @@
 /opt/spack/etc/spack/site/packages.yaml:148                          - +rootio +python
 /opt/spack/etc/spack/site/packages.yaml:149                        llvm:
 /opt/spack/etc/spack/site/packages.yaml:150                          variants:
-/opt/spack/etc/spack/site/packages.yaml:151                          - +lldb +python
+/opt/spack/etc/spack/site/packages.yaml:152                          - ~lld ~lldb ~python ~lua ~flang ~offload libcxx=none libunwind=none targets=aarch64
 /opt/spack/etc/spack/defaults/darwin/packages.yaml:30              apple-gl:
 /opt/spack/etc/spack/defaults/darwin/packages.yaml:31                buildable: False
 /opt/spack/etc/spack/defaults/darwin/packages.yaml:32                externals:

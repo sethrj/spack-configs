@@ -148,7 +148,10 @@ packages:
       - "+rootio +python"
   llvm:
     variants:
-      - "+lldb +python"
+      # NOTE: for local macos machine only, not linux boxes
+      - >-
+        ~lld ~lldb ~python ~lua ~flang ~offload
+        libcxx=none libunwind=none targets=aarch64
   root:
     variants:
       - generator=ninja
@@ -158,7 +161,8 @@ packages:
       # Edm4hep requires root7
       # Allpix requires geom, math
       - >-
-        ~aqua ~opengl ~x ~webgui
+        ~aqua ~opengl ~x ~webgui ~tiff
         ~davix ~examples ~tbb
+        ~builtin_llvm
         +root7
-        +geom +math
+        +geom +math +gsl
