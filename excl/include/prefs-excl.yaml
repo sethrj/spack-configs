@@ -1,0 +1,28 @@
+packages:
+  arborx:
+    prefer:
+      - generator=ninja
+  cabana:
+    prefer:
+      - generator=ninja
+  covfie:
+    prefer:
+      - generator=ninja
+  geant4:
+    prefer:
+      - generator=ninja
+  kokkos:
+    prefer:
+      - generator=ninja
+  python:
+    version:
+      - "3.14" # spack installation July 2026
+  root:
+    prefer:
+      - generator=ninja
+  vecgeom:
+    prefer:
+      - generator=ninja
+  all:
+    variants:
+      - ~mpi

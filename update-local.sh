@@ -54,11 +54,16 @@ print_error() {
 }
 
 status "Backing up config and environments to ${CONFIGDIR}"
-vcall cp "${SPACK_ROOT}/etc/spack/site/"*.yaml "./" 2>/dev/null \
-    || vcall cp "${SPACK_ROOT}/etc/spack/"*.yaml "./" \
+mkdir site || true
+vcall cp "${SPACK_ROOT}/etc/spack/site/"*.yaml "site/" 2>/dev/null \
+    || vcall cp "${SPACK_ROOT}/etc/spack/"*.yaml "site/" \
     || printf "\e[31;1m(no site spack configs are present)\e[0m "
 spack debug report > spack-debug-report.md
-vcall cp $SPACK_ENV_BASE/*.yaml .
+vcall cp $SPACK_ENV_BASE/*.yaml .  || true
+_include=$(readlink $SPACK_ENV_BASE/include || printf "")
+if [ -n "$_include" ]; then
+  vcall cp -Rp "$_include" include
+fi
 for env in $(cd ${SPACK_ENV_BASE} && ls); do
   (
     _prefix="${CONFIGDIR}/env/${env}"

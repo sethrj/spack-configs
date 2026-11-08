@@ -1,0 +1,25 @@
+mirrors:
+  projects:
+    url: /auto/projects/celeritas/spack-cache/build
+    binary: true
+    signed: false
+    autopush: false
+
+  celeritas:
+    url: oci://ghcr.io/celeritas-project/spack-buildcache
+    binary: true
+    signed: false
+    autopush: false
+    access_pair:
+      id_variable: GITHUB_USER
+      secret_variable: GITHUB_TOKEN
+
+  sethrj:
+    url: oci://ghcr.io/sethrj/spack-buildcache
+    binary: true
+    signed: false
+    autopush: false
+    access_pair:
+      id_variable: GITHUB_USER
+      secret_variable: GITHUB_TOKEN
+
