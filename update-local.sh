@@ -23,7 +23,7 @@ vcall() { cecho "37;2" "> $*"; "$@"; }
 ###############################################################################
 
 if [ -z "${SPACK_ROOT}" ]; then
-  error "Spack not loaded: ${SPACK_ROOT} must be defined"
+  error "Spack not loaded: \$SPACK_ROOT must be defined"
 fi
 if ! command -v spack 2>/dev/null; then
   . ${SPACK_ROOT}/share/spack/setup-env.sh
@@ -59,8 +59,10 @@ vcall cp "${SPACK_ROOT}/etc/spack/site/"*.yaml "site/" 2>/dev/null \
     || vcall cp "${SPACK_ROOT}/etc/spack/"*.yaml "site/" \
     || printf "\e[31;1m(no site spack configs are present)\e[0m "
 spack debug report > spack-debug-report.md
-vcall cp $SPACK_ENV_BASE/*.yaml .  || true
-_include=$(readlink $SPACK_ENV_BASE/include || printf "")
+for f in $(ls "$SPACK_ENV_BASE/*.yaml" 2>/dev/null) ; do
+  vcall cp $f .
+done
+_include=$(realpath $SPACK_ENV_BASE/include || printf "")
 if [ -n "$_include" ]; then
   vcall cp -Rp "$_include" include
 fi
