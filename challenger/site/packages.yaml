@@ -1,0 +1,96 @@
+packages:
+  intel-tbb:
+    buildable: false
+  opengl:
+    buildable: false
+
+
+  apple-clang:
+    buildable: false
+    externals:
+    - spec: apple-clang@21.0.0
+      prefix: /usr
+      extra_attributes:
+        compilers:
+          c: /usr/bin/clang
+          cxx: /usr/bin/clang++
+  gcc:
+    buildable: false
+    externals:
+    - spec: gcc@16.2.0 languages:='c,c++,fortran'
+      prefix: /opt/homebrew/opt/gcc
+      extra_attributes:
+        compilers:
+          c: /opt/homebrew/opt/gcc/bin/gcc-16
+          cxx: /opt/homebrew/opt/gcc/bin/g++-16
+          fortran: /opt/homebrew/opt/gcc/bin/gfortran
+
+  gmake:
+    externals:
+    - spec: gmake@3.81
+      prefix: /usr
+  git:
+    externals:
+    - spec: git@2.56.0~tcltk
+      prefix: /opt/homebrew/opt/git
+    - spec: git@2.54.0~tcltk
+      prefix: /usr
+  git-lfs:
+    externals:
+    - spec: git-lfs@3.8.1
+      prefix: /opt/homebrew/opt/git-lfs
+
+  bash:
+    externals:
+    - spec: bash@3.2.57
+      prefix: /
+  openssh:
+    buildable: false
+    externals:
+    - spec: openssh@10.5
+      prefix: /usr
+    - spec: openssh@10.5p1
+      prefix: /usr
+
+  ccache:
+    buildable: false
+    externals:
+    - spec: ccache@4.14.2
+      prefix: /opt/homebrew/opt/ccache
+  cmake:
+    buildable: false
+    externals:
+    - spec: cmake@4.4.5
+      prefix: /opt/homebrew/opt/cmake
+  doxygen:
+    externals:
+    - spec: doxygen@1.18.0+graphviz~mscgen
+      prefix: /opt/homebrew
+  go:
+    buildable: false
+    externals:
+    - spec: go@1.27.3
+      prefix: /opt/homebrew/opt/go
+  m4:
+    buildable: false
+    externals:
+    - spec: m4@1.4.2
+      prefix: /opt/homebrew/opt/m4
+  graphviz:
+    externals:
+    - spec: graphviz@16.1.0
+      prefix: /opt/homebrew/opt/graphviz
+  perl:
+    buildable: false
+    externals:
+    - spec: perl@5.44.0~cpanm+opcode+open+shared+threads
+      prefix: /opt/homebrew/opt/perl
+  kokkos-kernels:
+    prefer:
+    - generator=ninja
+  kokkos:
+    prefer:
+    - generator=ninja
+  trilinos:
+    prefer:
+    - generator=ninja

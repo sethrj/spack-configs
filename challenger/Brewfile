@@ -1,5 +1,7 @@
 tap "aide-qc/deploy"
 tap "microsoft/git"
+# Macro processing language
+brew "m4"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
 # Official Amazon AWS command-line interface
@@ -36,10 +38,6 @@ brew "gcc@11"
 brew "libavif"
 # GitHub command-line tool
 brew "gh"
-# Library for JPEG-2000 image manipulation
-brew "openjpeg"
-# Framework for layout and rendering of i18n text
-brew "pango"
 # Distributed revision control system
 brew "git"
 # Git extension for versioning large files
@@ -48,8 +46,6 @@ brew "git-lfs"
 brew "git-when-merged"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
-# Library to render SVG files using Cairo
-brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # Next-gen compiler infrastructure
@@ -72,6 +68,8 @@ brew "ninja"
 brew "node"
 # Flexible test automation for Python
 brew "nox"
+# Library for JPEG-2000 image manipulation
+brew "openjpeg"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Package compiler and linker metadata toolkit
@@ -82,29 +80,28 @@ brew "poetry"
 brew "pre-commit"
 # Python version management
 brew "pyenv"
-# Generate types and converters from JSON, Schema, and GraphQL
-brew "quicktype"
 # Perl-powered file rename script with many helpful built-ins
 brew "rename"
 # Language for application scale JavaScript development
 brew "typescript"
+# Terminal-based AI coding assistant
+cask "claude-code"
 # Cross-platform Git credential storage for multiple hosting providers
 cask "git-credential-manager"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
-# Utility to render Jupyter notebooks
-cask "jupyter-notebook-viewer"
 # Open-source cross-platform alternative to AirDrop
 cask "localsend"
-# Full TeX Live distribution with GUI applications
-cask "mactex"
 # Smart card libraries and utilities
 cask "opensc-app"
 # Open-source code editor
 cask "visual-studio-code"
 vscode "albertopdrf.root-file-viewer"
+vscode "anthropic.claude-code"
 vscode "charliermarsh.ruff"
+vscode "davidanson.vscode-markdownlint"
 vscode "eamodio.gitlens"
+vscode "esbenp.prettier-vscode"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
 vscode "gkarlos.vscode-ptx-syntax"

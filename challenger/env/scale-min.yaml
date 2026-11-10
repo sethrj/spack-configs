@@ -1,14 +1,15 @@
 spack:
   specs:
+  - ccache
   - cmake
   - git
   - git-lfs
   - googletest
-  - hdf5 +hl
+  - hdf5
   - ninja
   - nlohmann-json
   - pugixml
-  - "python@3.14:"
+  - python
   - py-furo
   - py-h5py
   - py-lxml
@@ -19,14 +20,7 @@ spack:
   #- py-sphinx-rtd-theme
   - py-sphinxcontrib-bibtex
   #- gnds
-  #- 'superlu@5.3'
-  # - trilinos +amesos +amesos2 +anasazi +aztec +belos +ifpack gotype=long_long +epetra +epetraext +kokkos +ifpack2 +intrepid +ml +sacado +shards +tpetra +stratimikos ~mpi
-  - >-
-    trilinos@14.4:16 +kokkos
-    +shared
-    +epetra +intrepid +ifpack +anasazi
-    +ml +ifpack2 +tpetra +epetraext +belos +stratimikos +amesos +amesos2 +aztec
-  #- swig
+  - trilinos
   view: true
   concretizer:
     unify: true
@@ -39,6 +33,18 @@ spack:
     - spec: "%fortran=gcc"
       when: "%fortran"
   packages:
+    hdf5:
+      require:
+        - +hl
+    trilinos:
+      variants:
+        - +shared ~mpi
+      require:
+        - >-
+          @14.4:16 +kokkos
+          +tpetra +ml +ifpack2 +belos +stratimikos +amesos2
+          +epetra +ifpack +anasazi  +epetraext +amesos +aztec
+          +intrepid 
     all:
       require:
         - "%clang_gf"

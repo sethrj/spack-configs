@@ -1,26 +1,27 @@
 /opt/spack/var/spack/environments/scale-min/spack.yaml:1   spack:
 /opt/spack/var/spack/environments/scale-min/spack.yaml:2     specs:
-/opt/spack/var/spack/environments/scale-min/spack.yaml:3     - cmake
-/opt/spack/var/spack/environments/scale-min/spack.yaml:4     - git
-/opt/spack/var/spack/environments/scale-min/spack.yaml:5     - git-lfs
-/opt/spack/var/spack/environments/scale-min/spack.yaml:6     - googletest
-/opt/spack/var/spack/environments/scale-min/spack.yaml:7     - hdf5 +hl
-/opt/spack/var/spack/environments/scale-min/spack.yaml:8     - ninja
-/opt/spack/var/spack/environments/scale-min/spack.yaml:9     - nlohmann-json
-/opt/spack/var/spack/environments/scale-min/spack.yaml:10    - pugixml
-/opt/spack/var/spack/environments/scale-min/spack.yaml:11    - 'python@3.14:'
-/opt/spack/var/spack/environments/scale-min/spack.yaml:12    - py-furo
-/opt/spack/var/spack/environments/scale-min/spack.yaml:13    - py-h5py
-/opt/spack/var/spack/environments/scale-min/spack.yaml:14    - py-lxml
-/opt/spack/var/spack/environments/scale-min/spack.yaml:15    - py-myst-parser
-/opt/spack/var/spack/environments/scale-min/spack.yaml:16    - py-numpy
-/opt/spack/var/spack/environments/scale-min/spack.yaml:17    - py-pint
-/opt/spack/var/spack/environments/scale-min/spack.yaml:18    - py-sphinx
-/opt/spack/var/spack/environments/scale-min/spack.yaml:20    - py-sphinxcontrib-bibtex
-/opt/spack/var/spack/environments/scale-min/spack.yaml:24    - trilinos@14.4:16 +kokkos +shared +epetra +intrepid +ifpack +anasazi +ml +ifpack2 +tpetra +epetraext +belos +stratimikos +amesos +amesos2 +aztec
-/opt/spack/var/spack/environments/scale-min/spack.yaml:30    view: True
-/opt/spack/var/spack/environments/scale-min/spack.yaml:31    concretizer:
-/opt/spack/var/spack/environments/scale-min/spack.yaml:32      unify: True
+/opt/spack/var/spack/environments/scale-min/spack.yaml:3     - ccache
+/opt/spack/var/spack/environments/scale-min/spack.yaml:4     - cmake
+/opt/spack/var/spack/environments/scale-min/spack.yaml:5     - git
+/opt/spack/var/spack/environments/scale-min/spack.yaml:6     - git-lfs
+/opt/spack/var/spack/environments/scale-min/spack.yaml:7     - googletest
+/opt/spack/var/spack/environments/scale-min/spack.yaml:8     - hdf5
+/opt/spack/var/spack/environments/scale-min/spack.yaml:9     - ninja
+/opt/spack/var/spack/environments/scale-min/spack.yaml:10    - nlohmann-json
+/opt/spack/var/spack/environments/scale-min/spack.yaml:11    - pugixml
+/opt/spack/var/spack/environments/scale-min/spack.yaml:12    - python
+/opt/spack/var/spack/environments/scale-min/spack.yaml:13    - py-furo
+/opt/spack/var/spack/environments/scale-min/spack.yaml:14    - py-h5py
+/opt/spack/var/spack/environments/scale-min/spack.yaml:15    - py-lxml
+/opt/spack/var/spack/environments/scale-min/spack.yaml:16    - py-myst-parser
+/opt/spack/var/spack/environments/scale-min/spack.yaml:17    - py-numpy
+/opt/spack/var/spack/environments/scale-min/spack.yaml:18    - py-pint
+/opt/spack/var/spack/environments/scale-min/spack.yaml:19    - py-sphinx
+/opt/spack/var/spack/environments/scale-min/spack.yaml:21    - py-sphinxcontrib-bibtex
+/opt/spack/var/spack/environments/scale-min/spack.yaml:23    - trilinos
+/opt/spack/var/spack/environments/scale-min/spack.yaml:24    view: True
+/opt/spack/var/spack/environments/scale-min/spack.yaml:25    concretizer:
+/opt/spack/var/spack/environments/scale-min/spack.yaml:26      unify: True
 /opt/spack/etc/spack/defaults/base/concretizer.yaml:18         reuse: True
 /opt/spack/etc/spack/defaults/base/concretizer.yaml:23         targets:
 /opt/spack/etc/spack/defaults/base/concretizer.yaml:28           granularity: microarchitectures
@@ -56,28 +57,38 @@
 /opt/spack/etc/spack/defaults/base/concretizer.yaml:88         timeout: 0
 /opt/spack/etc/spack/defaults/base/concretizer.yaml:94         error_on_timeout: True
 /opt/spack/etc/spack/defaults/base/concretizer.yaml:98         static_analysis: False
-/opt/spack/etc/spack/defaults/base/concretizer.yaml:102        concretization_cache:
-/opt/spack/etc/spack/defaults/base/concretizer.yaml:103          enable: True
-/opt/spack/etc/spack/defaults/base/concretizer.yaml:106        externals:
-/opt/spack/etc/spack/defaults/base/concretizer.yaml:110          completion: default_variants
-/opt/spack/var/spack/environments/scale-min/spack.yaml:33    toolchains:
-/opt/spack/var/spack/environments/scale-min/spack.yaml:34      clang_gf:
-/opt/spack/var/spack/environments/scale-min/spack.yaml:35      - spec: '%c=apple-clang'
-/opt/spack/var/spack/environments/scale-min/spack.yaml:36        when: '%c'
-/opt/spack/var/spack/environments/scale-min/spack.yaml:37      - spec: '%cxx=apple-clang'
-/opt/spack/var/spack/environments/scale-min/spack.yaml:38        when: '%cxx'
-/opt/spack/var/spack/environments/scale-min/spack.yaml:39      - spec: '%fortran=gcc'
-/opt/spack/var/spack/environments/scale-min/spack.yaml:40        when: '%fortran'
-/opt/spack/var/spack/environments/scale-min/spack.yaml:41    packages:
-/opt/spack/var/spack/environments/scale-min/spack.yaml:42      all:
-/opt/spack/var/spack/environments/scale-min/spack.yaml:43        require:
-/opt/spack/var/spack/environments/scale-min/spack.yaml:44        - '%clang_gf'
-/opt/spack/var/spack/environments/scale-min/spack.yaml:45        prefer:
-/opt/spack/var/spack/environments/scale-min/spack.yaml:46        - ~mpi
-/opt/spack/var/spack/environments/scale-min/spack.yaml:47        - cxxstd=17
-/opt/spack/var/spack/environments/scale-min/spack.yaml:48        providers:
-/opt/spack/var/spack/environments/scale-min/spack.yaml:49          blas: [openblas]
-/opt/spack/var/spack/environments/scale-min/spack.yaml:50          lapack: [openblas]
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:104        concretization_cache:
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:105          enable: True
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:108        externals:
+/opt/spack/etc/spack/defaults/base/concretizer.yaml:112          completion: default_variants
+/opt/spack/var/spack/environments/scale-min/spack.yaml:27    toolchains:
+/opt/spack/var/spack/environments/scale-min/spack.yaml:28      clang_gf:
+/opt/spack/var/spack/environments/scale-min/spack.yaml:29      - spec: '%c=apple-clang'
+/opt/spack/var/spack/environments/scale-min/spack.yaml:30        when: '%c'
+/opt/spack/var/spack/environments/scale-min/spack.yaml:31      - spec: '%cxx=apple-clang'
+/opt/spack/var/spack/environments/scale-min/spack.yaml:32        when: '%cxx'
+/opt/spack/var/spack/environments/scale-min/spack.yaml:33      - spec: '%fortran=gcc'
+/opt/spack/var/spack/environments/scale-min/spack.yaml:34        when: '%fortran'
+/opt/spack/var/spack/environments/scale-min/spack.yaml:35    packages:
+/opt/spack/var/spack/environments/scale-min/spack.yaml:36      hdf5:
+/opt/spack/var/spack/environments/scale-min/spack.yaml:37        require:
+/opt/spack/var/spack/environments/scale-min/spack.yaml:38        - +hl
+/opt/spack/var/spack/environments/scale-min/spack.yaml:39      trilinos:
+/opt/spack/var/spack/environments/scale-min/spack.yaml:40        variants:
+/opt/spack/var/spack/environments/scale-min/spack.yaml:41        - +shared ~mpi
+/opt/spack/var/spack/environments/scale-min/spack.yaml:42        require:
+/opt/spack/var/spack/environments/scale-min/spack.yaml:43        - '@14.4:16 +kokkos +tpetra +ml +ifpack2 +belos +stratimikos +amesos2 +epetra +ifpack +anasazi  +epetraext +amesos +aztec +intrepid '
+/opt/spack/etc/spack/site/packages.yaml:95                       prefer:
+/opt/spack/etc/spack/site/packages.yaml:96                       - generator=ninja
+/opt/spack/var/spack/environments/scale-min/spack.yaml:48      all:
+/opt/spack/var/spack/environments/scale-min/spack.yaml:49        require:
+/opt/spack/var/spack/environments/scale-min/spack.yaml:50        - '%clang_gf'
+/opt/spack/var/spack/environments/scale-min/spack.yaml:51        prefer:
+/opt/spack/var/spack/environments/scale-min/spack.yaml:52        - ~mpi
+/opt/spack/var/spack/environments/scale-min/spack.yaml:53        - cxxstd=17
+/opt/spack/var/spack/environments/scale-min/spack.yaml:54        providers:
+/opt/spack/var/spack/environments/scale-min/spack.yaml:55          blas: [openblas]
+/opt/spack/var/spack/environments/scale-min/spack.yaml:56          lapack: [openblas]
 /opt/spack/etc/spack/defaults/base/packages.yaml:52                mpi: [openmpi, mpich]
 /opt/spack/etc/spack/defaults/base/packages.yaml:22                c: [apple-clang, llvm, gcc, intel-oneapi-compilers]
 /opt/spack/etc/spack/defaults/base/packages.yaml:24                cxx: [apple-clang, llvm, gcc, intel-oneapi-compilers]
@@ -133,35 +144,93 @@
 /opt/spack/etc/spack/defaults/base/packages.yaml:73              permissions:
 /opt/spack/etc/spack/defaults/base/packages.yaml:74                read: world
 /opt/spack/etc/spack/defaults/base/packages.yaml:75                write: user
-/Users/s3j/.spack/packages.yaml:2                              apple-clang:
-/Users/s3j/.spack/packages.yaml:3                                externals:
-/opt/spack/etc/spack/site/packages.yaml:4                        - spec: apple-clang@21.0.0
-/opt/spack/etc/spack/site/packages.yaml:5                          prefix: /usr
-/opt/spack/etc/spack/site/packages.yaml:6                          extra_attributes:
-/opt/spack/etc/spack/site/packages.yaml:7                            compilers:
-/opt/spack/etc/spack/site/packages.yaml:8                              c: /usr/bin/clang
-/opt/spack/etc/spack/site/packages.yaml:9                              cxx: /usr/bin/clang++
-/opt/spack/etc/spack/defaults/darwin/packages.yaml:29            buildable: False
-/opt/spack/etc/spack/site/packages.yaml:10                     gcc:
-/opt/spack/etc/spack/site/packages.yaml:11                       externals:
-/opt/spack/etc/spack/site/packages.yaml:12                       - spec: gcc@11.5.0 languages:='c,c++,fortran'
-/opt/spack/etc/spack/site/packages.yaml:13                         prefix: /opt/homebrew
-/opt/spack/etc/spack/site/packages.yaml:14                         extra_attributes:
-/opt/spack/etc/spack/site/packages.yaml:15                           compilers:
-/opt/spack/etc/spack/site/packages.yaml:16                             c: /opt/homebrew/bin/gcc-11
-/opt/spack/etc/spack/site/packages.yaml:17                             cxx: /opt/homebrew/bin/g++-11
-/opt/spack/etc/spack/site/packages.yaml:18                             fortran: /opt/homebrew/bin/gfortran-11
-/opt/spack/etc/spack/site/packages.yaml:19                       - spec: gcc@16.1.0 languages:='c,c++,fortran'
-/opt/spack/etc/spack/site/packages.yaml:20                         prefix: /opt/homebrew
-/opt/spack/etc/spack/site/packages.yaml:21                         extra_attributes:
-/opt/spack/etc/spack/site/packages.yaml:22                           compilers:
-/opt/spack/etc/spack/site/packages.yaml:23                             c: /opt/homebrew/bin/gcc-16
-/opt/spack/etc/spack/site/packages.yaml:24                             cxx: /opt/homebrew/bin/g++-16
-/opt/spack/etc/spack/site/packages.yaml:25                             fortran: /opt/homebrew/bin/gfortran
-/opt/spack/etc/spack/site/packages.yaml:27                     cmake:
-/opt/spack/etc/spack/site/packages.yaml:28                       externals:
-/opt/spack/etc/spack/site/packages.yaml:29                       - spec: cmake@4.4.2
-/opt/spack/etc/spack/site/packages.yaml:30                         prefix: /opt/homebrew
+/opt/spack/etc/spack/site/packages.yaml:2                      intel-tbb:
+/opt/spack/etc/spack/site/packages.yaml:3                        buildable: False
+/opt/spack/etc/spack/site/packages.yaml:4                      opengl:
+/opt/spack/etc/spack/site/packages.yaml:5                        buildable: False
+/opt/spack/etc/spack/site/packages.yaml:8                      apple-clang:
+/opt/spack/etc/spack/site/packages.yaml:9                        buildable: False
+/opt/spack/etc/spack/site/packages.yaml:10                       externals:
+/opt/spack/etc/spack/site/packages.yaml:11                       - spec: apple-clang@21.0.0
+/opt/spack/etc/spack/site/packages.yaml:12                         prefix: /usr
+/opt/spack/etc/spack/site/packages.yaml:13                         extra_attributes:
+/opt/spack/etc/spack/site/packages.yaml:14                           compilers:
+/opt/spack/etc/spack/site/packages.yaml:15                             c: /usr/bin/clang
+/opt/spack/etc/spack/site/packages.yaml:16                             cxx: /usr/bin/clang++
+/opt/spack/etc/spack/site/packages.yaml:17                     gcc:
+/opt/spack/etc/spack/site/packages.yaml:18                       buildable: False
+/opt/spack/etc/spack/site/packages.yaml:19                       externals:
+/opt/spack/etc/spack/site/packages.yaml:20                       - spec: gcc@16.2.0 languages:='c,c++,fortran'
+/opt/spack/etc/spack/site/packages.yaml:21                         prefix: /opt/homebrew/opt/gcc
+/opt/spack/etc/spack/site/packages.yaml:22                         extra_attributes:
+/opt/spack/etc/spack/site/packages.yaml:23                           compilers:
+/opt/spack/etc/spack/site/packages.yaml:24                             c: /opt/homebrew/opt/gcc/bin/gcc-16
+/opt/spack/etc/spack/site/packages.yaml:25                             cxx: /opt/homebrew/opt/gcc/bin/g++-16
+/opt/spack/etc/spack/site/packages.yaml:26                             fortran: /opt/homebrew/opt/gcc/bin/gfortran
+/opt/spack/etc/spack/site/packages.yaml:28                     gmake:
+/opt/spack/etc/spack/site/packages.yaml:29                       externals:
+/opt/spack/etc/spack/site/packages.yaml:30                       - spec: gmake@3.81
+/opt/spack/etc/spack/site/packages.yaml:31                         prefix: /usr
+/opt/spack/etc/spack/site/packages.yaml:32                     git:
+/opt/spack/etc/spack/site/packages.yaml:33                       externals:
+/opt/spack/etc/spack/site/packages.yaml:34                       - spec: git@2.56.0~tcltk
+/opt/spack/etc/spack/site/packages.yaml:35                         prefix: /opt/homebrew/opt/git
+/opt/spack/etc/spack/site/packages.yaml:36                       - spec: git@2.54.0~tcltk
+/opt/spack/etc/spack/site/packages.yaml:37                         prefix: /usr
+/opt/spack/etc/spack/site/packages.yaml:38                     git-lfs:
+/opt/spack/etc/spack/site/packages.yaml:39                       externals:
+/opt/spack/etc/spack/site/packages.yaml:40                       - spec: git-lfs@3.8.1
+/opt/spack/etc/spack/site/packages.yaml:41                         prefix: /opt/homebrew/opt/git-lfs
+/opt/spack/etc/spack/site/packages.yaml:43                     bash:
+/opt/spack/etc/spack/site/packages.yaml:44                       externals:
+/opt/spack/etc/spack/site/packages.yaml:45                       - spec: bash@3.2.57
+/opt/spack/etc/spack/site/packages.yaml:46                         prefix: /
+/opt/spack/etc/spack/site/packages.yaml:47                     openssh:
+/opt/spack/etc/spack/site/packages.yaml:48                       buildable: False
+/opt/spack/etc/spack/site/packages.yaml:49                       externals:
+/opt/spack/etc/spack/site/packages.yaml:50                       - spec: openssh@10.5
+/opt/spack/etc/spack/site/packages.yaml:51                         prefix: /usr
+/opt/spack/etc/spack/site/packages.yaml:52                       - spec: openssh@10.5p1
+/opt/spack/etc/spack/site/packages.yaml:53                         prefix: /usr
+/opt/spack/etc/spack/site/packages.yaml:55                     ccache:
+/opt/spack/etc/spack/site/packages.yaml:56                       buildable: False
+/opt/spack/etc/spack/site/packages.yaml:57                       externals:
+/opt/spack/etc/spack/site/packages.yaml:58                       - spec: ccache@4.14.2
+/opt/spack/etc/spack/site/packages.yaml:59                         prefix: /opt/homebrew/opt/ccache
+/opt/spack/etc/spack/site/packages.yaml:60                     cmake:
+/opt/spack/etc/spack/site/packages.yaml:61                       buildable: False
+/opt/spack/etc/spack/site/packages.yaml:62                       externals:
+/opt/spack/etc/spack/site/packages.yaml:63                       - spec: cmake@4.4.5
+/opt/spack/etc/spack/site/packages.yaml:64                         prefix: /opt/homebrew/opt/cmake
+/opt/spack/etc/spack/site/packages.yaml:65                     doxygen:
+/opt/spack/etc/spack/site/packages.yaml:66                       externals:
+/opt/spack/etc/spack/site/packages.yaml:67                       - spec: doxygen@1.18.0+graphviz~mscgen
+/opt/spack/etc/spack/site/packages.yaml:68                         prefix: /opt/homebrew
+/opt/spack/etc/spack/site/packages.yaml:69                     go:
+/opt/spack/etc/spack/site/packages.yaml:70                       buildable: False
+/opt/spack/etc/spack/site/packages.yaml:71                       externals:
+/opt/spack/etc/spack/site/packages.yaml:72                       - spec: go@1.27.3
+/opt/spack/etc/spack/site/packages.yaml:73                         prefix: /opt/homebrew/opt/go
+/opt/spack/etc/spack/site/packages.yaml:74                     m4:
+/opt/spack/etc/spack/site/packages.yaml:75                       buildable: False
+/opt/spack/etc/spack/site/packages.yaml:76                       externals:
+/opt/spack/etc/spack/site/packages.yaml:77                       - spec: m4@1.4.2
+/opt/spack/etc/spack/site/packages.yaml:78                         prefix: /opt/homebrew/opt/m4
+/opt/spack/etc/spack/site/packages.yaml:79                     graphviz:
+/opt/spack/etc/spack/site/packages.yaml:80                       externals:
+/opt/spack/etc/spack/site/packages.yaml:81                       - spec: graphviz@16.1.0
+/opt/spack/etc/spack/site/packages.yaml:82                         prefix: /opt/homebrew/opt/graphviz
+/opt/spack/etc/spack/site/packages.yaml:83                     perl:
+/opt/spack/etc/spack/site/packages.yaml:84                       buildable: False
+/opt/spack/etc/spack/site/packages.yaml:85                       externals:
+/opt/spack/etc/spack/site/packages.yaml:86                       - spec: perl@5.44.0~cpanm+opcode+open+shared+threads
+/opt/spack/etc/spack/site/packages.yaml:87                         prefix: /opt/homebrew/opt/perl
+/opt/spack/etc/spack/site/packages.yaml:88                     kokkos-kernels:
+/opt/spack/etc/spack/site/packages.yaml:89                       prefer:
+/opt/spack/etc/spack/site/packages.yaml:90                       - generator=ninja
+/opt/spack/etc/spack/site/packages.yaml:91                     kokkos:
+/opt/spack/etc/spack/site/packages.yaml:92                       prefer:
+/opt/spack/etc/spack/site/packages.yaml:93                       - generator=ninja
 /opt/spack/etc/spack/defaults/darwin/packages.yaml:30          apple-gl:
 /opt/spack/etc/spack/defaults/darwin/packages.yaml:31            buildable: False
 /opt/spack/etc/spack/defaults/darwin/packages.yaml:32            externals:
@@ -223,8 +292,6 @@
 /opt/spack/etc/spack/defaults/base/packages.yaml:105             buildable: False
 /opt/spack/etc/spack/defaults/base/packages.yaml:106           musl:
 /opt/spack/etc/spack/defaults/base/packages.yaml:107             buildable: False
-/opt/spack/etc/spack/defaults/base/packages.yaml:108           opengl:
-/opt/spack/etc/spack/defaults/base/packages.yaml:109             buildable: False
 /opt/spack/etc/spack/defaults/base/packages.yaml:110           spectrum-mpi:
 /opt/spack/etc/spack/defaults/base/packages.yaml:111             buildable: False
 /opt/spack/etc/spack/defaults/base/packages.yaml:112           xl:
@@ -252,6 +319,11 @@
 /opt/spack/etc/spack/defaults/include.yaml:7                 - path: base
 /opt/spack/etc/spack/defaults/include.yaml:7                 develop: {}
 /opt/spack/etc/spack/defaults/include.yaml:7                 mirrors:
+/opt/spack/etc/spack/site/mirrors.yaml:2                       local:
+/opt/spack/etc/spack/site/mirrors.yaml:3                         url: $spack/var/spack/mirror
+/opt/spack/etc/spack/site/mirrors.yaml:4                         binary: True
+/opt/spack/etc/spack/site/mirrors.yaml:5                         signed: False
+/opt/spack/etc/spack/site/mirrors.yaml:6                         autopush: False
 /opt/spack/etc/spack/defaults/base/mirrors.yaml:2              spack-public:
 /opt/spack/etc/spack/defaults/base/mirrors.yaml:3                binary: False
 /opt/spack/etc/spack/defaults/base/mirrors.yaml:4                url: https://mirror.spack.io
@@ -294,10 +366,10 @@
 /opt/spack/etc/spack/defaults/base/modules.yaml:54                 hierarchy:
 /opt/spack/etc/spack/defaults/base/modules.yaml:55                 - mpi
 /opt/spack/etc/spack/defaults/base/modules.yaml:55           config:
-/opt/spack/etc/spack/defaults/base/config.yaml:19              install_tree:
+/opt/spack/etc/spack/site/config.yaml:2                        install_tree:
+/opt/spack/etc/spack/site/config.yaml:3                          projections:
+/opt/spack/etc/spack/site/config.yaml:4                            all: '{name}/{version}/{hash:7}'
 /opt/spack/etc/spack/defaults/base/config.yaml:20                root: $spack/opt/spack
-/opt/spack/etc/spack/defaults/base/config.yaml:21                projections:
-/opt/spack/etc/spack/defaults/base/config.yaml:22                  all: '{architecture.platform}-{architecture.target}/{name}-{version}-{hash}'
 /opt/spack/etc/spack/defaults/base/config.yaml:33              template_dirs:
 /opt/spack/etc/spack/defaults/base/config.yaml:34              - $spack/share/spack/templates
 /opt/spack/etc/spack/defaults/base/config.yaml:37              license_dir: $spack/etc/spack/licenses
