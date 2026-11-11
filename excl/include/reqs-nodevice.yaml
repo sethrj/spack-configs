@@ -1,4 +1,7 @@
 packages:
+  all:
+    variants:
+      - ~cuda ~rocm
   arborx:
     require:
       - ~cuda ~rocm
@@ -11,7 +14,4 @@ packages:
   vecgeom:
     require:
       - ~cuda
-  all:
-    variants:
-      - ~cuda ~rocm
 

@@ -1,0 +1,30 @@
+config:
+  deprecated: true
+repos:
+  fnal_art:
+    git: https://github.com/FNALssi/fnal_art.git
+    commit: 3ac162026e0343732a2539ef74eead3b89e3b7f0 # branch develop, as built 2026-10-02
+    paths: [spack_repo/fnal_art]
+    destination: $spack/var/spack/repos/fnal_art
+  nusofthep:
+    # brettviren fork: dk2nugenie LIBXML2_FQ_DIR fix (see multispack envs/larsoft).
+    git: https://github.com/brettviren/nusofthep-spack-recipes.git
+    commit: d0a27cf202e4b2691459140bbbc233b479a85690 # branch fix-libxml2-in-spack, as built 2026-10-02
+    paths: [spack_repo/nusofthep]
+    destination: $spack/var/spack/repos/nusofthep
+  larsoft:
+    git: https://github.com/LArSoft/larsoft-spack-recipes.git
+    commit: e18b1521c424c533a12dfcbc63c70b7189902561 # branch main, as built 2026-10-02
+    paths: [spack_repo/larsoft]
+    destination: $spack/var/spack/repos/larsoft
+  wirecell:
+    git: https://github.com/WireCell/wire-cell-spack.git
+    commit: 24153eb2cbcb116accb5fb81583ee297f9bd0701 # branch master, as built 2026-10-02
+    paths: [spack_repo/wirecell]
+    destination: $spack/var/spack/repos/wirecell
+  dune_spack:
+    git: https://github.com/DUNE/dune_spack.git
+    branch: spack-v1.0
+    paths: [spack_repo/dune_spack]
+    destination: $spack/var/spack/repos/dune-spack
+

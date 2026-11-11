@@ -54,7 +54,7 @@ print_error() {
 }
 
 status "Backing up config and environments to ${CONFIGDIR}"
-mkdir site || true
+mkdir site 2>/dev/null || true
 vcall cp "${SPACK_ROOT}/etc/spack/site/"*.yaml "site/" 2>/dev/null \
     || vcall cp "${SPACK_ROOT}/etc/spack/"*.yaml "site/" \
     || printf "\e[31;1m(no site spack configs are present)\e[0m "
@@ -64,7 +64,8 @@ for f in $(ls "$SPACK_ENV_BASE/*.yaml" 2>/dev/null) ; do
 done
 _include=$(realpath $SPACK_ENV_BASE/include || printf "")
 if [ -n "$_include" ]; then
-  vcall cp -Rp "$_include" include
+  rm -rf include >/dev/null
+  vcall cp -R "$_include"/ include/
 fi
 for env in $(cd ${SPACK_ENV_BASE} && ls); do
   (

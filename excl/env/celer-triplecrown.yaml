@@ -1,0 +1,55 @@
+spack:
+  include:
+    - include/reqs-celer.yaml
+    #- include/reqs-allpix.yaml
+    - include/reqs-excl.yaml
+    - include/reqs-scratch.yaml
+    - include/reqs-nodevice.yaml
+    - include/prefs-hep-nogui.yaml
+    - include/prefs-excl.yaml
+    - include/ext-triplecrown.yaml
+
+  definitions:
+    - build_specs:
+      - ccache
+      - py-pre-commit
+      - cmake
+      - ninja
+      - git-lfs
+      - git
+      - python
+    - celer_specs:
+      - cli11
+      - nlohmann-json
+      - geant4
+      - googletest
+      - covfie
+      - g4vg
+      - hepmc3
+      - vecgeom
+      - root
+    - allpix_specs:
+      - boost
+      - root
+      - eigen
+      - pkgconfig
+      - ccache
+      - cmake
+      - ninja
+      - py-pre-commit
+      - geant4
+      - hepmc3
+      - py-numpy
+      - hdf5
+      - py-h5py
+      - cabana
+    - util_specs: 
+      - gh
+      - libtree
+      - jq
+
+  specs:
+    - $build_specs
+    - $celer_specs
+      # - $allpix_specs
+    - $util_specs
