@@ -1,0 +1,21 @@
+packages:
+  bash:
+    externals:
+      - spec: bash@5.2.21
+        prefix: /usr
+  gcc:
+    buildable: false
+    externals:
+      - spec: gcc@12.3.0 languages:='c,c++'
+        prefix: /usr
+        extra_attributes:
+          compilers:
+            c: /usr/bin/gcc-12
+            cxx: /usr/bin/g++-12
+      - spec: gcc@13.3.0 languages:='c,c++,fortran'
+        prefix: /usr
+        extra_attributes:
+          compilers:
+            c: /usr/bin/gcc-13
+            cxx: /usr/bin/g++-13
+            fortran: /usr/bin/gfortran-13

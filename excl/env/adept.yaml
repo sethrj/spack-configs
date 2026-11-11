@@ -1,0 +1,14 @@
+spack:
+  include:
+    - excl.yaml
+    - celeritas-packages.yaml
+    - milan2.yaml
+  specs:
+    - cmake
+    - geant4
+    - git
+    - googletest
+    - "covfie +cuda"
+    - g4vg
+    - ninja
+    - "vecgeom@2: +gdml +cuda  cuda_arch=70"
